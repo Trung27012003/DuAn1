@@ -22,5 +22,40 @@ namespace _3_PL.Views
         {
             lb_thoigian.Text = DateTime.Now.ToString("F");
         }
+        private Form CurrentPanel;
+        private void OpenPanel(Form panel)
+        {
+            if (CurrentPanel != null)
+            {
+                CurrentPanel.Close();
+            }
+            CurrentPanel = panel;
+            panel.TopLevel = false;
+            panel.FormBorderStyle = FormBorderStyle.None;
+            panel.Dock = DockStyle.Fill;
+            pn_body.Controls.Add(panel);
+            pn_body.Tag = panel;
+            panel.BringToFront();
+            panel.Show();
+        }
+
+        private void btn_muontra_Click(object sender, EventArgs e)
+        {
+            OpenPanel(new MuonTraForm());
+
+        }
+
+        private void btn_sach_Click(object sender, EventArgs e)
+        {
+            OpenPanel(new SachForm());
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+            if (CurrentPanel != null)
+            {
+                CurrentPanel.Close();
+            }
+        }
     }
 }

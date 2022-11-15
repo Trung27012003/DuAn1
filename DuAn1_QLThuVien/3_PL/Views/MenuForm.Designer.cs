@@ -33,7 +33,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pn_body = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_sach = new System.Windows.Forms.Button();
             this.lb_thoigian = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.btn_muontra = new System.Windows.Forms.Button();
@@ -55,7 +55,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.btn_sach);
             this.panel2.Controls.Add(this.lb_thoigian);
             this.panel2.Controls.Add(this.button7);
             this.panel2.Controls.Add(this.btn_muontra);
@@ -65,16 +65,17 @@
             this.panel2.Size = new System.Drawing.Size(201, 537);
             this.panel2.TabIndex = 2;
             // 
-            // button2
+            // btn_sach
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(0, 197);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(201, 46);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Mượn Sách - Trả Sách";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_sach.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_sach.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_sach.Location = new System.Drawing.Point(0, 197);
+            this.btn_sach.Name = "btn_sach";
+            this.btn_sach.Size = new System.Drawing.Size(201, 46);
+            this.btn_sach.TabIndex = 9;
+            this.btn_sach.Text = "Thông Tin Sách";
+            this.btn_sach.UseVisualStyleBackColor = false;
+            this.btn_sach.Click += new System.EventHandler(this.btn_sach_Click);
             // 
             // lb_thoigian
             // 
@@ -105,6 +106,7 @@
             this.btn_muontra.TabIndex = 1;
             this.btn_muontra.Text = "Mượn Sách - Trả Sách";
             this.btn_muontra.UseVisualStyleBackColor = false;
+            this.btn_muontra.Click += new System.EventHandler(this.btn_muontra_Click);
             // 
             // panel4
             // 
@@ -114,6 +116,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(195, 147);
             this.panel4.TabIndex = 0;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // panel3
             // 
@@ -150,6 +153,6 @@
         private Panel panel4;
         private Label lb_thoigian;
         private Button button7;
-        private Button button2;
+        private Button btn_sach;
     }
 }
