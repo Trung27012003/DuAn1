@@ -39,6 +39,9 @@
             this.btn_muontra = new System.Windows.Forms.Button();
             this.pn_top = new System.Windows.Forms.Panel();
             this.ptb_daidien = new System.Windows.Forms.PictureBox();
+            this.btn_thethanhvien = new System.Windows.Forms.Button();
+            this.btn_nhanvien = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_daidien)).BeginInit();
             this.SuspendLayout();
@@ -56,6 +59,9 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.btn_nhanvien);
+            this.panel2.Controls.Add(this.btn_thethanhvien);
             this.panel2.Controls.Add(this.ptb_daidien);
             this.panel2.Controls.Add(this.btn_sach);
             this.panel2.Controls.Add(this.lb_thoigian);
@@ -90,6 +96,8 @@
             // 
             // button7
             // 
+            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button7.Location = new System.Drawing.Point(24, 442);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(144, 42);
@@ -127,6 +135,39 @@
             this.ptb_daidien.TabStop = false;
             this.ptb_daidien.Click += new System.EventHandler(this.ptb_daidien_Click);
             // 
+            // btn_thethanhvien
+            // 
+            this.btn_thethanhvien.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_thethanhvien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_thethanhvien.Location = new System.Drawing.Point(0, 241);
+            this.btn_thethanhvien.Name = "btn_thethanhvien";
+            this.btn_thethanhvien.Size = new System.Drawing.Size(201, 46);
+            this.btn_thethanhvien.TabIndex = 11;
+            this.btn_thethanhvien.Text = "Thẻ Thành Viên";
+            this.btn_thethanhvien.UseVisualStyleBackColor = false;
+            // 
+            // btn_nhanvien
+            // 
+            this.btn_nhanvien.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_nhanvien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_nhanvien.Location = new System.Drawing.Point(0, 285);
+            this.btn_nhanvien.Name = "btn_nhanvien";
+            this.btn_nhanvien.Size = new System.Drawing.Size(201, 46);
+            this.btn_nhanvien.TabIndex = 12;
+            this.btn_nhanvien.Text = "Nhân Viên";
+            this.btn_nhanvien.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Location = new System.Drawing.Point(0, 329);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(201, 46);
+            this.button3.TabIndex = 13;
+            this.button3.Text = "Thẻ Ngày";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -157,5 +198,8 @@
         private Button button7;
         private Button btn_sach;
         private PictureBox ptb_daidien;
+        private Button button3;
+        private Button btn_nhanvien;
+        private Button btn_thethanhvien;
     }
 }
