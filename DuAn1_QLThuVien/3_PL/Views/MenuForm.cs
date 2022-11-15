@@ -50,7 +50,7 @@ namespace _3_PL.Views
             OpenPanel(new SachForm());
         }
 
-        private void panel4_Paint(object sender, PaintEventArgs e)
+        private void ptb_daidien_Click(object sender, EventArgs e)
         {
             if (CurrentPanel != null)
             {

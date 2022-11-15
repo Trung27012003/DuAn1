@@ -37,9 +37,10 @@
             this.lb_thoigian = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.btn_muontra = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pn_top = new System.Windows.Forms.Panel();
+            this.ptb_daidien = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_daidien)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -55,11 +56,11 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.ptb_daidien);
             this.panel2.Controls.Add(this.btn_sach);
             this.panel2.Controls.Add(this.lb_thoigian);
             this.panel2.Controls.Add(this.button7);
             this.panel2.Controls.Add(this.btn_muontra);
-            this.panel2.Controls.Add(this.panel4);
             this.panel2.Location = new System.Drawing.Point(12, 12);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(201, 537);
@@ -108,22 +109,23 @@
             this.btn_muontra.UseVisualStyleBackColor = false;
             this.btn_muontra.Click += new System.EventHandler(this.btn_muontra_Click);
             // 
-            // panel4
+            // pn_top
             // 
-            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel4.Location = new System.Drawing.Point(3, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(195, 147);
-            this.panel4.TabIndex = 0;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            this.pn_top.Location = new System.Drawing.Point(219, 12);
+            this.pn_top.Name = "pn_top";
+            this.pn_top.Size = new System.Drawing.Size(849, 85);
+            this.pn_top.TabIndex = 3;
             // 
-            // panel3
+            // ptb_daidien
             // 
-            this.panel3.Location = new System.Drawing.Point(219, 12);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(849, 85);
-            this.panel3.TabIndex = 3;
+            this.ptb_daidien.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ptb_daidien.BackgroundImage")));
+            this.ptb_daidien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ptb_daidien.Location = new System.Drawing.Point(3, 3);
+            this.ptb_daidien.Name = "ptb_daidien";
+            this.ptb_daidien.Size = new System.Drawing.Size(195, 144);
+            this.ptb_daidien.TabIndex = 10;
+            this.ptb_daidien.TabStop = false;
+            this.ptb_daidien.Click += new System.EventHandler(this.ptb_daidien_Click);
             // 
             // MenuForm
             // 
@@ -133,13 +135,14 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1080, 561);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.pn_top);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pn_body);
             this.Name = "MenuForm";
             this.Text = "Menu";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_daidien)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -148,11 +151,11 @@
         private System.Windows.Forms.Timer timer1;
         private Panel pn_body;
         private Panel panel2;
-        private Panel panel3;
+        private Panel pn_top;
         private Button btn_muontra;
-        private Panel panel4;
         private Label lb_thoigian;
         private Button button7;
         private Button btn_sach;
+        private PictureBox ptb_daidien;
     }
 }
