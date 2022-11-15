@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lb_thoigian = new System.Windows.Forms.Label();
             this.ptb_anhdaidien = new System.Windows.Forms.PictureBox();
@@ -41,9 +42,9 @@
             // 
             this.groupBox1.Controls.Add(this.lb_thoigian);
             this.groupBox1.Controls.Add(this.ptb_anhdaidien);
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(265, 621);
+            this.groupBox1.Size = new System.Drawing.Size(265, 541);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "INFO";
@@ -51,7 +52,7 @@
             // lb_thoigian
             // 
             this.lb_thoigian.AutoSize = true;
-            this.lb_thoigian.Location = new System.Drawing.Point(12, 592);
+            this.lb_thoigian.Location = new System.Drawing.Point(12, 504);
             this.lb_thoigian.Name = "lb_thoigian";
             this.lb_thoigian.Size = new System.Drawing.Size(42, 20);
             this.lb_thoigian.TabIndex = 1;
@@ -59,6 +60,8 @@
             // 
             // ptb_anhdaidien
             // 
+            this.ptb_anhdaidien.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ptb_anhdaidien.BackgroundImage")));
+            this.ptb_anhdaidien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ptb_anhdaidien.Location = new System.Drawing.Point(6, 26);
             this.ptb_anhdaidien.Name = "ptb_anhdaidien";
             this.ptb_anhdaidien.Size = new System.Drawing.Size(253, 179);
@@ -73,7 +76,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1080, 621);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1080, 561);
             this.Controls.Add(this.groupBox1);
             this.Name = "MenuForm";
             this.Text = "Menu";
