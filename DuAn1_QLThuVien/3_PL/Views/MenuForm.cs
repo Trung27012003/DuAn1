@@ -22,5 +22,10 @@ namespace _3_PL.Views
         {
             lb_thoigian.Text = DateTime.Now.ToString("F");
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
