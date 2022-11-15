@@ -15,6 +15,12 @@ namespace _3_PL.Views
         public MenuForm()
         {
             InitializeComponent();
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lb_thoigian.Text = DateTime.Now.ToString("F");
         }
     }
 }

@@ -28,19 +28,67 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lb_thoigian = new System.Windows.Forms.Label();
+            this.ptb_anhdaidien = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_anhdaidien)).BeginInit();
             this.SuspendLayout();
             // 
-            // Menu
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lb_thoigian);
+            this.groupBox1.Controls.Add(this.ptb_anhdaidien);
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(265, 621);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "INFO";
+            // 
+            // lb_thoigian
+            // 
+            this.lb_thoigian.AutoSize = true;
+            this.lb_thoigian.Location = new System.Drawing.Point(12, 592);
+            this.lb_thoigian.Name = "lb_thoigian";
+            this.lb_thoigian.Size = new System.Drawing.Size(42, 20);
+            this.lb_thoigian.TabIndex = 1;
+            this.lb_thoigian.Text = "Time";
+            // 
+            // ptb_anhdaidien
+            // 
+            this.ptb_anhdaidien.Location = new System.Drawing.Point(6, 26);
+            this.ptb_anhdaidien.Name = "ptb_anhdaidien";
+            this.ptb_anhdaidien.Size = new System.Drawing.Size(253, 179);
+            this.ptb_anhdaidien.TabIndex = 0;
+            this.ptb_anhdaidien.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1080, 621);
-            this.Name = "Menu";
+            this.Controls.Add(this.groupBox1);
+            this.Name = "MenuForm";
             this.Text = "Menu";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_anhdaidien)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private GroupBox groupBox1;
+        private Label lb_thoigian;
+        private PictureBox ptb_anhdaidien;
+        private System.Windows.Forms.Timer timer1;
     }
 }
