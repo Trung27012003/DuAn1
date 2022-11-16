@@ -67,5 +67,7 @@ namespace _3_PL.Views
         {
             OpenPanel(new TheTVForm());
         }
+
+       
     }
 }

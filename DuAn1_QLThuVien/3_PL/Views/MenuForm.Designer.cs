@@ -44,6 +44,10 @@
             this.btn_sach = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.btn_muontra = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pn_body.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -60,6 +64,10 @@
             this.pn_body.AutoSize = true;
             this.pn_body.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pn_body.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pn_body.Controls.Add(this.linkLabel1);
+            this.pn_body.Controls.Add(this.label9);
+            this.pn_body.Controls.Add(this.label8);
+            this.pn_body.Controls.Add(this.label3);
             this.pn_body.Controls.Add(this.label2);
             this.pn_body.Controls.Add(this.pictureBox1);
             this.pn_body.Controls.Add(this.label1);
@@ -205,6 +213,47 @@
             this.btn_muontra.UseVisualStyleBackColor = false;
             this.btn_muontra.Click += new System.EventHandler(this.btn_muontra_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(46, 417);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(270, 28);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Chủ sở hữu : Nhóm 5 IT17203";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(46, 498);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(73, 28);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Email : ";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(46, 458);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(249, 28);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "Địa chỉ : Tòa P P208 , Hà Lội";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.linkLabel1.Location = new System.Drawing.Point(125, 498);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(236, 28);
+            this.linkLabel1.TabIndex = 17;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "nhom5hoclai@gmail.com";
+            // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -241,5 +290,9 @@
         private PictureBox pictureBox1;
         private Label label1;
         private Label label2;
+        private LinkLabel linkLabel1;
+        private Label label9;
+        private Label label8;
+        private Label label3;
     }
 }
