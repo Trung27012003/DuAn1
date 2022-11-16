@@ -51,6 +51,7 @@
             // 
             // pn_body
             // 
+            this.pn_body.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pn_body.AutoSize = true;
             this.pn_body.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pn_body.Location = new System.Drawing.Point(196, -1);
@@ -77,7 +78,7 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button3.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.Location = new System.Drawing.Point(0, 329);
             this.button3.Name = "button3";
@@ -88,7 +89,7 @@
             // 
             // btn_nhanvien
             // 
-            this.btn_nhanvien.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_nhanvien.BackColor = System.Drawing.SystemColors.Info;
             this.btn_nhanvien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_nhanvien.Location = new System.Drawing.Point(0, 285);
             this.btn_nhanvien.Name = "btn_nhanvien";
@@ -99,7 +100,7 @@
             // 
             // btn_thethanhvien
             // 
-            this.btn_thethanhvien.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_thethanhvien.BackColor = System.Drawing.Color.IndianRed;
             this.btn_thethanhvien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_thethanhvien.Location = new System.Drawing.Point(0, 241);
             this.btn_thethanhvien.Name = "btn_thethanhvien";
