@@ -57,5 +57,10 @@ namespace _3_PL.Views
                 CurrentPanel.Close();
             }
         }
+
+        private void btn_nhanvien_Click(object sender, EventArgs e)
+        {
+            OpenPanel(new TheTVForm());
+        }
     }
 }

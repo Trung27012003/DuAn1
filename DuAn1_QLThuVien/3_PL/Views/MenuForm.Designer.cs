@@ -34,8 +34,8 @@
             this.pn_body = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
+            this.btn_thetv = new System.Windows.Forms.Button();
             this.btn_nhanvien = new System.Windows.Forms.Button();
-            this.btn_thethanhvien = new System.Windows.Forms.Button();
             this.ptb_daidien = new System.Windows.Forms.PictureBox();
             this.btn_sach = new System.Windows.Forms.Button();
             this.lb_thoigian = new System.Windows.Forms.Label();
@@ -63,8 +63,8 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.btn_thetv);
             this.panel2.Controls.Add(this.btn_nhanvien);
-            this.panel2.Controls.Add(this.btn_thethanhvien);
             this.panel2.Controls.Add(this.ptb_daidien);
             this.panel2.Controls.Add(this.btn_sach);
             this.panel2.Controls.Add(this.lb_thoigian);
@@ -87,27 +87,28 @@
             this.button3.Text = "Thẻ Ngày";
             this.button3.UseVisualStyleBackColor = false;
             // 
+            // btn_thetv
+            // 
+            this.btn_thetv.BackColor = System.Drawing.SystemColors.Info;
+            this.btn_thetv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_thetv.Location = new System.Drawing.Point(0, 285);
+            this.btn_thetv.Name = "btn_thetv";
+            this.btn_thetv.Size = new System.Drawing.Size(206, 46);
+            this.btn_thetv.TabIndex = 12;
+            this.btn_thetv.Text = "Thẻ Thành Viên";
+            this.btn_thetv.UseVisualStyleBackColor = false;
+            // 
             // btn_nhanvien
             // 
-            this.btn_nhanvien.BackColor = System.Drawing.SystemColors.Info;
+            this.btn_nhanvien.BackColor = System.Drawing.Color.IndianRed;
             this.btn_nhanvien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_nhanvien.Location = new System.Drawing.Point(0, 285);
+            this.btn_nhanvien.Location = new System.Drawing.Point(0, 241);
             this.btn_nhanvien.Name = "btn_nhanvien";
             this.btn_nhanvien.Size = new System.Drawing.Size(206, 46);
-            this.btn_nhanvien.TabIndex = 12;
+            this.btn_nhanvien.TabIndex = 11;
             this.btn_nhanvien.Text = "Nhân Viên";
             this.btn_nhanvien.UseVisualStyleBackColor = false;
-            // 
-            // btn_thethanhvien
-            // 
-            this.btn_thethanhvien.BackColor = System.Drawing.Color.IndianRed;
-            this.btn_thethanhvien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_thethanhvien.Location = new System.Drawing.Point(0, 241);
-            this.btn_thethanhvien.Name = "btn_thethanhvien";
-            this.btn_thethanhvien.Size = new System.Drawing.Size(206, 46);
-            this.btn_thethanhvien.TabIndex = 11;
-            this.btn_thethanhvien.Text = "Thẻ Thành Viên";
-            this.btn_thethanhvien.UseVisualStyleBackColor = false;
+            this.btn_nhanvien.Click += new System.EventHandler(this.btn_nhanvien_Click);
             // 
             // ptb_daidien
             // 
@@ -195,7 +196,7 @@
         private Button btn_sach;
         private PictureBox ptb_daidien;
         private Button button3;
+        private Button btn_thetv;
         private Button btn_nhanvien;
-        private Button btn_thethanhvien;
     }
 }

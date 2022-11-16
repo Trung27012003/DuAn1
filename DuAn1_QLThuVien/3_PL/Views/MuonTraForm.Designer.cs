@@ -176,7 +176,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(712, 215);
+            this.button1.Location = new System.Drawing.Point(623, 218);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(130, 49);
             this.button1.TabIndex = 16;
@@ -200,7 +200,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(623, 179);
+            this.label6.Location = new System.Drawing.Point(618, 179);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(66, 20);
             this.label6.TabIndex = 12;
@@ -209,7 +209,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(623, 133);
+            this.label5.Location = new System.Drawing.Point(606, 133);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(87, 20);
             this.label5.TabIndex = 11;
@@ -226,14 +226,14 @@
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(712, 172);
+            this.dateTimePicker2.Location = new System.Drawing.Point(696, 172);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(224, 27);
             this.dateTimePicker2.TabIndex = 9;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(712, 126);
+            this.dateTimePicker1.Location = new System.Drawing.Point(696, 128);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(224, 27);
             this.dateTimePicker1.TabIndex = 8;
@@ -249,14 +249,14 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(712, 81);
+            this.textBox2.Location = new System.Drawing.Point(695, 81);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(224, 27);
             this.textBox2.TabIndex = 5;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(712, 36);
+            this.textBox1.Location = new System.Drawing.Point(695, 36);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(224, 27);
             this.textBox1.TabIndex = 4;
@@ -314,7 +314,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(950, 562);
+            this.ClientSize = new System.Drawing.Size(937, 562);
             this.Controls.Add(this.tabControl1);
             this.Name = "MuonTraForm";
             this.Text = "MuonTraForm";
