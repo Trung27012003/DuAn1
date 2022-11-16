@@ -55,9 +55,9 @@
             this.pn_body.AutoSize = true;
             this.pn_body.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pn_body.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pn_body.Location = new System.Drawing.Point(196, -1);
+            this.pn_body.Location = new System.Drawing.Point(204, -1);
             this.pn_body.Name = "pn_body";
-            this.pn_body.Size = new System.Drawing.Size(884, 562);
+            this.pn_body.Size = new System.Drawing.Size(899, 562);
             this.pn_body.TabIndex = 1;
             // 
             // panel2
@@ -173,9 +173,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1080, 561);
+            this.ClientSize = new System.Drawing.Size(1099, 561);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pn_body);
             this.Name = "MenuForm";
