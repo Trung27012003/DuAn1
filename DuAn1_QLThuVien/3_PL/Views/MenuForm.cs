@@ -32,7 +32,7 @@ namespace _3_PL.Views
             CurrentPanel = panel;
             panel.TopLevel = false;
             panel.FormBorderStyle = FormBorderStyle.None;
-            panel.Dock = DockStyle.Fill;
+            panel.Dock = DockStyle.None;
             pn_body.Controls.Add(panel);
             pn_body.Tag = panel;
             panel.BringToFront();
@@ -59,6 +59,11 @@ namespace _3_PL.Views
         }
 
         private void btn_nhanvien_Click(object sender, EventArgs e)
+        {
+            OpenPanel(new TheNVForm());
+        }
+
+        private void btn_thetv_Click(object sender, EventArgs e)
         {
             OpenPanel(new TheTVForm());
         }

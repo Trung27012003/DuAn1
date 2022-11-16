@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace _3_PL.Views
 {
-    public partial class TheTVForm : Form
+    public partial class TheNVForm : Form
     {
-        public TheTVForm()
+        public TheNVForm()
         {
             InitializeComponent();
         }

@@ -53,6 +53,7 @@
             // 
             this.pn_body.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pn_body.AutoSize = true;
+            this.pn_body.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pn_body.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pn_body.Location = new System.Drawing.Point(196, -1);
             this.pn_body.Name = "pn_body";
@@ -97,6 +98,7 @@
             this.btn_thetv.TabIndex = 12;
             this.btn_thetv.Text = "Thẻ Thành Viên";
             this.btn_thetv.UseVisualStyleBackColor = false;
+            this.btn_thetv.Click += new System.EventHandler(this.btn_thetv_Click);
             // 
             // btn_nhanvien
             // 
