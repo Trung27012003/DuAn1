@@ -32,21 +32,22 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuForm));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pn_body = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lb_thoigian = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.btn_thetv = new System.Windows.Forms.Button();
             this.btn_nhanvien = new System.Windows.Forms.Button();
             this.ptb_daidien = new System.Windows.Forms.PictureBox();
             this.btn_sach = new System.Windows.Forms.Button();
-            this.lb_thoigian = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.btn_muontra = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pn_body.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_daidien)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -59,12 +60,53 @@
             this.pn_body.AutoSize = true;
             this.pn_body.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pn_body.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pn_body.Controls.Add(this.label2);
             this.pn_body.Controls.Add(this.pictureBox1);
             this.pn_body.Controls.Add(this.label1);
+            this.pn_body.Controls.Add(this.lb_thoigian);
             this.pn_body.Location = new System.Drawing.Point(204, -1);
             this.pn_body.Name = "pn_body";
-            this.pn_body.Size = new System.Drawing.Size(899, 562);
+            this.pn_body.Size = new System.Drawing.Size(943, 562);
             this.pn_body.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(390, 211);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 20);
+            this.label2.TabIndex = 9;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(315, 103);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(230, 71);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Algerian", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(219, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(399, 66);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Thư Viện FPT";
+            // 
+            // lb_thoigian
+            // 
+            this.lb_thoigian.AutoSize = true;
+            this.lb_thoigian.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lb_thoigian.Location = new System.Drawing.Point(622, 533);
+            this.lb_thoigian.Name = "lb_thoigian";
+            this.lb_thoigian.Size = new System.Drawing.Size(50, 20);
+            this.lb_thoigian.TabIndex = 8;
+            this.lb_thoigian.Text = "label1";
             // 
             // panel2
             // 
@@ -74,7 +116,6 @@
             this.panel2.Controls.Add(this.btn_nhanvien);
             this.panel2.Controls.Add(this.ptb_daidien);
             this.panel2.Controls.Add(this.btn_sach);
-            this.panel2.Controls.Add(this.lb_thoigian);
             this.panel2.Controls.Add(this.button7);
             this.panel2.Controls.Add(this.btn_muontra);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
@@ -141,16 +182,6 @@
             this.btn_sach.UseVisualStyleBackColor = false;
             this.btn_sach.Click += new System.EventHandler(this.btn_sach_Click);
             // 
-            // lb_thoigian
-            // 
-            this.lb_thoigian.AutoSize = true;
-            this.lb_thoigian.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lb_thoigian.Location = new System.Drawing.Point(12, 535);
-            this.lb_thoigian.Name = "lb_thoigian";
-            this.lb_thoigian.Size = new System.Drawing.Size(43, 17);
-            this.lb_thoigian.TabIndex = 8;
-            this.lb_thoigian.Text = "label1";
-            // 
             // button7
             // 
             this.button7.BackColor = System.Drawing.SystemColors.Highlight;
@@ -174,43 +205,22 @@
             this.btn_muontra.UseVisualStyleBackColor = false;
             this.btn_muontra.Click += new System.EventHandler(this.btn_muontra_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Algerian", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(219, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(399, 66);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Thư Viện FPT";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(301, 96);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(230, 62);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1099, 561);
+            this.ClientSize = new System.Drawing.Size(1148, 561);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pn_body);
             this.Name = "MenuForm";
             this.Text = "Menu";
             this.pn_body.ResumeLayout(false);
             this.pn_body.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_daidien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_daidien)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,5 +240,6 @@
         private Button btn_nhanvien;
         private PictureBox pictureBox1;
         private Label label1;
+        private Label label2;
     }
 }
