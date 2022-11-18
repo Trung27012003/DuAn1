@@ -68,6 +68,9 @@ namespace _3_PL.Views
             OpenPanel(new TheTVForm());
         }
 
-       
+        private void btn_thengay_Click(object sender, EventArgs e)
+        {
+            OpenPanel(new TheNgayForm());
+        }
     }
 }
