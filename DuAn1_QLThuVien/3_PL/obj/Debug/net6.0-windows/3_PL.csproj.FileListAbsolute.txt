@@ -107,3 +107,4 @@ C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.SachForm.resources
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.TheTVForm.resources
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.TheNVForm.resources
+C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.TheNgayForm.resources
