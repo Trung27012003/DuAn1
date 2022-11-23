@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace _3_PL.Views
 {
-    public partial class Menu : Form
+    public partial class MuonTraForm : Form
     {
-        public Menu()
+        public MuonTraForm()
         {
             InitializeComponent();
+        }
+
+        private void MuonTraForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
