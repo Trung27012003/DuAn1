@@ -8,5 +8,6 @@ namespace _2_BUS
 {
     internal class Class1
     {
+        //trungdb
     }
 }
