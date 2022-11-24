@@ -37,7 +37,7 @@
             // tbt_taikhoan
             // 
             this.tbt_taikhoan.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.tbt_taikhoan.Location = new System.Drawing.Point(346, 207);
+            this.tbt_taikhoan.Location = new System.Drawing.Point(291, 161);
             this.tbt_taikhoan.Name = "tbt_taikhoan";
             this.tbt_taikhoan.PlaceholderText = "Nhập Tài Khoản";
             this.tbt_taikhoan.Size = new System.Drawing.Size(386, 30);
@@ -46,7 +46,7 @@
             // tbt_matkau
             // 
             this.tbt_matkau.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.tbt_matkau.Location = new System.Drawing.Point(346, 281);
+            this.tbt_matkau.Location = new System.Drawing.Point(291, 235);
             this.tbt_matkau.Name = "tbt_matkau";
             this.tbt_matkau.PasswordChar = '*';
             this.tbt_matkau.PlaceholderText = "Nhập Mật Khẩu";
@@ -56,7 +56,7 @@
             // btn_dangnhap
             // 
             this.btn_dangnhap.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_dangnhap.Location = new System.Drawing.Point(441, 358);
+            this.btn_dangnhap.Location = new System.Drawing.Point(386, 315);
             this.btn_dangnhap.Name = "btn_dangnhap";
             this.btn_dangnhap.Size = new System.Drawing.Size(213, 80);
             this.btn_dangnhap.TabIndex = 2;
@@ -70,7 +70,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1047, 625);
+            this.ClientSize = new System.Drawing.Size(936, 502);
             this.Controls.Add(this.btn_dangnhap);
             this.Controls.Add(this.tbt_matkau);
             this.Controls.Add(this.tbt_taikhoan);
