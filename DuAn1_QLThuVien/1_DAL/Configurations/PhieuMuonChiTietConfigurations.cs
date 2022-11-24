@@ -22,6 +22,7 @@ namespace _1_DAL.Configurations
             buider.Property(p => p.SoLuong).HasColumnName("SoLuong").HasColumnType("nvarchar(100)").IsRequired();
             buider.Property(p => p.DieuKien).HasColumnName("DieuKien").HasColumnType("nvarchar(100)").IsRequired();
             buider.Property(p => p.GhiChu).HasColumnName("GhiChu").HasColumnType("nvarchar(100)").IsRequired();
+            buider.Property(p => p.TienTheChan).HasColumnName("TienTheChan").HasColumnType("Money").IsRequired();
 
             buider.HasOne(p => p.Sach).WithMany().HasForeignKey(p => p.IdSach);
             buider.HasOne(p=>p.PhieuMuon).WithMany().HasForeignKey(p => p.IdPM);
