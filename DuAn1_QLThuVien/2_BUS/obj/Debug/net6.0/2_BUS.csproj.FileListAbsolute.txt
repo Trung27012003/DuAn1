@@ -58,3 +58,14 @@ F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\2_BU
 F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\2_BUS\obj\Debug\net6.0\refint\2_BUS.dll
 F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\2_BUS\obj\Debug\net6.0\2_BUS.pdb
 F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\2_BUS\obj\Debug\net6.0\ref\2_BUS.dll
+D:\GitClone\DuAn1_QLThuVien\2_BUS\bin\Debug\net6.0\1_DAL.dll
+D:\GitClone\DuAn1_QLThuVien\2_BUS\bin\Debug\net6.0\1_DAL.pdb
+D:\GitClone\DuAn1_QLThuVien\2_BUS\obj\Debug\net6.0\2_BUS.csproj.AssemblyReference.cache
+D:\GitClone\DuAn1_QLThuVien\2_BUS\obj\Debug\net6.0\2_BUS.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitClone\DuAn1_QLThuVien\2_BUS\obj\Debug\net6.0\2_BUS.AssemblyInfoInputs.cache
+D:\GitClone\DuAn1_QLThuVien\2_BUS\obj\Debug\net6.0\2_BUS.AssemblyInfo.cs
+D:\GitClone\DuAn1_QLThuVien\2_BUS\obj\Debug\net6.0\2_BUS.csproj.CoreCompileInputs.cache
+D:\GitClone\DuAn1_QLThuVien\2_BUS\obj\Debug\net6.0\2_BUS.csproj.CopyComplete
+D:\GitClone\DuAn1_QLThuVien\2_BUS\obj\Debug\net6.0\2_BUS.dll
+D:\GitClone\DuAn1_QLThuVien\2_BUS\obj\Debug\net6.0\refint\2_BUS.dll
+D:\GitClone\DuAn1_QLThuVien\2_BUS\obj\Debug\net6.0\2_BUS.pdb
