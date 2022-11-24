@@ -259,11 +259,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1148, 561);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pn_body);
+            this.MaximizeBox = false;
             this.Name = "MenuForm";
             this.Text = "Menu";
             this.pn_body.ResumeLayout(false);
