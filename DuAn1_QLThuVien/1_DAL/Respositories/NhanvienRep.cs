@@ -18,12 +18,9 @@ namespace _1_DAL.Respositories
         {
             _context = new QL_ThuVienDbContext();
         }
-
         public bool AddNV(NhanVien obj)
         {
-
             if (obj == null) return false;
-            obj.Id = Guid.NewGuid();
             _context.nhanViens.Add(obj);
             _context.SaveChanges();
             return true;
@@ -34,11 +31,10 @@ namespace _1_DAL.Respositories
             return _context.nhanViens.ToList();
         }
 
-        public bool RemoveNV(NhanVien obj)
+        public bool RemoveNV(Guid obj)
         {
             if (obj == null) return false;
-            var tempobj = _context.nhanViens.FirstOrDefault(c => c.Id == obj.Id);
-
+            var tempobj = _context.nhanViens.FirstOrDefault(c => c.Id == obj);
             _context.Remove(tempobj);
             _context.SaveChanges();
             return true;

@@ -11,7 +11,7 @@ namespace _1_DAL.IRespositories
     {
         bool AddNV(ChucVu x);
 
-        bool RemoveNV(ChucVu x);
+        bool RemoveNV(Guid x);
 
         bool UpdateNV(ChucVu x);
 

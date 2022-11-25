@@ -10,7 +10,7 @@ namespace _1_DAL.IRespositories
     {
         bool AddPT(PhieuTra x);
 
-        bool RemovePT(PhieuTra x);
+        bool RemovePT(Guid x);
 
         bool UpdatePT(PhieuTra x);
 

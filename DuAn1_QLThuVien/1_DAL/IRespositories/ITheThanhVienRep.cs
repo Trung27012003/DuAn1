@@ -10,7 +10,7 @@ namespace _1_DAL.IRespositories
     {
         bool AddTTV(TheThanhVien x);
 
-        bool RemoveTTV(TheThanhVien x);
+        bool RemoveTTV(Guid x);
 
         bool UpdateTTV(TheThanhVien x);
 

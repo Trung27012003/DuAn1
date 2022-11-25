@@ -10,7 +10,7 @@ namespace _1_DAL.IRespositories
     {
         bool AddTN(TheNgay x);
 
-        bool RemoveTN(TheNgay x);
+        bool RemoveTN(Guid x);
 
         bool UpdateTN(TheNgay x);
 

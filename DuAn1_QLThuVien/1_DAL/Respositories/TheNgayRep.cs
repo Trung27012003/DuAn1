@@ -29,7 +29,7 @@ namespace _1_DAL.Respositories
             return _context.theNgays.ToList();
         }
 
-        public bool RemoveTN(TheNgay x)
+        public bool RemoveTN(Guid x)
         {
             throw new NotImplementedException();
         }

@@ -10,7 +10,7 @@ namespace _1_DAL.IRespositories
     {
         bool AddNV(NhanVien x);
 
-        bool RemoveNV(NhanVien x);
+        bool RemoveNV(Guid x);
 
         bool UpdateNV(NhanVien x);
 
