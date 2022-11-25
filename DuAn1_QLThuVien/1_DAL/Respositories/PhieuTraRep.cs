@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _1_DAL.Respositories
 {
-    internal class TheThanhVienRes
+    internal class PhieuTraRep
     {
     }
 }
