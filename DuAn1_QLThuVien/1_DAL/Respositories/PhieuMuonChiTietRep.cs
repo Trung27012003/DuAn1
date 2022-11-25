@@ -1,4 +1,5 @@
-﻿using _1_DAL.IRespositories;
+﻿using _1_DAL.Context;
+using _1_DAL.IRespositories;
 using _1_DAL.Models;
 using System;
 using System.Collections.Generic;
@@ -10,24 +11,49 @@ namespace _1_DAL.Respositories
 {
     public class PhieuMuonChiTietRep : IPhieuMuonCTRep
     {
-        public bool AddPMCT(PhieuMuonChiTiet x)
+        QL_ThuVienDbContext _context;
+        public PhieuMuonChiTietRep()
         {
-            throw new NotImplementedException();
+            _context = new QL_ThuVienDbContext();
+        }
+        public bool AddPMCT(PhieuMuonChiTiet obj)
+        {
+            if (obj == null) return false;
+            obj.Id = Guid.NewGuid();
+            _context.phieuMuonChiTiets.Add(obj);
+            _context.SaveChanges();
+            return true;
         }
 
         public List<PhieuMuonChiTiet> GetAllPMCT()
         {
-            throw new NotImplementedException();
+            return _context.phieuMuonChiTiets.ToList();
         }
 
-        public bool RemovePMCT(PhieuMuonChiTiet x)
+        public bool RemovePMCT(PhieuMuonChiTiet obj)
         {
-            throw new NotImplementedException();
+            if (obj == null) return false;
+            var tempobj = _context.nhanViens.FirstOrDefault(c => c.Id == obj.Id);
+
+            _context.Remove(tempobj);
+            _context.SaveChanges();
+            return true;
         }
 
-        public bool UpdatePMCT(PhieuMuonChiTiet x)
+        public bool UpdatePMCT(PhieuMuonChiTiet obj)
         {
-            throw new NotImplementedException();
+            if (obj == null) return false;
+            var tempobj = _context.phieuMuonChiTiets.FirstOrDefault(c => c.Id == obj.Id);
+            tempobj.IdSach = obj.IdSach;
+            tempobj.IdPM = obj.IdPM;
+            tempobj.SoLuong = obj.SoLuong;
+            tempobj.TienTheChan = obj.TienTheChan;
+            tempobj.GhiChu = obj.GhiChu;
+            tempobj.DieuKien = obj.DieuKien;
+            
+            _context.Update(tempobj);
+            _context.SaveChanges();
+            return true;
         }
     }
 }

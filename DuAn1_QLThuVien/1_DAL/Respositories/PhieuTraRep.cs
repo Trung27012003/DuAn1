@@ -1,4 +1,5 @@
-﻿using _1_DAL.IRespositories;
+﻿using _1_DAL.Context;
+using _1_DAL.IRespositories;
 using _1_DAL.Models;
 using System;
 using System.Collections.Generic;
@@ -8,26 +9,48 @@ using System.Threading.Tasks;
 
 namespace _1_DAL.Respositories
 {
-    internal class PhieuTraRep : IPhieuTraRep
+    public class PhieuTraRep : IPhieuTraRep
     {
-        public bool AddPT(PhieuTra x)
+        QL_ThuVienDbContext _context;
+        public PhieuTraRep()
         {
-            throw new NotImplementedException();
+            _context = new QL_ThuVienDbContext();
+        }
+        public bool AddPT(PhieuTra obj)
+        {
+            if (obj == null) return false;
+            obj.Id = Guid.NewGuid();
+            _context.phieuTras.Add(obj);
+            _context.SaveChanges();
+            return true;
         }
 
         public List<PhieuTra> GetAllPT()
         {
-            throw new NotImplementedException();
+            return _context.phieuTras.ToList();
         }
 
-        public bool RemovePT(PhieuTra x)
+        public bool RemovePT(PhieuTra obj)
         {
-            throw new NotImplementedException();
+            if (obj == null) return false;
+            var tempobj = _context.phieuTras.FirstOrDefault(c => c.Id == obj.Id);
+
+            _context.Remove(tempobj);
+            _context.SaveChanges();
+            return true;
         }
 
-        public bool UpdatePT(PhieuTra x)
+        public bool UpdatePT(PhieuTra obj)
         {
-            throw new NotImplementedException();
+            if (obj == null) return false;
+            var tempobj = _context.phieuTras.FirstOrDefault(c => c.Id == obj.Id);
+            tempobj.NgayTra = obj.NgayTra;
+            tempobj.GhiChu = obj.GhiChu;
+            tempobj.IdPM = obj.IdPM;
+
+            _context.Update(tempobj);
+            _context.SaveChanges();
+            return true;
         }
     }
 }
