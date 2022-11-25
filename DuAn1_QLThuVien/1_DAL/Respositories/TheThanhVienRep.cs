@@ -30,11 +30,5 @@ namespace _1_DAL.Respositories
         {
             throw new NotImplementedException();
         }
-
-        public class TheThanhVienRes
-        {
-
-
-        }
     }
 }
