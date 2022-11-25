@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace _1_DAL.Respositories
 {
+<<<<<<< HEAD
     internal class TheThanhVienRep : ITheThanhVienRep
     {
         public bool AddTTV(TheThanhVien x)
@@ -29,5 +30,10 @@ namespace _1_DAL.Respositories
         {
             throw new NotImplementedException();
         }
+=======
+    public class TheThanhVienRes
+    {
+
+>>>>>>> 7887583e9c5990208a09759951b272b41a3a5950
     }
 }
