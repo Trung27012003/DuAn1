@@ -22,6 +22,22 @@ namespace _1_DAL.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("_1_DAL.Models.Account", b =>
+                {
+                    b.Property<string>("UserName")
+                        .HasColumnType("nvarchar(100)")
+                        .HasColumnName("UserName");
+
+                    b.Property<string>("PassWord")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasColumnName("PassWord");
+
+                    b.HasKey("UserName");
+
+                    b.ToTable("Account", (string)null);
+                });
+
             modelBuilder.Entity("_1_DAL.Models.ChucVu", b =>
                 {
                     b.Property<Guid>("Id")
@@ -141,6 +157,10 @@ namespace _1_DAL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(100)")
                         .HasColumnName("SoLuong");
+
+                    b.Property<decimal>("TienTheChan")
+                        .HasColumnType("Money")
+                        .HasColumnName("TienTheChan");
 
                     b.HasKey("Id");
 
