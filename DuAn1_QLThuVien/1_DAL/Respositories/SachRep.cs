@@ -19,7 +19,9 @@ namespace _1_DAL.Respositories
         public bool AddSach(Sach obj)
         {
             if (obj == null) return false;
+
             obj.Id = Guid.NewGuid();
+
             _context.sachs.Add(obj);
             _context.SaveChanges();
             return true;
@@ -30,10 +32,17 @@ namespace _1_DAL.Respositories
             return _context.sachs.ToList();
         }
 
+
         public bool RemoveSach(Sach obj)
         {
-            if(obj == null) return false;
+            if (obj == null) return false;
             var tempobj = _context.sachs.FirstOrDefault(c => c.Id == obj.Id);
+
+        }
+        public bool RemoveSach(Guid  obj)
+        {
+            if (obj == null) return false;
+            var tempobj = _context.sachs.FirstOrDefault(c => c.Id == obj);
 
             _context.Remove(tempobj);
             _context.SaveChanges();
@@ -42,15 +51,23 @@ namespace _1_DAL.Respositories
 
         public bool UpdateSach(Sach obj)
         {
+
             if (obj == null) return false;
             var tempobj = _context.sachs.FirstOrDefault(c => c.Id == obj.Id);
             tempobj.TL = obj.TL;
             tempobj.TG = obj.TG;
+
             tempobj.Name = obj.Name;
             tempobj.SoLuong = obj.SoLuong;
             tempobj.GiaTien = obj.GiaTien;
             tempobj.NXB = obj.NXB;
             tempobj.GhiChu = obj.GhiChu;
+
+
+            tempobj.NXB = obj.NXB;
+            tempobj.Name = obj.Name;
+            tempobj.SoLuong = obj.SoLuong;
+            tempobj.GiaTien = obj.GiaTien;
 
             _context.Update(tempobj);
             _context.SaveChanges();

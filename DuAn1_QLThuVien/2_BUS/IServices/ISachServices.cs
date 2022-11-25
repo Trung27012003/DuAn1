@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2_BUS.Services
+namespace _2_BUS.IServices
 {
-    internal class TheNgayServices
+    internal interface ISachServices
     {
     }
 }

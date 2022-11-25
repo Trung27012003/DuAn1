@@ -19,7 +19,9 @@ namespace _1_DAL.Respositories
         public bool AddPT(PhieuTra obj)
         {
             if (obj == null) return false;
+
             obj.Id = Guid.NewGuid();
+
             _context.phieuTras.Add(obj);
             _context.SaveChanges();
             return true;
@@ -30,15 +32,23 @@ namespace _1_DAL.Respositories
             return _context.phieuTras.ToList();
         }
 
+
         public bool RemovePT(PhieuTra obj)
         {
             if (obj == null) return false;
             var tempobj = _context.phieuTras.FirstOrDefault(c => c.Id == obj.Id);
 
+        }
+        public bool RemovePT(Guid obj)
+        {
+            if (obj == null) return false;
+            var tempobj = _context.phieuTras.FirstOrDefault(c => c.Id == obj);
+
             _context.Remove(tempobj);
             _context.SaveChanges();
             return true;
         }
+
 
         public bool UpdatePT(PhieuTra obj)
         {
@@ -48,9 +58,19 @@ namespace _1_DAL.Respositories
             tempobj.GhiChu = obj.GhiChu;
             tempobj.IdPM = obj.IdPM;
 
-            _context.Update(tempobj);
-            _context.SaveChanges();
-            return true;
+
+            public bool UpdatePT(PhieuTra obj)
+            {
+                if (obj == null) return false;
+                var tempobj = _context.phieuTras.FirstOrDefault(c => c.Id == obj.Id);
+                tempobj.IdPM = obj.IdPM;
+                tempobj.NgayTra = obj.NgayTra;
+                tempobj.GhiChu = obj.GhiChu;
+
+                _context.Update(tempobj);
+                _context.SaveChanges();
+                return true;
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using _1_DAL.IRespositories;
+﻿using _1_DAL.Context;
+using _1_DAL.IRespositories;
 using _1_DAL.Models;
 using System;
 using System.Collections.Generic;
@@ -10,24 +11,46 @@ namespace _1_DAL.Respositories
 {
     public class PhieuTraChiTietRep : IPhieuTraCTRep
     {
-        public bool AddPTCT(PhieuTraChiTiet x)
+        QL_ThuVienDbContext _context;
+        public PhieuTraChiTietRep()
         {
-            throw new NotImplementedException();
-        }
+            _context = new QL_ThuVienDbContext();
 
+        }
+        public bool AddPTCT(PhieuTraChiTiet obj)
+        {
+            if (obj == null) return false;
+            _context.phieuTraChiTiets.Add(obj);
+            _context.SaveChanges();
+            return true;
+        }
         public List<PhieuTraChiTiet> GetAllPTCT()
         {
-            throw new NotImplementedException();
+            return _context.phieuTraChiTiets.ToList();
         }
 
-        public bool RemovePTCT(PhieuTraChiTiet x)
+        public bool RemovePTCT(Guid obj)
         {
-            throw new NotImplementedException();
+            if (obj == null) return false;
+            var tempobj = _context.phieuTraChiTiets.FirstOrDefault(c => c.Id == obj);
+            _context.Remove(tempobj);
+            _context.SaveChanges();
+            return true;
         }
 
-        public bool UpdatePTCT(PhieuTraChiTiet x)
+        public bool UpdatePTCT(PhieuTraChiTiet obj)
         {
-            throw new NotImplementedException();
+
+            if (obj == null) return false;
+            var tempobj = _context.phieuTraChiTiets.FirstOrDefault(c => c.Id == obj.Id);
+            tempobj.IdPT = obj.IdPT;
+            tempobj.IdSach = obj.IdSach;
+            tempobj.SoLuong = obj.SoLuong;
+            tempobj.TinhTrang = obj.TinhTrang;
+            tempobj.GhiChu = obj.GhiChu;
+            _context.Update(tempobj);
+            _context.SaveChanges();
+            return true;
         }
     }
 }

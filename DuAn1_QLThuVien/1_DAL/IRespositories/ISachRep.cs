@@ -10,7 +10,7 @@ namespace _1_DAL.IRespositories
     {
         bool AddSach(Sach x);
 
-        bool RemoveSach(Sach x);
+        bool RemoveSach(Guid x);
 
         bool UpdateSach(Sach x);
 

@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+
 using System.Threading.Tasks;
 using _1_DAL.Models;
 namespace _1_DAL.IRespositories
 {
     public interface ITheThanhVienRep
     {
-        bool AddTTV(TheThanhVien x);
+        bool AddTTV(TheThanhVien obj);
 
-        bool RemoveTTV(TheThanhVien x);
+        bool RemoveTTV(Guid obj);
 
-        bool UpdateTTV(TheThanhVien x);
+        bool UpdateTTV(TheThanhVien obj);
 
         List<TheThanhVien> GetAllTTVs();
     }

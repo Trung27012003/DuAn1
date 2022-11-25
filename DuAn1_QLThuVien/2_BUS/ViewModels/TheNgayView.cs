@@ -13,6 +13,6 @@ namespace _2_BUS.ViewModels
         public DateTime? StartTime { get; set; }
         public DateTime? EndTime { get; set; }
         public string? GhiChu { get; set; }
-        public virtual NhanVien NhanVien { get; set; }
+        
     }
 }

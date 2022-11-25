@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace _2_BUS.ViewModels
 {
-    internal class ChucVuView
+    public class ChucVuView
     {
+        public Guid Id { get; set; }
+        public string Name { get; set; }
     }
 }
