@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _2_BUS.Services
 {
-    internal class TheNgayServices
+    internal class NhanVienServices
     {
     }
 }
