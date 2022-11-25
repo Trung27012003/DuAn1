@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using _1_DAL.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,15 @@ namespace _1_DAL.Context
         {
 
         }
-
+        public DbSet<TheThanhVien> theThanhViens { get; set; }
+        public DbSet<TheNgay> theNgays { get; set; }
+        public DbSet<NhanVien> nhanViens { get; set; }
+        public DbSet<Sach> sachs { get; set; }
+        public DbSet<PhieuMuon> phieuMuons { get; set; }
+        public DbSet<PhieuMuonChiTiet> phieuMuonChiTiets { get; set; }
+        public DbSet<PhieuTra> phieuTras { get; set; }
+        public DbSet<PhieuTraChiTiet> phieuTraChiTiets { get; set; }
+        public DbSet<ChucVu> chucVus { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder.
