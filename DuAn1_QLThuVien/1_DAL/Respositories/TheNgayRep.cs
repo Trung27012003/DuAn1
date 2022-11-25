@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace _1_DAL.Respositories
 {
-    internal class TheNgayRep
+    public class TheNgayRep
     {
+
     }
 }

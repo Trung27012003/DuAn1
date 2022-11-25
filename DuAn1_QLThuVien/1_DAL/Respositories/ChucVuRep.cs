@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace _1_DAL.Respositories
 {
-    internal class ChucVuRep
-    {
+    public class ChucVuRep { 
     }
 }

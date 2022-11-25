@@ -12,8 +12,8 @@ using _1_DAL.Context;
 namespace _1_DAL.Migrations
 {
     [DbContext(typeof(QL_ThuVienDbContext))]
-    [Migration("20221125054918_DA1")]
-    partial class DA1
+    [Migration("20221125061911_duan1")]
+    partial class duan1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
