@@ -19,10 +19,9 @@ namespace _1_DAL.Respositories
         public bool AddPMCT(PhieuMuonChiTiet obj)
         {
             if (obj == null) return false;
-<<<<<<< HEAD
+
             obj.Id = Guid.NewGuid();
-=======
->>>>>>> 8940fc1cc29b98957af892c6825ca4b30cbc89cc
+
             _context.phieuMuonChiTiets.Add(obj);
             _context.SaveChanges();
             return true;
@@ -33,45 +32,40 @@ namespace _1_DAL.Respositories
             return _context.phieuMuonChiTiets.ToList();
         }
 
-<<<<<<< HEAD
-        public bool RemovePMCT(PhieuMuonChiTiet obj)
-        {
-            if (obj == null) return false;
-            var tempobj = _context.nhanViens.FirstOrDefault(c => c.Id == obj.Id);
 
-=======
-        public bool RemovePMCT(Guid obj)
-        {
-            if (obj == null) return false;
-            var tempobj = _context.phieuMuonChiTiets.FirstOrDefault(c => c.Id == obj);
->>>>>>> 8940fc1cc29b98957af892c6825ca4b30cbc89cc
-            _context.Remove(tempobj);
-            _context.SaveChanges();
-            return true;
-        }
+        
 
-        public bool UpdatePMCT(PhieuMuonChiTiet obj)
-        {
-            if (obj == null) return false;
-            var tempobj = _context.phieuMuonChiTiets.FirstOrDefault(c => c.Id == obj.Id);
-            tempobj.IdSach = obj.IdSach;
-            tempobj.IdPM = obj.IdPM;
-<<<<<<< HEAD
-            tempobj.SoLuong = obj.SoLuong;
-            tempobj.TienTheChan = obj.TienTheChan;
-            tempobj.GhiChu = obj.GhiChu;
-            tempobj.DieuKien = obj.DieuKien;
-            
-=======
-            tempobj.DieuKien = obj.DieuKien;
-            tempobj.SoLuong = obj.SoLuong;
-            tempobj.DieuKien = obj.DieuKien;
-            tempobj.GhiChu = obj.GhiChu;
-            tempobj.TienTheChan = obj.TienTheChan;
->>>>>>> 8940fc1cc29b98957af892c6825ca4b30cbc89cc
-            _context.Update(tempobj);
-            _context.SaveChanges();
-            return true;
+
+            public bool RemovePMCT(Guid obj)
+            {
+                if (obj == null) return false;
+                var tempobj = _context.phieuMuonChiTiets.FirstOrDefault(c => c.Id == obj);
+
+                _context.Remove(tempobj);
+                _context.SaveChanges();
+                return true;
+            }
+
+            public bool UpdatePMCT(PhieuMuonChiTiet obj)
+            {
+                if (obj == null) return false;
+                var tempobj = _context.phieuMuonChiTiets.FirstOrDefault(c => c.Id == obj.Id);
+                tempobj.IdSach = obj.IdSach;
+                tempobj.IdPM = obj.IdPM;
+
+                tempobj.SoLuong = obj.SoLuong;
+                tempobj.TienTheChan = obj.TienTheChan;
+                tempobj.GhiChu = obj.GhiChu;
+                tempobj.DieuKien = obj.DieuKien;
+
+
+                
+
+
+                _context.Update(tempobj);
+                _context.SaveChanges();
+                return true;
+            }
         }
     }
-}
+

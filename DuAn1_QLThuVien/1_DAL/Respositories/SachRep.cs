@@ -33,12 +33,7 @@ namespace _1_DAL.Respositories
         }
 
 
-        public bool RemoveSach(Sach obj)
-        {
-            if (obj == null) return false;
-            var tempobj = _context.sachs.FirstOrDefault(c => c.Id == obj.Id);
-
-        }
+        
         public bool RemoveSach(Guid  obj)
         {
             if (obj == null) return false;
@@ -64,10 +59,7 @@ namespace _1_DAL.Respositories
             tempobj.GhiChu = obj.GhiChu;
 
 
-            tempobj.NXB = obj.NXB;
-            tempobj.Name = obj.Name;
-            tempobj.SoLuong = obj.SoLuong;
-            tempobj.GiaTien = obj.GiaTien;
+            
 
             _context.Update(tempobj);
             _context.SaveChanges();

@@ -33,12 +33,7 @@ namespace _1_DAL.Respositories
         }
 
 
-        public bool RemovePT(PhieuTra obj)
-        {
-            if (obj == null) return false;
-            var tempobj = _context.phieuTras.FirstOrDefault(c => c.Id == obj.Id);
-
-        }
+        
         public bool RemovePT(Guid obj)
         {
             if (obj == null) return false;
@@ -50,13 +45,7 @@ namespace _1_DAL.Respositories
         }
 
 
-        public bool UpdatePT(PhieuTra obj)
-        {
-            if (obj == null) return false;
-            var tempobj = _context.phieuTras.FirstOrDefault(c => c.Id == obj.Id);
-            tempobj.NgayTra = obj.NgayTra;
-            tempobj.GhiChu = obj.GhiChu;
-            tempobj.IdPM = obj.IdPM;
+        
 
 
             public bool UpdatePT(PhieuTra obj)
@@ -71,6 +60,6 @@ namespace _1_DAL.Respositories
                 _context.SaveChanges();
                 return true;
             }
-        }
+        
     }
 }

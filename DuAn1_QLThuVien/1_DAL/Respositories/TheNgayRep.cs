@@ -29,14 +29,27 @@ namespace _1_DAL.Respositories
             return _context.theNgays.ToList();
         }
 
-        public bool RemoveTN(Guid x)
+        public bool RemoveTN(Guid obj)
         {
-            throw new NotImplementedException();
+            if (obj == null) return false;
+            var tempobj = _context.theNgays.FirstOrDefault(c => c.Id == obj.Id);
+
+            _context.Remove(tempobj);
+            _context.SaveChanges();
+            return true;
         }
 
-        public bool UpdateTN(TheNgay x)
+        public bool UpdateTN(TheNgay obj)
         {
-            throw new NotImplementedException();
+            if(obj == null) return false;
+            var tempobj = _context.theNgays.FirstOrDefault(c => c.Id == obj.Id);
+            tempobj.StartTime = obj.StartTime;
+            tempobj.EndTime = obj.EndTime;
+            tempobj.IdNV = obj.IdNV;
+            tempobj.GhiChu = obj.GhiChu;
+            _context.Update(tempobj);
+            _context.SaveChanges();
+            return true;
         }
     }
 }
