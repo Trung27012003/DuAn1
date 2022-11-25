@@ -1,19 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "D:\\GitClone\\DuAn1_QLThuVien\\1_DAL\\1_DAL.csproj": {}
-  },
-  "projects": {
-    "D:\\GitClone\\DuAn1_QLThuVien\\1_DAL\\1_DAL.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\GitClone\\DuAn1_QLThuVien\\1_DAL\\1_DAL.csproj",
-        "projectName": "1_DAL",
-        "projectPath": "D:\\GitClone\\DuAn1_QLThuVien\\1_DAL\\1_DAL.csproj",
-        "packagesPath": "C:\\Users\\vanhu\\.nuget\\packages\\",
-        "outputPath": "D:\\GitClone\\DuAn1_QLThuVien\\1_DAL\\obj\\",
-=======
     "F:\\Trungtvph28671\\TL_FPT\\PRO131_DU_AN_1\\Du_An\\QLThuVien\\DuAn1_QLThuVien\\1_DAL\\1_DAL.csproj": {}
   },
   "projects": {
@@ -25,17 +12,12 @@
         "projectPath": "F:\\Trungtvph28671\\TL_FPT\\PRO131_DU_AN_1\\Du_An\\QLThuVien\\DuAn1_QLThuVien\\1_DAL\\1_DAL.csproj",
         "packagesPath": "C:\\Users\\Trung2701\\.nuget\\packages\\",
         "outputPath": "F:\\Trungtvph28671\\TL_FPT\\PRO131_DU_AN_1\\Du_An\\QLThuVien\\DuAn1_QLThuVien\\1_DAL\\obj\\",
->>>>>>> origin/Trung
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-<<<<<<< HEAD
-          "C:\\Users\\vanhu\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
           "C:\\Users\\Trung2701\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> origin/Trung
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -93,11 +75,7 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
-=======
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
->>>>>>> origin/Trung
         }
       }
     }
