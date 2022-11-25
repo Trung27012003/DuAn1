@@ -10,8 +10,8 @@ namespace _2_BUS.IServices
     public interface ITheNgayServices
     {
         List<TheNgay> GetTheNgay();
-        bool AddTN(TheNgay HangSX);
-        bool RemoveTN(TheNgay HangSX);
-        bool UpdateTN(TheNgay HangSX);
+        bool AddTN(TheNgay obj);
+        bool RemoveTN(TheNgay obj);
+        bool UpdateTN(TheNgay obj);
     }
 }
