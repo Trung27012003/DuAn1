@@ -54,3 +54,6 @@ F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\1_DA
 F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\1_DAL.pdb
 F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\1_DAL.genruntimeconfig.cache
 F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\ref\1_DAL.dll
+D:\GitClone\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\1_DAL.dll
+D:\GitClone\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\refint\1_DAL.dll
+D:\GitClone\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\1_DAL.pdb
