@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2_BUS
+namespace _1_DAL.Respositories
 {
-    internal class Class1
+    internal class PhieuMuonChiTietRep
     {
-        //trungdb
     }
 }

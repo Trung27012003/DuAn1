@@ -5,10 +5,22 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace _1_DAL.Migrations
 {
-    public partial class QLThuVien : Migration
+    public partial class DA1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "Account",
+                columns: table => new
+                {
+                    UserName = table.Column<string>(type: "nvarchar(100)", nullable: false),
+                    PassWord = table.Column<string>(type: "nvarchar(100)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Account", x => x.UserName);
+                });
+
             migrationBuilder.CreateTable(
                 name: "ChucVu",
                 columns: table => new
@@ -137,7 +149,8 @@ namespace _1_DAL.Migrations
                     IdSach = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     SoLuong = table.Column<string>(type: "nvarchar(100)", nullable: false),
                     DieuKien = table.Column<string>(type: "nvarchar(100)", nullable: false),
-                    GhiChu = table.Column<string>(type: "nvarchar(100)", nullable: false)
+                    GhiChu = table.Column<string>(type: "nvarchar(100)", nullable: false),
+                    TienTheChan = table.Column<decimal>(type: "Money", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -252,6 +265,9 @@ namespace _1_DAL.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Account");
+
             migrationBuilder.DropTable(
                 name: "PhieuMuonChiTiet");
 

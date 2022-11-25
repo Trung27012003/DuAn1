@@ -5,7 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using _1_DAL.Models;
+
 namespace _1_DAL.Context
 {
     internal class QL_ThuVienDbContext:DbContext
@@ -19,21 +19,10 @@ namespace _1_DAL.Context
 
         }
 
-        public DbSet<TheThanhVien> theThanhViens { get; set; }
-        public DbSet<TheNgay> theNgays { get; set; }
-        public DbSet<NhanVien> nhanViens { get; set; }
-        public DbSet<Sach> sachs { get; set; }
-        public DbSet<PhieuMuon> phieuMuons { get; set; }
-        public DbSet<PhieuMuonChiTiet> phieuMuonChiTiets { get; set; }
-        public DbSet<PhieuTra> phieuTras { get; set; }
-        public DbSet<PhieuTraChiTiet> phieuTraChiTiets { get; set; }
-
-
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder.
-              UseSqlServer("Data Source=MINGGG\\SQLEXPRESS;Initial Catalog=DuAn1_ThuVien;Integrated Security=True;User ID = Ura; Password = minhanh321"));
+              UseSqlServer("Data Source=TRUNG2701\\SQLEXPRESS;Initial Catalog=DuAn_QLThuVien;Integrated Security=True;"));//User ID=trungtruong;Password=123456
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
