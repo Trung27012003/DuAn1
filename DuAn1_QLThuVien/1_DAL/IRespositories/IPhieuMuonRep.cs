@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 using _1_DAL.Models;
 namespace _1_DAL.IRespositories
 {
-    public interface INhanVienRep
+    public interface IPhieuMuonRep
     {
-        bool AddNV(NhanVien x);
+        bool AddPM(PhieuMuon x);
 
-        bool RemoveNV(NhanVien x);
+        bool RemovePM(PhieuMuon x);
 
-        bool UpdateNV(NhanVien x);
+        bool UpdatePM(PhieuMuon x);
 
-        List<NhanVien> GetAllNV();
+        List<PhieuMuon> GetAllPM();
     }
 }
