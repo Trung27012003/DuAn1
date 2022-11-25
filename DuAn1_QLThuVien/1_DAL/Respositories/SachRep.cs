@@ -6,44 +6,43 @@ using System.Threading.Tasks;
 using _1_DAL.Context;
 using _1_DAL.Models;
 using _1_DAL.IRespositories;
-
 namespace _1_DAL.Respositories
 {
-    public class TheThanhVienRep : ITheThanhVienRep
+    public class SachRep : ISachRep
     {
-        private List<TheThanhVien> _listttv;
+        private List<Sach> _listnv;
         private QL_ThuVienDbContext _context;
 
-        public TheThanhVienRep()
+        public SachRep()
         {
-            _listttv = new List<TheThanhVien>();
+            _listnv = new List<Sach>();
             _context = new QL_ThuVienDbContext();
         }
 
-        public bool AddTTV(TheThanhVien x)
+        public bool AddSach(Sach x)
         {
             _context.Add(x);
             _context.SaveChanges();
             return true;
         }
 
-        public bool RemoveTTV(TheThanhVien x)
+        public bool RemoveSach(Sach x)
         {
             _context.Remove(x);
             _context.SaveChanges();
             return true;
         }
 
-        public bool UpdateTTV(TheThanhVien x)
+        public bool UpdateSach(Sach x)
         {
             _context.Update(x);
             _context.SaveChanges();
             return true;
         }
-        public List<TheThanhVien> GetAllTTVs()
+        public List<Sach> GetAllSach()
         {
-           _listttv = _context.theThanhViens.ToList();
-            return _listttv;
+            _listnv = _context.sachs.ToList();
+            return _listnv;
         }
     }
 }
