@@ -12,8 +12,8 @@ using _1_DAL.Context;
 namespace _1_DAL.Migrations
 {
     [DbContext(typeof(QL_ThuVienDbContext))]
-    [Migration("20221110151418_QLThuVien")]
-    partial class QLThuVien
+    [Migration("20221125054918_DA1")]
+    partial class DA1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,6 +23,22 @@ namespace _1_DAL.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
+
+            modelBuilder.Entity("_1_DAL.Models.Account", b =>
+                {
+                    b.Property<string>("UserName")
+                        .HasColumnType("nvarchar(100)")
+                        .HasColumnName("UserName");
+
+                    b.Property<string>("PassWord")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasColumnName("PassWord");
+
+                    b.HasKey("UserName");
+
+                    b.ToTable("Account", (string)null);
+                });
 
             modelBuilder.Entity("_1_DAL.Models.ChucVu", b =>
                 {
@@ -143,6 +159,10 @@ namespace _1_DAL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(100)")
                         .HasColumnName("SoLuong");
+
+                    b.Property<decimal>("TienTheChan")
+                        .HasColumnType("Money")
+                        .HasColumnName("TienTheChan");
 
                     b.HasKey("Id");
 
