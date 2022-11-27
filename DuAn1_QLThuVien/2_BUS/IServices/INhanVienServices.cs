@@ -10,7 +10,7 @@ namespace _2_BUS.IServices
 {
     public  interface INhanVienServices
     {//Duc ngu
-        List<NhanVienView> GetNhanVien();
+        List<NhanVienView> GetAllNv();
         string AddTN(NhanVienView nv);
         string RemoveTN(Guid nv);
         string UpdateTN(NhanVienView nv);

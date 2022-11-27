@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ifSE7Q0JWZqhsQ1EbOJ7Tn8ThnVrEhX6XcK+k+ZMIAaQsK8wd2W0MAGfpWMR3MFR3gI1/uu1ncI1RADcNnPxoQ==",
+  "dgSpecHash": "fq2pke7Cncw6h7ZC5SeM90sRPbwDGaMFJP0aJoFcVvz7ZXjxju4n9Lo7wagRhj/8Kc/kjAHg34QKv8t4CooDvg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Trung2701\\Documents\\DuAn1\\DuAn1\\DuAn1_QLThuVien\\1_DAL\\1_DAL.csproj",
+  "projectFilePath": "C:\\Users\\Trung2701\\Documents\\Duan2\\DuAn1_QLThuVien\\1_DAL\\1_DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Trung2701\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Trung2701\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

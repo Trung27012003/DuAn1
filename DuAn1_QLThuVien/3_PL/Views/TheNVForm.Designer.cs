@@ -171,6 +171,7 @@
             this.btn_themnv.TabIndex = 10;
             this.btn_themnv.Text = "THÊM";
             this.btn_themnv.UseVisualStyleBackColor = true;
+            this.btn_themnv.Click += new System.EventHandler(this.btn_themnv_Click);
             // 
             // label5
             // 

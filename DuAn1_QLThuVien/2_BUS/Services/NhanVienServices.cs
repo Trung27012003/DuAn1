@@ -14,9 +14,11 @@ namespace _2_BUS.Services
     public class NhanVienServices : INhanVienServices
     {//Duc ngu
         INhanVienRep _INhanVienRep;
+        IChucVuRep _IChucVuRep;
         public NhanVienServices()
         {
             _INhanVienRep = new NhanvienRep();
+            _IChucVuRep = new ChucVuRep();
         }
         public string AddTN(NhanVienView obj)
         {
@@ -35,17 +37,17 @@ namespace _2_BUS.Services
             return "Thêm không thành công!";
         }
 
-        public List<NhanVienView> GetNhanVien()
+        public List<NhanVienView> GetAllNv()
         {
             List<NhanVienView> lst = new List<NhanVienView>();
             lst =
                 (
-                from a in _INhanVienRep.GetAllNV()
+                from a in _INhanVienRep.GetAllNV() 
                 select new NhanVienView()
                 {
                     Id = a.Id,
                     Name = a.Name,
-                    IdCV = a.IdCV,
+                    IdCV =a.IdCV,
                     DiaChi = a.DiaChi,
                     SDT = a.SDT,
                     NgaySinh = a.NgaySinh,
@@ -54,9 +56,12 @@ namespace _2_BUS.Services
             return lst;
         }
 
-        public string RemoveTN(Guid nv)
+        public string RemoveTN(Guid obj)
         {
-           /
+            if (obj == null) return "Xóa không thành công!";
+            if (_INhanVienRep.RemoveNV(obj)) return "Xóa  thành công!";
+            return "Xóa không thành công!";
+
         }
 
         public string UpdateTN(NhanVienView obj)
