@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace _1_DAL.Respositories
 {
 
-    internal class NhanvienRep : INhanVienRep
+    public class NhanvienRep : INhanVienRep
     {
         QL_ThuVienDbContext _context;
         public NhanvienRep()

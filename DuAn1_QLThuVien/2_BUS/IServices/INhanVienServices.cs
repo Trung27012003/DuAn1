@@ -1,4 +1,5 @@
 ﻿using _1_DAL.Models;
+using _2_BUS.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,9 @@ namespace _2_BUS.IServices
 {
     public  interface INhanVienServices
     {//Duc ngu
-        List<NhanVien> GetNhanVien();
-        string AddTN(NhanVien nv);
+        List<NhanVienView> GetNhanVien();
+        string AddTN(NhanVienView nv);
         string RemoveTN(Guid nv);
-        string UpdateTN(NhanVien nv);
+        string UpdateTN(NhanVienView nv);
     }
 }

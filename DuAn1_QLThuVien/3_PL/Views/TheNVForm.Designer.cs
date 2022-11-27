@@ -31,22 +31,23 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TheNVForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.cbb_tenchucvu = new System.Windows.Forms.ComboBox();
+            this.tbx_searchnv = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.dgrid_shownv = new System.Windows.Forms.DataGridView();
+            this.btn_xoanv = new System.Windows.Forms.Button();
+            this.btn_suanv = new System.Windows.Forms.Button();
+            this.btn_themnv = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.dtp_ngaysinh = new System.Windows.Forms.DateTimePicker();
+            this.tbx_sdt = new System.Windows.Forms.TextBox();
+            this.tbx_diachi = new System.Windows.Forms.TextBox();
+            this.tbx_tennv = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label7 = new System.Windows.Forms.Label();
             this.tbx_tencv = new System.Windows.Forms.TextBox();
@@ -55,11 +56,10 @@
             this.btn_xoa = new System.Windows.Forms.Button();
             this.btn_them = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.cbb_tenchucvu = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgrid_shownv)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_show)).BeginInit();
             this.SuspendLayout();
@@ -77,22 +77,22 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.cbb_tenchucvu);
-            this.tabPage1.Controls.Add(this.textBox5);
+            this.tabPage1.Controls.Add(this.tbx_searchnv);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.pictureBox1);
-            this.tabPage1.Controls.Add(this.dataGridView1);
-            this.tabPage1.Controls.Add(this.button3);
-            this.tabPage1.Controls.Add(this.button2);
-            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.dgrid_shownv);
+            this.tabPage1.Controls.Add(this.btn_xoanv);
+            this.tabPage1.Controls.Add(this.btn_suanv);
+            this.tabPage1.Controls.Add(this.btn_themnv);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.dateTimePicker1);
-            this.tabPage1.Controls.Add(this.textBox4);
-            this.tabPage1.Controls.Add(this.textBox3);
-            this.tabPage1.Controls.Add(this.textBox2);
+            this.tabPage1.Controls.Add(this.dtp_ngaysinh);
+            this.tabPage1.Controls.Add(this.tbx_sdt);
+            this.tabPage1.Controls.Add(this.tbx_diachi);
+            this.tabPage1.Controls.Add(this.tbx_tennv);
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -101,12 +101,20 @@
             this.tabPage1.Text = "Nhân viên";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // textBox5
+            // cbb_tenchucvu
             // 
-            this.textBox5.Location = new System.Drawing.Point(677, 238);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(222, 27);
-            this.textBox5.TabIndex = 16;
+            this.cbb_tenchucvu.FormattingEnabled = true;
+            this.cbb_tenchucvu.Location = new System.Drawing.Point(129, 26);
+            this.cbb_tenchucvu.Name = "cbb_tenchucvu";
+            this.cbb_tenchucvu.Size = new System.Drawing.Size(222, 28);
+            this.cbb_tenchucvu.TabIndex = 17;
+            // 
+            // tbx_searchnv
+            // 
+            this.tbx_searchnv.Location = new System.Drawing.Point(677, 238);
+            this.tbx_searchnv.Name = "tbx_searchnv";
+            this.tbx_searchnv.Size = new System.Drawing.Size(222, 27);
+            this.tbx_searchnv.TabIndex = 16;
             // 
             // label6
             // 
@@ -127,42 +135,42 @@
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
             // 
-            // dataGridView1
+            // dgrid_shownv
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 271);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(901, 238);
-            this.dataGridView1.TabIndex = 13;
+            this.dgrid_shownv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgrid_shownv.Location = new System.Drawing.Point(7, 271);
+            this.dgrid_shownv.Name = "dgrid_shownv";
+            this.dgrid_shownv.RowHeadersWidth = 51;
+            this.dgrid_shownv.RowTemplate.Height = 29;
+            this.dgrid_shownv.Size = new System.Drawing.Size(901, 238);
+            this.dgrid_shownv.TabIndex = 13;
             // 
-            // button3
+            // btn_xoanv
             // 
-            this.button3.Location = new System.Drawing.Point(742, 143);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(142, 61);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "XÓA";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_xoanv.Location = new System.Drawing.Point(742, 143);
+            this.btn_xoanv.Name = "btn_xoanv";
+            this.btn_xoanv.Size = new System.Drawing.Size(142, 61);
+            this.btn_xoanv.TabIndex = 12;
+            this.btn_xoanv.Text = "XÓA";
+            this.btn_xoanv.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btn_suanv
             // 
-            this.button2.Location = new System.Drawing.Point(742, 76);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(142, 61);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "SỬA";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_suanv.Location = new System.Drawing.Point(742, 76);
+            this.btn_suanv.Name = "btn_suanv";
+            this.btn_suanv.Size = new System.Drawing.Size(142, 61);
+            this.btn_suanv.TabIndex = 11;
+            this.btn_suanv.Text = "SỬA";
+            this.btn_suanv.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btn_themnv
             // 
-            this.button1.Location = new System.Drawing.Point(742, 9);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 61);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "THÊM";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_themnv.Location = new System.Drawing.Point(742, 9);
+            this.btn_themnv.Name = "btn_themnv";
+            this.btn_themnv.Size = new System.Drawing.Size(142, 61);
+            this.btn_themnv.TabIndex = 10;
+            this.btn_themnv.Text = "THÊM";
+            this.btn_themnv.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -209,33 +217,33 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Tên chức vụ";
             // 
-            // dateTimePicker1
+            // dtp_ngaysinh
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(129, 207);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(222, 27);
-            this.dateTimePicker1.TabIndex = 4;
+            this.dtp_ngaysinh.Location = new System.Drawing.Point(129, 207);
+            this.dtp_ngaysinh.Name = "dtp_ngaysinh";
+            this.dtp_ngaysinh.Size = new System.Drawing.Size(222, 27);
+            this.dtp_ngaysinh.TabIndex = 4;
             // 
-            // textBox4
+            // tbx_sdt
             // 
-            this.textBox4.Location = new System.Drawing.Point(129, 164);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(222, 27);
-            this.textBox4.TabIndex = 3;
+            this.tbx_sdt.Location = new System.Drawing.Point(129, 164);
+            this.tbx_sdt.Name = "tbx_sdt";
+            this.tbx_sdt.Size = new System.Drawing.Size(222, 27);
+            this.tbx_sdt.TabIndex = 3;
             // 
-            // textBox3
+            // tbx_diachi
             // 
-            this.textBox3.Location = new System.Drawing.Point(129, 121);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(222, 27);
-            this.textBox3.TabIndex = 2;
+            this.tbx_diachi.Location = new System.Drawing.Point(129, 121);
+            this.tbx_diachi.Name = "tbx_diachi";
+            this.tbx_diachi.Size = new System.Drawing.Size(222, 27);
+            this.tbx_diachi.TabIndex = 2;
             // 
-            // textBox2
+            // tbx_tennv
             // 
-            this.textBox2.Location = new System.Drawing.Point(129, 70);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(222, 27);
-            this.textBox2.TabIndex = 1;
+            this.tbx_tennv.Location = new System.Drawing.Point(129, 70);
+            this.tbx_tennv.Name = "tbx_tennv";
+            this.tbx_tennv.Size = new System.Drawing.Size(222, 27);
+            this.tbx_tennv.TabIndex = 1;
             // 
             // tabPage2
             // 
@@ -310,14 +318,6 @@
             this.btn_them.UseVisualStyleBackColor = true;
             this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
             // 
-            // cbb_tenchucvu
-            // 
-            this.cbb_tenchucvu.FormattingEnabled = true;
-            this.cbb_tenchucvu.Location = new System.Drawing.Point(129, 26);
-            this.cbb_tenchucvu.Name = "cbb_tenchucvu";
-            this.cbb_tenchucvu.Size = new System.Drawing.Size(222, 28);
-            this.cbb_tenchucvu.TabIndex = 17;
-            // 
             // TheNVForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -330,7 +330,7 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgrid_shownv)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_show)).EndInit();
@@ -342,21 +342,21 @@
 
         private TabControl tabControl1;
         private TabPage tabPage1;
-        private DataGridView dataGridView1;
-        private Button button3;
-        private Button button2;
-        private Button button1;
+        private DataGridView dgrid_shownv;
+        private Button btn_xoanv;
+        private Button btn_suanv;
+        private Button btn_themnv;
         private Label label5;
         private Label label4;
         private Label label3;
         private Label label2;
         private Label label1;
-        private DateTimePicker dateTimePicker1;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
+        private DateTimePicker dtp_ngaysinh;
+        private TextBox tbx_sdt;
+        private TextBox tbx_diachi;
+        private TextBox tbx_tennv;
         private TabPage tabPage2;
-        private TextBox textBox5;
+        private TextBox tbx_searchnv;
         private Label label6;
         private PictureBox pictureBox1;
         private Label label7;

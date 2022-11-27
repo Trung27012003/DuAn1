@@ -15,17 +15,22 @@ namespace _3_PL.Views
 {
     public partial class TheNVForm : Form
     {
-        Guid _Id;
-        List<ChucVuView> _ChucVuViews;
+        Guid _IdCv;
+        List<ChucVuView> _lstChucVuViews;
+        List<NhanVienView> _lstNhanVienView;
         ChucVuServices _ChucVuServices;
+        NhanVienServices _NhanVienServices;
 
         public TheNVForm()
         {
             _ChucVuServices = new ChucVuServices();
             InitializeComponent();
-            _ChucVuViews = new List<ChucVuView>();
-            _ChucVuViews = _ChucVuServices.GetTheNgay();
-            LoadToGrid(_ChucVuViews);
+            _lstChucVuViews = new List<ChucVuView>();
+            _lstNhanVienView = new List<NhanVienView>();
+            _lstChucVuViews = _ChucVuServices.GetTheNgay();
+            _lstNhanVienView = _NhanVienServices.GetNhanVien();
+            LoadToGridCv(_lstChucVuViews);
+            LoadToGridNv(_lstNhanVienView);
             Loadtocbb();
 
         }
@@ -37,7 +42,21 @@ namespace _3_PL.Views
                 cbb_tenchucvu.Items.Add(item.Name);
             }
         }
-        private void LoadToGrid(List<ChucVuView> lst)
+        private void LoadToGridNv(List<NhanVienView> lst)
+        {
+            int stt = 1;
+            dgrid_show.Rows.Clear();
+            dgrid_show.ColumnCount = 3;
+            dgrid_show.Columns[0].Name = "ID";
+            dgrid_show.Columns[0].Visible = false;
+            dgrid_show.Columns[1].Name = "STT";
+            dgrid_show.Columns[2].Name = "Name";
+            foreach (var item in lst)
+            {
+                dgrid_show.Rows.Add(item.Id, stt++, item.Name);
+            }
+        }
+        private void LoadToGridCv(List<ChucVuView> lst)
         {
             int stt = 1;
             dgrid_show.Rows.Clear();
@@ -54,7 +73,7 @@ namespace _3_PL.Views
 
         private void dgrid_show_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            _Id = (Guid)dgrid_show.CurrentRow.Cells[0].Value;
+            _IdCv = (Guid)dgrid_show.CurrentRow.Cells[0].Value;
             tbx_tencv.Text = dgrid_show.CurrentRow.Cells[2].Value.ToString();
         }
 
@@ -69,8 +88,8 @@ namespace _3_PL.Views
             if (dg == DialogResult.Yes)
             {
                 MessageBox.Show(_ChucVuServices.AddTN(cvv));
-                _ChucVuViews = _ChucVuServices.GetTheNgay();
-                LoadToGrid(_ChucVuViews);
+                _lstChucVuViews = _ChucVuServices.GetTheNgay();
+                LoadToGridCv(_lstChucVuViews);
             }
         }
 
@@ -78,15 +97,15 @@ namespace _3_PL.Views
         {
             ChucVuView cvv = new ChucVuView()
             {
-                Id = _Id,
+                Id = _IdCv,
                 Name = tbx_tencv.Text,
             };
             DialogResult dg = MessageBox.Show("Bạn có chắc chắn muốn Sửa không ?", "Thông báo", MessageBoxButtons.YesNo);
             if (dg == DialogResult.Yes)
             {
                 MessageBox.Show(_ChucVuServices.UpdateTN(cvv));
-                _ChucVuViews = _ChucVuServices.GetTheNgay();
-                LoadToGrid(_ChucVuViews);
+                _lstChucVuViews = _ChucVuServices.GetTheNgay();
+                LoadToGridCv(_lstChucVuViews);
             }
         }
 
@@ -96,9 +115,9 @@ namespace _3_PL.Views
             DialogResult dg = MessageBox.Show("Bạn có chắc chắn muốn Xóa không ?", "Thông báo", MessageBoxButtons.YesNo);
             if (dg == DialogResult.Yes)
             {
-                MessageBox.Show(_ChucVuServices.RemoveTN(_Id));
-                _ChucVuViews = _ChucVuServices.GetTheNgay();
-                LoadToGrid(_ChucVuViews);
+                MessageBox.Show(_ChucVuServices.RemoveTN(_IdCv));
+                _lstChucVuViews = _ChucVuServices.GetTheNgay();
+                LoadToGridCv(_lstChucVuViews);
             }
         }
     }
