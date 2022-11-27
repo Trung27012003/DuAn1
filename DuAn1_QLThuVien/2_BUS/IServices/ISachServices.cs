@@ -11,7 +11,7 @@ namespace _2_BUS.IServices
     {//Duc ngu
         List<Sach> GetSach();
         string AddTN(Sach obj);
-        string RemoveTN(Sach obj);
+        string RemoveTN(Guid obj);
         string UpdateTN(Sach obj);
     }
 }

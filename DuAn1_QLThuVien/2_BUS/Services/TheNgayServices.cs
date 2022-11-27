@@ -20,7 +20,7 @@ namespace _2_BUS.Services
             throw new NotImplementedException();
         }
 
-        public string RemoveTN(TheNgay obj)
+        public string RemoveTN(Guid obj)
         {
             throw new NotImplementedException();
         }

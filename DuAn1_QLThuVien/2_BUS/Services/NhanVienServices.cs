@@ -20,7 +20,7 @@ namespace _2_BUS.Services
             throw new NotImplementedException();
         }
 
-        public string RemoveTN(NhanVien nv)
+        public string RemoveTN(Guid nv)
         {
             throw new NotImplementedException();
         }

@@ -21,6 +21,7 @@ namespace _3_PL.Views
         {
             MenuForm mn = new MenuForm();
             mn.ShowDialog();
+
         }
     }
 }

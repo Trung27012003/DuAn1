@@ -11,7 +11,7 @@ namespace _2_BUS.IServices
     {//Duc ngu si dan
         List<PhieuTraChiTiet> GetPhieuTraChiTiet();
         string AddTN(PhieuTraChiTiet obj);
-        string RemoveTN(PhieuTraChiTiet obj);
+        string RemoveTN(Guid obj);
         string UpdateTN(PhieuTraChiTiet obj);
     }
 }

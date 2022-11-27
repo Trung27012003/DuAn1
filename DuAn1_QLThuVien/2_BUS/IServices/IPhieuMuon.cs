@@ -11,7 +11,7 @@ namespace _2_BUS.IServices
     {//Duc ngu
         List<PhieuMuon> GetPhieuMuon();
         string AddTN(PhieuMuon obj);
-        string RemoveTN(PhieuMuon obj);
+        string RemoveTN(Guid obj);
         string UpdateTN(PhieuMuon obj);
     }
 }

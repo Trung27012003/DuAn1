@@ -1,4 +1,5 @@
 ﻿using _1_DAL.Models;
+using _2_BUS.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,9 @@ namespace _2_BUS.IServices
 {
     public interface IChucVuServices
     {//Duc ngu
-        List<ChucVu> GetTheNgay();
-        string AddTN(ChucVu cv);
-        string RemoveTN(ChucVu cv);
-        string UpdateTN(ChucVu cv);
+        List<ChucVuView> GetTheNgay();
+        string AddTN(ChucVuView cv);
+        string RemoveTN(Guid cv);
+        string UpdateTN(ChucVuView cv);
     }
 }

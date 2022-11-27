@@ -47,20 +47,21 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.tbx_tencv = new System.Windows.Forms.TextBox();
+            this.dgrid_show = new System.Windows.Forms.DataGridView();
+            this.btn_sua = new System.Windows.Forms.Button();
+            this.btn_xoa = new System.Windows.Forms.Button();
+            this.btn_them = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.cbb_tenchucvu = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgrid_show)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -75,6 +76,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.cbb_tenchucvu);
             this.tabPage1.Controls.Add(this.textBox5);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.pictureBox1);
@@ -91,7 +93,6 @@
             this.tabPage1.Controls.Add(this.textBox4);
             this.tabPage1.Controls.Add(this.textBox3);
             this.tabPage1.Controls.Add(this.textBox2);
-            this.tabPage1.Controls.Add(this.textBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -204,9 +205,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(28, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 20);
+            this.label1.Size = new System.Drawing.Size(86, 20);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Mã chức vụ";
+            this.label1.Text = "Tên chức vụ";
             // 
             // dateTimePicker1
             // 
@@ -236,25 +237,18 @@
             this.textBox2.Size = new System.Drawing.Size(222, 27);
             this.textBox2.TabIndex = 1;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(129, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(222, 27);
-            this.textBox1.TabIndex = 0;
-            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.label7);
-            this.tabPage2.Controls.Add(this.textBox6);
-            this.tabPage2.Controls.Add(this.dataGridView2);
-            this.tabPage2.Controls.Add(this.button6);
-            this.tabPage2.Controls.Add(this.button5);
-            this.tabPage2.Controls.Add(this.button4);
+            this.tabPage2.Controls.Add(this.tbx_tencv);
+            this.tabPage2.Controls.Add(this.dgrid_show);
+            this.tabPage2.Controls.Add(this.btn_sua);
+            this.tabPage2.Controls.Add(this.btn_xoa);
+            this.tabPage2.Controls.Add(this.btn_them);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(914, 480);
+            this.tabPage2.Size = new System.Drawing.Size(914, 513);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Chức vụ";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -268,49 +262,61 @@
             this.label7.TabIndex = 5;
             this.label7.Text = "Tên chức vụ";
             // 
-            // textBox6
+            // tbx_tencv
             // 
-            this.textBox6.Location = new System.Drawing.Point(145, 49);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(192, 27);
-            this.textBox6.TabIndex = 4;
+            this.tbx_tencv.Location = new System.Drawing.Point(145, 49);
+            this.tbx_tencv.Name = "tbx_tencv";
+            this.tbx_tencv.Size = new System.Drawing.Size(192, 27);
+            this.tbx_tencv.TabIndex = 4;
             // 
-            // dataGridView2
+            // dgrid_show
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(7, 281);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 29;
-            this.dataGridView2.Size = new System.Drawing.Size(807, 169);
-            this.dataGridView2.TabIndex = 3;
+            this.dgrid_show.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgrid_show.Location = new System.Drawing.Point(7, 281);
+            this.dgrid_show.Name = "dgrid_show";
+            this.dgrid_show.RowHeadersWidth = 51;
+            this.dgrid_show.RowTemplate.Height = 29;
+            this.dgrid_show.Size = new System.Drawing.Size(807, 208);
+            this.dgrid_show.TabIndex = 3;
+            this.dgrid_show.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrid_show_CellClick);
             // 
-            // button6
+            // btn_sua
             // 
-            this.button6.Location = new System.Drawing.Point(656, 74);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(158, 62);
-            this.button6.TabIndex = 2;
-            this.button6.Text = "SỬA";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btn_sua.Location = new System.Drawing.Point(656, 74);
+            this.btn_sua.Name = "btn_sua";
+            this.btn_sua.Size = new System.Drawing.Size(158, 62);
+            this.btn_sua.TabIndex = 2;
+            this.btn_sua.Text = "SỬA";
+            this.btn_sua.UseVisualStyleBackColor = true;
+            this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
             // 
-            // button5
+            // btn_xoa
             // 
-            this.button5.Location = new System.Drawing.Point(656, 142);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(158, 62);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "XÓA";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btn_xoa.Location = new System.Drawing.Point(656, 142);
+            this.btn_xoa.Name = "btn_xoa";
+            this.btn_xoa.Size = new System.Drawing.Size(158, 62);
+            this.btn_xoa.TabIndex = 1;
+            this.btn_xoa.Text = "XÓA";
+            this.btn_xoa.UseVisualStyleBackColor = true;
+            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
             // 
-            // button4
+            // btn_them
             // 
-            this.button4.Location = new System.Drawing.Point(656, 6);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(158, 62);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "THÊM";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn_them.Location = new System.Drawing.Point(656, 6);
+            this.btn_them.Name = "btn_them";
+            this.btn_them.Size = new System.Drawing.Size(158, 62);
+            this.btn_them.TabIndex = 0;
+            this.btn_them.Text = "THÊM";
+            this.btn_them.UseVisualStyleBackColor = true;
+            this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
+            // 
+            // cbb_tenchucvu
+            // 
+            this.cbb_tenchucvu.FormattingEnabled = true;
+            this.cbb_tenchucvu.Location = new System.Drawing.Point(129, 26);
+            this.cbb_tenchucvu.Name = "cbb_tenchucvu";
+            this.cbb_tenchucvu.Size = new System.Drawing.Size(222, 28);
+            this.cbb_tenchucvu.TabIndex = 17;
             // 
             // TheNVForm
             // 
@@ -327,7 +333,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgrid_show)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -349,16 +355,17 @@
         private TextBox textBox4;
         private TextBox textBox3;
         private TextBox textBox2;
-        private TextBox textBox1;
         private TabPage tabPage2;
         private TextBox textBox5;
         private Label label6;
         private PictureBox pictureBox1;
         private Label label7;
-        private TextBox textBox6;
-        private DataGridView dataGridView2;
-        private Button button6;
-        private Button button5;
-        private Button button4;
+        private TextBox tbx_tencv;
+        private DataGridView dgrid_show;
+        private Button btn_sua;
+        private Button btn_xoa;
+        private Button btn_them;
+        private ComboBox cbb_tenchucvu;
+        private SaveFileDialog saveFileDialog1;
     }
 }
