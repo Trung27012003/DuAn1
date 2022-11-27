@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 namespace _2_BUS.IServices
 {
     public interface IChucVuServices
-    {
+    {//Duc ngu
         List<ChucVu> GetTheNgay();
-        bool AddTN(ChucVu cv);
-        bool RemoveTN(ChucVu cv);
-        bool UpdateTN(ChucVu cv);
+        string AddTN(ChucVu cv);
+        string RemoveTN(ChucVu cv);
+        string UpdateTN(ChucVu cv);
     }
 }
