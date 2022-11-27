@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace _2_BUS.IServices
 {
     public interface IPhieuTraChiTietServices
-    {//Duc ngu
+    {//Duc ngu si dan
         List<PhieuTraChiTiet> GetPhieuTraChiTiet();
         string AddTN(PhieuTraChiTiet obj);
         string RemoveTN(PhieuTraChiTiet obj);

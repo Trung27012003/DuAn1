@@ -8,10 +8,10 @@ using _1_DAL.Models;
 namespace _2_BUS.IServices
 {
     public interface ITheNgayServices
-    {
+    {//Duc ngu
         List<TheNgay> GetTheNgay();
-        bool AddTN(TheNgay obj);
-        bool RemoveTN(TheNgay obj);
-        bool UpdateTN(TheNgay obj);
+        string AddTN(TheNgay obj);
+        string RemoveTN(TheNgay obj);
+        string UpdateTN(TheNgay obj);
     }
 }
