@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 namespace _2_BUS.Services
 {
     public class PhieuTraServices : IPhieuTraServices
-    {
-        public bool AddTN(PhieuTra obj)
+    {//Duc ngu
+        public string AddTN(PhieuTra obj)
         {
             throw new NotImplementedException();
         }
@@ -20,12 +20,12 @@ namespace _2_BUS.Services
             throw new NotImplementedException();
         }
 
-        public bool RemoveTN(PhieuTra obj)
+        public string RemoveTN(PhieuTra obj)
         {
             throw new NotImplementedException();
         }
 
-        public bool UpdateTN(PhieuTra obj)
+        public string UpdateTN(PhieuTra obj)
         {
             throw new NotImplementedException();
         }

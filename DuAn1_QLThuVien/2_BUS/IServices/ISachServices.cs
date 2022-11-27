@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 namespace _2_BUS.IServices
 {
     public interface ISachServices
-    {
+    {//Duc ngu
         List<Sach> GetSach();
-        bool AddTN(Sach obj);
-        bool RemoveTN(Sach obj);
-        bool UpdateTN(Sach obj);
+        string AddTN(Sach obj);
+        string RemoveTN(Sach obj);
+        string UpdateTN(Sach obj);
     }
 }

@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 namespace _2_BUS.IServices
 {
     public interface IPhieuTraServices
-    {
+    {//Duc ngu
         List<PhieuTra> GetPhieuTra();
-        bool AddTN(PhieuTra obj);
-        bool RemoveTN(PhieuTra obj);
-        bool UpdateTN(PhieuTra obj);
+        string AddTN(PhieuTra obj);
+        string RemoveTN(PhieuTra obj);
+        string UpdateTN(PhieuTra obj);
     }
 }

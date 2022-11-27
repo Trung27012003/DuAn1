@@ -8,9 +8,10 @@ using System.Threading.Tasks;
 
 namespace _2_BUS.Services
 {
+
     public class PhieuMuonChiTietServices : IPhieuMuonChiTietChiTietServices
-    {
-        public bool AddTN(PhieuMuonChiTiet obj)
+    {//Duc ngu
+        public string AddTN(PhieuMuonChiTiet obj)
         {
             throw new NotImplementedException();
         }
@@ -20,12 +21,12 @@ namespace _2_BUS.Services
             throw new NotImplementedException();
         }
 
-        public bool RemoveTN(PhieuMuonChiTiet obj)
+        public string RemoveTN(PhieuMuonChiTiet obj)
         {
             throw new NotImplementedException();
         }
 
-        public bool UpdateTN(PhieuMuonChiTiet obj)
+        public string UpdateTN(PhieuMuonChiTiet obj)
         {
             throw new NotImplementedException();
         }

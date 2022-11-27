@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 namespace _2_BUS.IServices
 {
     public interface ITheThanhVienServices
-    {
+    {//Duc ngu
         List<TheThanhVien> GetTheThanhVien();
-        bool AddTN(TheThanhVien obj);
-        bool RemoveTN(TheThanhVien obj);
-        bool UpdateTN(TheThanhVien obj);
+        string AddTN(TheThanhVien obj);
+        string RemoveTN(TheThanhVien obj);
+        string UpdateTN(TheThanhVien obj);
     }
 }

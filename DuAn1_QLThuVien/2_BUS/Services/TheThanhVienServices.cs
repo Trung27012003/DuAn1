@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 namespace _2_BUS.Services
 {
     public class TheThanhVienServices : ITheThanhVienServices
-    {
-        public bool AddTN(TheThanhVien obj)
+    {//Duc ngu
+        public string AddTN(TheThanhVien obj)
         {
             throw new NotImplementedException();
         }
@@ -20,12 +20,12 @@ namespace _2_BUS.Services
             throw new NotImplementedException();
         }
 
-        public bool RemoveTN(TheThanhVien obj)
+        public string RemoveTN(TheThanhVien obj)
         {
             throw new NotImplementedException();
         }
 
-        public bool UpdateTN(TheThanhVien obj)
+        public string UpdateTN(TheThanhVien obj)
         {
             throw new NotImplementedException();
         }
