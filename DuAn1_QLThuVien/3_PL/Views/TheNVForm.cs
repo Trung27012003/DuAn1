@@ -64,8 +64,37 @@ namespace _3_PL.Views
                     );
             }
         }
+<<<<<<< HEAD
 
 
+=======
+        private void LoadToGridNv(List<NhanVienView> lst)
+        {
+            int stt = 1;
+            dgrid_show.Rows.Clear();
+            dgrid_show.ColumnCount = 7;
+            dgrid_show.Columns[0].Name = "ID";
+            dgrid_show.Columns[0].Visible = false;
+            dgrid_show.Columns[1].Name = "STT";
+            dgrid_show.Columns[2].Name = "Tên";
+            dgrid_show.Columns[3].Name = "Chức vụ";
+            dgrid_show.Columns[4].Name = "Địa chỉ";
+            dgrid_show.Columns[5].Name = "Sdt";
+            dgrid_show.Columns[6].Name = "Ngày sinh";
+            foreach (var item in lst)
+            {
+                dgrid_shownv.Rows.Add(
+                    item.Id,
+                    stt++,
+                    item.Name,
+                    _ChucVuServices.GetTheNgay().FirstOrDefault(c => c.Id == item.IdCV).Name,
+                    item.DiaChi,
+                    item.SDT,
+                    item.NgaySinh
+                    );
+            }
+        }
+>>>>>>> d73cbc545064942e91a1aefadcccf7710093f1b4
         private void LoadToGridCv(List<ChucVuView> lst)
         {
             int stt = 1;
