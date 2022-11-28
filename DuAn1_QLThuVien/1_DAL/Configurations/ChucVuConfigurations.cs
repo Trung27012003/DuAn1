@@ -14,7 +14,9 @@ namespace _1_DAL.Configurations
         public void Configure(EntityTypeBuilder<ChucVu> buider)
         {
             buider.ToTable("ChucVu");
+
             buider.HasKey(x => x.Id);
+
             buider.Property(p => p.Name).HasColumnName("TenCV").HasColumnType("nvarchar(100)").IsRequired();
         }
     }

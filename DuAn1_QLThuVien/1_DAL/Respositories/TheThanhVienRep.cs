@@ -32,10 +32,10 @@ namespace _1_DAL.Respositories
             return _context.theThanhViens.ToList();
         }
 
-        public bool RemoveTTV(TheThanhVien obj)
+        public bool RemoveTTV(Guid obj)
         {
             if (obj == null) return false;
-            var tempobj = _context.theThanhViens.FirstOrDefault(c => c.Id == obj.Id);
+            var tempobj = _context.theThanhViens.FirstOrDefault(c => c.Id == obj);
 
             _context.Remove(tempobj);
             _context.SaveChanges();

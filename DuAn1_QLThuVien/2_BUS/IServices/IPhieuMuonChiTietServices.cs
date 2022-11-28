@@ -1,4 +1,5 @@
 ﻿using _1_DAL.Models;
+using _2_BUS.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +9,10 @@ using System.Threading.Tasks;
 namespace _2_BUS.IServices
 {
     public interface IPhieuMuonChiTietChiTietServices
-    {
-        List<PhieuMuonChiTiet> GetPhieuMuonChiTiet();
-        bool AddTN(PhieuMuonChiTiet obj);
-        bool RemoveTN(PhieuMuonChiTiet obj);
-        bool UpdateTN(PhieuMuonChiTiet obj);
+    {//Duc ngu
+        List<PhieuMuonChiTietView> GetPhieuMuonChiTiet();
+        string AddTN(PhieuMuonChiTietView obj);
+        string RemoveTN(Guid obj);
+        string UpdateTN(PhieuMuonChiTietView obj);
     }
 }

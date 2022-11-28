@@ -1,5 +1,7 @@
-﻿using _1_DAL.Models;
+﻿using _1_DAL.IRespositories;
+using _1_DAL.Models;
 using _2_BUS.IServices;
+using _2_BUS.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,24 +10,30 @@ using System.Threading.Tasks;
 
 namespace _2_BUS.Services
 {
+
     public class PhieuMuonChiTietServices : IPhieuMuonChiTietChiTietServices
-    {
-        public bool AddTN(PhieuMuonChiTiet obj)
+    {//Duc ngu
+        public IPhieuMuonCTRep _phieuMuonCTRep;
+        public PhieuMuonChiTietServices()
+        {
+
+        }
+        public string AddTN(PhieuMuonChiTietView obj)
+        {
+             throw new NotImplementedException();
+        }
+
+        public List<PhieuMuonChiTietView> GetPhieuMuonChiTiet()
         {
             throw new NotImplementedException();
         }
 
-        public List<PhieuMuonChiTiet> GetPhieuMuonChiTiet()
+        public string RemoveTN(Guid obj)
         {
             throw new NotImplementedException();
         }
 
-        public bool RemoveTN(PhieuMuonChiTiet obj)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool UpdateTN(PhieuMuonChiTiet obj)
+        public string UpdateTN(PhieuMuonChiTietView obj)
         {
             throw new NotImplementedException();
         }

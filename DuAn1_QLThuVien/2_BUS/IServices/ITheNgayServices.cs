@@ -4,14 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using _1_DAL.Models;
+using _2_BUS.ViewModels;
 
 namespace _2_BUS.IServices
 {
     public interface ITheNgayServices
-    {
-        List<TheNgay> GetTheNgay();
-        bool AddTN(TheNgay obj);
-        bool RemoveTN(TheNgay obj);
-        bool UpdateTN(TheNgay obj);
+    {//Duc ngu
+        List<TheNgayView> GetTheNgay();
+        string AddTN(TheNgayView obj);
+        string RemoveTN(Guid obj);
+        string UpdateTN(TheNgayView obj);
     }
 }

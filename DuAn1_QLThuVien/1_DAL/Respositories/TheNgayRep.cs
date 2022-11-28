@@ -32,7 +32,7 @@ namespace _1_DAL.Respositories
         public bool RemoveTN(Guid obj)
         {
             if (obj == null) return false;
-            var tempobj = _context.theNgays.FirstOrDefault(c => c.Id == obj.Id);
+            var tempobj = _context.theNgays.FirstOrDefault(c => c.Id == obj);
 
             _context.Remove(tempobj);
             _context.SaveChanges();

@@ -1,5 +1,6 @@
 ﻿using _1_DAL.Models;
 using _2_BUS.IServices;
+using _2_BUS.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,23 +10,23 @@ using System.Threading.Tasks;
 namespace _2_BUS.Services
 {
     public class TheNgayServices : ITheNgayServices
-    {
-        public bool AddTN(TheNgay obj)
+    {//Duc ngu
+        public string AddTN(TheNgayView obj)
         {
             throw new NotImplementedException();
         }
 
-        public List<TheNgay> GetTheNgay()
+        public List<TheNgayView> GetTheNgay()
         {
             throw new NotImplementedException();
         }
 
-        public bool RemoveTN(TheNgay obj)
+        public string RemoveTN(Guid obj)
         {
             throw new NotImplementedException();
         }
 
-        public bool UpdateTN(TheNgay obj)
+        public string UpdateTN(TheNgayView obj)
         {
             throw new NotImplementedException();
         }

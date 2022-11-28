@@ -1,4 +1,5 @@
 ﻿using _1_DAL.Models;
+using _2_BUS.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,9 @@ namespace _2_BUS.IServices
 {
     public interface ITheThanhVienServices
     {
-        List<TheThanhVien> GetTheThanhVien();
-        bool AddTN(TheThanhVien obj);
-        bool RemoveTN(TheThanhVien obj);
-        bool UpdateTN(TheThanhVien obj);
+        List<TheThanhVienView> GetTheThanhVien();
+        string AddTN(TheThanhVienView obj);
+        string RemoveTN(Guid obj);
+        string UpdateTN(TheThanhVienView obj);
     }
 }
