@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TheNVForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.cbb_tenchucvu = new System.Windows.Forms.ComboBox();
@@ -115,6 +114,7 @@
             this.tbx_searchnv.Name = "tbx_searchnv";
             this.tbx_searchnv.Size = new System.Drawing.Size(222, 27);
             this.tbx_searchnv.TabIndex = 16;
+            this.tbx_searchnv.TextChanged += new System.EventHandler(this.tbx_searchnv_TextChanged);
             // 
             // label6
             // 
@@ -127,9 +127,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(381, 22);
+            this.pictureBox1.Location = new System.Drawing.Point(425, 26);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(189, 182);
             this.pictureBox1.TabIndex = 14;
@@ -144,6 +143,7 @@
             this.dgrid_shownv.RowTemplate.Height = 29;
             this.dgrid_shownv.Size = new System.Drawing.Size(901, 238);
             this.dgrid_shownv.TabIndex = 13;
+            this.dgrid_shownv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrid_shownv_CellClick);
             // 
             // btn_xoanv
             // 
@@ -153,6 +153,7 @@
             this.btn_xoanv.TabIndex = 12;
             this.btn_xoanv.Text = "XÓA";
             this.btn_xoanv.UseVisualStyleBackColor = true;
+            this.btn_xoanv.Click += new System.EventHandler(this.btn_xoanv_Click);
             // 
             // btn_suanv
             // 
@@ -162,6 +163,7 @@
             this.btn_suanv.TabIndex = 11;
             this.btn_suanv.Text = "SỬA";
             this.btn_suanv.UseVisualStyleBackColor = true;
+            this.btn_suanv.Click += new System.EventHandler(this.btn_suanv_Click);
             // 
             // btn_themnv
             // 

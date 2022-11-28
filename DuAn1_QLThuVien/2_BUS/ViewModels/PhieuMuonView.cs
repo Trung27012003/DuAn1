@@ -15,6 +15,5 @@ namespace _2_BUS.ViewModels
         public DateTime? NgayMuon { get; set; }
         public DateTime? NgayTra { get; set; }
         public string? GhiChu { get; set; }
-       
     }
 }

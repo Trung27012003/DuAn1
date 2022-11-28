@@ -47,7 +47,7 @@ namespace _2_BUS.Services
                 {
                     Id = a.Id,
                     Name = a.Name,
-                    IdCV =a.IdCV,
+                    IdCV = a.IdCV,
                     DiaChi = a.DiaChi,
                     SDT = a.SDT,
                     NgaySinh = a.NgaySinh,
