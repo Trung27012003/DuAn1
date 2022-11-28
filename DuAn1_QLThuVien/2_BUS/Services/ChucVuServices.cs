@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 namespace _2_BUS.Services
 {
     public class ChucVuServices : IChucVuServices
-    {//Duc ngu
+    {
         private IChucVuRep _IChucVuRep;
         //private ChucVuView _view;
         public ChucVuServices()

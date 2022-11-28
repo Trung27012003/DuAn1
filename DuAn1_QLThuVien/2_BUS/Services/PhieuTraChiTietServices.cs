@@ -1,5 +1,6 @@
 ﻿using _1_DAL.Models;
 using _2_BUS.IServices;
+using _2_BUS.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,12 +11,12 @@ namespace _2_BUS.Services
 {
     public class PhieuTraChiTietServices : IPhieuTraChiTietServices
     {//Duc ngu
-        public string AddTN(PhieuTraChiTiet obj)
+        public string AddTN(PhieuTraChiTietView obj)
         {
             throw new NotImplementedException();
         }
 
-        public List<PhieuTraChiTiet> GetPhieuTraChiTiet()
+        public List<PhieuTraChiTietView> GetPhieuTraChiTiet()
         {
             throw new NotImplementedException();
         }
@@ -25,7 +26,7 @@ namespace _2_BUS.Services
             throw new NotImplementedException();
         }
 
-        public string UpdateTN(PhieuTraChiTiet obj)
+        public string UpdateTN(PhieuTraChiTietView obj)
         {
             throw new NotImplementedException();
         }

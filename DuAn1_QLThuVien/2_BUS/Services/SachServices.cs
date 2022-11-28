@@ -1,5 +1,8 @@
-﻿using _1_DAL.Models;
+﻿using _1_DAL.IRespositories;
+using _1_DAL.Models;
+using _1_DAL.Respositories;
 using _2_BUS.IServices;
+using _2_BUS.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,25 +12,75 @@ using System.Threading.Tasks;
 namespace _2_BUS.Services
 {
     public class SachServices : ISachServices
-    {//Duc ngu
-        public string AddTN(Sach obj)
+    {
+        public ISachRep _IsachRep;
+        public SachServices()
         {
-            throw new NotImplementedException();
+            _IsachRep = new SachRep();
+        }
+        public string AddTN(SachView a)
+        {
+            if (a == null) return "Thêm không thành công!";
+            var Sach = new Sach()
+            {
+                Name = a.Name,
+                TL = a.TL,
+                TG = a.TG,
+                NXB = a.NXB,
+                SoLuong =  a.SoLuong,
+                GhiChu = a.GhiChu,
+                GiaTien = a.GiaTien,
+
+            };
+            if (_IsachRep.AddSach(Sach)) return "Thêm  thành công!";
+            return "Thêm không thành công!";
         }
 
-        public List<Sach> GetSach()
+        public List<SachView> GetSach()
         {
-            throw new NotImplementedException();
+            List<SachView> lst = new List<SachView>();
+            lst =
+                (
+                from a in _IsachRep.GetAllSach()
+                select new SachView()
+                {
+                    Id = a.Id,
+                    Name = a.Name,
+                    TL = a.TL,
+                    TG = a.TG,
+                    NXB = a.NXB,
+                    SoLuong = a.SoLuong,
+                    GhiChu = a.GhiChu,
+                    GiaTien = a.GiaTien,
+                }
+                ).ToList();
+            return lst;
         }
 
         public string RemoveTN(Guid obj)
         {
-            throw new NotImplementedException();
+            if (obj == null) return "Xóa không thành công!";
+            if (_IsachRep.RemoveSach(obj)) return "Xóa  thành công!";
+            return "Xóa không thành công!";
         }
 
-        public string UpdateTN(Sach obj)
+        public string UpdateTN(SachView obj)
         {
-            throw new NotImplementedException();
+            if (obj == null) return "Sửa không thành công!";
+            var sach = new Sach()
+            {
+                Id = obj.Id,
+                Name = obj.Name,
+                TL = obj.TL,
+                TG = obj.TG,
+                NXB = obj.NXB,
+                SoLuong = obj.SoLuong,
+                GhiChu = obj.GhiChu,
+                GiaTien = obj.GiaTien,
+
+            };
+            if (_IsachRep.UpdateSach(sach)) return "Sửa  thành công!";
+            return "Sửa không thành công!";
         }
     }
 }

@@ -108,3 +108,13 @@ C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\2_BUS\bin\Debug\net6.0\1_DAL.
 C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\2_BUS\bin\Debug\net6.0\1_DAL.pdb
 C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\2_BUS\obj\Debug\net6.0\2_BUS.csproj.CopyComplete
 C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\2_BUS\obj\Debug\net6.0\ref\2_BUS.dll
+D:\GitClone\DuAn1_QLThuVien\2_BUS\bin\Debug\net6.0\2_BUS.deps.json
+D:\GitClone\DuAn1_QLThuVien\2_BUS\bin\Debug\net6.0\2_BUS.dll
+D:\GitClone\DuAn1_QLThuVien\2_BUS\bin\Debug\net6.0\2_BUS.pdb
+D:\GitClone\DuAn1_QLThuVien\2_BUS\bin\Debug\net6.0\1_DAL.dll
+D:\GitClone\DuAn1_QLThuVien\2_BUS\bin\Debug\net6.0\1_DAL.pdb
+D:\GitClone\DuAn1_QLThuVien\2_BUS\obj\Debug\net6.0\2_BUS.csproj.CopyComplete
+D:\GitClone\DuAn1_QLThuVien\2_BUS\obj\Debug\net6.0\2_BUS.dll
+D:\GitClone\DuAn1_QLThuVien\2_BUS\obj\Debug\net6.0\refint\2_BUS.dll
+D:\GitClone\DuAn1_QLThuVien\2_BUS\obj\Debug\net6.0\2_BUS.pdb
+D:\GitClone\DuAn1_QLThuVien\2_BUS\obj\Debug\net6.0\ref\2_BUS.dll
