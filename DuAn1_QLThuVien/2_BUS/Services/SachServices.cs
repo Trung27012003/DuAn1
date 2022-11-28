@@ -18,21 +18,21 @@ namespace _2_BUS.Services
         {
             _IsachRep = new SachRep();
         }
-        public string AddTN(SachView obj)
+        public string AddTN(SachView a)
         {
-            if (obj == null) return "Thêm không thành công!";
-            var sach = new SachView()
+            if (a == null) return "Thêm không thành công!";
+            var Sach = new Sach()
             {
-                Name = obj.Name,
-                TL = obj.TL,
-                TG = obj.TG,
-                NXB = obj.NXB,
-                SoLuong =  obj.SoLuong,
-                GhiChu = obj.GhiChu,
-                GiaTien = obj.GiaTien,
+                Name = a.Name,
+                TL = a.TL,
+                TG = a.TG,
+                NXB = a.NXB,
+                SoLuong =  a.SoLuong,
+                GhiChu = a.GhiChu,
+                GiaTien = a.GiaTien,
 
             };
-            //if (_IsachRep.AddSach(sach)) return "Thêm  thành công!";
+            if (_IsachRep.AddSach(Sach)) return "Thêm  thành công!";
             return "Thêm không thành công!";
         }
 
@@ -46,6 +46,12 @@ namespace _2_BUS.Services
                 {
                     Id = a.Id,
                     Name = a.Name,
+                    TL = a.TL,
+                    TG = a.TG,
+                    NXB = a.NXB,
+                    SoLuong = a.SoLuong,
+                    GhiChu = a.GhiChu,
+                    GiaTien = a.GiaTien,
                 }
                 ).ToList();
             return lst;
@@ -53,12 +59,28 @@ namespace _2_BUS.Services
 
         public string RemoveTN(Guid obj)
         {
-            throw new NotImplementedException();
+            if (obj == null) return "Xóa không thành công!";
+            if (_IsachRep.RemoveSach(obj)) return "Xóa  thành công!";
+            return "Xóa không thành công!";
         }
 
         public string UpdateTN(SachView obj)
         {
-            throw new NotImplementedException();
+            if (obj == null) return "Sửa không thành công!";
+            var sach = new Sach()
+            {
+                Id = obj.Id,
+                Name = obj.Name,
+                TL = obj.TL,
+                TG = obj.TG,
+                NXB = obj.NXB,
+                SoLuong = obj.SoLuong,
+                GhiChu = obj.GhiChu,
+                GiaTien = obj.GiaTien,
+
+            };
+            if (_IsachRep.UpdateSach(sach)) return "Sửa  thành công!";
+            return "Sửa không thành công!";
         }
     }
 }
