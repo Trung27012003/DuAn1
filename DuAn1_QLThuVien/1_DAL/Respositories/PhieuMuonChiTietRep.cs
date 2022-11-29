@@ -57,11 +57,6 @@ namespace _1_DAL.Respositories
                 tempobj.TienTheChan = obj.TienTheChan;
                 tempobj.GhiChu = obj.GhiChu;
                 tempobj.DieuKien = obj.DieuKien;
-
-
-                
-
-
                 _context.Update(tempobj);
                 _context.SaveChanges();
                 return true;

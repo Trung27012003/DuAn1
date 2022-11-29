@@ -44,10 +44,6 @@ namespace _1_DAL.Respositories
             return true;
         }
 
-
-        
-
-
             public bool UpdatePT(PhieuTra obj)
             {
                 if (obj == null) return false;
