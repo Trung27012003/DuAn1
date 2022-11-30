@@ -1,4 +1,6 @@
-﻿using System;
+﻿using _2_BUS.IServices;
+using _2_BUS.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,16 @@ namespace _3_PL.Views
 {
     public partial class SachForm : Form
     {
+        public ISachServices _IsachServices;
         public SachForm()
         {
             InitializeComponent();
+            _IsachServices = new SachServices();
+        }
+
+        private void btn_them_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

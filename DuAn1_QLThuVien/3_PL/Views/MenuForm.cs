@@ -6,12 +6,15 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Forms;
 
 namespace _3_PL.Views
 {
     public partial class MenuForm : Form
     {
+        public event EventHandler DangXuat;
+        public bool _isthoat = true;
         public MenuForm()
         {
             InitializeComponent();
@@ -71,6 +74,17 @@ namespace _3_PL.Views
         private void btn_thengay_Click(object sender, EventArgs e)
         {
             OpenPanel(new TheNgayForm());
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            DangXuat(this, new EventArgs());
+        }
+
+        private void MenuForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(_isthoat)
+            Application.Exit();
         }
     }
 }
