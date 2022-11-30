@@ -16,10 +16,6 @@ namespace _3_PL.Views
         {
             InitializeComponent();
         }
-
-        private void MuonTraForm_Load(object sender, EventArgs e)
-        {
-
-        }
+        public void LoadToGrid
     }
 }
