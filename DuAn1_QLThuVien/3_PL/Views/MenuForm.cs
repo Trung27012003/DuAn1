@@ -13,13 +13,11 @@ namespace _3_PL.Views
 {
     public partial class MenuForm : Form
     {
-<<<<<<< HEAD
+
         public event EventHandler DangXuat;
         public bool _isthoat = true;
-=======
-        public bool Thoat = true;
-        public event EventHandler Logout;
->>>>>>> a2a6c009c3bb2e7baa6f8dcc09fa62f5ec912550
+
+
         public MenuForm()
         {
             InitializeComponent();
@@ -81,7 +79,7 @@ namespace _3_PL.Views
             OpenPanel(new TheNgayForm());
         }
 
-<<<<<<< HEAD
+
         private void button7_Click(object sender, EventArgs e)
         {
             DangXuat(this, new EventArgs());
@@ -91,27 +89,8 @@ namespace _3_PL.Views
         {
             if(_isthoat)
             Application.Exit();
-=======
-        private void MenuForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if(Thoat == true)
-            {
-                if(MessageBox.Show("Bạn có muốn thoát", "Cảnh Báo", MessageBoxButtons.YesNo) != DialogResult.Yes)
-                    this.Close();
-            }
+
         }
 
-        private void MenuForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            if (Thoat == true)
-            {
-                Application.Exit();
-            }
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
->>>>>>> a2a6c009c3bb2e7baa6f8dcc09fa62f5ec912550
-        }
     }
 }

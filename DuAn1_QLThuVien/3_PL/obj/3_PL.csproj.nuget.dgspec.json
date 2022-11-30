@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hoang\\OneDrive\\Tài liệu\\DuAn1\\DuAn1_QLThuVien\\3_PL\\3_PL.csproj": {}
+    "D:\\GitClone\\DuAn1_QLThuVien\\3_PL\\3_PL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hoang\\OneDrive\\Tài liệu\\DuAn1\\DuAn1_QLThuVien\\1_DAL\\1_DAL.csproj": {
+    "D:\\GitClone\\DuAn1_QLThuVien\\1_DAL\\1_DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hoang\\OneDrive\\Tài liệu\\DuAn1\\DuAn1_QLThuVien\\1_DAL\\1_DAL.csproj",
+        "projectUniqueName": "D:\\GitClone\\DuAn1_QLThuVien\\1_DAL\\1_DAL.csproj",
         "projectName": "1_DAL",
-        "projectPath": "C:\\Users\\hoang\\OneDrive\\Tài liệu\\DuAn1\\DuAn1_QLThuVien\\1_DAL\\1_DAL.csproj",
-        "packagesPath": "C:\\Users\\hoang\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hoang\\OneDrive\\Tài liệu\\DuAn1\\DuAn1_QLThuVien\\1_DAL\\obj\\",
+        "projectPath": "D:\\GitClone\\DuAn1_QLThuVien\\1_DAL\\1_DAL.csproj",
+        "packagesPath": "C:\\Users\\vanhu\\.nuget\\packages\\",
+        "outputPath": "D:\\GitClone\\DuAn1_QLThuVien\\1_DAL\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\hoang\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vanhu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -61,7 +65,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -70,21 +75,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\hoang\\OneDrive\\Tài liệu\\DuAn1\\DuAn1_QLThuVien\\2_BUS\\2_BUS.csproj": {
+    "D:\\GitClone\\DuAn1_QLThuVien\\2_BUS\\2_BUS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hoang\\OneDrive\\Tài liệu\\DuAn1\\DuAn1_QLThuVien\\2_BUS\\2_BUS.csproj",
+        "projectUniqueName": "D:\\GitClone\\DuAn1_QLThuVien\\2_BUS\\2_BUS.csproj",
         "projectName": "2_BUS",
-        "projectPath": "C:\\Users\\hoang\\OneDrive\\Tài liệu\\DuAn1\\DuAn1_QLThuVien\\2_BUS\\2_BUS.csproj",
-        "packagesPath": "C:\\Users\\hoang\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hoang\\OneDrive\\Tài liệu\\DuAn1\\DuAn1_QLThuVien\\2_BUS\\obj\\",
+        "projectPath": "D:\\GitClone\\DuAn1_QLThuVien\\2_BUS\\2_BUS.csproj",
+        "packagesPath": "C:\\Users\\vanhu\\.nuget\\packages\\",
+        "outputPath": "D:\\GitClone\\DuAn1_QLThuVien\\2_BUS\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\hoang\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vanhu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -98,8 +107,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\hoang\\OneDrive\\Tài liệu\\DuAn1\\DuAn1_QLThuVien\\1_DAL\\1_DAL.csproj": {
-                "projectPath": "C:\\Users\\hoang\\OneDrive\\Tài liệu\\DuAn1\\DuAn1_QLThuVien\\1_DAL\\1_DAL.csproj"
+              "D:\\GitClone\\DuAn1_QLThuVien\\1_DAL\\1_DAL.csproj": {
+                "projectPath": "D:\\GitClone\\DuAn1_QLThuVien\\1_DAL\\1_DAL.csproj"
               }
             }
           }
@@ -119,7 +128,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -128,25 +138,29 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\hoang\\OneDrive\\Tài liệu\\DuAn1\\DuAn1_QLThuVien\\3_PL\\3_PL.csproj": {
+    "D:\\GitClone\\DuAn1_QLThuVien\\3_PL\\3_PL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hoang\\OneDrive\\Tài liệu\\DuAn1\\DuAn1_QLThuVien\\3_PL\\3_PL.csproj",
+        "projectUniqueName": "D:\\GitClone\\DuAn1_QLThuVien\\3_PL\\3_PL.csproj",
         "projectName": "3_PL",
-        "projectPath": "C:\\Users\\hoang\\OneDrive\\Tài liệu\\DuAn1\\DuAn1_QLThuVien\\3_PL\\3_PL.csproj",
-        "packagesPath": "C:\\Users\\hoang\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hoang\\OneDrive\\Tài liệu\\DuAn1\\DuAn1_QLThuVien\\3_PL\\obj\\",
+        "projectPath": "D:\\GitClone\\DuAn1_QLThuVien\\3_PL\\3_PL.csproj",
+        "packagesPath": "C:\\Users\\vanhu\\.nuget\\packages\\",
+        "outputPath": "D:\\GitClone\\DuAn1_QLThuVien\\3_PL\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\hoang\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vanhu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0-windows7.0"
+          "net6.0-windows"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -156,8 +170,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\hoang\\OneDrive\\Tài liệu\\DuAn1\\DuAn1_QLThuVien\\2_BUS\\2_BUS.csproj": {
-                "projectPath": "C:\\Users\\hoang\\OneDrive\\Tài liệu\\DuAn1\\DuAn1_QLThuVien\\2_BUS\\2_BUS.csproj"
+              "D:\\GitClone\\DuAn1_QLThuVien\\2_BUS\\2_BUS.csproj": {
+                "projectPath": "D:\\GitClone\\DuAn1_QLThuVien\\2_BUS\\2_BUS.csproj"
               }
             }
           }
@@ -189,7 +203,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -201,7 +216,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
