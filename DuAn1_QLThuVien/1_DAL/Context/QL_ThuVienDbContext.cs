@@ -28,6 +28,7 @@ namespace _1_DAL.Context
         public DbSet<PhieuTra> phieuTras { get; set; }
         public DbSet<PhieuTraChiTiet> phieuTraChiTiets { get; set; }
         public DbSet<ChucVu> chucVus { get; set; }
+        public DbSet<Account> Accounts { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder.

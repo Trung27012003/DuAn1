@@ -641,8 +641,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "1_DAL": "1.0.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0"
+          "1_DAL": "1.0.0"
         },
         "compile": {
           "bin/placeholder/2_BUS.dll": {}
@@ -1865,29 +1864,23 @@
     "net6.0-windows7.0": [
       "2_BUS >= 1.0.0",
       "FontAwesome.Sharp >= 6.1.1",
-      "Microsoft.EntityFrameworkCore.Design >= 3.1.9",
-      "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.0"
+      "Microsoft.EntityFrameworkCore.Design >= 3.1.9"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\hoang\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\git\\DuAn1\\DuAn1_QLThuVien\\3_PL\\3_PL.csproj",
+      "projectUniqueName": "C:\\Users\\hoang\\OneDrive\\Tài liệu\\DuAn1\\DuAn1_QLThuVien\\3_PL\\3_PL.csproj",
       "projectName": "3_PL",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\git\\DuAn1\\DuAn1_QLThuVien\\3_PL\\3_PL.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\git\\DuAn1\\DuAn1_QLThuVien\\3_PL\\obj\\",
+      "projectPath": "C:\\Users\\hoang\\OneDrive\\Tài liệu\\DuAn1\\DuAn1_QLThuVien\\3_PL\\3_PL.csproj",
+      "packagesPath": "C:\\Users\\hoang\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\hoang\\OneDrive\\Tài liệu\\DuAn1\\DuAn1_QLThuVien\\3_PL\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\hoang\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1901,8 +1894,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\Admin\\Desktop\\git\\DuAn1\\DuAn1_QLThuVien\\2_BUS\\2_BUS.csproj": {
-              "projectPath": "C:\\Users\\Admin\\Desktop\\git\\DuAn1\\DuAn1_QLThuVien\\2_BUS\\2_BUS.csproj"
+            "C:\\Users\\hoang\\OneDrive\\Tài liệu\\DuAn1\\DuAn1_QLThuVien\\2_BUS\\2_BUS.csproj": {
+              "projectPath": "C:\\Users\\hoang\\OneDrive\\Tài liệu\\DuAn1\\DuAn1_QLThuVien\\2_BUS\\2_BUS.csproj"
             }
           }
         }
@@ -1926,10 +1919,6 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[3.1.9, )"
-          },
-          "Microsoft.EntityFrameworkCore.SqlServer": {
-            "target": "Package",
-            "version": "[6.0.0, )"
           }
         },
         "imports": [
@@ -1950,7 +1939,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

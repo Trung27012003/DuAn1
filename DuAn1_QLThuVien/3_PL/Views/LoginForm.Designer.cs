@@ -32,49 +32,89 @@
             this.tbt_taikhoan = new System.Windows.Forms.TextBox();
             this.tbt_matkau = new System.Windows.Forms.TextBox();
             this.btn_dangnhap = new System.Windows.Forms.Button();
+            this.cb_nguoimay = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbt_taikhoan
             // 
             this.tbt_taikhoan.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.tbt_taikhoan.Location = new System.Drawing.Point(291, 161);
+            this.tbt_taikhoan.Location = new System.Drawing.Point(364, 201);
+            this.tbt_taikhoan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbt_taikhoan.Name = "tbt_taikhoan";
             this.tbt_taikhoan.PlaceholderText = "Nhập Tài Khoản";
-            this.tbt_taikhoan.Size = new System.Drawing.Size(386, 30);
+            this.tbt_taikhoan.Size = new System.Drawing.Size(482, 35);
             this.tbt_taikhoan.TabIndex = 0;
             // 
             // tbt_matkau
             // 
             this.tbt_matkau.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.tbt_matkau.Location = new System.Drawing.Point(291, 235);
+            this.tbt_matkau.Location = new System.Drawing.Point(364, 294);
+            this.tbt_matkau.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbt_matkau.Name = "tbt_matkau";
             this.tbt_matkau.PasswordChar = '*';
             this.tbt_matkau.PlaceholderText = "Nhập Mật Khẩu";
-            this.tbt_matkau.Size = new System.Drawing.Size(386, 30);
+            this.tbt_matkau.Size = new System.Drawing.Size(482, 35);
             this.tbt_matkau.TabIndex = 1;
             // 
             // btn_dangnhap
             // 
             this.btn_dangnhap.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_dangnhap.Location = new System.Drawing.Point(386, 315);
+            this.btn_dangnhap.Location = new System.Drawing.Point(482, 394);
+            this.btn_dangnhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_dangnhap.Name = "btn_dangnhap";
-            this.btn_dangnhap.Size = new System.Drawing.Size(213, 80);
+            this.btn_dangnhap.Size = new System.Drawing.Size(266, 100);
             this.btn_dangnhap.TabIndex = 2;
             this.btn_dangnhap.Text = "ĐĂNG NHẬP";
             this.btn_dangnhap.UseVisualStyleBackColor = true;
             this.btn_dangnhap.Click += new System.EventHandler(this.btn_dangnhap_Click);
             // 
+            // cb_nguoimay
+            // 
+            this.cb_nguoimay.AutoSize = true;
+            this.cb_nguoimay.Location = new System.Drawing.Point(364, 358);
+            this.cb_nguoimay.Name = "cb_nguoimay";
+            this.cb_nguoimay.Size = new System.Drawing.Size(246, 29);
+            this.cb_nguoimay.TabIndex = 3;
+            this.cb_nguoimay.Text = "Tôi không phải người máy";
+            this.cb_nguoimay.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(509, 508);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(197, 25);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Nếu chưa có tài khoản?";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(529, 547);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(158, 46);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "ĐĂNG KÝ";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(936, 502);
+            this.ClientSize = new System.Drawing.Size(1170, 628);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cb_nguoimay);
             this.Controls.Add(this.btn_dangnhap);
             this.Controls.Add(this.tbt_matkau);
             this.Controls.Add(this.tbt_taikhoan);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "LoginForm";
             this.Text = "LoginForm";
             this.ResumeLayout(false);
@@ -87,5 +127,8 @@
         private TextBox tbt_taikhoan;
         private TextBox tbt_matkau;
         private Button btn_dangnhap;
+        private CheckBox cb_nguoimay;
+        private Label label1;
+        private Button button1;
     }
 }
