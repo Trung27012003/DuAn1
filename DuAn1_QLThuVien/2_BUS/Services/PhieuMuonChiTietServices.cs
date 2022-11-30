@@ -24,7 +24,10 @@ namespace _2_BUS.Services
             if (obj == null) return "Thêm không thành công!";
             var phieuMuonChiTiet = new PhieuMuonChiTiet()
             {
-              
+              SoLuong = obj.SoLuong,
+              DieuKien = obj.DieuKien,
+              GhiChu = obj.GhiChu,
+              TienTheChan = obj.TienTheChan,
 
             };
             if (_iphieuMuonCTRep.AddPMCT(phieuMuonChiTiet)) return "Thêm  thành công!";
@@ -33,17 +36,46 @@ namespace _2_BUS.Services
 
         public List<PhieuMuonChiTietView> GetPhieuMuonChiTiet()
         {
-            throw new NotImplementedException();
+            List<PhieuMuonChiTietView> lst = new List<PhieuMuonChiTietView>();
+            lst =
+                (
+                from a in _iphieuMuonCTRep.GetAllPMCT()
+                select new PhieuMuonChiTietView()
+                {
+                    Id = a.Id,
+                    IdPM = a.IdPM,
+                    IdSach = a.IdSach,
+                    SoLuong = a.SoLuong,
+                    DieuKien = a.DieuKien,
+                    GhiChu = a.GhiChu,
+                    TienTheChan = a.TienTheChan
+                }
+                ).ToList();
+            return lst;
         }
 
         public string RemoveTN(Guid obj)
         {
-            throw new NotImplementedException();
+            if (obj == null) return "Xóa không thành công!";
+            if (_iphieuMuonCTRep.RemovePMCT(obj)) return "Xóa  thành công!";
+            return "Xóa không thành công!";
         }
-
         public string UpdateTN(PhieuMuonChiTietView obj)
         {
-            throw new NotImplementedException();
+            if (obj == null) return "Sửa không thành công!";
+            var phieuMuonChiTiet = new PhieuMuonChiTiet()
+            {
+                Id = obj.Id,
+                IdPM = obj.IdPM,
+                IdSach = obj.IdSach,
+                SoLuong = obj.SoLuong,
+                DieuKien = obj.DieuKien,
+                GhiChu = obj.GhiChu,
+                TienTheChan = obj.TienTheChan,
+
+            };
+            if (_iphieuMuonCTRep.UpdatePMCT(phieuMuonChiTiet)) return "Sửa thành công!";
+            return "Sửa không thành công!";
         }
     }
 }

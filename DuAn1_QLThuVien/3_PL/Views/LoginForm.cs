@@ -20,8 +20,16 @@ namespace _3_PL.Views
         private void btn_dangnhap_Click(object sender, EventArgs e)
         {
             MenuForm mn = new MenuForm();
-            mn.ShowDialog();
+            mn.Show();
+            this.Hide();
+            mn.DangXuat += Mn_DangXuat;
+        }
 
+        private void Mn_DangXuat(object sender, EventArgs e)
+        {
+            (sender as MenuForm)._isthoat = false;
+            (sender as MenuForm).Close();
+            this.Show();
         }
     }
 }
