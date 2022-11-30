@@ -14,8 +14,10 @@ namespace _2_BUS.Services
         public string AddTN(PhieuTraChiTietView obj)
         {
             throw new NotImplementedException();
+            
         }
 
+        public void sum2number() { }
         public List<PhieuTraChiTietView> GetPhieuTraChiTiet()
         {
             throw new NotImplementedException();
@@ -32,3 +34,4 @@ namespace _2_BUS.Services
         }
     }
 }
+//sum two 2 number  
