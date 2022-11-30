@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "cAFJCbjmITz3JD2+DEwqkIJlkF7lsIar4AWb12590DFe86bQS2J+3GJ2K/kbqPtM67+T6mBPjLlL/A1Ve9cWxg==",
+=======
+  "dgSpecHash": "fhIUoWxKqxVR+JrCaMKHAsmAvVsukcUC6OqjdVwqNufuzH2cFqG27NBnPg/zH+lV9yWhbrLpGP273AIt3cOynQ==",
+>>>>>>> Stashed changes
   "success": true,
   "projectFilePath": "C:\\Users\\Trung2701\\Documents\\DuAn1\\DuAn1\\DuAn1_QLThuVien\\3_PL\\3_PL.csproj",
   "expectedPackageFiles": [

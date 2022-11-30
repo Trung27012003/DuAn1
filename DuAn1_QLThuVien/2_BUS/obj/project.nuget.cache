@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "LwMhvkkJ5lEvVIOs9oYnsEwagKeY9opW1x3fS55jj830hacpan1XWUyb8wbri8LdTdNR6iGuR2ItxdEguVf8pA==",
+=======
+  "dgSpecHash": "nP0+MLpuV1+grtzJn2NUYEvingT65KrHo7vS16uNMM1GspPyORO3GYFPkvpZAdMnqDrtk2tHAD2IlRJ1kWHKnw==",
+>>>>>>> Stashed changes
   "success": true,
   "projectFilePath": "C:\\Users\\Trung2701\\Documents\\DuAn1\\DuAn1\\DuAn1_QLThuVien\\2_BUS\\2_BUS.csproj",
   "expectedPackageFiles": [
