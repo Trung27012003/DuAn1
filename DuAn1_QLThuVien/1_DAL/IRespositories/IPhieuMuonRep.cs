@@ -10,7 +10,7 @@ namespace _1_DAL.IRespositories
     {
         bool AddPM(PhieuMuon x);
 
-        bool RemovePM(PhieuMuon x);
+        bool RemovePM(Guid x);
 
         bool UpdatePM(PhieuMuon x);
 

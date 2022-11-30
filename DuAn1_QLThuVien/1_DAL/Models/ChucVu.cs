@@ -9,6 +9,6 @@ namespace _1_DAL.Models
     public class ChucVu
     {
         public Guid Id { get; set; }
-        public string Name { get; set; }
+        public string? Name { get; set; }
     }
 }

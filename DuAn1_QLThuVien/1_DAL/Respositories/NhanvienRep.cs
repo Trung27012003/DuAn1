@@ -1,5 +1,7 @@
-﻿using _1_DAL.IRespositories;
+﻿using _1_DAL.Context;
+using _1_DAL.IRespositories;
 using _1_DAL.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,30 +10,48 @@ using System.Threading.Tasks;
 
 namespace _1_DAL.Respositories
 {
-<<<<<<< HEAD
-    internal class NhanvienRep : INhanVienRep
-=======
-    internal class TheThanhVienRes
->>>>>>> 7887583e9c5990208a09759951b272b41a3a5950
+
+    public class NhanvienRep : INhanVienRep
     {
-        public bool AddNV(NhanVien x)
+        QL_ThuVienDbContext _context;
+        public NhanvienRep()
         {
-            throw new NotImplementedException();
+            _context = new QL_ThuVienDbContext();
+        }
+        public bool AddNV(NhanVien obj)
+        {
+            if (obj == null) return false;
+            _context.nhanViens.Add(obj);
+            _context.SaveChanges();
+            return true;
         }
 
         public List<NhanVien> GetAllNV()
         {
-            throw new NotImplementedException();
+            return _context.nhanViens.ToList();
         }
 
-        public bool RemoveNV(NhanVien x)
+        public bool RemoveNV(Guid obj)
         {
-            throw new NotImplementedException();
+            if (obj == null) return false;
+            var tempobj = _context.nhanViens.FirstOrDefault(c => c.Id == obj);
+            _context.Remove(tempobj);
+            _context.SaveChanges();
+            return true;
         }
 
-        public bool UpdateNV(NhanVien x)
+        public bool UpdateNV(NhanVien obj)
         {
-            throw new NotImplementedException();
+            if (obj == null) return false;
+            var tempobj = _context.nhanViens.FirstOrDefault(c => c.Id == obj.Id);
+            tempobj.Name = obj.Name;
+            tempobj.DiaChi = obj.DiaChi;
+            tempobj.NgaySinh = obj.NgaySinh;
+            tempobj.SDT = obj.SDT;
+            _context.Update(tempobj);
+            _context.SaveChanges();
+            return true;
         }
-    }
+    } 
+   
 }

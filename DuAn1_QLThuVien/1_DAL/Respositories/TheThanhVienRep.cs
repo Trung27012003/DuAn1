@@ -1,5 +1,7 @@
-﻿using _1_DAL.IRespositories;
+﻿using _1_DAL.Context;
+using _1_DAL.IRespositories;
 using _1_DAL.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,32 +10,54 @@ using System.Threading.Tasks;
 
 namespace _1_DAL.Respositories
 {
-<<<<<<< HEAD
-    internal class TheThanhVienRep : ITheThanhVienRep
+
+    public class TheThanhVienRep : ITheThanhVienRep
     {
-        public bool AddTTV(TheThanhVien x)
+        QL_ThuVienDbContext _context;
+        public TheThanhVienRep()
         {
-            throw new NotImplementedException();
+            _context = new QL_ThuVienDbContext();
+        }
+        public bool AddTTV(TheThanhVien obj)
+        {
+            if (obj == null) return false;
+            obj.Id = Guid.NewGuid();
+            _context.theThanhViens.Add(obj);
+            _context.SaveChanges();
+            return true;
         }
 
         public List<TheThanhVien> GetAllTTVs()
         {
-            throw new NotImplementedException();
+            return _context.theThanhViens.ToList();
         }
 
-        public bool RemoveTTV(TheThanhVien x)
+        public bool RemoveTTV(Guid obj)
         {
-            throw new NotImplementedException();
+            if (obj == null) return false;
+            var tempobj = _context.theThanhViens.FirstOrDefault(c => c.Id == obj);
+
+            _context.Remove(tempobj);
+            _context.SaveChanges();
+            return true;
         }
 
-        public bool UpdateTTV(TheThanhVien x)
+        public bool UpdateTTV(TheThanhVien obj)
         {
-            throw new NotImplementedException();
+            if(obj == null) return false;
+            var tempobj = _context.theThanhViens.FirstOrDefault(c => c.Id == obj.Id);
+            tempobj.TenThanhVien = obj.TenThanhVien;
+            tempobj.NgayDangKi = obj.NgayDangKi;
+            tempobj.NgayHetHan = obj.NgayHetHan;
+            tempobj.SDT = obj.SDT;
+            tempobj.DiaChi = obj.DiaChi;
+            tempobj.NgaySinh = obj.NgaySinh;
+            tempobj.GhiChu = obj.GhiChu;
+            _context.Update(tempobj);
+            _context.SaveChanges();
+            return true;
         }
-=======
-    public class TheThanhVienRes
-    {
 
->>>>>>> 7887583e9c5990208a09759951b272b41a3a5950
+        
     }
 }

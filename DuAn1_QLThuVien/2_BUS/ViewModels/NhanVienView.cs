@@ -14,6 +14,6 @@ namespace _2_BUS.ViewModels
         public string? DiaChi { get; set; }
         public DateTime? NgaySinh { get; set; }
         public string? SDT { get; set; }
-        public virtual ChucVu ChucVu { get; set; }
+      
     }
 }

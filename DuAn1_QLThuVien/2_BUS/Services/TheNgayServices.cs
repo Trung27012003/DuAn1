@@ -1,48 +1,75 @@
-﻿using System;
+﻿using _1_DAL.IRespositories;
+using _1_DAL.Models;
+using _1_DAL.Respositories;
+using _2_BUS.IServices;
+using _2_BUS.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using _2_BUS.IServices;
-using _2_BUS.ViewModels;
-using _1_DAL.Models;
-using _1_DAL.IRespositories;
-using _1_DAL.Respositories;
+
 namespace _2_BUS.Services
 {
     public class TheNgayServices : ITheNgayServices
-    {
-        private ITheNgayRep _thengay;
-        private List<TheNgay> _listtn;
-
+    {//Duc ngu
+        public ITheNgayRep _itheNgayRep;
         public TheNgayServices()
         {
-            _listtn = new List<TheNgay>();
-            _thengay = new TheNgayRep();
+            _itheNgayRep = new TheNgayRep();
+        }
+        public string AddTN(TheNgayView obj)
+        {
+            if (obj == null) return "Thêm không thành công!";
+            var tn = new TheNgay()
+            {
+               StartTime = obj.StartTime,
+               EndTime = obj.EndTime,
+               GhiChu = obj.GhiChu
+
+            };
+            if (_itheNgayRep.AddTN(tn)) return "Thêm  thành công!";
+            return "Thêm không thành công!";
         }
 
-        public bool AddTN(TheNgay x)
+        public List<TheNgayView> GetTheNgay()
         {
-            _thengay.AddTN(x);
-            return true;
+            List<TheNgayView> lst = new List<TheNgayView>();
+            lst =
+                (
+                from a in _itheNgayRep.GetAllTNs()
+                select new TheNgayView()
+                {
+                    Id = a.Id,
+                    IdNV = a.IdNV,
+                    StartTime = a.StartTime,
+                    EndTime = a.EndTime,
+                    GhiChu = a.GhiChu
+                }
+                ).ToList();
+            return lst;
         }
-
-        public bool RemoveTN(TheNgay x)
+        public string RemoveTN(Guid obj)
         {
-            _thengay.RemoveTN(x);
-            return true;
-        }
+                if (obj == null) return "Xóa không thành công!";
+                if (_itheNgayRep.RemoveTN(obj)) return "Xóa  thành công!";
+                return "Xóa không thành công!";
+            }
 
-        public List<TheNgay> GetTheNgay()
+        public string UpdateTN(TheNgayView obj)
         {
-            _listtn = _thengay.GetAllTNs();
-            return _listtn;
-        }
+            if (obj == null) return "Sửa không thành công!";
+            var tn = new TheNgay()
+            {
+                Id = obj.Id,
+                IdNV = obj.IdNV,
+                StartTime = obj.StartTime,
+                EndTime = obj.EndTime,
+                GhiChu = obj.GhiChu
 
-        public bool UpdateTN(TheNgay x)
-        {
-            _thengay.UpdateTN(x);
-            return true;
+            };
+            if (_itheNgayRep.UpdateTN(tn)) return "Sửa  thành công!";
+            return "Sửa không thành công!";
         }
     }
 }

@@ -10,7 +10,7 @@ namespace _1_DAL.IRespositories
     {
         bool AddPTCT(PhieuTraChiTiet x);
 
-        bool RemovePTCT(PhieuTraChiTiet x);
+        bool RemovePTCT(Guid x);
 
         bool UpdatePTCT(PhieuTraChiTiet x);
 
