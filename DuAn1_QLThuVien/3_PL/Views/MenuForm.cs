@@ -12,6 +12,8 @@ namespace _3_PL.Views
 {
     public partial class MenuForm : Form
     {
+        public bool Thoat = true;
+        public event EventHandler Logout;
         public MenuForm()
         {
             InitializeComponent();
@@ -71,6 +73,27 @@ namespace _3_PL.Views
         private void btn_thengay_Click(object sender, EventArgs e)
         {
             OpenPanel(new TheNgayForm());
+        }
+
+        private void MenuForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(Thoat == true)
+            {
+                if(MessageBox.Show("Bạn có muốn thoát", "Cảnh Báo", MessageBoxButtons.YesNo) != DialogResult.Yes)
+                    this.Close();
+            }
+        }
+
+        private void MenuForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (Thoat == true)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
         }
     }
 }
