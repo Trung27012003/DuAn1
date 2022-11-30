@@ -785,7 +785,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "1_DAL": "1.0.0"
+          "1_DAL": "1.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0"
         },
         "compile": {
           "bin/placeholder/2_BUS.dll": {}
@@ -2008,7 +2009,8 @@
     "net6.0-windows7.0": [
       "2_BUS >= 1.0.0",
       "FontAwesome.Sharp >= 6.1.1",
-      "Microsoft.EntityFrameworkCore.Design >= 3.1.9"
+      "Microsoft.EntityFrameworkCore.Design >= 3.1.9",
+      "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.0"
     ]
   },
   "packageFolders": {
@@ -2068,6 +2070,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[3.1.9, )"
+          },
+          "Microsoft.EntityFrameworkCore.SqlServer": {
+            "target": "Package",
+            "version": "[6.0.0, )"
           }
         },
         "imports": [

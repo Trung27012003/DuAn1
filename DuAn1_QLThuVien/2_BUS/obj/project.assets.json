@@ -1921,7 +1921,8 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "1_DAL >= 1.0.0"
+      "1_DAL >= 1.0.0",
+      "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.0"
     ]
   },
   "packageFolders": {
@@ -1971,6 +1972,12 @@
     "frameworks": {
       "net6.0": {
         "targetAlias": "net6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": {
+            "target": "Package",
+            "version": "[6.0.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
