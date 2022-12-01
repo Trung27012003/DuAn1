@@ -82,7 +82,11 @@ namespace _3_PL.Views
 
         private void button7_Click(object sender, EventArgs e)
         {
-            DangXuat(this, new EventArgs());
+            DialogResult rs = MessageBox.Show("Bạn có muốn đăng xuất ?", "Thông báo", MessageBoxButtons.OKCancel);
+            if (rs == DialogResult.OK)
+            {
+                DangXuat(this, new EventArgs());
+            }
         }
 
         private void MenuForm_FormClosing(object sender, FormClosingEventArgs e)
