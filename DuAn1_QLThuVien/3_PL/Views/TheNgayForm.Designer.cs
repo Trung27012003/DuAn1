@@ -28,31 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_start = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rtb_ghichu = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dtg_show = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_them = new System.Windows.Forms.Button();
             this.btn_in = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_end = new System.Windows.Forms.DateTimePicker();
             this.cbb_nhanvien = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tbt_idnv = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_show)).BeginInit();
             this.SuspendLayout();
             // 
-            // dateTimePicker1
+            // dtp_start
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(119, 112);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(210, 23);
-            this.dateTimePicker1.TabIndex = 0;
+            this.dtp_start.Location = new System.Drawing.Point(119, 112);
+            this.dtp_start.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtp_start.Name = "dtp_start";
+            this.dtp_start.Size = new System.Drawing.Size(210, 23);
+            this.dtp_start.TabIndex = 0;
             // 
             // dateTimePicker2
             // 
@@ -62,14 +64,14 @@
             this.dateTimePicker2.Size = new System.Drawing.Size(215, 23);
             this.dateTimePicker2.TabIndex = 1;
             // 
-            // richTextBox1
+            // rtb_ghichu
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(367, 89);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(215, 91);
-            this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "";
+            this.rtb_ghichu.Location = new System.Drawing.Point(367, 89);
+            this.rtb_ghichu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rtb_ghichu.Name = "rtb_ghichu";
+            this.rtb_ghichu.Size = new System.Drawing.Size(215, 91);
+            this.rtb_ghichu.TabIndex = 2;
+            this.rtb_ghichu.Text = "";
             // 
             // label1
             // 
@@ -114,19 +116,20 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(28, 64);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 15);
+            this.label4.Size = new System.Drawing.Size(83, 15);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Mã nhân viên ";
+            this.label4.Text = "Tên nhân viên ";
             // 
-            // button1
+            // btn_them
             // 
-            this.button1.Location = new System.Drawing.Point(646, 50);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(153, 54);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "THÊM";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_them.Location = new System.Drawing.Point(646, 50);
+            this.btn_them.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_them.Name = "btn_them";
+            this.btn_them.Size = new System.Drawing.Size(153, 54);
+            this.btn_them.TabIndex = 9;
+            this.btn_them.Text = "THÊM";
+            this.btn_them.UseVisualStyleBackColor = true;
+            this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
             // 
             // btn_in
             // 
@@ -165,13 +168,13 @@
             this.label6.TabIndex = 14;
             this.label6.Text = "đến";
             // 
-            // dateTimePicker4
+            // dtp_end
             // 
-            this.dateTimePicker4.Location = new System.Drawing.Point(120, 157);
-            this.dateTimePicker4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(210, 23);
-            this.dateTimePicker4.TabIndex = 15;
+            this.dtp_end.Location = new System.Drawing.Point(120, 157);
+            this.dtp_end.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtp_end.Name = "dtp_end";
+            this.dtp_end.Size = new System.Drawing.Size(210, 23);
+            this.dtp_end.TabIndex = 15;
             // 
             // cbb_nhanvien
             // 
@@ -181,26 +184,44 @@
             this.cbb_nhanvien.Size = new System.Drawing.Size(213, 23);
             this.cbb_nhanvien.TabIndex = 16;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(29, 35);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(82, 15);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Mã nhân viên ";
+            // 
+            // tbt_idnv
+            // 
+            this.tbt_idnv.Location = new System.Drawing.Point(116, 27);
+            this.tbt_idnv.Name = "tbt_idnv";
+            this.tbt_idnv.Size = new System.Drawing.Size(213, 23);
+            this.tbt_idnv.TabIndex = 18;
+            // 
             // TheNgayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(809, 386);
+            this.Controls.Add(this.tbt_idnv);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.cbb_nhanvien);
-            this.Controls.Add(this.dateTimePicker4);
+            this.Controls.Add(this.dtp_end);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dateTimePicker3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btn_in);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_them);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dtg_show);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.rtb_ghichu);
             this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtp_start);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "TheNgayForm";
             this.Text = "TheNgayForm";
@@ -212,20 +233,22 @@
 
         #endregion
 
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtp_start;
         private DateTimePicker dateTimePicker2;
-        private RichTextBox richTextBox1;
+        private RichTextBox rtb_ghichu;
         private Label label1;
         private Label label2;
         private Label label3;
         private DataGridView dtg_show;
         private Label label4;
-        private Button button1;
+        private Button btn_them;
         private Button btn_in;
         private Label label5;
         private DateTimePicker dateTimePicker3;
         private Label label6;
-        private DateTimePicker dateTimePicker4;
+        private DateTimePicker dtp_end;
         private ComboBox cbb_nhanvien;
+        private Label label7;
+        private TextBox tbt_idnv;
     }
 }
