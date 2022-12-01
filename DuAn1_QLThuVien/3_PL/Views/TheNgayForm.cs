@@ -17,6 +17,9 @@ namespace _3_PL.Views
             InitializeComponent();
         }
 
-        
+        private void btn_in_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Đi mua cái máy in về đây rồi tính tiếp !!!");
+        }
     }
 }

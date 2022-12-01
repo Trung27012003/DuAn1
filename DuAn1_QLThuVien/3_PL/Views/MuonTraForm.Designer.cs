@@ -318,7 +318,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "MuonTraForm";
             this.Text = "MuonTraForm";
-            this.Load += new System.EventHandler(this.MuonTraForm_Load);
+     //       this.Load += new System.EventHandler(this.MuonTraForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.tp_muon.ResumeLayout(false);
             this.tp_muon.PerformLayout();
