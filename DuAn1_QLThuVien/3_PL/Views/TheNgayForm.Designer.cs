@@ -28,173 +28,255 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_start = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rtb_ghichu = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtg_show = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_them = new System.Windows.Forms.Button();
+            this.btn_in = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dtp_end = new System.Windows.Forms.DateTimePicker();
+            this.tbt_idnv = new System.Windows.Forms.TextBox();
+            this.cbb_nhanvien = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dtg_show)).BeginInit();
             this.SuspendLayout();
             // 
-            // dateTimePicker1
+            // dtp_start
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(136, 150);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(240, 27);
-            this.dateTimePicker1.TabIndex = 0;
+            this.dtp_start.Location = new System.Drawing.Point(119, 112);
+            this.dtp_start.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtp_start.Name = "dtp_start";
+            this.dtp_start.Size = new System.Drawing.Size(210, 23);
+            this.dtp_start.TabIndex = 0;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(109, 290);
+            this.dateTimePicker2.Location = new System.Drawing.Point(116, 215);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(245, 27);
+            this.dateTimePicker2.Size = new System.Drawing.Size(215, 23);
             this.dateTimePicker2.TabIndex = 1;
             // 
-            // richTextBox1
+            // rtb_ghichu
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(419, 116);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(245, 120);
-            this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "";
+            this.rtb_ghichu.Location = new System.Drawing.Point(367, 89);
+            this.rtb_ghichu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rtb_ghichu.Name = "rtb_ghichu";
+            this.rtb_ghichu.Size = new System.Drawing.Size(215, 91);
+            this.rtb_ghichu.TabIndex = 2;
+            this.rtb_ghichu.Text = "";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 150);
+            this.label1.Location = new System.Drawing.Point(14, 112);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 20);
+            this.label1.Size = new System.Drawing.Size(78, 15);
             this.label1.TabIndex = 3;
             this.label1.Text = "Ngày bắt đầu";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 216);
+            this.label2.Location = new System.Drawing.Point(14, 162);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 20);
+            this.label2.Size = new System.Drawing.Size(81, 15);
             this.label2.TabIndex = 4;
             this.label2.Text = "Ngày kết thúc";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(413, 85);
+            this.label3.Location = new System.Drawing.Point(361, 64);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 20);
+            this.label3.Size = new System.Drawing.Size(48, 15);
             this.label3.TabIndex = 5;
             this.label3.Text = "Ghi chú";
             // 
-            // dataGridView1
+            // dtg_show
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 339);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(917, 164);
-            this.dataGridView1.TabIndex = 6;
+            this.dtg_show.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtg_show.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6});
+            this.dtg_show.Location = new System.Drawing.Point(12, 252);
+            this.dtg_show.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtg_show.Name = "dtg_show";
+            this.dtg_show.RowHeadersWidth = 51;
+            this.dtg_show.RowTemplate.Height = 29;
+            this.dtg_show.Size = new System.Drawing.Size(802, 123);
+            this.dtg_show.TabIndex = 6;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(32, 85);
+            this.label4.Location = new System.Drawing.Point(28, 64);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 20);
+            this.label4.Size = new System.Drawing.Size(83, 15);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Mã mượn";
+            this.label4.Text = "Tên nhân viên ";
             // 
-            // textBox1
+            // btn_them
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(136, 85);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(240, 27);
-            this.textBox1.TabIndex = 8;
+            this.btn_them.Location = new System.Drawing.Point(646, 50);
+            this.btn_them.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_them.Name = "btn_them";
+            this.btn_them.Size = new System.Drawing.Size(153, 54);
+            this.btn_them.TabIndex = 9;
+            this.btn_them.Text = "THÊM";
+            this.btn_them.UseVisualStyleBackColor = true;
+            this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
             // 
-            // button1
+            // btn_in
             // 
-            this.button1.Location = new System.Drawing.Point(738, 67);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(175, 63);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "THÊM";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(738, 168);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(175, 68);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "In";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_in.Location = new System.Drawing.Point(646, 126);
+            this.btn_in.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_in.Name = "btn_in";
+            this.btn_in.Size = new System.Drawing.Size(153, 51);
+            this.btn_in.TabIndex = 10;
+            this.btn_in.Text = "In";
+            this.btn_in.UseVisualStyleBackColor = true;
+            this.btn_in.Click += new System.EventHandler(this.btn_in_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 295);
+            this.label5.Location = new System.Drawing.Point(39, 223);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 20);
+            this.label5.Size = new System.Drawing.Size(56, 15);
             this.label5.TabIndex = 12;
             this.label5.Text = "Tìm kiếm";
             // 
             // dateTimePicker3
             // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(424, 290);
+            this.dateTimePicker3.Location = new System.Drawing.Point(388, 215);
+            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(240, 27);
+            this.dateTimePicker3.Size = new System.Drawing.Size(210, 23);
             this.dateTimePicker3.TabIndex = 13;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(370, 295);
+            this.label6.Location = new System.Drawing.Point(345, 218);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(34, 20);
+            this.label6.Size = new System.Drawing.Size(27, 15);
             this.label6.TabIndex = 14;
             this.label6.Text = "đến";
             // 
-            // dateTimePicker4
+            // dtp_end
             // 
-            this.dateTimePicker4.Location = new System.Drawing.Point(137, 209);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(240, 27);
-            this.dateTimePicker4.TabIndex = 15;
+            this.dtp_end.Location = new System.Drawing.Point(120, 157);
+            this.dtp_end.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtp_end.Name = "dtp_end";
+            this.dtp_end.Size = new System.Drawing.Size(210, 23);
+            this.dtp_end.TabIndex = 15;
+            // 
+            // tbt_idnv
+            // 
+            this.tbt_idnv.Location = new System.Drawing.Point(116, 27);
+            this.tbt_idnv.Name = "tbt_idnv";
+            this.tbt_idnv.Size = new System.Drawing.Size(213, 23);
+            this.tbt_idnv.TabIndex = 18;
+            // 
+            // cbb_nhanvien
+            // 
+            this.cbb_nhanvien.FormattingEnabled = true;
+            this.cbb_nhanvien.Location = new System.Drawing.Point(116, 61);
+            this.cbb_nhanvien.Name = "cbb_nhanvien";
+            this.cbb_nhanvien.Size = new System.Drawing.Size(213, 23);
+            this.cbb_nhanvien.TabIndex = 16;
+            this.cbb_nhanvien.SelectedIndexChanged += new System.EventHandler(this.cbb_nhanvien_SelectedIndexChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(29, 35);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(82, 15);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Mã nhân viên ";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Id";
+            this.Column1.Name = "Column1";
+            this.Column1.Visible = false;
+            this.Column1.Width = 50;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "STT";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 50;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Tên Nhân Viên";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 160;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Ngày Bắt Đầu";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 200;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Ngày Kết Thúc";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 200;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Ghi Chú";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 140;
             // 
             // TheNgayForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(925, 515);
-            this.Controls.Add(this.dateTimePicker4);
+            this.ClientSize = new System.Drawing.Size(818, 386);
+            this.Controls.Add(this.tbt_idnv);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.cbb_nhanvien);
+            this.Controls.Add(this.dtp_end);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dateTimePicker3);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btn_in);
+            this.Controls.Add(this.btn_them);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtg_show);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.rtb_ghichu);
             this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtp_start);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "TheNgayForm";
             this.Text = "TheNgayForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtg_show)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,20 +284,28 @@
 
         #endregion
 
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtp_start;
         private DateTimePicker dateTimePicker2;
-        private RichTextBox richTextBox1;
+        private RichTextBox rtb_ghichu;
         private Label label1;
         private Label label2;
         private Label label3;
-        private DataGridView dataGridView1;
+        private DataGridView dtg_show;
         private Label label4;
-        private TextBox textBox1;
-        private Button button1;
-        private Button button2;
+        private Button btn_them;
+        private Button btn_in;
         private Label label5;
         private DateTimePicker dateTimePicker3;
         private Label label6;
-        private DateTimePicker dateTimePicker4;
+        private DateTimePicker dtp_end;
+        private TextBox tbt_idnv;
+        private ComboBox cbb_nhanvien;
+        private Label label7;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column5;
+        private DataGridViewTextBoxColumn Column6;
     }
 }

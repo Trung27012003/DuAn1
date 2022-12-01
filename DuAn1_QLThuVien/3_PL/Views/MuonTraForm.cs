@@ -16,6 +16,6 @@ namespace _3_PL.Views
         {
             InitializeComponent();
         }
-        public void LoadToGrid
+      //  public void LoadToGrid
     }
 }

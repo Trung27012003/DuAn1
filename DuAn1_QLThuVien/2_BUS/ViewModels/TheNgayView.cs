@@ -10,6 +10,8 @@ namespace _2_BUS.ViewModels
     {
         public Guid Id { get; set; }
         public Guid? IdNV { get; set; }
+
+        public string NameNV { get; set; }
         public DateTime? StartTime { get; set; }
         public DateTime? EndTime { get; set; }
         public string? GhiChu { get; set; }
