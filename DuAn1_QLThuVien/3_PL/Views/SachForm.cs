@@ -94,17 +94,49 @@ namespace _3_PL.Views
         {
             LoadTL();
             LoadDS();
+            btn_sua.Enabled = false;
+            btn_xoa.Enabled = false;
         }
 
         private void btn_sua_Click(object sender, EventArgs e)
         {
-            DialogResult dialog = MessageBox.Show("Bạn có muốn thêm sách mới không?", "Xác nhận", MessageBoxButtons.YesNo);
-            if (dialog == DialogResult.Yes) { }
+            DialogResult dialog = MessageBox.Show("Bạn có muốn cập nhập sách không?", "Xác nhận", MessageBoxButtons.YesNo);
+            if (dialog == DialogResult.Yes)
+            {
+                MessageBox.Show(_IsachServices.UpdateTN(GetData()));
+                LoadDS();
+            }
+            else
+            {
+                MessageBox.Show("Đã hủy");
+            }
         }
 
         private void btn_xoa_Click(object sender, EventArgs e)
         {
+            DialogResult dialog = MessageBox.Show("Bạn có muốn xóa sách không?", "Xác nhận", MessageBoxButtons.YesNo);
+            if (dialog == DialogResult.Yes)
+            {
+                MessageBox.Show(_IsachServices.RemoveTN(_id));
+                LoadDS();
+            }
+            else
+            {
+                MessageBox.Show("Đã hủy");
+            }
+        }
 
+        private void dtg_showsach_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btn_sua.Enabled = true;
+            btn_xoa.Enabled = true;
+            _id = (Guid)dtg_showsach.CurrentRow.Cells[1].Value;
+            tbt_TL.Text = dtg_showsach.CurrentRow.Cells[2].Value.ToString();
+            tbt_tg.Text = dtg_showsach.CurrentRow.Cells[3].Value.ToString();
+            tbt_NXB.Text = dtg_showsach.CurrentRow.Cells[4].Value.ToString();
+            tbt_tensach.Text = dtg_showsach.CurrentRow.Cells[5].ToString();
+            tbt_soluong.Text = dtg_showsach.CurrentRow.Cells[6].Value.ToString();
+            tbt_giatien.Text = dtg_showsach.CurrentRow.Cells[7].Value.ToString();
         }
     }
 }

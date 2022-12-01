@@ -252,6 +252,7 @@
             this.dtg_showsach.RowTemplate.Height = 29;
             this.dtg_showsach.Size = new System.Drawing.Size(892, 176);
             this.dtg_showsach.TabIndex = 0;
+            this.dtg_showsach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_showsach_CellClick);
             // 
             // groupBox4
             // 
