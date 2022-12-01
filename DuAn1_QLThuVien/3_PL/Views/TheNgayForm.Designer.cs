@@ -121,7 +121,7 @@
             this.dtg_show.Name = "dtg_show";
             this.dtg_show.RowHeadersWidth = 51;
             this.dtg_show.RowTemplate.Height = 29;
-            this.dtg_show.Size = new System.Drawing.Size(802, 123);
+            this.dtg_show.Size = new System.Drawing.Size(802, 149);
             this.dtg_show.TabIndex = 6;
             // 
             // label4
@@ -218,6 +218,7 @@
             // 
             this.Column1.HeaderText = "Id";
             this.Column1.Name = "Column1";
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Column1.Visible = false;
             this.Column1.Width = 50;
             // 
@@ -249,13 +250,13 @@
             // 
             this.Column6.HeaderText = "Ghi Chú";
             this.Column6.Name = "Column6";
-            this.Column6.Width = 140;
+            this.Column6.Width = 135;
             // 
             // TheNgayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(818, 386);
+            this.ClientSize = new System.Drawing.Size(818, 412);
             this.Controls.Add(this.tbt_idnv);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.cbb_nhanvien);
