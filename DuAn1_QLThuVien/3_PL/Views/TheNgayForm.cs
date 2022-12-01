@@ -26,6 +26,7 @@ namespace _3_PL.Views
             _NhanVienServices = new NhanVienServices();
             _nvviews = new List<NhanVienView>();
             theNgayViews = new List<TheNgayView>();
+            theNgayViews = _ITheNgayServices.GetTheNgay();
             LoadToDTG(theNgayViews);
             LoadTocbb();
         }
@@ -36,15 +37,16 @@ namespace _3_PL.Views
             dtg_show.ColumnCount = 6;
             dtg_show.Columns[0].Name = "Id";
             dtg_show.Columns[0].Visible = false;
-            dtg_show.Columns[1].Name = "STT";
-            dtg_show.Columns[2].Name = "Mã Nhân viên";
+            dtg_show.Columns[1].Name = "STT";         
             dtg_show.Columns[2].Name = "Tên Nhân viên";
             dtg_show.Columns[3].Name = "Ngày bắt đầu";
             dtg_show.Columns[4].Name = "Ngày kết thúc";
+            dtg_show.Columns[5].Name = "Ghi chú";
+
 
             foreach (var view in list)
             {
-                dtg_show.Rows.Add(view.Id, stt++, (view.IdNV != null) ? _NhanVienServices.GetAllNv().FirstOrDefault(c => c.Id == view.IdNV).Name : " ", view.NameNV, view.StartTime, view.EndTime);
+                dtg_show.Rows.Add(view.Id, stt++, (_NhanVienServices.GetAllNv().FirstOrDefault(p => p.Id == view.IdNV).Name), view.StartTime, view.EndTime , view.GhiChu);
             }
 
         }
@@ -67,8 +69,8 @@ namespace _3_PL.Views
         {
             TheNgayView tnv = new TheNgayView();
             {
-                tnv.Id = id;
 
+                tnv.IdNV = Guid.Parse(tbt_idnv.Text);
                 tnv.NameNV = cbb_nhanvien.Text;
                 tnv.StartTime = DateTime.Now;
                 tnv.EndTime = DateTime.Now;
@@ -81,6 +83,11 @@ namespace _3_PL.Views
                 theNgayViews = _ITheNgayServices.GetTheNgay();
                 LoadToDTG(theNgayViews);
             }
+        }
+
+        private void cbb_nhanvien_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           tbt_idnv.Text =  _NhanVienServices.GetAllNv().FirstOrDefault(p => p.Name == cbb_nhanvien.Text).Id.ToString();
         }
     }
 }

@@ -13,9 +13,11 @@ namespace _2_BUS.Services
 {
     public class TheNgayServices : ITheNgayServices
     {//Duc ngu
+        public INhanVienRep _nvRep;
         public ITheNgayRep _itheNgayRep;
         public TheNgayServices()
         {
+            _nvRep = new NhanvienRep();
             _itheNgayRep = new TheNgayRep();
         }
         public string AddTN(TheNgayView obj)
@@ -23,6 +25,7 @@ namespace _2_BUS.Services
             if (obj == null) return "Thêm không thành công!";
             var tn = new TheNgay()
             {
+                IdNV = obj.IdNV,
                StartTime = obj.StartTime,
                EndTime = obj.EndTime,
                GhiChu = obj.GhiChu
@@ -38,6 +41,8 @@ namespace _2_BUS.Services
             lst =
                 (
                 from a in _itheNgayRep.GetAllTNs()
+
+                join b in _nvRep.GetAllNV() on a.IdNV equals b.Id
                 select new TheNgayView()
                 {
                     Id = a.Id,

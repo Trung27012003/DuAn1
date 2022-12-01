@@ -42,9 +42,15 @@
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.dtp_end = new System.Windows.Forms.DateTimePicker();
+            this.tbt_idnv = new System.Windows.Forms.TextBox();
             this.cbb_nhanvien = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.tbt_idnv = new System.Windows.Forms.TextBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_show)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,7 +109,14 @@
             // dtg_show
             // 
             this.dtg_show.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtg_show.Location = new System.Drawing.Point(5, 254);
+            this.dtg_show.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6});
+            this.dtg_show.Location = new System.Drawing.Point(12, 252);
             this.dtg_show.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtg_show.Name = "dtg_show";
             this.dtg_show.RowHeadersWidth = 51;
@@ -176,6 +189,13 @@
             this.dtp_end.Size = new System.Drawing.Size(210, 23);
             this.dtp_end.TabIndex = 15;
             // 
+            // tbt_idnv
+            // 
+            this.tbt_idnv.Location = new System.Drawing.Point(116, 27);
+            this.tbt_idnv.Name = "tbt_idnv";
+            this.tbt_idnv.Size = new System.Drawing.Size(213, 23);
+            this.tbt_idnv.TabIndex = 18;
+            // 
             // cbb_nhanvien
             // 
             this.cbb_nhanvien.FormattingEnabled = true;
@@ -183,6 +203,7 @@
             this.cbb_nhanvien.Name = "cbb_nhanvien";
             this.cbb_nhanvien.Size = new System.Drawing.Size(213, 23);
             this.cbb_nhanvien.TabIndex = 16;
+            this.cbb_nhanvien.SelectedIndexChanged += new System.EventHandler(this.cbb_nhanvien_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -193,18 +214,48 @@
             this.label7.TabIndex = 17;
             this.label7.Text = "Mã nhân viên ";
             // 
-            // tbt_idnv
+            // Column1
             // 
-            this.tbt_idnv.Location = new System.Drawing.Point(116, 27);
-            this.tbt_idnv.Name = "tbt_idnv";
-            this.tbt_idnv.Size = new System.Drawing.Size(213, 23);
-            this.tbt_idnv.TabIndex = 18;
+            this.Column1.HeaderText = "Id";
+            this.Column1.Name = "Column1";
+            this.Column1.Visible = false;
+            this.Column1.Width = 50;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "STT";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 50;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Tên Nhân Viên";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 160;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Ngày Bắt Đầu";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 200;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Ngày Kết Thúc";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 200;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Ghi Chú";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 140;
             // 
             // TheNgayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(809, 386);
+            this.ClientSize = new System.Drawing.Size(818, 386);
             this.Controls.Add(this.tbt_idnv);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.cbb_nhanvien);
@@ -247,8 +298,14 @@
         private DateTimePicker dateTimePicker3;
         private Label label6;
         private DateTimePicker dtp_end;
+        private TextBox tbt_idnv;
         private ComboBox cbb_nhanvien;
         private Label label7;
-        private TextBox tbt_idnv;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column5;
+        private DataGridViewTextBoxColumn Column6;
     }
 }
