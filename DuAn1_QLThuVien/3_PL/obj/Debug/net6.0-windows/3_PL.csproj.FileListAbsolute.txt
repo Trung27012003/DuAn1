@@ -1,8 +1,4 @@
 C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.exe
-C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.deps.json
-C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.runtimeconfig.json
-C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.dll
-C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.pdb
 C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
 C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Humanizer.dll
 C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Data.SqlClient.dll
@@ -40,7 +36,10 @@ C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows
 C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\2_BUS.pdb
 C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\1_DAL.pdb
 C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.AssemblyReference.cache
+C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.custom_control.TvT_TextBox.resources
 C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Properties.Resources.resources
+C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.frm_Login.resources
+C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.frm_SignUp.resources
 C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.HungTextBox.resources
 C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.LoginForm.resources
 C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.Menu.resources
@@ -60,5 +59,10 @@ C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows
 C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.dll
 C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\refint\3_PL.dll
 C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.pdb
+C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.deps.json
+C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.runtimeconfig.json
+C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.dll
+C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.pdb
 C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.genruntimeconfig.cache
 C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\ref\3_PL.dll
+C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.frm_menus.resources
