@@ -32,3 +32,20 @@ C:\Users\My HanhQuynh\Documents\Zalo Received Files\DuAn1\DuAn1_QLThuVien\2_BUS\
 C:\Users\My HanhQuynh\Documents\Zalo Received Files\DuAn1\DuAn1_QLThuVien\2_BUS\obj\Debug\net6.0\2_BUS.pdb
 C:\Users\My HanhQuynh\Documents\Zalo Received Files\DuAn1\DuAn1_QLThuVien\2_BUS\obj\Debug\net6.0\2_BUS.genruntimeconfig.cache
 C:\Users\My HanhQuynh\Documents\Zalo Received Files\DuAn1\DuAn1_QLThuVien\2_BUS\obj\Debug\net6.0\ref\2_BUS.dll
+C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\2_BUS\bin\Debug\net6.0\2_BUS.deps.json
+C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\2_BUS\bin\Debug\net6.0\2_BUS.runtimeconfig.json
+C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\2_BUS\bin\Debug\net6.0\2_BUS.dll
+C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\2_BUS\bin\Debug\net6.0\2_BUS.pdb
+C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\2_BUS\bin\Debug\net6.0\1_DAL.dll
+C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\2_BUS\bin\Debug\net6.0\1_DAL.pdb
+C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\2_BUS\obj\Debug\net6.0\2_BUS.csproj.AssemblyReference.cache
+C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\2_BUS\obj\Debug\net6.0\2_BUS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\2_BUS\obj\Debug\net6.0\2_BUS.AssemblyInfoInputs.cache
+C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\2_BUS\obj\Debug\net6.0\2_BUS.AssemblyInfo.cs
+C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\2_BUS\obj\Debug\net6.0\2_BUS.csproj.CoreCompileInputs.cache
+C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\2_BUS\obj\Debug\net6.0\2_BUS.csproj.CopyComplete
+C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\2_BUS\obj\Debug\net6.0\2_BUS.dll
+C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\2_BUS\obj\Debug\net6.0\refint\2_BUS.dll
+C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\2_BUS\obj\Debug\net6.0\2_BUS.pdb
+C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\2_BUS\obj\Debug\net6.0\2_BUS.genruntimeconfig.cache
+C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\2_BUS\obj\Debug\net6.0\ref\2_BUS.dll

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "r7FEXmohQpsHYYh/2J6R7aTcmmlaqcNXySn2qGMIqxFMNkqJaU5ZnGdkyjoO4cffImJSOjHO0ifHmcR+Oa4bng==",
+  "dgSpecHash": "I83sTu160L8TV1DtTObOJDprMlh22iGWx/fmpNSz0V6hey5gZ9RF/Feat70jLT3ijIXrPJ4DaxL5K+TXmxW8+w==",
   "success": true,
   "projectFilePath": "C:\\Users\\My HanhQuynh\\Documents\\Zalo Received Files\\DuAn1\\DuAn1_QLThuVien\\3_PL\\3_PL.csproj",
   "expectedPackageFiles": [
@@ -32,11 +32,12 @@
     "C:\\Users\\My HanhQuynh\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.8.0\\microsoft.identitymodel.tokens.6.8.0.nupkg.sha512",
     "C:\\Users\\My HanhQuynh\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\My HanhQuynh\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
-    "C:\\Users\\My HanhQuynh\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\My HanhQuynh\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\My HanhQuynh\\.nuget\\packages\\qrcoder\\1.4.3\\qrcoder.1.4.3.nupkg.sha512",
     "C:\\Users\\My HanhQuynh\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\My HanhQuynh\\.nuget\\packages\\system.configuration.configurationmanager\\4.7.0\\system.configuration.configurationmanager.4.7.0.nupkg.sha512",
     "C:\\Users\\My HanhQuynh\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
-    "C:\\Users\\My HanhQuynh\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512",
+    "C:\\Users\\My HanhQuynh\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
     "C:\\Users\\My HanhQuynh\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.8.0\\system.identitymodel.tokens.jwt.6.8.0.nupkg.sha512",
     "C:\\Users\\My HanhQuynh\\.nuget\\packages\\system.runtime.caching\\4.7.0\\system.runtime.caching.4.7.0.nupkg.sha512",
     "C:\\Users\\My HanhQuynh\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
