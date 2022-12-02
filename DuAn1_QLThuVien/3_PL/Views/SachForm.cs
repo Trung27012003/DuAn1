@@ -46,12 +46,13 @@ namespace _3_PL.Views
         private void LoadTL()
         {
             dtg_showtl.Rows.Clear();
-            dtg_showtl.ColumnCount = 1;
+            int stt = 1;
+            dtg_showtl.ColumnCount = 2;
             dtg_showtl.Columns[0].Name = "STT";
             dtg_showtl.Columns[1].Name = "Thể loại";
             foreach(var x in _IsachServices.GetSach())
             {
-                dtg_showtl.Rows.Add(x.TL);
+                dtg_showtl.Rows.Add(stt++,x.TL);
             }
         }
         private SachView GetData()
@@ -63,6 +64,7 @@ namespace _3_PL.Views
                 sachView.TG = tbt_tg.Text;
                 sachView.NXB = tbt_NXB.Text;
                 sachView.Name = tbt_tensach.Text;
+                sachView.GhiChu = tbx_ghichu.Text;
                 sachView.SoLuong =Convert.ToInt32(tbt_soluong.Text);
                 sachView.GiaTien = Convert.ToInt32(tbt_giatien.Text);
             }return sachView;
@@ -135,9 +137,36 @@ namespace _3_PL.Views
             tbt_TL.Text = dtg_showsach.CurrentRow.Cells[2].Value.ToString();
             tbt_tg.Text = dtg_showsach.CurrentRow.Cells[3].Value.ToString();
             tbt_NXB.Text = dtg_showsach.CurrentRow.Cells[4].Value.ToString();
-            tbt_tensach.Text = dtg_showsach.CurrentRow.Cells[5].ToString();
+            tbt_tensach.Text = dtg_showsach.CurrentRow.Cells[5].Value.ToString();
             tbt_soluong.Text = dtg_showsach.CurrentRow.Cells[6].Value.ToString();
             tbt_giatien.Text = dtg_showsach.CurrentRow.Cells[7].Value.ToString();
+        }
+
+        private void tbt_timkiem_TextChanged(object sender, EventArgs e)
+        {
+            var a = _IsachServices.GetSach().Where(x => x.Name.ToLower().Contains(tbt_timkiem.Text.ToLower())).ToList();
+            dtg_showsach.Rows.Clear();
+            Loadsearch(a);
+        }
+        private void Loadsearch(dynamic a)
+        {
+            stt = 1;
+            dtg_showsach.Rows.Clear();
+            dtg_showsach.ColumnCount = 8;
+            dtg_showsach.Columns[0].Name = "STT";
+            dtg_showsach.Columns[1].Name = "Id";
+            dtg_showsach.Columns[2].Name = "Thể loại";
+            dtg_showsach.Columns[3].Name = "Tác giả";
+            dtg_showsach.Columns[4].Name = "NXB";
+            dtg_showsach.Columns[5].Name = "Tên sách";
+            dtg_showsach.Columns[6].Name = "Số lượng";
+            dtg_showsach.Columns[7].Name = "Giá tiền";
+            dtg_showsach.Columns[1].Visible = false;
+            foreach (var x in a)
+            {
+                dtg_showsach.Rows.Add(
+                    stt++, x.Id, x.TL, x.TG, x.NXB, x.Name, x.SoLuong, x.GiaTien);
+            }
         }
     }
 }

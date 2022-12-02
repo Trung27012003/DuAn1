@@ -44,6 +44,8 @@
             this.tbt_timkiem = new System.Windows.Forms.TextBox();
             this.dtg_showtl = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tbx_ghichu = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.tbt_NXB = new System.Windows.Forms.TextBox();
             this.tbt_TL = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -60,28 +62,28 @@
             // 
             // tbt_tg
             // 
-            this.tbt_tg.Location = new System.Drawing.Point(110, 76);
+            this.tbt_tg.Location = new System.Drawing.Point(113, 63);
             this.tbt_tg.Name = "tbt_tg";
             this.tbt_tg.Size = new System.Drawing.Size(218, 27);
             this.tbt_tg.TabIndex = 1;
             // 
             // tbt_giatien
             // 
-            this.tbt_giatien.Location = new System.Drawing.Point(110, 257);
+            this.tbt_giatien.Location = new System.Drawing.Point(113, 244);
             this.tbt_giatien.Name = "tbt_giatien";
             this.tbt_giatien.Size = new System.Drawing.Size(218, 27);
             this.tbt_giatien.TabIndex = 4;
             // 
             // tbt_tensach
             // 
-            this.tbt_tensach.Location = new System.Drawing.Point(110, 169);
+            this.tbt_tensach.Location = new System.Drawing.Point(113, 156);
             this.tbt_tensach.Name = "tbt_tensach";
             this.tbt_tensach.Size = new System.Drawing.Size(218, 27);
             this.tbt_tensach.TabIndex = 5;
             // 
             // tbt_soluong
             // 
-            this.tbt_soluong.Location = new System.Drawing.Point(110, 216);
+            this.tbt_soluong.Location = new System.Drawing.Point(113, 203);
             this.tbt_soluong.Name = "tbt_soluong";
             this.tbt_soluong.Size = new System.Drawing.Size(218, 27);
             this.tbt_soluong.TabIndex = 6;
@@ -89,7 +91,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 36);
+            this.label1.Location = new System.Drawing.Point(26, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 20);
             this.label1.TabIndex = 8;
@@ -98,7 +100,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 83);
+            this.label2.Location = new System.Drawing.Point(26, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 20);
             this.label2.TabIndex = 9;
@@ -107,7 +109,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 128);
+            this.label3.Location = new System.Drawing.Point(26, 115);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 20);
             this.label3.TabIndex = 10;
@@ -116,7 +118,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 172);
+            this.label4.Location = new System.Drawing.Point(23, 159);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 20);
             this.label4.TabIndex = 11;
@@ -125,7 +127,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(20, 219);
+            this.label5.Location = new System.Drawing.Point(23, 206);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 20);
             this.label5.TabIndex = 12;
@@ -134,7 +136,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(23, 257);
+            this.label6.Location = new System.Drawing.Point(26, 244);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 20);
             this.label6.TabIndex = 13;
@@ -176,6 +178,7 @@
             this.tbt_timkiem.Name = "tbt_timkiem";
             this.tbt_timkiem.Size = new System.Drawing.Size(268, 27);
             this.tbt_timkiem.TabIndex = 20;
+            this.tbt_timkiem.TextChanged += new System.EventHandler(this.tbt_timkiem_TextChanged);
             // 
             // dtg_showtl
             // 
@@ -190,6 +193,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.tbx_ghichu);
+            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.tbt_NXB);
             this.groupBox1.Controls.Add(this.tbt_TL);
             this.groupBox1.Controls.Add(this.tbt_tg);
@@ -204,21 +209,37 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Location = new System.Drawing.Point(245, 11);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(385, 305);
+            this.groupBox1.Size = new System.Drawing.Size(385, 326);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chi tiết";
             // 
+            // tbx_ghichu
+            // 
+            this.tbx_ghichu.Location = new System.Drawing.Point(113, 278);
+            this.tbx_ghichu.Name = "tbx_ghichu";
+            this.tbx_ghichu.Size = new System.Drawing.Size(218, 27);
+            this.tbx_ghichu.TabIndex = 19;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(26, 281);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(58, 20);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Ghi chú";
+            // 
             // tbt_NXB
             // 
-            this.tbt_NXB.Location = new System.Drawing.Point(110, 125);
+            this.tbt_NXB.Location = new System.Drawing.Point(113, 112);
             this.tbt_NXB.Name = "tbt_NXB";
             this.tbt_NXB.Size = new System.Drawing.Size(218, 27);
             this.tbt_NXB.TabIndex = 18;
             // 
             // tbt_TL
             // 
-            this.tbt_TL.Location = new System.Drawing.Point(110, 33);
+            this.tbt_TL.Location = new System.Drawing.Point(113, 20);
             this.tbt_TL.Name = "tbt_TL";
             this.tbt_TL.Size = new System.Drawing.Size(218, 27);
             this.tbt_TL.TabIndex = 17;
@@ -236,9 +257,9 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dtg_showsach);
-            this.groupBox3.Location = new System.Drawing.Point(12, 322);
+            this.groupBox3.Location = new System.Drawing.Point(12, 336);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(904, 208);
+            this.groupBox3.Size = new System.Drawing.Size(904, 194);
             this.groupBox3.TabIndex = 25;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Danh sách";
@@ -315,5 +336,7 @@
         private GroupBox groupBox4;
         private TextBox tbt_NXB;
         private TextBox tbt_TL;
+        private TextBox tbx_ghichu;
+        private Label label7;
     }
 }
