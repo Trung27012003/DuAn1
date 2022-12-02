@@ -47,6 +47,7 @@ namespace _3_PL.Views
         {
             dtg_showtl.Rows.Clear();
             dtg_showtl.ColumnCount = 1;
+            dtg_showtl.Columns[0].Name = "STT";
             dtg_showtl.Columns[1].Name = "Thể loại";
             foreach(var x in _IsachServices.GetSach())
             {
