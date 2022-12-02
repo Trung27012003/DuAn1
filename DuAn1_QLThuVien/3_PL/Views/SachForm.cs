@@ -29,30 +29,28 @@ namespace _3_PL.Views
             dtg_showsach.Rows.Clear();
             dtg_showsach.ColumnCount = 8;
             dtg_showsach.Columns[0].Name = "STT";
-            dtg_showsach.Columns[1].Name = "Id";        
-            dtg_showsach.Columns[2].Name = "Tác giả";
-            dtg_showsach.Columns[3].Name = "NXB";
-            dtg_showsach.Columns[4].Name = "Tên sách";
-            dtg_showsach.Columns[5].Name = "Số lượng";
-            dtg_showsach.Columns[6].Name = "Giá tiền";
-            dtg_showsach.Columns[7].Name = "Ghi chú";
+            dtg_showsach.Columns[1].Name = "Id";
+            dtg_showsach.Columns[2].Name = "Thể loại";
+            dtg_showsach.Columns[3].Name = "Tác giả";
+            dtg_showsach.Columns[4].Name = "NXB";
+            dtg_showsach.Columns[5].Name = "Tên sách";
+            dtg_showsach.Columns[6].Name = "Số lượng";
+            dtg_showsach.Columns[7].Name = "Giá tiền";
             dtg_showsach.Columns[1].Visible = false;
             foreach (var x in _IsachServices.GetSach())
             {
                 dtg_showsach.Rows.Add(
-                    stt++,x.Id,x.TG,x.NXB,x.Name,x.SoLuong,x.GiaTien , x.GhiChu);
+                    stt++,x.Id,x.TL,x.TG,x.NXB,x.Name,x.SoLuong,x.GiaTien);
             }
         }
         private void LoadTL()
         {
-            int stt = 0;
             dtg_showtl.Rows.Clear();
-            dtg_showtl.ColumnCount = 2;
-            dtg_showtl.Columns[0].Name = "STT";
+            dtg_showtl.ColumnCount = 1;
             dtg_showtl.Columns[1].Name = "Thể loại";
             foreach(var x in _IsachServices.GetSach())
             {
-                dtg_showtl.Rows.Add(stt++, x.TL);
+                dtg_showtl.Rows.Add(x.TL);
             }
         }
         private SachView GetData()
@@ -133,13 +131,12 @@ namespace _3_PL.Views
             btn_sua.Enabled = true;
             btn_xoa.Enabled = true;
             _id = (Guid)dtg_showsach.CurrentRow.Cells[1].Value;
-            
-            tbt_tg.Text = dtg_showsach.CurrentRow.Cells[2].Value.ToString();
-            tbt_NXB.Text = dtg_showsach.CurrentRow.Cells[3].Value.ToString();
-            tbt_tensach.Text = dtg_showsach.CurrentRow.Cells[4].ToString();
-            tbt_soluong.Text = dtg_showsach.CurrentRow.Cells[5].Value.ToString();
-            tbt_giatien.Text = dtg_showsach.CurrentRow.Cells[6].Value.ToString();
-            rtb_ghichu.Text = dtg_showsach.CurrentRow.Cells[7].Value.ToString();
+            tbt_TL.Text = dtg_showsach.CurrentRow.Cells[2].Value.ToString();
+            tbt_tg.Text = dtg_showsach.CurrentRow.Cells[3].Value.ToString();
+            tbt_NXB.Text = dtg_showsach.CurrentRow.Cells[4].Value.ToString();
+            tbt_tensach.Text = dtg_showsach.CurrentRow.Cells[5].ToString();
+            tbt_soluong.Text = dtg_showsach.CurrentRow.Cells[6].Value.ToString();
+            tbt_giatien.Text = dtg_showsach.CurrentRow.Cells[7].Value.ToString();
         }
     }
 }
