@@ -10,6 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QRCoder;
+using QRCoder.Exceptions;
 
 namespace _3_PL.Views
 {
@@ -167,6 +169,15 @@ namespace _3_PL.Views
                 dtg_showsach.Rows.Add(
                     stt++, x.Id, x.TL, x.TG, x.NXB, x.Name, x.SoLuong, x.GiaTien);
             }
+        }
+
+        private void btn_QR_Click(object sender, EventArgs e)
+        {
+            QRCoder.QRCodeGenerator qrcode = new QRCodeGenerator();
+            var qrtext = "Tên Sách: " + tbt_tensach.Text + "\n" + "Nhà Xuất Bản: " + tbt_NXB.Text + "\n" + "Tác Giả: " + tbt_tg.Text + "\n" + "Thể Loại: " + tbt_TL.Text + "\n" +"Ghi Chú: " + tbx_ghichu.Text;
+            var data = qrcode.CreateQrCode(qrtext, QRCoder.QRCodeGenerator.ECCLevel.L);
+            var code = new QRCoder.QRCode(data);
+            ptb_QR.Image = code.GetGraphic(20);
         }
     }
 }
