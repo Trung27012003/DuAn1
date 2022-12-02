@@ -150,3 +150,5 @@ D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\2_BUS\obj\Debug\net6.0\2_BUS.pdb
 D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\2_BUS\obj\Debug\net6.0\ref\2_BUS.dll
 D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\2_BUS\bin\Debug\net6.0\2_BUS.runtimeconfig.json
 D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\2_BUS\obj\Debug\net6.0\2_BUS.genruntimeconfig.cache
+C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\2_BUS\bin\Debug\net6.0\2_BUS.runtimeconfig.json
+C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\2_BUS\obj\Debug\net6.0\2_BUS.genruntimeconfig.cache
