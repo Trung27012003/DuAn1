@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -76,16 +77,48 @@ namespace _3_PL.Views
         }
         private void btn_them_Click(object sender, EventArgs e)
         {
-            DialogResult dialog = MessageBox.Show("Bạn có muốn thêm sách mới không?", "Xác nhận", MessageBoxButtons.YesNo);
-            if (dialog == DialogResult.Yes)
+            
+            int a;
+            if (tbt_TL.Text == "")
             {
-                MessageBox.Show(_IsachServices.AddTN(GetData()));
-                LoadDS();
+                MessageBox.Show("Vui lòng nhập thể loại");
             }
+            else if (tbt_tg.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên tác giả");
+            }
+            else if (tbt_NXB.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập nhà xuất bản");
+            }
+            else if (tbt_tensach.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên sách");
+            }
+            else if (!int.TryParse(tbt_soluong.Text, out a))
+            {
+                MessageBox.Show("Số lượng phải là số");
+            }
+            else if (!int.TryParse(tbt_giatien.Text, out a))
+            {
+                MessageBox.Show("Giá tiền phải là số");
+            }
+            
             else
             {
-                MessageBox.Show("Đã hủy");
+                DialogResult dialog = MessageBox.Show("Bạn có muốn thêm sách mới không?", "Xác nhận", MessageBoxButtons.YesNo);
+                if (dialog == DialogResult.Yes)
+                {
+                    MessageBox.Show(_IsachServices.AddTN(GetData()));
+                    LoadDS();
+                }
+                else
+                {
+                    MessageBox.Show("Đã hủy");
+                }
             }
+
+            
         }
 
         private void dtg_showtl_CellClick(object sender, DataGridViewCellEventArgs e)

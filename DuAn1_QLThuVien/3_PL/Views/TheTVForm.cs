@@ -1,6 +1,7 @@
 ﻿using _2_BUS.IServices;
 using _2_BUS.Services;
 using _2_BUS.ViewModels;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -57,26 +58,46 @@ namespace _3_PL.Views
                     );
             }
         }
-
+      
         private void btn_them_Click(object sender, EventArgs e)
         {
-            TheThanhVienView ttv = new TheThanhVienView()
+            bool sdt = Regex.IsMatch(tbt_sdt.Text, "^0\\d+");
+            if (!sdt)
             {
-                TenThanhVien = tbt_tenthanhvien.Text,
-                NgayDangKi = DateTime.Now,
-                NgayHetHan = DateTime.Now,
-                SDT = tbt_sdt.Text,
-                DiaChi = tbt_diachi.Text,
-                NgaySinh = DateTime.Now,
-                GhiChu = rtb_ghichu.Text
-            };
-            DialogResult dg = MessageBox.Show("bạn có chắc chắn muốn thêm không ?", "thông báo", MessageBoxButtons.YesNo);
-            if (dg == DialogResult.Yes)
+                MessageBox.Show("Số điện thoại không đúng định dạng");
+            }else if(tbt_tenthanhvien.Text == "")
             {
-                MessageBox.Show(_TheThanhVienServices.AddTN(ttv));
-                _lstTheThanhVienView = _TheThanhVienServices.GetTheThanhVien();
-                LoadToGrid(_lstTheThanhVienView);
+                MessageBox.Show("Vui lòng nhập tên thành viên");
+            }else if (tbt_diachi.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập địa chỉ");
+            }else if (tbt_sdt.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập số điện thoại");
             }
+            else
+            {
+                TheThanhVienView ttv = new TheThanhVienView()
+                {
+                    TenThanhVien = tbt_tenthanhvien.Text,
+                    NgayDangKi = DateTime.Now,
+                    NgayHetHan = DateTime.Now,
+                    SDT = tbt_sdt.Text,
+                    DiaChi = tbt_diachi.Text,
+                    NgaySinh = DateTime.Now,
+                    GhiChu = rtb_ghichu.Text
+                };
+
+                DialogResult dg = MessageBox.Show("bạn có chắc chắn muốn thêm không ?", "thông báo", MessageBoxButtons.YesNo);
+                if (dg == DialogResult.Yes)
+                {
+                    MessageBox.Show(_TheThanhVienServices.AddTN(ttv));
+                    _lstTheThanhVienView = _TheThanhVienServices.GetTheThanhVien();
+                    LoadToGrid(_lstTheThanhVienView);
+                }
+            }
+            
+            
         }
 
         private void btn_sua_Click(object sender, EventArgs e)

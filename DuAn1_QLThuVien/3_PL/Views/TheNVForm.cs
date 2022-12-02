@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -151,22 +152,31 @@ namespace _3_PL.Views
 
         private void btn_themnv_Click(object sender, EventArgs e)
         {
-            NhanVienView cvv = new NhanVienView()
+            bool sdt = Regex.IsMatch(tbx_sdt.Text, "^0\\d+");
+            if (!sdt)
             {
-                
-                Name = tbx_tennv.Text,
-                NgaySinh = DateTime.Now,
-                DiaChi = tbx_diachi.Text,
-                SDT = tbx_sdt.Text,
-                IdCV =_ChucVuServices.GetTheNgay().FirstOrDefault(c=>c.Name==cbb_tenchucvu.Text).Id 
-            };
-            DialogResult dg = MessageBox.Show("bạn có chắc chắn muốn thêm không ?", "thông báo", MessageBoxButtons.YesNo);
-            if (dg == DialogResult.Yes)
-            {
-                MessageBox.Show(_NhanVienServices.AddTN(cvv));
-                _lstNhanVienView = _NhanVienServices.GetAllNv();
-                LoadToGridNv(_lstNhanVienView);
+                MessageBox.Show("Số điện thoại không đúng định dạng");
             }
+            else
+            {
+                NhanVienView cvv = new NhanVienView()
+                {
+
+                    Name = tbx_tennv.Text,
+                    NgaySinh = DateTime.Now,
+                    DiaChi = tbx_diachi.Text,
+                    SDT = tbx_sdt.Text,
+                    IdCV = _ChucVuServices.GetTheNgay().FirstOrDefault(c => c.Name == cbb_tenchucvu.Text).Id
+                };
+                DialogResult dg = MessageBox.Show("bạn có chắc chắn muốn thêm không ?", "thông báo", MessageBoxButtons.YesNo);
+                if (dg == DialogResult.Yes)
+                {
+                    MessageBox.Show(_NhanVienServices.AddTN(cvv));
+                    _lstNhanVienView = _NhanVienServices.GetAllNv();
+                    LoadToGridNv(_lstNhanVienView);
+                }
+            }
+                
         }
 
        
