@@ -17,23 +17,16 @@ namespace _1_DAL.Respositories
         {
             _context = new QL_ThuVienDbContext();
         }
-        public bool AddAccount(string username, string password)
+        public bool AddAccount(Account ac)
         {
-            try
-            {
-                Account ac = new Account();
-                ac.UserName = username;
-                ac.PassWord = password;
+           
+                
+                
                 _context.Accounts.Add(ac); 
                 _context.SaveChanges();
-                
                 return true;
-            }
-            catch (Exception e)
-            {
-               
-                return false;
-            }
+            
+            
         }
 
         public Account GetAccount(string username, string password)
@@ -45,8 +38,8 @@ namespace _1_DAL.Respositories
 
         public List<Account> GetAllAccounts()
         {
-            List<Account> accounts = _context.Accounts.ToList();
-            return accounts;
+             return _context.Accounts.ToList();
+          
         }
     }
 }

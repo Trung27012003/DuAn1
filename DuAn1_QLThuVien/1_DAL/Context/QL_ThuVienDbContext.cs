@@ -28,11 +28,11 @@ namespace _1_DAL.Context
         public DbSet<PhieuTra> phieuTras { get; set; }
         public DbSet<PhieuTraChiTiet> phieuTraChiTiets { get; set; }
         public DbSet<ChucVu> chucVus { get; set; }
-        public DbSet<Account> Accounts { get; set; }
+        public virtual DbSet<Account> Accounts { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder.
-              UseSqlServer("Data Source=DESKTOP-OJ6PLFS\\SQLEXPRESS;Initial Catalog=DuAn_QLThuVien;Integrated Security=True"));//User ID=trungtruong;Password=123456
+              UseSqlServer("Data Source=VANHUNG;Initial Catalog=DuAn_QLThuVien;Integrated Security=True"));//User ID=trungtruong;Password=123456
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
