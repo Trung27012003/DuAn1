@@ -118,11 +118,10 @@
             this.dtg_show.Name = "dtg_show";
             this.dtg_show.RowHeadersWidth = 51;
             this.dtg_show.RowTemplate.Height = 29;
-<<<<<<< HEAD
             this.dtg_show.Size = new System.Drawing.Size(802, 149);
-=======
-            this.dtg_show.Size = new System.Drawing.Size(917, 164);
->>>>>>> main
+
+
+
             this.dtg_show.TabIndex = 6;
             // 
             // Column1
@@ -257,7 +256,7 @@
             this.label7.TabIndex = 17;
             this.label7.Text = "Mã nhân viên ";
             // 
-<<<<<<< HEAD
+
             // Column1
             // 
             this.Column1.HeaderText = "Id";
@@ -296,17 +295,16 @@
             this.Column6.Name = "Column6";
             this.Column6.Width = 135;
             // 
-=======
->>>>>>> main
+
             // TheNgayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
+
             this.ClientSize = new System.Drawing.Size(818, 412);
-=======
+
             this.ClientSize = new System.Drawing.Size(935, 515);
->>>>>>> main
+
             this.Controls.Add(this.tbt_idnv);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.cbb_nhanvien);
