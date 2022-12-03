@@ -203,6 +203,7 @@ C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.
 C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.pdb
 C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.genruntimeconfig.cache
 C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\ref\3_PL.dll
+<<<<<<< HEAD
 D:\Gitclone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.exe
 D:\Gitclone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.deps.json
 D:\Gitclone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.runtimeconfig.json
@@ -271,3 +272,7 @@ D:\Gitclone\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\refint\3_PL.dll
 D:\Gitclone\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.pdb
 D:\Gitclone\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.genruntimeconfig.cache
 D:\Gitclone\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\ref\3_PL.dll
+=======
+C:\Users\My HanhQuynh\Documents\Zalo Received Files\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\QRCoder.dll
+>>>>>>> 3177c45989064ed18b3153d4180ab2b632801ac8
+D:\GitClone\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\WinFormsApp1.Custom_Controls.TvT_IconButton.resources

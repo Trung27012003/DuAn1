@@ -9,11 +9,12 @@ namespace _2_BUS.Utilities
 {
     public class Validates
     {
-        
-       public void checkSDT(string s)
+
+        public bool checkSo(string text)
         {
-            bool rg = Regex.IsMatch(s,@"[0-9]");
-           
+            // return Regex.IsMatch(text, "^[0-9]*$");
+            return Regex.IsMatch(text, "\\d+");
         }
+
     }
 }
