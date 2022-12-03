@@ -47,7 +47,7 @@ namespace _3_PL.Views
             }
             else
             {
-                Account account = _iaccServices.CheckLogin(tbx_username.Text, tbx_password.Text);
+                Account account = _iaccServices.CheckLogin(tbx_username.Texts, tbx_password.Texts);
                 if (account == null)
                 {
                     MessageBox.Show("tai khoan mat khau ko chinh xac");

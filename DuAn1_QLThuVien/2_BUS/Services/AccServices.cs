@@ -46,7 +46,7 @@ namespace _2_BUS.Services
         
         public bool CheckAccountExists(string username) // kiem tra xem ten tk da ton tai hay chua
         {
-            var x = _iAccRep.GetAllAccounts().Where(x => x.UserName == username);
+            var x = _iAccRep.GetAllAccounts().Find(x => x.UserName == username);
             if (x != null)
             {
                 return true;

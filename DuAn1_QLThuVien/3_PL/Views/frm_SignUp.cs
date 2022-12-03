@@ -28,19 +28,19 @@ namespace _3_PL.Views
         }
         private void tvT_IconButton1_Click(object sender, EventArgs e)
         {
-            if (tbx_repass.Text == tbx_pass.Text)
+            if (tbx_repass.Texts == tbx_pass.Texts)
             {
-                if (_iAccServices.CheckAccountExists(tbx_username.Text))
+                if (_iAccServices.CheckAccountExists(tbx_username.Texts))
                 {
                     MessageBox.Show("Tai khoan da ton tai, moi kiem tra lai");
-                    tbx_username.Text = "";
+                    tbx_username.Texts = "";
                 }
                 else
                 {
                     AccView acc = new AccView();
                     {
-                        acc.UserName = tbx_username.Text;
-                        acc.PassWord = tbx_pass.Text;
+                        acc.UserName = tbx_username.Texts;
+                        acc.PassWord = tbx_pass.Texts;
                     }
                     
                     MessageBox.Show(_iAccServices.CreateAccount(acc));
