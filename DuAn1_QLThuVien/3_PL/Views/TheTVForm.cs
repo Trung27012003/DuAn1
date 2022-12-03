@@ -1,4 +1,5 @@
-﻿using _2_BUS.IServices;
+﻿
+using _2_BUS.IServices;
 using _2_BUS.Services;
 using _2_BUS.ViewModels;
 using System;
@@ -16,7 +17,7 @@ namespace _3_PL.Views
 {
     public partial class TheTVForm : Form
     {
-        Guid _idTV;
+        Guid _idTv;
         List<TheThanhVienView> _lstTheThanhVienView;
         ITheThanhVienServices _TheThanhVienServices;
         public TheTVForm()
@@ -58,32 +59,57 @@ namespace _3_PL.Views
             }
         }
 
+
+
         private void btn_them_Click(object sender, EventArgs e)
         {
-            TheThanhVienView ttv = new TheThanhVienView()
+            bool sdt = Regex.IsMatch(tbt_sdt.Text, "^0\\d+");
+            if (!sdt)
             {
-                TenThanhVien = tbt_tenthanhvien.Text,
-                NgayDangKi = DateTime.Now,
-                NgayHetHan = DateTime.Now,
-                SDT = tbt_sdt.Text,
-                DiaChi = tbt_diachi.Text,
-                NgaySinh = DateTime.Now,
-                GhiChu = rtb_ghichu.Text
-            };
-            DialogResult dg = MessageBox.Show("bạn có chắc chắn muốn thêm không ?", "thông báo", MessageBoxButtons.YesNo);
-            if (dg == DialogResult.Yes)
-            {
-                MessageBox.Show(_TheThanhVienServices.AddTN(ttv));
-                _lstTheThanhVienView = _TheThanhVienServices.GetTheThanhVien();
-                LoadToGrid(_lstTheThanhVienView);
+                MessageBox.Show("Số điện thoại không đúng định dạng");
             }
+            else if (tbt_tenthanhvien.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên thành viên");
+            }
+            else if (tbt_diachi.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập địa chỉ");
+            }
+            else if (tbt_sdt.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập số điện thoại");
+            }
+            else
+            {
+                TheThanhVienView ttv = new TheThanhVienView()
+                {
+                    TenThanhVien = tbt_tenthanhvien.Text,
+                    NgayDangKi = DateTime.Now,
+                    NgayHetHan = DateTime.Now,
+                    SDT = tbt_sdt.Text,
+                    DiaChi = tbt_diachi.Text,
+                    NgaySinh = DateTime.Now,
+                    GhiChu = rtb_ghichu.Text
+                };
+
+                DialogResult dg = MessageBox.Show("bạn có chắc chắn muốn thêm không ?", "thông báo", MessageBoxButtons.YesNo);
+                if (dg == DialogResult.Yes)
+                {
+                    MessageBox.Show(_TheThanhVienServices.AddTN(ttv));
+                    _lstTheThanhVienView = _TheThanhVienServices.GetTheThanhVien();
+                    LoadToGrid(_lstTheThanhVienView);
+                }
+            }
+
+
         }
 
         private void btn_sua_Click(object sender, EventArgs e)
         {
             TheThanhVienView ttv = new TheThanhVienView()
             {
-                Id = _idTV,
+                Id = _idTv,
                 TenThanhVien = tbt_tenthanhvien.Text,
                 NgayDangKi = DateTime.Now,
                 NgayHetHan = DateTime.Now,
@@ -99,11 +125,12 @@ namespace _3_PL.Views
                 _lstTheThanhVienView = _TheThanhVienServices.GetTheThanhVien();
                 LoadToGrid(_lstTheThanhVienView);
             }
+
         }
 
         private void dtg_show_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            _idTV = Guid.Parse(dtg_show.CurrentRow.Cells[0].Value.ToString());
+            _idTv = Guid.Parse(dtg_show.CurrentRow.Cells[0].Value.ToString());
             tbt_tenthanhvien.Text = dtg_show.CurrentRow.Cells[2].Value.ToString();
             dtp_ngaybatdau.Text = dtg_show.CurrentRow.Cells[3].Value.ToString();
             dtp_ngayketthuc.Text = dtg_show.CurrentRow.Cells[4].Value.ToString();
@@ -111,6 +138,7 @@ namespace _3_PL.Views
             tbt_diachi.Text = dtg_show.CurrentRow.Cells[6].Value.ToString();
             dtp_ngaysinh.Text = dtg_show.CurrentRow.Cells[7].Value.ToString();
             rtb_ghichu.Text = dtg_show.CurrentRow.Cells[8].Value.ToString();
+
         }
 
         private void btn_xoa_Click(object sender, EventArgs e)
@@ -118,10 +146,11 @@ namespace _3_PL.Views
             DialogResult dg = MessageBox.Show("bạn có chắc chắn muốn xoá không ?", "thông báo", MessageBoxButtons.YesNo);
             if (dg == DialogResult.Yes)
             {
-                MessageBox.Show(_TheThanhVienServices.RemoveTN(_idTV));
+                MessageBox.Show(_TheThanhVienServices.RemoveTN(_idTv));
                 _lstTheThanhVienView = _TheThanhVienServices.GetTheThanhVien();
                 LoadToGrid(_lstTheThanhVienView);
             }
+
         }
 
         private void tbt_timkiem_TextChanged(object sender, EventArgs e)
@@ -132,12 +161,7 @@ namespace _3_PL.Views
                 MessageBox.Show("Không tìm thấy kết quả");
             }
             LoadToGrid(a);
-        }
 
-        private void tbt_sdt_TextChanged(object sender, EventArgs e)
-        {
-            
         }
-       
     } 
 }

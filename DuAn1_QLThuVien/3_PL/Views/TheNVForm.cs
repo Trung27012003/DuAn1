@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -100,19 +101,27 @@ namespace _3_PL.Views
 
         private void btn_them_Click(object sender, EventArgs e)
         {
-            ChucVuView cvv = new ChucVuView()
+            if(tbx_tencv.Text == "")
             {
-               
-                Name = tbx_tencv.Text,
-            };
-            DialogResult dg = MessageBox.Show("Bạn có chắc chắn muốn thêm không ?", "Thông báo", MessageBoxButtons.YesNo);
-            if (dg == DialogResult.Yes)
-            {
-                MessageBox.Show(_ChucVuServices.AddTN(cvv));
-                _lstChucVuViews = _ChucVuServices.GetTheNgay();
-                LoadToGridCv(_lstChucVuViews);
+                MessageBox.Show("Vui lòng nhập chức vụ");
             }
-            Loadtocbb();
+            else
+            {
+                ChucVuView cvv = new ChucVuView()
+                {
+
+                    Name = tbx_tencv.Text,
+                };
+                DialogResult dg = MessageBox.Show("Bạn có chắc chắn muốn thêm không ?", "Thông báo", MessageBoxButtons.YesNo);
+                if (dg == DialogResult.Yes)
+                {
+                    MessageBox.Show(_ChucVuServices.AddTN(cvv));
+                    _lstChucVuViews = _ChucVuServices.GetTheNgay();
+                    LoadToGridCv(_lstChucVuViews);
+                }
+                Loadtocbb();
+            }
+            
         }
 
         private void btn_sua_Click(object sender, EventArgs e)
@@ -151,22 +160,43 @@ namespace _3_PL.Views
 
         private void btn_themnv_Click(object sender, EventArgs e)
         {
-            NhanVienView cvv = new NhanVienView()
+            bool sdt = Regex.IsMatch(tbx_sdt.Text, "^0\\d+");
+            if (!sdt)
             {
-                
-                Name = tbx_tennv.Text,
-                NgaySinh = DateTime.Now,
-                DiaChi = tbx_diachi.Text,
-                SDT = tbx_sdt.Text,
-                IdCV =_ChucVuServices.GetTheNgay().FirstOrDefault(c=>c.Name==cbb_tenchucvu.Text).Id 
-            };
-            DialogResult dg = MessageBox.Show("bạn có chắc chắn muốn thêm không ?", "thông báo", MessageBoxButtons.YesNo);
-            if (dg == DialogResult.Yes)
-            {
-                MessageBox.Show(_NhanVienServices.AddTN(cvv));
-                _lstNhanVienView = _NhanVienServices.GetAllNv();
-                LoadToGridNv(_lstNhanVienView);
+                MessageBox.Show("Số điện thoại không đúng định dạng");
             }
+            else if (cbb_tenchucvu.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn chức vụ");
+            }
+            else if (tbx_tennv.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên nhân viên");
+            }
+            else if (tbx_diachi.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập địa chỉ");
+            }
+            else
+            {
+                NhanVienView cvv = new NhanVienView()
+                {
+
+                    Name = tbx_tennv.Text,
+                    NgaySinh = DateTime.Now,
+                    DiaChi = tbx_diachi.Text,
+                    SDT = tbx_sdt.Text,
+                    IdCV = _ChucVuServices.GetTheNgay().FirstOrDefault(c => c.Name == cbb_tenchucvu.Text).Id
+                };
+                DialogResult dg = MessageBox.Show("bạn có chắc chắn muốn thêm không ?", "thông báo", MessageBoxButtons.YesNo);
+                if (dg == DialogResult.Yes)
+                {
+                    MessageBox.Show(_NhanVienServices.AddTN(cvv));
+                    _lstNhanVienView = _NhanVienServices.GetAllNv();
+                    LoadToGridNv(_lstNhanVienView);
+                }
+            }
+                
         }
 
        
