@@ -41,9 +41,9 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgrid_doncho = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbx_search = new System.Windows.Forms.TextBox();
             this.dgrid_danhsachsach = new System.Windows.Forms.DataGridView();
-            this.cmb_dieukien_frm1 = new System.Windows.Forms.ComboBox();
+            this.cmb_loc = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lbl_tongtien1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -60,7 +60,7 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tp_muon.SuspendLayout();
@@ -205,12 +205,13 @@
             this.dgrid_doncho.RowTemplate.Height = 29;
             this.dgrid_doncho.Size = new System.Drawing.Size(379, 263);
             this.dgrid_doncho.TabIndex = 33;
+            this.dgrid_doncho.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrid_doncho_CellClick);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.tbx_search);
             this.groupBox2.Controls.Add(this.dgrid_danhsachsach);
-            this.groupBox2.Controls.Add(this.cmb_dieukien_frm1);
+            this.groupBox2.Controls.Add(this.cmb_loc);
             this.groupBox2.Location = new System.Drawing.Point(7, 259);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(606, 276);
@@ -218,13 +219,13 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách Sách";
             // 
-            // textBox1
+            // tbx_search
             // 
-            this.textBox1.Location = new System.Drawing.Point(136, 24);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(269, 27);
-            this.textBox1.TabIndex = 27;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.tbx_search.Location = new System.Drawing.Point(136, 24);
+            this.tbx_search.Name = "tbx_search";
+            this.tbx_search.Size = new System.Drawing.Size(269, 27);
+            this.tbx_search.TabIndex = 27;
+            this.tbx_search.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // dgrid_danhsachsach
             // 
@@ -234,7 +235,7 @@
             this.Column2,
             this.Column3,
             this.Column4,
-            this.Column5,
+            this.ten,
             this.Column6});
             this.dgrid_danhsachsach.Location = new System.Drawing.Point(6, 56);
             this.dgrid_danhsachsach.Name = "dgrid_danhsachsach";
@@ -242,14 +243,15 @@
             this.dgrid_danhsachsach.RowTemplate.Height = 29;
             this.dgrid_danhsachsach.Size = new System.Drawing.Size(581, 214);
             this.dgrid_danhsachsach.TabIndex = 33;
+            this.dgrid_danhsachsach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrid_danhsachsach_CellClick);
             // 
-            // cmb_dieukien_frm1
+            // cmb_loc
             // 
-            this.cmb_dieukien_frm1.FormattingEnabled = true;
-            this.cmb_dieukien_frm1.Location = new System.Drawing.Point(422, 22);
-            this.cmb_dieukien_frm1.Name = "cmb_dieukien_frm1";
-            this.cmb_dieukien_frm1.Size = new System.Drawing.Size(151, 28);
-            this.cmb_dieukien_frm1.TabIndex = 20;
+            this.cmb_loc.FormattingEnabled = true;
+            this.cmb_loc.Location = new System.Drawing.Point(422, 22);
+            this.cmb_loc.Name = "cmb_loc";
+            this.cmb_loc.Size = new System.Drawing.Size(151, 28);
+            this.cmb_loc.TabIndex = 20;
             // 
             // groupBox1
             // 
@@ -294,6 +296,7 @@
             this.dgrid_phieumuonchitiet.RowTemplate.Height = 29;
             this.dgrid_phieumuonchitiet.Size = new System.Drawing.Size(428, 183);
             this.dgrid_phieumuonchitiet.TabIndex = 31;
+            this.dgrid_phieumuonchitiet.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrid_phieumuonchitiet_CellClick);
             // 
             // btn_them
             // 
@@ -315,6 +318,7 @@
             this.btn_them.Text = "Thêm";
             this.btn_them.TextColor = System.Drawing.Color.Black;
             this.btn_them.UseVisualStyleBackColor = false;
+            this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
             // 
             // btn_reset
             // 
@@ -336,6 +340,7 @@
             this.btn_reset.Text = "Reset";
             this.btn_reset.TextColor = System.Drawing.Color.Black;
             this.btn_reset.UseVisualStyleBackColor = false;
+            this.btn_reset.Click += new System.EventHandler(this.btn_reset_Click);
             // 
             // btn_sua
             // 
@@ -379,6 +384,7 @@
             this.btn_xoa.Text = "Xóa";
             this.btn_xoa.TextColor = System.Drawing.Color.Black;
             this.btn_xoa.UseVisualStyleBackColor = false;
+            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
             // 
             // label9
             // 
@@ -437,16 +443,16 @@
             this.Column4.Name = "Column4";
             this.Column4.Width = 125;
             // 
-            // Column5
+            // ten
             // 
-            this.Column5.HeaderText = "Số lượng";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 125;
+            this.ten.HeaderText = "Tên sách";
+            this.ten.MinimumWidth = 6;
+            this.ten.Name = "ten";
+            this.ten.Width = 125;
             // 
             // Column6
             // 
-            this.Column6.HeaderText = "Thể loại";
+            this.Column6.HeaderText = "Số lượng";
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
             this.Column6.Width = 125;
@@ -482,7 +488,7 @@
         private TabControl tabControl1;
         private TabPage tp_muon;
         private TabPage tabPage2;
-        private ComboBox cmb_dieukien_frm1;
+        private ComboBox cmb_loc;
         private Label label9;
         private Label label8;
         private TextBox tbx_idpm;
@@ -500,7 +506,7 @@
         private Label label2;
         private GroupBox groupBox3;
         private DataGridView dgrid_doncho;
-        private TextBox textBox1;
+        private TextBox tbx_search;
         private DataGridView dgrid_danhsachsach;
         private Label label1;
         private DataGridView dgrid_phieumuonchitiet;
@@ -511,7 +517,7 @@
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
+        private DataGridViewTextBoxColumn ten;
         private DataGridViewTextBoxColumn Column6;
     }
 }
