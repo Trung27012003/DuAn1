@@ -18,6 +18,7 @@ namespace _1_DAL.Respositories
         {
             _context = new QL_ThuVienDbContext();
         }
+
         public bool AddTTV(TheThanhVien obj)
         {
             if (obj == null) return false;
@@ -25,6 +26,7 @@ namespace _1_DAL.Respositories
             _context.theThanhViens.Add(obj);
             _context.SaveChanges();
             return true;
+
         }
 
         public List<TheThanhVien> GetAllTTVs()
@@ -40,11 +42,12 @@ namespace _1_DAL.Respositories
             _context.Remove(tempobj);
             _context.SaveChanges();
             return true;
+
         }
 
         public bool UpdateTTV(TheThanhVien obj)
         {
-            if(obj == null) return false;
+            if (obj == null) return false;
             var tempobj = _context.theThanhViens.FirstOrDefault(c => c.Id == obj.Id);
             tempobj.TenThanhVien = obj.TenThanhVien;
             tempobj.NgayDangKi = obj.NgayDangKi;
@@ -56,8 +59,7 @@ namespace _1_DAL.Respositories
             _context.Update(tempobj);
             _context.SaveChanges();
             return true;
-        }
 
-        
+        }
     }
 }

@@ -11,6 +11,6 @@ namespace _1_DAL.IRespositories
     {
          List<Account> GetAllAccounts();
          Account GetAccount(string username, string password);
-         bool AddAccount(string username, string password);
+         bool AddAccount(Account ac);
     }
 }

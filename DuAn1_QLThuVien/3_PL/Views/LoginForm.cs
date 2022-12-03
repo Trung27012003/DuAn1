@@ -8,16 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using _2_BUS.Services;
+using _2_BUS.Utilities;
 using _3_PL.Views;
 namespace _3_PL.Views
 {
     public partial class LoginForm : Form
     {
-        public IAccServices _iaccServices;
+        public AccServices _iaccServices;
+        Validates _validates;
         public LoginForm()
         {
             InitializeComponent();
-            //_iaccServices = new AccServices();
+            _iaccServices = new _2_BUS.Services.AccServices();
+            _validates = new Validates();
         }
 
         private void btn_dangnhap_Click(object sender, EventArgs e)
@@ -33,6 +36,11 @@ namespace _3_PL.Views
             (sender as MenuForm)._isthoat = false;
             (sender as MenuForm).Close();
             this.Show();
+        }
+
+        private void tbt_taikhoan_TextChanged(object sender, EventArgs e)
+        {
+            tbt_matkau.Text= _validates.checkSDT(tbt_taikhoan.Text);
         }
     }
 }

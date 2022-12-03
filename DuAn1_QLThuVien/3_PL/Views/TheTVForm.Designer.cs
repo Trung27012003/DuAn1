@@ -101,7 +101,6 @@
             this.tbt_sdt.Name = "tbt_sdt";
             this.tbt_sdt.Size = new System.Drawing.Size(298, 31);
             this.tbt_sdt.TabIndex = 5;
-            this.tbt_sdt.TextChanged += new System.EventHandler(this.tbt_sdt_TextChanged);
             // 
             // tbt_diachi
             // 

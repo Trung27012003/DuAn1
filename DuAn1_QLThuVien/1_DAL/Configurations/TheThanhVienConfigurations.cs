@@ -23,7 +23,7 @@ namespace _1_DAL.Configurations
             buider.Property(p => p.DiaChi).HasColumnName("DiaChi").HasColumnType("nvarchar(100)").IsRequired();
             buider.Property(p => p.NgaySinh).HasColumnName("NgaySinh").HasColumnType("DateTime").IsRequired();
             buider.Property(p => p.GhiChu).HasColumnName("GhiChu").HasColumnType("nvarchar(100)").IsRequired();
-            buider.Property(p => p.PhiDangKi).HasColumnName("PhiDangKi").HasColumnType("Money").IsRequired();
+            //buider.Property(p => p.PhiDangKi).HasColumnName("PhiDangKi").HasColumnType("Money").IsRequired();
         }
     }
 }

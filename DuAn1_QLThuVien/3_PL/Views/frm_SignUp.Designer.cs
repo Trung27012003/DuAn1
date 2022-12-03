@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_SignUp));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.tvT_TextBox3 = new _3_PL.custom_control.TvT_TextBox();
+            this.tbx_repass = new _3_PL.custom_control.TvT_TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.tvT_IconButton1 = new WinFormsApp1.Custom_Controls.TvT_IconButton();
-            this.cbx_remember = new System.Windows.Forms.CheckBox();
-            this.tvT_TextBox1 = new _3_PL.custom_control.TvT_TextBox();
-            this.tvT_TextBox2 = new _3_PL.custom_control.TvT_TextBox();
+            this.cbx_robot = new System.Windows.Forms.CheckBox();
+            this.tbx_username = new _3_PL.custom_control.TvT_TextBox();
+            this.tbx_pass = new _3_PL.custom_control.TvT_TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,49 +46,51 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.tvT_TextBox3);
+            this.panel1.Controls.Add(this.tbx_repass);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.tvT_IconButton1);
-            this.panel1.Controls.Add(this.cbx_remember);
-            this.panel1.Controls.Add(this.tvT_TextBox1);
-            this.panel1.Controls.Add(this.tvT_TextBox2);
+            this.panel1.Controls.Add(this.cbx_robot);
+            this.panel1.Controls.Add(this.tbx_username);
+            this.panel1.Controls.Add(this.tbx_pass);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(268, -6);
+            this.panel1.Location = new System.Drawing.Point(335, -8);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(394, 536);
+            this.panel1.Size = new System.Drawing.Size(492, 670);
             this.panel1.TabIndex = 3;
             // 
-            // tvT_TextBox3
+            // tbx_repass
             // 
-            this.tvT_TextBox3.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.tvT_TextBox3.BorderColor = System.Drawing.Color.Gray;
-            this.tvT_TextBox3.BorderFocusColor = System.Drawing.Color.Green;
-            this.tvT_TextBox3.BorderRadius = 15;
-            this.tvT_TextBox3.BorderSize = 2;
-            this.tvT_TextBox3.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tvT_TextBox3.Location = new System.Drawing.Point(37, 289);
-            this.tvT_TextBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tvT_TextBox3.Multiline = false;
-            this.tvT_TextBox3.Name = "tvT_TextBox3";
-            this.tvT_TextBox3.Padding = new System.Windows.Forms.Padding(24, 9, 24, 9);
-            this.tvT_TextBox3.PasswordChar = true;
-            this.tvT_TextBox3.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.tvT_TextBox3.PlaceholderText = "";
-            this.tvT_TextBox3.Size = new System.Drawing.Size(324, 44);
-            this.tvT_TextBox3.TabIndex = 11;
-            this.tvT_TextBox3.Texts = "";
-            this.tvT_TextBox3.UnderlinedStyle = false;
+            this.tbx_repass.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.tbx_repass.BorderColor = System.Drawing.Color.Gray;
+            this.tbx_repass.BorderFocusColor = System.Drawing.Color.Green;
+            this.tbx_repass.BorderRadius = 15;
+            this.tbx_repass.BorderSize = 2;
+            this.tbx_repass.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbx_repass.Location = new System.Drawing.Point(46, 361);
+            this.tbx_repass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbx_repass.Multiline = false;
+            this.tbx_repass.Name = "tbx_repass";
+            this.tbx_repass.Padding = new System.Windows.Forms.Padding(30, 11, 30, 11);
+            this.tbx_repass.PasswordChar = true;
+            this.tbx_repass.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.tbx_repass.PlaceholderText = "";
+            this.tbx_repass.Size = new System.Drawing.Size(405, 53);
+            this.tbx_repass.TabIndex = 11;
+            this.tbx_repass.Texts = "";
+            this.tbx_repass.UnderlinedStyle = false;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.Gray;
-            this.label6.Location = new System.Drawing.Point(37, 262);
+            this.label6.Location = new System.Drawing.Point(46, 328);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(132, 23);
+            this.label6.Size = new System.Drawing.Size(158, 28);
             this.label6.TabIndex = 10;
             this.label6.Text = "RePassword";
             // 
@@ -106,77 +108,80 @@
             this.tvT_IconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
             this.tvT_IconButton1.IconColor = System.Drawing.Color.Black;
             this.tvT_IconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.tvT_IconButton1.Location = new System.Drawing.Point(90, 403);
+            this.tvT_IconButton1.Location = new System.Drawing.Point(112, 504);
+            this.tvT_IconButton1.Margin = new System.Windows.Forms.Padding(4);
             this.tvT_IconButton1.Name = "tvT_IconButton1";
-            this.tvT_IconButton1.Size = new System.Drawing.Size(208, 66);
+            this.tvT_IconButton1.Size = new System.Drawing.Size(260, 82);
             this.tvT_IconButton1.TabIndex = 7;
             this.tvT_IconButton1.Text = "Sign up";
             this.tvT_IconButton1.TextColor = System.Drawing.Color.WhiteSmoke;
             this.tvT_IconButton1.UseVisualStyleBackColor = false;
             this.tvT_IconButton1.Click += new System.EventHandler(this.tvT_IconButton1_Click);
             // 
-            // cbx_remember
+            // cbx_robot
             // 
-            this.cbx_remember.AutoSize = true;
-            this.cbx_remember.Font = new System.Drawing.Font("Century", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cbx_remember.ForeColor = System.Drawing.Color.Gray;
-            this.cbx_remember.Location = new System.Drawing.Point(43, 350);
-            this.cbx_remember.Name = "cbx_remember";
-            this.cbx_remember.Size = new System.Drawing.Size(164, 25);
-            this.cbx_remember.TabIndex = 6;
-            this.cbx_remember.Text = "I\'m not a robot";
-            this.cbx_remember.UseVisualStyleBackColor = true;
+            this.cbx_robot.AutoSize = true;
+            this.cbx_robot.Font = new System.Drawing.Font("Century", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cbx_robot.ForeColor = System.Drawing.Color.Gray;
+            this.cbx_robot.Location = new System.Drawing.Point(54, 438);
+            this.cbx_robot.Margin = new System.Windows.Forms.Padding(4);
+            this.cbx_robot.Name = "cbx_robot";
+            this.cbx_robot.Size = new System.Drawing.Size(198, 29);
+            this.cbx_robot.TabIndex = 6;
+            this.cbx_robot.Text = "I\'m not a robot";
+            this.cbx_robot.UseVisualStyleBackColor = true;
             // 
-            // tvT_TextBox1
+            // tbx_username
             // 
-            this.tvT_TextBox1.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.tvT_TextBox1.BorderColor = System.Drawing.Color.Gray;
-            this.tvT_TextBox1.BorderFocusColor = System.Drawing.Color.Green;
-            this.tvT_TextBox1.BorderRadius = 15;
-            this.tvT_TextBox1.BorderSize = 2;
-            this.tvT_TextBox1.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tvT_TextBox1.Location = new System.Drawing.Point(37, 116);
-            this.tvT_TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tvT_TextBox1.Multiline = false;
-            this.tvT_TextBox1.Name = "tvT_TextBox1";
-            this.tvT_TextBox1.Padding = new System.Windows.Forms.Padding(24, 9, 24, 9);
-            this.tvT_TextBox1.PasswordChar = false;
-            this.tvT_TextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.tvT_TextBox1.PlaceholderText = "";
-            this.tvT_TextBox1.Size = new System.Drawing.Size(324, 44);
-            this.tvT_TextBox1.TabIndex = 5;
-            this.tvT_TextBox1.Texts = "";
-            this.tvT_TextBox1.UnderlinedStyle = false;
+            this.tbx_username.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.tbx_username.BorderColor = System.Drawing.Color.Gray;
+            this.tbx_username.BorderFocusColor = System.Drawing.Color.Green;
+            this.tbx_username.BorderRadius = 15;
+            this.tbx_username.BorderSize = 2;
+            this.tbx_username.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbx_username.Location = new System.Drawing.Point(46, 145);
+            this.tbx_username.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbx_username.Multiline = false;
+            this.tbx_username.Name = "tbx_username";
+            this.tbx_username.Padding = new System.Windows.Forms.Padding(30, 11, 30, 11);
+            this.tbx_username.PasswordChar = false;
+            this.tbx_username.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.tbx_username.PlaceholderText = "";
+            this.tbx_username.Size = new System.Drawing.Size(405, 53);
+            this.tbx_username.TabIndex = 5;
+            this.tbx_username.Texts = "";
+            this.tbx_username.UnderlinedStyle = false;
             // 
-            // tvT_TextBox2
+            // tbx_pass
             // 
-            this.tvT_TextBox2.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.tvT_TextBox2.BorderColor = System.Drawing.Color.Gray;
-            this.tvT_TextBox2.BorderFocusColor = System.Drawing.Color.Green;
-            this.tvT_TextBox2.BorderRadius = 15;
-            this.tvT_TextBox2.BorderSize = 2;
-            this.tvT_TextBox2.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tvT_TextBox2.Location = new System.Drawing.Point(37, 201);
-            this.tvT_TextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tvT_TextBox2.Multiline = false;
-            this.tvT_TextBox2.Name = "tvT_TextBox2";
-            this.tvT_TextBox2.Padding = new System.Windows.Forms.Padding(24, 9, 24, 9);
-            this.tvT_TextBox2.PasswordChar = true;
-            this.tvT_TextBox2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.tvT_TextBox2.PlaceholderText = "";
-            this.tvT_TextBox2.Size = new System.Drawing.Size(324, 44);
-            this.tvT_TextBox2.TabIndex = 4;
-            this.tvT_TextBox2.Texts = "";
-            this.tvT_TextBox2.UnderlinedStyle = false;
+            this.tbx_pass.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.tbx_pass.BorderColor = System.Drawing.Color.Gray;
+            this.tbx_pass.BorderFocusColor = System.Drawing.Color.Green;
+            this.tbx_pass.BorderRadius = 15;
+            this.tbx_pass.BorderSize = 2;
+            this.tbx_pass.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbx_pass.Location = new System.Drawing.Point(46, 251);
+            this.tbx_pass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbx_pass.Multiline = false;
+            this.tbx_pass.Name = "tbx_pass";
+            this.tbx_pass.Padding = new System.Windows.Forms.Padding(30, 11, 30, 11);
+            this.tbx_pass.PasswordChar = true;
+            this.tbx_pass.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.tbx_pass.PlaceholderText = "";
+            this.tbx_pass.Size = new System.Drawing.Size(405, 53);
+            this.tbx_pass.TabIndex = 4;
+            this.tbx_pass.Texts = "";
+            this.tbx_pass.UnderlinedStyle = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(37, 174);
+            this.label3.Location = new System.Drawing.Point(46, 218);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 23);
+            this.label3.Size = new System.Drawing.Size(127, 28);
             this.label3.TabIndex = 2;
             this.label3.Text = "Password";
             // 
@@ -185,9 +190,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(37, 89);
+            this.label2.Location = new System.Drawing.Point(46, 111);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 23);
+            this.label2.Size = new System.Drawing.Size(135, 28);
             this.label2.TabIndex = 1;
             this.label2.Text = "Username";
             // 
@@ -196,29 +202,32 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label1.Location = new System.Drawing.Point(127, 26);
+            this.label1.Location = new System.Drawing.Point(159, 32);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 39);
+            this.label1.Size = new System.Drawing.Size(168, 47);
             this.label1.TabIndex = 0;
             this.label1.Text = "Sign up";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-10, -3);
+            this.pictureBox1.Location = new System.Drawing.Point(-12, -4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(943, 530);
+            this.pictureBox1.Size = new System.Drawing.Size(1194, 662);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
             // frm_SignUp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(935, 518);
+            this.ClientSize = new System.Drawing.Size(822, 648);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_SignUp";
             this.Text = "frm_SignUp";
             this.panel1.ResumeLayout(false);
@@ -231,12 +240,12 @@
         #endregion
 
         private Panel panel1;
-        private custom_control.TvT_TextBox tvT_TextBox3;
+        private custom_control.TvT_TextBox tbx_repass;
         private Label label6;
         private WinFormsApp1.Custom_Controls.TvT_IconButton tvT_IconButton1;
-        private CheckBox cbx_remember;
-        private custom_control.TvT_TextBox tvT_TextBox1;
-        private custom_control.TvT_TextBox tvT_TextBox2;
+        private CheckBox cbx_robot;
+        private custom_control.TvT_TextBox tbx_username;
+        private custom_control.TvT_TextBox tbx_pass;
         private Label label3;
         private Label label2;
         private Label label1;
