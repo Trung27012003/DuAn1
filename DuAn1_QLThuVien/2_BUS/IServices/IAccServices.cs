@@ -8,12 +8,11 @@ using System.Threading.Tasks;
 
 namespace _2_BUS.IServices
 {
-    internal interface IAccServices
-    {
-       
+    public interface IAccServices
+    {   
         bool CheckEmtyDB();
         Account CheckLogin(string username, string password);
         bool CheckAccountExists(string username);
-        string CreateAccount(string username, string password);
+        string CreateAccount(AccView obj);
     }
 }

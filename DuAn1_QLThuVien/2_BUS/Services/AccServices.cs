@@ -13,15 +13,17 @@ namespace _2_BUS.Services
 {
     public class AccServices : IAccServices
     {
-        public IAccRep _iAccRep = new AccRep();
+        private IAccRep _iAccRep;
+        public AccServices()
+        {
+            _iAccRep = new AccRep();
+        }
+            
         public bool CheckEmtyDB()
         {
             return _iAccRep.GetAllAccounts() == null;
         }
-        public bool AddAccount(string username, string password)
-        {
-            throw new NotImplementedException();
-        }
+       
         public Account CheckLogin(string username, string password)
         {
             Account ac = _iAccRep.GetAccount(username, password);
@@ -29,20 +31,22 @@ namespace _2_BUS.Services
 
         }
         
-        public string CreateAccount(string username, string password)
+        public string CreateAccount(AccView obj)
         {
-            if (_iAccRep.AddAccount(username, password))
+            if (obj == null) return "Thêm không thành công!";
+            var acc = new Account()
             {
-                return "Them thanh cong";
+               UserName = obj.UserName,
+               PassWord = obj.PassWord
 
-            }
-            else
-                return "Them that bai";
+            };
+            if (_iAccRep.AddAccount(acc)) return "Thêm  thành công!";
+            return "Thêm không thành công!";
         }
         
         public bool CheckAccountExists(string username) // kiem tra xem ten tk da ton tai hay chua
         {
-            var x = _iAccRep.GetAllAccounts().Find(x => x.UserName == username);
+            var x = _iAccRep.GetAllAccounts().Where(x => x.UserName == username);
             if (x != null)
             {
                 return true;

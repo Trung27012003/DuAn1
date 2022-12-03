@@ -13,11 +13,11 @@ namespace _3_PL.Views
 {
     public partial class LoginForm : Form
     {
-        public IAccServices _iaccServices;
+        public AccServices _iaccServices;
         public LoginForm()
         {
             InitializeComponent();
-            //_iaccServices = new AccServices();
+            _iaccServices = new _2_BUS.Services.AccServices();
         }
 
         private void btn_dangnhap_Click(object sender, EventArgs e)

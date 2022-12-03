@@ -22,9 +22,6 @@
     <Compile Update="Views\frm_SignUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\HungTextBox.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Update="Views\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
