@@ -101,19 +101,27 @@ namespace _3_PL.Views
 
         private void btn_them_Click(object sender, EventArgs e)
         {
-            ChucVuView cvv = new ChucVuView()
+            if(tbx_tencv.Text == "")
             {
-               
-                Name = tbx_tencv.Text,
-            };
-            DialogResult dg = MessageBox.Show("Bạn có chắc chắn muốn thêm không ?", "Thông báo", MessageBoxButtons.YesNo);
-            if (dg == DialogResult.Yes)
-            {
-                MessageBox.Show(_ChucVuServices.AddTN(cvv));
-                _lstChucVuViews = _ChucVuServices.GetTheNgay();
-                LoadToGridCv(_lstChucVuViews);
+                MessageBox.Show("Vui lòng nhập chức vụ");
             }
-            Loadtocbb();
+            else
+            {
+                ChucVuView cvv = new ChucVuView()
+                {
+
+                    Name = tbx_tencv.Text,
+                };
+                DialogResult dg = MessageBox.Show("Bạn có chắc chắn muốn thêm không ?", "Thông báo", MessageBoxButtons.YesNo);
+                if (dg == DialogResult.Yes)
+                {
+                    MessageBox.Show(_ChucVuServices.AddTN(cvv));
+                    _lstChucVuViews = _ChucVuServices.GetTheNgay();
+                    LoadToGridCv(_lstChucVuViews);
+                }
+                Loadtocbb();
+            }
+            
         }
 
         private void btn_sua_Click(object sender, EventArgs e)
@@ -156,6 +164,18 @@ namespace _3_PL.Views
             if (!sdt)
             {
                 MessageBox.Show("Số điện thoại không đúng định dạng");
+            }
+            else if (cbb_tenchucvu.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn chức vụ");
+            }
+            else if (tbx_tennv.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên nhân viên");
+            }
+            else if (tbx_diachi.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập địa chỉ");
             }
             else
             {

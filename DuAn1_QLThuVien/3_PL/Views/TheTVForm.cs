@@ -25,7 +25,7 @@ namespace _3_PL.Views
             InitializeComponent();
             _lstTheThanhVienView = new List<TheThanhVienView>();
             _TheThanhVienServices = new TheThanhVienServices();
-            //_lstTheThanhVienView = _TheThanhVienServices.GetTheThanhVien();
+            _lstTheThanhVienView = _TheThanhVienServices.GetTheThanhVien();
             LoadToGrid(_lstTheThanhVienView);
         }
         public void LoadToGrid(List<TheThanhVienView> lst)
