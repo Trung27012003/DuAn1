@@ -212,5 +212,7 @@ namespace _3_PL.Views
             var code = new QRCoder.QRCode(data);
             ptb_QR.Image = code.GetGraphic(20);
         }
+
+      
     }
 }
