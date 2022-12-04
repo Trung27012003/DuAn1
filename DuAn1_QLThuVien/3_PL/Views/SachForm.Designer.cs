@@ -43,26 +43,29 @@
             this.btn_xoa = new System.Windows.Forms.Button();
             this.tbt_timkiem = new System.Windows.Forms.TextBox();
             this.dtg_showtl = new System.Windows.Forms.DataGridView();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tbx_ghichu = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.tbt_NXB = new System.Windows.Forms.TextBox();
             this.tbt_TL = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.ptb_QR = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dtg_showsach = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btn_QR = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.ptb_QR = new System.Windows.Forms.PictureBox();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_showtl)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_QR)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_showsach)).BeginInit();
             this.groupBox4.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_QR)).BeginInit();
             this.SuspendLayout();
             // 
             // tbt_tg
@@ -196,6 +199,9 @@
             // dtg_showtl
             // 
             this.dtg_showtl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtg_showtl.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column2,
+            this.Column3});
             this.dtg_showtl.Location = new System.Drawing.Point(5, 20);
             this.dtg_showtl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtg_showtl.Name = "dtg_showtl";
@@ -204,6 +210,17 @@
             this.dtg_showtl.Size = new System.Drawing.Size(181, 203);
             this.dtg_showtl.TabIndex = 22;
             this.dtg_showtl.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_showtl_CellClick);
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "STT";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 45;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Thể Loại";
+            this.Column3.Name = "Column3";
             // 
             // groupBox1
             // 
@@ -262,6 +279,23 @@
             this.tbt_TL.Name = "tbt_TL";
             this.tbt_TL.Size = new System.Drawing.Size(191, 23);
             this.tbt_TL.TabIndex = 17;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.ptb_QR);
+            this.panel1.Location = new System.Drawing.Point(562, 94);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(233, 90);
+            this.panel1.TabIndex = 28;
+            // 
+            // ptb_QR
+            // 
+            this.ptb_QR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ptb_QR.Location = new System.Drawing.Point(59, 2);
+            this.ptb_QR.Name = "ptb_QR";
+            this.ptb_QR.Size = new System.Drawing.Size(124, 85);
+            this.ptb_QR.TabIndex = 0;
+            this.ptb_QR.TabStop = false;
             // 
             // groupBox2
             // 
@@ -322,22 +356,11 @@
             this.btn_QR.UseVisualStyleBackColor = true;
             this.btn_QR.Click += new System.EventHandler(this.btn_QR_Click);
             // 
-            // panel1
+            // ID
             // 
-            this.panel1.Controls.Add(this.ptb_QR);
-            this.panel1.Location = new System.Drawing.Point(556, 93);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(245, 90);
-            this.panel1.TabIndex = 28;
-            // 
-            // ptb_QR
-            // 
-            this.ptb_QR.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ptb_QR.Location = new System.Drawing.Point(0, 0);
-            this.ptb_QR.Name = "ptb_QR";
-            this.ptb_QR.Size = new System.Drawing.Size(245, 90);
-            this.ptb_QR.TabIndex = 0;
-            this.ptb_QR.TabStop = false;
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.Visible = false;
             // 
             // SachForm
             // 
@@ -361,13 +384,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtg_showtl)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_QR)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtg_showsach)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_QR)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -400,5 +423,8 @@
         private Button btn_QR;
         private Panel panel1;
         private PictureBox ptb_QR;
+        private DataGridViewTextBoxColumn ID;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
     }
 }
