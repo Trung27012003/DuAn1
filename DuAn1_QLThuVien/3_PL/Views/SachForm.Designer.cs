@@ -55,6 +55,10 @@
             this.btn_QR = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.ptb_QR = new System.Windows.Forms.PictureBox();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_showtl)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -196,6 +200,10 @@
             // dtg_showtl
             // 
             this.dtg_showtl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtg_showtl.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
             this.dtg_showtl.Location = new System.Drawing.Point(5, 20);
             this.dtg_showtl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtg_showtl.Name = "dtg_showtl";
@@ -339,6 +347,29 @@
             this.ptb_QR.TabIndex = 0;
             this.ptb_QR.TabStop = false;
             // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.Visible = false;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "STT";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 45;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Thể Loại";
+            this.Column3.Name = "Column3";
+            // 
             // SachForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -400,5 +431,9 @@
         private Button btn_QR;
         private Panel panel1;
         private PictureBox ptb_QR;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn ID;
     }
 }
