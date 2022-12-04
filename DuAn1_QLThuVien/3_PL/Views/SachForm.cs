@@ -88,6 +88,9 @@ namespace _3_PL.Views
         private void dtg_showtl_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             tbt_TL.Text = dtg_showtl.CurrentCell.Value.ToString();
+            var a = _IsachServices.GetSach().Where(x => x.TL.Contains(tbt_TL.Text)).ToList();
+            dtg_showsach.Rows.Clear();
+            Loadsearch(a);
         }
 
         private void SachForm_Load(object sender, EventArgs e)

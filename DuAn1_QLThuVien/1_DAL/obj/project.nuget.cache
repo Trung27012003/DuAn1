@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "hpNK6QyiVeujLccKxE6vBEY0Vq6UMvhlnGLUGjS1PAQRrNjX83bMrrZ/aRNUxYSkA2RuthByo/VxAOpV+ySNgQ==",
   "success": true,
   "projectFilePath": "D:\\Dự án 1\\New folder\\DuAn1\\DuAn1_QLThuVien\\1_DAL\\1_DAL.csproj",
+=======
+  "dgSpecHash": "pwz2kREWm+VCCxBrpHqSnRVZtN7Nx1t+dJhKx7fAz2T/MAaqL8r5KaPpXC6+YlAZ72y+LeFPw4QYS+oFheRkNg==",
+  "success": true,
+  "projectFilePath": "D:\\Dự án 1\\New folder\\DuAn1\\DuAn1\\DuAn1_QLThuVien\\1_DAL\\1_DAL.csproj",
+>>>>>>> Stashed changes
   "expectedPackageFiles": [
     "C:\\Users\\VHC\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\VHC\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
