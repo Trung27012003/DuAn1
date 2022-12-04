@@ -182,7 +182,6 @@ C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.
 C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.frm_Login.resources
 C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.frm_menus.resources
 C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.frm_SignUp.resources
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.HungTextBox.resources
 C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.LoginForm.resources
 C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.Menu.resources
 C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.MenuForm.resources
