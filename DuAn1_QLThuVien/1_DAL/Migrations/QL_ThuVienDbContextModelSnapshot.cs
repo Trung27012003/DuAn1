@@ -251,6 +251,10 @@ namespace _1_DAL.Migrations
                         .HasColumnType("money")
                         .HasColumnName("GiaTien");
 
+                    b.Property<Guid?>("IdTL")
+                        .IsRequired()
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("NXB")
                         .IsRequired()
                         .HasColumnType("nvarchar(100)")
@@ -271,14 +275,27 @@ namespace _1_DAL.Migrations
                         .HasColumnType("nvarchar(100)")
                         .HasColumnName("TacGia");
 
-                    b.Property<string>("TL")
+                    b.HasKey("Id");
+
+                    b.HasIndex("IdTL");
+
+                    b.ToTable("Sach", (string)null);
+                });
+
+            modelBuilder.Entity("_1_DAL.Models.TheLoai", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(100)")
-                        .HasColumnName("TheLoai");
+                        .HasColumnName("TenTL");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Sach", (string)null);
+                    b.ToTable("TheLoai", (string)null);
                 });
 
             modelBuilder.Entity("_1_DAL.Models.TheNgay", b =>
@@ -436,6 +453,17 @@ namespace _1_DAL.Migrations
                     b.Navigation("PhieuTra");
 
                     b.Navigation("Sach");
+                });
+
+            modelBuilder.Entity("_1_DAL.Models.Sach", b =>
+                {
+                    b.HasOne("_1_DAL.Models.TheLoai", "TheLoai")
+                        .WithMany()
+                        .HasForeignKey("IdTL")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("TheLoai");
                 });
 
             modelBuilder.Entity("_1_DAL.Models.TheNgay", b =>

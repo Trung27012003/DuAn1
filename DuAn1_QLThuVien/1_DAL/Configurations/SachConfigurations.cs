@@ -17,12 +17,15 @@ namespace _1_DAL.Configurations
             buider.HasKey(x => x.Id);
 
             buider.Property(p => p.Name).HasColumnName("TenSach").HasColumnType("nvarchar(100)").IsRequired();
-            buider.Property(p => p.TL).HasColumnName("TheLoai").HasColumnType("nvarchar(100)").IsRequired();
+            //buider.Property(p => p.IdTL).HasColumnName("IdTL").HasColumnType("nvarchar(100)").IsRequired();
+            buider.Property(p => p.IdTL).IsRequired();
             buider.Property(p => p.NXB).HasColumnName("NXB").HasColumnType("nvarchar(100)").IsRequired();
             buider.Property(p => p.TG).HasColumnName("TacGia").HasColumnType("nvarchar(100)").IsRequired();
             buider.Property(p => p.SoLuong).HasColumnName("SoLuong").HasColumnType("int").IsRequired();
             buider.Property(p => p.GiaTien).HasColumnName("GiaTien").HasColumnType("money").IsRequired();
             buider.Property(p => p.GhiChu).HasColumnName("GhiChu").HasColumnType("nvarchar(100)").IsRequired();
+
+            buider.HasOne(p => p.TheLoai).WithMany().HasForeignKey(p => p.IdTL);
         }
     }
 }
