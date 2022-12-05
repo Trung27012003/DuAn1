@@ -15,6 +15,7 @@ namespace _1_DAL.Models
         public string? SDT { get; set; }
         public string? DiaChi { get; set; }
         public DateTime? NgaySinh { get; set; }
+        //public int? PhiDangKi { get; set; }
         public string? GhiChu { get; set; }
     }
 }

@@ -1,134 +1,83 @@
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.exe
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.deps.json
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.runtimeconfig.json
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.pdb
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Data.SqlClient.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Memory.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Identity.Client.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Logging.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Tokens.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\System.IdentityModel.Tokens.Jwt.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\System.Runtime.Caching.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\1_DAL.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\2_BUS.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\2_BUS.pdb
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\1_DAL.pdb
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.AssemblyReference.cache
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.GeneratedMSBuildEditorConfig.editorconfig
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.AssemblyInfoInputs.cache
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.AssemblyInfo.cs
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.CoreCompileInputs.cache
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.CopyComplete
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\refint\3_PL.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.pdb
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.genruntimeconfig.cache
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\ref\3_PL.dll
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.exe
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.deps.json
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.runtimeconfig.json
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.dll
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.pdb
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Data.SqlClient.dll
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.dll
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Memory.dll
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Identity.Client.dll
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Logging.dll
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.dll
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Tokens.dll
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\System.Runtime.Caching.dll
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\1_DAL.dll
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\2_BUS.dll
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\2_BUS.pdb
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\1_DAL.pdb
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.AssemblyReference.cache
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Properties.Resources.resources
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.LoginForm.resources
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.Menu.resources
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.GenerateResource.cache
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.AssemblyInfoInputs.cache
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.AssemblyInfo.cs
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.CoreCompileInputs.cache
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.CopyComplete
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.dll
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\refint\3_PL.dll
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.pdb
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.genruntimeconfig.cache
-C:\Users\trung\Desktop\Demo1311\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\ref\3_PL.dll
-C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.AssemblyReference.cache
-C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Properties.Resources.resources
-C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.LoginForm.resources
-C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.Menu.resources
-C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.MenuForm.resources
-C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.MuonTraForm.resources
-C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.SachForm.resources
-C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.TheNgayForm.resources
-C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.TheNVForm.resources
-C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.TheTVForm.resources
-C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.GenerateResource.cache
-C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.AssemblyInfoInputs.cache
-C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.AssemblyInfo.cs
-C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.CoreCompileInputs.cache
-C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.dll
-C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\refint\3_PL.dll
-C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.pdb
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.exe
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.deps.json
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.runtimeconfig.json
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.pdb
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Humanizer.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Identity.Client.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\QRCoder.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\System.Runtime.Caching.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\1_DAL.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\2_BUS.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\2_BUS.pdb
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\1_DAL.pdb
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.AssemblyReference.cache
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\WinFormsApp1.Custom_Controls.TvT_IconButton.resources
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.custom_control.TvT_TextBox.resources
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Properties.Resources.resources
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.frm_Login.resources
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.frm_menus.resources
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.frm_SignUp.resources
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.LoginForm.resources
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.Menu.resources
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.MenuForm.resources
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.MuonTraForm.resources
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.SachForm.resources
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.SignUP.resources
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.TheNgayForm.resources
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.TheNVForm.resources
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.TheTVForm.resources
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.GenerateResource.cache
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.AssemblyInfoInputs.cache
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.AssemblyInfo.cs
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.CoreCompileInputs.cache
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.CopyComplete
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\refint\3_PL.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.pdb
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.genruntimeconfig.cache
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\ref\3_PL.dll
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.exe
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.deps.json
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.runtimeconfig.json
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.dll
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.pdb
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
+C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Humanizer.dll
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Data.SqlClient.dll
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.dll
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
@@ -146,6 +95,7 @@ C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\M
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.dll
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\QRCoder.dll
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\System.Runtime.Caching.dll
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
@@ -159,444 +109,31 @@ C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\1
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\2_BUS.dll
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\2_BUS.pdb
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\1_DAL.pdb
+C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\WinFormsApp1.Custom_Controls.TvT_IconButton.resources
+C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.custom_control.TvT_TextBox.resources
+C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Properties.Resources.resources
+C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.frm_Login.resources
+C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.frm_menus.resources
+C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.frm_SignUp.resources
+C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.LoginForm.resources
+C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.Menu.resources
+C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.MenuForm.resources
+C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.MuonTraForm.resources
+C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.SachForm.resources
+C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.SignUP.resources
+C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.TheNgayForm.resources
+C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.TheNVForm.resources
+C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.TheTVForm.resources
+C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.AssemblyInfo.cs
+C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.CopyComplete
+C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.dll
+C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\refint\3_PL.dll
+C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.pdb
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.genruntimeconfig.cache
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\ref\3_PL.dll
-C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Design.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.exe
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.deps.json
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.runtimeconfig.json
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.pdb
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Data.SqlClient.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Design.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Memory.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Identity.Client.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Logging.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Tokens.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\System.IdentityModel.Tokens.Jwt.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\System.Runtime.Caching.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\1_DAL.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\2_BUS.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\2_BUS.pdb
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\1_DAL.pdb
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.AssemblyReference.cache
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Properties.Resources.resources
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.LoginForm.resources
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.Menu.resources
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.MenuForm.resources
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.MuonTraForm.resources
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.SachForm.resources
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.TheNgayForm.resources
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.TheNVForm.resources
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.TheTVForm.resources
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.GenerateResource.cache
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.GeneratedMSBuildEditorConfig.editorconfig
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.AssemblyInfoInputs.cache
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.AssemblyInfo.cs
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.CoreCompileInputs.cache
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.CopyComplete
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\refint\3_PL.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.pdb
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.genruntimeconfig.cache
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien_DA1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\ref\3_PL.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.exe
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.deps.json
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.runtimeconfig.json
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.pdb
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Data.SqlClient.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Design.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Memory.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Identity.Client.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Logging.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Tokens.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\System.IdentityModel.Tokens.Jwt.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\System.Runtime.Caching.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\1_DAL.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\2_BUS.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\2_BUS.pdb
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\1_DAL.pdb
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.AssemblyReference.cache
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Properties.Resources.resources
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.LoginForm.resources
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.Menu.resources
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.MenuForm.resources
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.MuonTraForm.resources
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.SachForm.resources
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.TheNgayForm.resources
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.TheNVForm.resources
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.TheTVForm.resources
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.GenerateResource.cache
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.GeneratedMSBuildEditorConfig.editorconfig
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.AssemblyInfoInputs.cache
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.AssemblyInfo.cs
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.CoreCompileInputs.cache
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.CopyComplete
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\refint\3_PL.dll
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.pdb
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.genruntimeconfig.cache
-F:\Trungtvph28671\TL_FPT\PRO131_DU_AN_1\Du_An\QLThuVien\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\ref\3_PL.dll
-D:\GitClone\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.AssemblyReference.cache
-D:\GitClone\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Properties.Resources.resources
-D:\GitClone\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.LoginForm.resources
-D:\GitClone\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.Menu.resources
-D:\GitClone\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.MenuForm.resources
-D:\GitClone\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.MuonTraForm.resources
-D:\GitClone\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.SachForm.resources
-D:\GitClone\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.TheNgayForm.resources
-D:\GitClone\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.TheNVForm.resources
-D:\GitClone\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.TheTVForm.resources
-D:\GitClone\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.GenerateResource.cache
-D:\GitClone\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.GeneratedMSBuildEditorConfig.editorconfig
-D:\GitClone\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.AssemblyInfoInputs.cache
-D:\GitClone\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.AssemblyInfo.cs
-D:\GitClone\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.CoreCompileInputs.cache
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.AssemblyReference.cache
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Properties.Resources.resources
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.LoginForm.resources
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.Menu.resources
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.MenuForm.resources
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.MuonTraForm.resources
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.SachForm.resources
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.TheNgayForm.resources
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.TheNVForm.resources
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.TheTVForm.resources
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.GenerateResource.cache
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.AssemblyInfoInputs.cache
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.AssemblyInfo.cs
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.CoreCompileInputs.cache
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.dll
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\refint\3_PL.dll
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.pdb
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.exe
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.deps.json
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.runtimeconfig.json
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.dll
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.pdb
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Data.SqlClient.dll
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.dll
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Memory.dll
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Identity.Client.dll
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Logging.dll
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.dll
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Tokens.dll
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\System.Runtime.Caching.dll
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\1_DAL.dll
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\2_BUS.dll
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\2_BUS.pdb
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\1_DAL.pdb
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.CopyComplete
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.genruntimeconfig.cache
-C:\Users\Trung2701\Documents\Duan2\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\ref\3_PL.dll
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.exe
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.deps.json
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.runtimeconfig.json
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.dll
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.pdb
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Data.SqlClient.dll
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.dll
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Design.dll
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Memory.dll
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Identity.Client.dll
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Logging.dll
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.dll
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Tokens.dll
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\System.IdentityModel.Tokens.Jwt.dll
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\System.Runtime.Caching.dll
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\1_DAL.dll
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\2_BUS.dll
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\2_BUS.pdb
-D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\1_DAL.pdb
-D:\GitClone\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.CopyComplete
-D:\GitClone\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.dll
-D:\GitClone\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\refint\3_PL.dll
-D:\GitClone\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.pdb
-D:\GitClone\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.genruntimeconfig.cache
-D:\GitClone\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\ref\3_PL.dll
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.AssemblyReference.cache
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Properties.Resources.resources
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.LoginForm.resources
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.Menu.resources
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.MenuForm.resources
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.MuonTraForm.resources
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.SachForm.resources
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.TheNgayForm.resources
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.TheNVForm.resources
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.TheTVForm.resources
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.GenerateResource.cache
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.AssemblyInfoInputs.cache
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.AssemblyInfo.cs
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.CoreCompileInputs.cache
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.exe
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.deps.json
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.runtimeconfig.json
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.dll
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.pdb
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Data.SqlClient.dll
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.dll
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Memory.dll
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Identity.Client.dll
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Logging.dll
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.dll
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Tokens.dll
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\System.Runtime.Caching.dll
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\1_DAL.dll
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\2_BUS.dll
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\2_BUS.pdb
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\1_DAL.pdb
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.CopyComplete
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.dll
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\refint\3_PL.dll
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.pdb
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.genruntimeconfig.cache
-C:\Users\Trung2701\Documents\DuAn1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\ref\3_PL.dll
-<<<<<<< HEAD
-D:\GitClone\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.HungTextBox.resources
-=======
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.exe
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.deps.json
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.runtimeconfig.json
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.dll
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.pdb
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Data.SqlClient.dll
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.dll
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Memory.dll
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Identity.Client.dll
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Logging.dll
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.dll
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Tokens.dll
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\System.Runtime.Caching.dll
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\1_DAL.dll
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\2_BUS.dll
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\2_BUS.pdb
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\1_DAL.pdb
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.AssemblyReference.cache
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Properties.Resources.resources
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.LoginForm.resources
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.Menu.resources
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.MenuForm.resources
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.MuonTraForm.resources
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.SachForm.resources
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.TheNgayForm.resources
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.TheNVForm.resources
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.TheTVForm.resources
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.GenerateResource.cache
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.AssemblyInfoInputs.cache
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.AssemblyInfo.cs
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.CoreCompileInputs.cache
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.CopyComplete
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.dll
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\refint\3_PL.dll
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.pdb
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.genruntimeconfig.cache
-C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\ref\3_PL.dll
->>>>>>> a2a6c009c3bb2e7baa6f8dcc09fa62f5ec912550
-D:\GitClone\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.SignUP.resources
-C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.HungTextBox.resources
-C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.SignUP.resources
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.AssemblyReference.cache
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Properties.Resources.resources
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.HungTextBox.resources
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.LoginForm.resources
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.Menu.resources
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.MenuForm.resources
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.MuonTraForm.resources
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.SachForm.resources
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.SignUP.resources
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.TheNgayForm.resources
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.TheNVForm.resources
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.TheTVForm.resources
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.GenerateResource.cache
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.GeneratedMSBuildEditorConfig.editorconfig
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.AssemblyInfoInputs.cache
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.AssemblyInfo.cs
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.CoreCompileInputs.cache
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\refint\3_PL.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.pdb
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.exe
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.deps.json
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.runtimeconfig.json
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.pdb
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Data.SqlClient.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Design.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Memory.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Identity.Client.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Logging.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Tokens.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\System.IdentityModel.Tokens.Jwt.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\System.Runtime.Caching.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\1_DAL.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\2_BUS.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\2_BUS.pdb
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\1_DAL.pdb
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.CopyComplete
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.genruntimeconfig.cache
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\ref\3_PL.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Humanizer.dll
+C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.ThongKeForm.resources

@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< Updated upstream
-  "dgSpecHash": "hpNK6QyiVeujLccKxE6vBEY0Vq6UMvhlnGLUGjS1PAQRrNjX83bMrrZ/aRNUxYSkA2RuthByo/VxAOpV+ySNgQ==",
-  "success": true,
-  "projectFilePath": "D:\\Dự án 1\\New folder\\DuAn1\\DuAn1_QLThuVien\\1_DAL\\1_DAL.csproj",
-=======
   "dgSpecHash": "pwz2kREWm+VCCxBrpHqSnRVZtN7Nx1t+dJhKx7fAz2T/MAaqL8r5KaPpXC6+YlAZ72y+LeFPw4QYS+oFheRkNg==",
   "success": true,
   "projectFilePath": "D:\\Dự án 1\\New folder\\DuAn1\\DuAn1\\DuAn1_QLThuVien\\1_DAL\\1_DAL.csproj",
->>>>>>> Stashed changes
   "expectedPackageFiles": [
     "C:\\Users\\VHC\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\VHC\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
@@ -54,5 +48,12 @@
     "C:\\Users\\VHC\\.nuget\\packages\\system.text.encoding.codepages\\4.7.0\\system.text.encoding.codepages.4.7.0.nupkg.sha512",
     "C:\\Users\\VHC\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\Dự án 1\\New folder\\DuAn1\\DuAn1\\DuAn1_QLThuVien\\1_DAL\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
