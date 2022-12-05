@@ -43,6 +43,12 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tbx_search = new System.Windows.Forms.TextBox();
             this.dgrid_danhsachsach = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmb_loc = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lbl_tongtien1 = new System.Windows.Forms.Label();
@@ -56,12 +62,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tp_muon.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -225,7 +225,7 @@
             this.tbx_search.Name = "tbx_search";
             this.tbx_search.Size = new System.Drawing.Size(269, 27);
             this.tbx_search.TabIndex = 27;
-            this.tbx_search.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.tbx_search.TextChanged += new System.EventHandler(this.tbx_search_TextChanged);
             // 
             // dgrid_danhsachsach
             // 
@@ -245,6 +245,49 @@
             this.dgrid_danhsachsach.TabIndex = 33;
             this.dgrid_danhsachsach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrid_danhsachsach_CellClick);
             // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.Visible = false;
+            this.ID.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "STT";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 50;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Thể loại";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Tác giả";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 125;
+            // 
+            // ten
+            // 
+            this.ten.HeaderText = "Tên sách";
+            this.ten.MinimumWidth = 6;
+            this.ten.Name = "ten";
+            this.ten.Width = 125;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Số lượng";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 125;
+            // 
             // cmb_loc
             // 
             this.cmb_loc.FormattingEnabled = true;
@@ -252,6 +295,7 @@
             this.cmb_loc.Name = "cmb_loc";
             this.cmb_loc.Size = new System.Drawing.Size(151, 28);
             this.cmb_loc.TabIndex = 20;
+            this.cmb_loc.SelectedIndexChanged += new System.EventHandler(this.cmb_loc_SelectedIndexChanged);
             // 
             // groupBox1
             // 
@@ -413,49 +457,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "TRẢ SÁCH";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.MinimumWidth = 6;
-            this.ID.Name = "ID";
-            this.ID.Visible = false;
-            this.ID.Width = 125;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "STT";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 50;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Thể loại";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Tác giả";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
-            // 
-            // ten
-            // 
-            this.ten.HeaderText = "Tên sách";
-            this.ten.MinimumWidth = 6;
-            this.ten.Name = "ten";
-            this.ten.Width = 125;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Số lượng";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 125;
             // 
             // MuonTraForm
             // 

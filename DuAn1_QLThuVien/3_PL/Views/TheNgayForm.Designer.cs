@@ -119,9 +119,6 @@
             this.dtg_show.RowHeadersWidth = 51;
             this.dtg_show.RowTemplate.Height = 29;
             this.dtg_show.Size = new System.Drawing.Size(802, 149);
-
-
-
             this.dtg_show.TabIndex = 6;
             // 
             // Column1
@@ -129,6 +126,7 @@
             this.Column1.HeaderText = "Id";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Column1.Visible = false;
             this.Column1.Width = 50;
             // 
@@ -165,7 +163,7 @@
             this.Column6.HeaderText = "Ghi Chú";
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
-            this.Column6.Width = 140;
+            this.Column6.Width = 135;
             // 
             // label4
             // 
@@ -256,55 +254,11 @@
             this.label7.TabIndex = 17;
             this.label7.Text = "Mã nhân viên ";
             // 
-
-            // Column1
-            // 
-            this.Column1.HeaderText = "Id";
-            this.Column1.Name = "Column1";
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column1.Visible = false;
-            this.Column1.Width = 50;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "STT";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 50;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Tên Nhân Viên";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 160;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Ngày Bắt Đầu";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 200;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Ngày Kết Thúc";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 200;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Ghi Chú";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 135;
-            // 
-
             // TheNgayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-
-            this.ClientSize = new System.Drawing.Size(818, 412);
-
             this.ClientSize = new System.Drawing.Size(935, 515);
-
             this.Controls.Add(this.tbt_idnv);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.cbb_nhanvien);

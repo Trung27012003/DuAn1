@@ -65,12 +65,6 @@ namespace _3_PL.Views
                     );
             }
         }
-
-
-
-
-     
-
         private void LoadToGridCv(List<ChucVuView> lst)
         {
             int stt = 1;

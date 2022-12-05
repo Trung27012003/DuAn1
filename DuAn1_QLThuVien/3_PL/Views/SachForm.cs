@@ -161,7 +161,7 @@ namespace _3_PL.Views
 
         private void dtg_showtl_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            cmb_theLoai.Text = dtg_showtl.CurrentCell.Value.ToString();
+            cmb_theLoai.Text = dtg_showtl.CurrentRow.Cells[1].Value.ToString();
         }
 
         private void SachForm_Load(object sender, EventArgs e)

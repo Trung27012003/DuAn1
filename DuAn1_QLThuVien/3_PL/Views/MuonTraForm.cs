@@ -16,6 +16,7 @@ namespace _3_PL.Views
     public partial class MuonTraForm : Form
     {
         ISachServices _IsachServices;
+        ITheLoaiServices _ITheLoaiServices;
         List<SachView> _lstSachView;
         List<PhieuMuonChiTietView> _lstPMCT;
         List<PhieuMuonChiTietView> _lstPM;
@@ -26,6 +27,7 @@ namespace _3_PL.Views
         {
             InitializeComponent();
             _IsachServices = new SachServices();
+            _ITheLoaiServices = new TheLoaiServices();
             _lstSachView = new List<SachView>();
             _lstPMCT = new List<PhieuMuonChiTietView>();
             _lstPM = new List<PhieuMuonChiTietView>();
@@ -36,11 +38,13 @@ namespace _3_PL.Views
         }
         public void LoadToCmbTL()
         {
-            //cmb_loc.Items.Clear();
-            //foreach (var item in _IsachServices.GetSach().Where(c=>c.TL.)
-            //{
-            //    cmb_loc.Items.Add(item.TL);
-            //}
+            cmb_loc.Items.Clear();
+            cmb_loc.Items.Add("Tất cả");
+            foreach (var item in _ITheLoaiServices.GetAllTL())
+            {
+                cmb_loc.Items.Add(item.Name);
+            }
+          
         }
         public void TongTien1(Label a, dynamic lst)
         {
@@ -74,7 +78,7 @@ namespace _3_PL.Views
                 foreach (var x in s)
                 {
                     dgrid_danhsachsach.Rows.Add(
-                         x.Id, stt++, x.IdTL, x.TG, x.Name, x.SoLuong);
+                         x.Id, stt++,_ITheLoaiServices.GetAllTL().FirstOrDefault(c=>c.Id==x.IdTL).Name, x.TG, x.Name, x.SoLuong);
                 }
             
         }
@@ -178,11 +182,6 @@ namespace _3_PL.Views
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void dgrid_danhsachsach_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             _IDSach = Guid.Parse(dgrid_danhsachsach.CurrentRow.Cells[0].Value.ToString());
@@ -247,6 +246,26 @@ namespace _3_PL.Views
             tbx_idpm.Text = "";
             dtp_ngaytra.Value = DateTime.Now + TimeSpan.FromDays(7);
 
+        }
+
+        private void tbx_search_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmb_loc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmb_loc.SelectedIndex==0)
+            {
+                _lstSachView = _IsachServices.GetSach();
+                LoadToGrid_Sach(_lstSachView);
+            }
+            else if (cmb_loc.SelectedIndex == cmb_loc.SelectedIndex)
+            {
+                Guid a = _ITheLoaiServices.GetAllTL().FirstOrDefault(c => c.Name == cmb_loc.Text).Id;
+                var x = (List<SachView>)_IsachServices.GetSach().FindAll(c => c.IdTL == a);
+                LoadToGrid_Sach(x);
+            }
         }
         //  public void LoadToGrid
     }
