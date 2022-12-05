@@ -74,7 +74,7 @@ namespace _3_PL.Views
                 foreach (var x in s)
                 {
                     dgrid_danhsachsach.Rows.Add(
-                         x.Id, stt++, x.TL, x.TG, x.Name, x.SoLuong);
+                         x.Id, stt++, x.IdTL, x.TG, x.Name, x.SoLuong);
                 }
             
         }

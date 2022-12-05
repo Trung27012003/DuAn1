@@ -179,21 +179,57 @@ namespace _3_PL.Views
             }
             else
             {
-                NhanVienView cvv = new NhanVienView()
+                var checkcv = _ChucVuServices.GetTheNgay().FirstOrDefault(c => c.Name == cbb_tenchucvu.Text);
+                
+                if (checkcv==null)
                 {
+                   DialogResult dr = MessageBox.Show($"Chức vụ bạn chọn không tồn tại, bạn có muốn thêm mới chức vụ '{cbb_tenchucvu.Text}' không", "Thông báo", MessageBoxButtons.YesNo);
+                    if (dr == DialogResult.Yes)
+                    {
+                        ChucVuView cv = new ChucVuView()
+                        {
 
-                    Name = tbx_tennv.Text,
-                    NgaySinh = DateTime.Now,
-                    DiaChi = tbx_diachi.Text,
-                    SDT = tbx_sdt.Text,
-                    IdCV = _ChucVuServices.GetTheNgay().FirstOrDefault(c => c.Name == cbb_tenchucvu.Text).Id
-                };
-                DialogResult dg = MessageBox.Show("bạn có chắc chắn muốn thêm không ?", "thông báo", MessageBoxButtons.YesNo);
-                if (dg == DialogResult.Yes)
+                            Name = cbb_tenchucvu.Text,
+                        };
+                        _ChucVuServices.AddTN(cv);
+                        Loadtocbb();
+
+                        NhanVienView cvv = new NhanVienView()
+                        {
+
+                            Name = tbx_tennv.Text,
+                            NgaySinh = DateTime.Now,
+                            DiaChi = tbx_diachi.Text,
+                            SDT = tbx_sdt.Text,
+                            IdCV = _ChucVuServices.GetTheNgay().FirstOrDefault(c => c.Name == cbb_tenchucvu.Text).Id
+                        };
+                        DialogResult dg = MessageBox.Show("bạn có chắc chắn muốn thêm mới nhân viên không ?", "thông báo", MessageBoxButtons.YesNo);
+                        if (dg == DialogResult.Yes)
+                        {
+                            MessageBox.Show(_NhanVienServices.AddTN(cvv));
+                            _lstNhanVienView = _NhanVienServices.GetAllNv();
+                            LoadToGridNv(_lstNhanVienView);
+                        }
+                    }
+                }
+                else
                 {
-                    MessageBox.Show(_NhanVienServices.AddTN(cvv));
-                    _lstNhanVienView = _NhanVienServices.GetAllNv();
-                    LoadToGridNv(_lstNhanVienView);
+                    NhanVienView cvv = new NhanVienView()
+                    {
+
+                        Name = tbx_tennv.Text,
+                        NgaySinh = DateTime.Now,
+                        DiaChi = tbx_diachi.Text,
+                        SDT = tbx_sdt.Text,
+                        IdCV = _ChucVuServices.GetTheNgay().FirstOrDefault(c => c.Name == cbb_tenchucvu.Text).Id
+                    };
+                    DialogResult dg = MessageBox.Show("bạn có chắc chắn muốn thêm không ?", "thông báo", MessageBoxButtons.YesNo);
+                    if (dg == DialogResult.Yes)
+                    {
+                        MessageBox.Show(_NhanVienServices.AddTN(cvv));
+                        _lstNhanVienView = _NhanVienServices.GetAllNv();
+                        LoadToGridNv(_lstNhanVienView);
+                    }
                 }
             }
                 
