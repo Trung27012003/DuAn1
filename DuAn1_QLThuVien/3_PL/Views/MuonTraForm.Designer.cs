@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tp_muon = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -62,10 +63,11 @@
             this.label8 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.tvT_IconButton2 = new WinFormsApp1.Custom_Controls.TvT_IconButton();
-            this.tvT_IconButton1 = new WinFormsApp1.Custom_Controls.TvT_IconButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cbb_chonanh = new System.Windows.Forms.ComboBox();
+            this.rtb_show = new System.Windows.Forms.RichTextBox();
+            this.btn_tatmay = new WinFormsApp1.Custom_Controls.TvT_IconButton();
+            this.btn_batmay = new WinFormsApp1.Custom_Controls.TvT_IconButton();
+            this.ptb_camera = new System.Windows.Forms.PictureBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.dgrid_phieutract = new System.Windows.Forms.DataGridView();
@@ -74,6 +76,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dgrid_phieutra = new System.Windows.Forms.DataGridView();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.tp_muon.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -85,7 +88,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_phieumuonchitiet)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.groupBox8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_camera)).BeginInit();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_phieutract)).BeginInit();
             this.groupBox5.SuspendLayout();
@@ -505,10 +508,11 @@
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.richTextBox1);
-            this.groupBox8.Controls.Add(this.tvT_IconButton2);
-            this.groupBox8.Controls.Add(this.tvT_IconButton1);
-            this.groupBox8.Controls.Add(this.pictureBox1);
+            this.groupBox8.Controls.Add(this.cbb_chonanh);
+            this.groupBox8.Controls.Add(this.rtb_show);
+            this.groupBox8.Controls.Add(this.btn_tatmay);
+            this.groupBox8.Controls.Add(this.btn_batmay);
+            this.groupBox8.Controls.Add(this.ptb_camera);
             this.groupBox8.Location = new System.Drawing.Point(276, 197);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(396, 194);
@@ -516,63 +520,73 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "CAMERA";
             // 
-            // richTextBox1
+            // cbb_chonanh
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(201, 22);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(189, 157);
-            this.richTextBox1.TabIndex = 3;
-            this.richTextBox1.Text = "";
+            this.cbb_chonanh.FormattingEnabled = true;
+            this.cbb_chonanh.Location = new System.Drawing.Point(235, 156);
+            this.cbb_chonanh.Name = "cbb_chonanh";
+            this.cbb_chonanh.Size = new System.Drawing.Size(155, 23);
+            this.cbb_chonanh.TabIndex = 4;
             // 
-            // tvT_IconButton2
+            // rtb_show
             // 
-            this.tvT_IconButton2.BackColor = System.Drawing.Color.SkyBlue;
-            this.tvT_IconButton2.BackgroundColor = System.Drawing.Color.SkyBlue;
-            this.tvT_IconButton2.BorderColor = System.Drawing.Color.Gray;
-            this.tvT_IconButton2.BorderRadius = 20;
-            this.tvT_IconButton2.BorderSize = 1;
-            this.tvT_IconButton2.FlatAppearance.BorderSize = 0;
-            this.tvT_IconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tvT_IconButton2.ForeColor = System.Drawing.Color.Black;
-            this.tvT_IconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.tvT_IconButton2.IconColor = System.Drawing.Color.Black;
-            this.tvT_IconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.tvT_IconButton2.Location = new System.Drawing.Point(100, 148);
-            this.tvT_IconButton2.Name = "tvT_IconButton2";
-            this.tvT_IconButton2.Size = new System.Drawing.Size(85, 37);
-            this.tvT_IconButton2.TabIndex = 2;
-            this.tvT_IconButton2.Text = "Tắt Máy Ảnh";
-            this.tvT_IconButton2.TextColor = System.Drawing.Color.Black;
-            this.tvT_IconButton2.UseVisualStyleBackColor = false;
+            this.rtb_show.Location = new System.Drawing.Point(191, 22);
+            this.rtb_show.Name = "rtb_show";
+            this.rtb_show.Size = new System.Drawing.Size(199, 120);
+            this.rtb_show.TabIndex = 3;
+            this.rtb_show.Text = "";
             // 
-            // tvT_IconButton1
+            // btn_tatmay
             // 
-            this.tvT_IconButton1.BackColor = System.Drawing.Color.SkyBlue;
-            this.tvT_IconButton1.BackgroundColor = System.Drawing.Color.SkyBlue;
-            this.tvT_IconButton1.BorderColor = System.Drawing.Color.Gray;
-            this.tvT_IconButton1.BorderRadius = 20;
-            this.tvT_IconButton1.BorderSize = 1;
-            this.tvT_IconButton1.FlatAppearance.BorderSize = 0;
-            this.tvT_IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tvT_IconButton1.ForeColor = System.Drawing.Color.Black;
-            this.tvT_IconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.tvT_IconButton1.IconColor = System.Drawing.Color.Black;
-            this.tvT_IconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.tvT_IconButton1.Location = new System.Drawing.Point(6, 148);
-            this.tvT_IconButton1.Name = "tvT_IconButton1";
-            this.tvT_IconButton1.Size = new System.Drawing.Size(85, 37);
-            this.tvT_IconButton1.TabIndex = 1;
-            this.tvT_IconButton1.Text = "Bật Máy Ảnh";
-            this.tvT_IconButton1.TextColor = System.Drawing.Color.Black;
-            this.tvT_IconButton1.UseVisualStyleBackColor = false;
+            this.btn_tatmay.BackColor = System.Drawing.Color.SkyBlue;
+            this.btn_tatmay.BackgroundColor = System.Drawing.Color.SkyBlue;
+            this.btn_tatmay.BorderColor = System.Drawing.Color.Gray;
+            this.btn_tatmay.BorderRadius = 20;
+            this.btn_tatmay.BorderSize = 1;
+            this.btn_tatmay.FlatAppearance.BorderSize = 0;
+            this.btn_tatmay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_tatmay.ForeColor = System.Drawing.Color.Black;
+            this.btn_tatmay.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btn_tatmay.IconColor = System.Drawing.Color.Black;
+            this.btn_tatmay.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_tatmay.Location = new System.Drawing.Point(100, 148);
+            this.btn_tatmay.Name = "btn_tatmay";
+            this.btn_tatmay.Size = new System.Drawing.Size(85, 37);
+            this.btn_tatmay.TabIndex = 2;
+            this.btn_tatmay.Text = "Tắt Máy Ảnh";
+            this.btn_tatmay.TextColor = System.Drawing.Color.Black;
+            this.btn_tatmay.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
+            // btn_batmay
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(6, 22);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(179, 120);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.btn_batmay.BackColor = System.Drawing.Color.SkyBlue;
+            this.btn_batmay.BackgroundColor = System.Drawing.Color.SkyBlue;
+            this.btn_batmay.BorderColor = System.Drawing.Color.Gray;
+            this.btn_batmay.BorderRadius = 20;
+            this.btn_batmay.BorderSize = 1;
+            this.btn_batmay.FlatAppearance.BorderSize = 0;
+            this.btn_batmay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_batmay.ForeColor = System.Drawing.Color.Black;
+            this.btn_batmay.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btn_batmay.IconColor = System.Drawing.Color.Black;
+            this.btn_batmay.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_batmay.Location = new System.Drawing.Point(6, 148);
+            this.btn_batmay.Name = "btn_batmay";
+            this.btn_batmay.Size = new System.Drawing.Size(85, 37);
+            this.btn_batmay.TabIndex = 1;
+            this.btn_batmay.Text = "Bật Máy Ảnh";
+            this.btn_batmay.TextColor = System.Drawing.Color.Black;
+            this.btn_batmay.UseVisualStyleBackColor = false;
+            this.btn_batmay.Click += new System.EventHandler(this.btn_batmay_Click);
+            // 
+            // ptb_camera
+            // 
+            this.ptb_camera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ptb_camera.Location = new System.Drawing.Point(6, 22);
+            this.ptb_camera.Name = "ptb_camera";
+            this.ptb_camera.Size = new System.Drawing.Size(179, 120);
+            this.ptb_camera.TabIndex = 0;
+            this.ptb_camera.TabStop = false;
             // 
             // groupBox7
             // 
@@ -639,6 +653,10 @@
             this.dgrid_phieutra.Size = new System.Drawing.Size(258, 329);
             this.dgrid_phieutra.TabIndex = 0;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // MuonTraForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -649,6 +667,8 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MuonTraForm";
             this.Text = "MuonTraForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MuonTraForm_FormClosing);
+            this.Load += new System.EventHandler(this.MuonTraForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.tp_muon.ResumeLayout(false);
             this.tp_muon.PerformLayout();
@@ -664,7 +684,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_phieumuonchitiet)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_camera)).EndInit();
             this.groupBox6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_phieutract)).EndInit();
             this.groupBox5.ResumeLayout(false);
@@ -718,9 +738,11 @@
         private TextBox textBox1;
         private GroupBox groupBox8;
         private GroupBox groupBox7;
-        private RichTextBox richTextBox1;
-        private WinFormsApp1.Custom_Controls.TvT_IconButton tvT_IconButton2;
-        private WinFormsApp1.Custom_Controls.TvT_IconButton tvT_IconButton1;
-        private PictureBox pictureBox1;
+        private RichTextBox rtb_show;
+        private WinFormsApp1.Custom_Controls.TvT_IconButton btn_tatmay;
+        private WinFormsApp1.Custom_Controls.TvT_IconButton btn_batmay;
+        private PictureBox ptb_camera;
+        private ComboBox cbb_chonanh;
+        private System.Windows.Forms.Timer timer1;
     }
 }
