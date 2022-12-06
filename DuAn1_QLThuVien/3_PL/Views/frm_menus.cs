@@ -109,6 +109,11 @@ namespace _3_PL.Views
         {
             lbl_timer01.Text =DateTime.Now.ToLongTimeString();
         }
+
+        private void tvT_IconButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

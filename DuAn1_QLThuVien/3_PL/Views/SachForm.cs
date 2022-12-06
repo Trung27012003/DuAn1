@@ -246,9 +246,9 @@ namespace _3_PL.Views
             var qrtext = "Tên Sách: " + tbt_tensach.Text + "\n" + "Nhà Xuất Bản: " + tbt_NXB.Text + "\n" + "Tác Giả: " + tbt_tg.Text + "\n" + "Thể Loại: " + cmb_theLoai.Text + "\n" +"Ghi Chú: " + tbx_ghichu.Text;
             var data = qrcode.CreateQrCode(qrtext, QRCoder.QRCodeGenerator.ECCLevel.L);
             var code = new QRCoder.QRCode(data);
-            ptb_QR.Image = code.GetGraphic(20);
+            ptb_QR.Image = code.GetGraphic(2);
         }
 
-      
+       
     }
 }
