@@ -24,7 +24,7 @@ namespace _2_BUS.Services
             var Sach = new Sach()
             {
                 Name = a.Name,
-                TL = a.TL,
+                IdTL = a.IdTL,
                 TG = a.TG,
                 NXB = a.NXB,
                 SoLuong =  a.SoLuong,
@@ -46,7 +46,7 @@ namespace _2_BUS.Services
                 {
                     Id = a.Id,
                     Name = a.Name,
-                    TL = a.TL,
+                    IdTL = a.IdTL,
                     TG = a.TG,
                     NXB = a.NXB,
                     SoLuong = a.SoLuong,
@@ -56,14 +56,12 @@ namespace _2_BUS.Services
                 ).ToList();
             return lst;
         }
-
         public string RemoveTN(Guid obj)
         {
             if (obj == null) return "Xóa không thành công!";
             if (_IsachRep.RemoveSach(obj)) return "Xóa  thành công!";
             return "Xóa không thành công!";
         }
-
         public string UpdateTN(SachView obj)
         {
             if (obj == null) return "Sửa không thành công!";
@@ -71,7 +69,7 @@ namespace _2_BUS.Services
             {
                 Id = obj.Id,
                 Name = obj.Name,
-                TL = obj.TL,
+                IdTL = obj.IdTL,
                 TG = obj.TG,
                 NXB = obj.NXB,
                 SoLuong = obj.SoLuong,

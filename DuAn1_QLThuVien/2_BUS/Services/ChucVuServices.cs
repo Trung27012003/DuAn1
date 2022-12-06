@@ -15,11 +15,9 @@ namespace _2_BUS.Services
     public class ChucVuServices : IChucVuServices
     {
         private IChucVuRep _IChucVuRep;
-        //private ChucVuView _view;
         public ChucVuServices()
         {
             _IChucVuRep = new ChucVuRep();
-            //_view = new ChucVuView();
         }
         public string AddTN(ChucVuView obj)
         {

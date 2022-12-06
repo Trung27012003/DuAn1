@@ -9,7 +9,7 @@ namespace _2_BUS.ViewModels
     public class SachView
     {
         public Guid Id { get; set; }
-        public string? TL { get; set; }
+        public Guid? IdTL { get; set; }
         public string? TG { get; set; }
         public string? NXB { get; set; }
         public string? Name { get; set; }
