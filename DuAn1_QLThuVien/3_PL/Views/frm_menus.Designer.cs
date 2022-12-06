@@ -36,6 +36,7 @@
             this.lbl_darkMode = new System.Windows.Forms.Label();
             this.tbtn_darkmode = new CustomControls.RJControls.RJToggleButton();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.tvT_IconButton1 = new WinFormsApp1.Custom_Controls.TvT_IconButton();
             this.tbx_thengay = new WinFormsApp1.Custom_Controls.TvT_IconButton();
             this.tbx_thenhanvien = new WinFormsApp1.Custom_Controls.TvT_IconButton();
             this.tbx_thethanhvien = new WinFormsApp1.Custom_Controls.TvT_IconButton();
@@ -46,7 +47,6 @@
             this.ptb_dangxuat = new FontAwesome.Sharp.IconPictureBox();
             this.ptx_avata = new FontAwesome.Sharp.IconPictureBox();
             this.timer_01 = new System.Windows.Forms.Timer(this.components);
-            this.tvT_IconButton1 = new WinFormsApp1.Custom_Controls.TvT_IconButton();
             this.pn_show.SuspendLayout();
             this.pn_1.SuspendLayout();
             this.pn_2.SuspendLayout();
@@ -81,7 +81,7 @@
             // 
             this.lbl_timer01.AutoSize = true;
             this.lbl_timer01.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_timer01.Location = new System.Drawing.Point(763, 7);
+            this.lbl_timer01.Location = new System.Drawing.Point(713, 8);
             this.lbl_timer01.Name = "lbl_timer01";
             this.lbl_timer01.Size = new System.Drawing.Size(60, 20);
             this.lbl_timer01.TabIndex = 0;
@@ -144,6 +144,34 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(172, 229);
             this.panel4.TabIndex = 1;
+            // 
+            // tvT_IconButton1
+            // 
+            this.tvT_IconButton1.BackColor = System.Drawing.Color.SkyBlue;
+            this.tvT_IconButton1.BackgroundColor = System.Drawing.Color.SkyBlue;
+            this.tvT_IconButton1.BorderColor = System.Drawing.Color.White;
+            this.tvT_IconButton1.BorderRadius = 10;
+            this.tvT_IconButton1.BorderSize = 3;
+            this.tvT_IconButton1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tvT_IconButton1.FlatAppearance.BorderSize = 0;
+            this.tvT_IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tvT_IconButton1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tvT_IconButton1.ForeColor = System.Drawing.Color.Black;
+            this.tvT_IconButton1.IconChar = FontAwesome.Sharp.IconChar.IdCardClip;
+            this.tvT_IconButton1.IconColor = System.Drawing.Color.Black;
+            this.tvT_IconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.tvT_IconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.tvT_IconButton1.Location = new System.Drawing.Point(0, 190);
+            this.tvT_IconButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tvT_IconButton1.Name = "tvT_IconButton1";
+            this.tvT_IconButton1.Padding = new System.Windows.Forms.Padding(39, 0, 0, 0);
+            this.tvT_IconButton1.Size = new System.Drawing.Size(172, 38);
+            this.tvT_IconButton1.TabIndex = 5;
+            this.tvT_IconButton1.Text = "Thống kê";
+            this.tvT_IconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tvT_IconButton1.TextColor = System.Drawing.Color.Black;
+            this.tvT_IconButton1.UseVisualStyleBackColor = false;
+            this.tvT_IconButton1.Click += new System.EventHandler(this.tvT_IconButton1_Click);
             // 
             // tbx_thengay
             // 
@@ -343,33 +371,6 @@
             // timer_01
             // 
             this.timer_01.Tick += new System.EventHandler(this.timer_01_Tick);
-            // 
-            // tvT_IconButton1
-            // 
-            this.tvT_IconButton1.BackColor = System.Drawing.Color.SkyBlue;
-            this.tvT_IconButton1.BackgroundColor = System.Drawing.Color.SkyBlue;
-            this.tvT_IconButton1.BorderColor = System.Drawing.Color.White;
-            this.tvT_IconButton1.BorderRadius = 10;
-            this.tvT_IconButton1.BorderSize = 3;
-            this.tvT_IconButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tvT_IconButton1.FlatAppearance.BorderSize = 0;
-            this.tvT_IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tvT_IconButton1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.tvT_IconButton1.ForeColor = System.Drawing.Color.Black;
-            this.tvT_IconButton1.IconChar = FontAwesome.Sharp.IconChar.IdCardClip;
-            this.tvT_IconButton1.IconColor = System.Drawing.Color.Black;
-            this.tvT_IconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.tvT_IconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.tvT_IconButton1.Location = new System.Drawing.Point(0, 190);
-            this.tvT_IconButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tvT_IconButton1.Name = "tvT_IconButton1";
-            this.tvT_IconButton1.Padding = new System.Windows.Forms.Padding(39, 0, 0, 0);
-            this.tvT_IconButton1.Size = new System.Drawing.Size(172, 38);
-            this.tvT_IconButton1.TabIndex = 5;
-            this.tvT_IconButton1.Text = "Thống kê";
-            this.tvT_IconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tvT_IconButton1.TextColor = System.Drawing.Color.Black;
-            this.tvT_IconButton1.UseVisualStyleBackColor = false;
             // 
             // frm_menus
             // 
