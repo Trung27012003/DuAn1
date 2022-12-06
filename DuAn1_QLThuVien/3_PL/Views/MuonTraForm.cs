@@ -34,6 +34,8 @@ namespace _3_PL.Views
             LoadToCmbTL();
 
         }
+
+        // ============FORM MƯỢN =============================================//
         public void LoadToCmbTL()
         {
             //cmb_loc.Items.Clear();
@@ -249,5 +251,10 @@ namespace _3_PL.Views
 
         }
         //  public void LoadToGrid
+
+
+        // ====================== FORM TRẢ ================================//
+
+
     }
 }

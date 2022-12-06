@@ -249,6 +249,6 @@ namespace _3_PL.Views
             ptb_QR.Image = code.GetGraphic(2);
         }
 
-      
+       
     }
 }
