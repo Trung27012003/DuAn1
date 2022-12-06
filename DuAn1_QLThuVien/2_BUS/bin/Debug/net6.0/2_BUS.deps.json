@@ -11,7 +11,8 @@
           "1_DAL": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "6.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0",
-          "Microsoft.EntityFrameworkCore.Tools": "6.0.0"
+          "Microsoft.EntityFrameworkCore.Tools": "6.0.0",
+          "ZXing.Net": "0.16.8"
         },
         "runtime": {
           "2_BUS.dll": {}
@@ -484,10 +485,19 @@
           }
         }
       },
+      "ZXing.Net/0.16.8": {
+        "runtime": {
+          "lib/net6.0/zxing.dll": {
+            "assemblyVersion": "0.16.8.0",
+            "fileVersion": "0.16.8.0"
+          }
+        }
+      },
       "1_DAL/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "6.0.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0"
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0",
+          "ZXing.Net": "0.16.8"
         },
         "runtime": {
           "1_DAL.dll": {}
@@ -801,6 +811,13 @@
       "sha512": "sha512-CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
+    },
+    "ZXing.Net/0.16.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Cbbe+x7I7E+VJ0VxU1fPc7AktIw/9xea/ZY/fh38sXqTQ75LJp9ooGUjpzFqfpPfIKozAoXgJ4yvY4GzKpPBzQ==",
+      "path": "zxing.net/0.16.8",
+      "hashPath": "zxing.net.0.16.8.nupkg.sha512"
     },
     "1_DAL/1.0.0": {
       "type": "project",

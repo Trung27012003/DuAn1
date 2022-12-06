@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "L6xWmlqjxVIjQTCr0xBP0Cm5+2E6qydK/+CrHXIDLGcIyC7qDNrkX/PSirLmKFvo2HmvQ+w3KG2t/a60PvGnDw==",
+  "dgSpecHash": "ImTqNr16Vews59Y2xC7qIFvNRm2dj49i6lZ1wAKrbD7D8+dCJhe3+4hO3a8gjJc7tyAMPrSYatmBf7o1VrPd7A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\Desktop\\git\\DuAn1\\DuAn1_QLThuVien\\3_PL\\3_PL.csproj",
   "expectedPackageFiles": [
@@ -47,7 +47,8 @@
     "C:\\Users\\Admin\\.nuget\\packages\\system.security.permissions\\4.7.0\\system.security.permissions.4.7.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.text.encoding.codepages\\4.7.0\\system.text.encoding.codepages.4.7.0.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
+    "C:\\Users\\Admin\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\zxing.net\\0.16.8\\zxing.net.0.16.8.nupkg.sha512"
   ],
   "logs": []
 }

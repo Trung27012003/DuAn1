@@ -63,6 +63,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "ZXing.Net": {
+              "target": "Package",
+              "version": "[0.16.8, )"
             }
           },
           "imports": [
@@ -143,6 +147,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "ZXing.Net": {
+              "target": "Package",
+              "version": "[0.16.8, )"
             }
           },
           "imports": [
@@ -225,6 +233,10 @@
             "QRCoder": {
               "target": "Package",
               "version": "[1.4.3, )"
+            },
+            "ZXing.Net": {
+              "target": "Package",
+              "version": "[0.16.8, )"
             }
           },
           "imports": [

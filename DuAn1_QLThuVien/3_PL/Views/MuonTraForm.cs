@@ -10,7 +10,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using AForge.Video;
+using AForge.Video.DirectShow;
+using ZXing;
+using System.IO;
+using ZXing.Aztec;
+using AForge;
+using ZXing.QrCode;
 namespace _3_PL.Views
 {
     public partial class MuonTraForm : Form
@@ -250,11 +256,49 @@ namespace _3_PL.Views
             dtp_ngaytra.Value = DateTime.Now + TimeSpan.FromDays(7);
 
         }
-        //  public void LoadToGrid
 
 
         // ====================== FORM TRẢ ================================//
+        private FilterInfoCollection capturedevice;
+        private VideoCaptureDevice frame;
+        private void btn_batmay_Click(object sender, EventArgs e)
+        {
+            frame = new VideoCaptureDevice(capturedevice[cbb_chonanh.SelectedIndex].MonikerString);
+            frame.NewFrame += new NewFrameEventHandler(Frame_NewFrame);
+            frame.Start();
+        }
 
+        private void Frame_NewFrame(object sender, NewFrameEventArgs eventArgs)
+        {
+            ptb_camera.Image = (Bitmap)eventArgs.Frame.Clone();
+        }
 
+        private void MuonTraForm_Load(object sender, EventArgs e)
+        {
+            capturedevice = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            foreach(FilterInfo item in capturedevice)   
+            {
+                cbb_chonanh.Items.Add(item.Name);
+            }
+            cbb_chonanh.SelectedIndex = 0;
+            frame = new VideoCaptureDevice();
+        }
+
+        private void MuonTraForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(frame.IsRunning == true)
+            {
+                frame.Stop();
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+         //if(ptb_camera.Image != null)
+         //   {
+         //       BarcodeReaderGeneric reader = new BarcodeReaderGeneric();
+         //       Result rs = reader.Decode((Bitmap)ptb_camera.Image);
+         //   }  
+        }
     }
 }
