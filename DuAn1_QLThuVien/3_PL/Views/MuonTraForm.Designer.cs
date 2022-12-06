@@ -61,19 +61,19 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.dgrid_phieutra = new System.Windows.Forms.DataGridView();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dgrid_phieutract = new System.Windows.Forms.DataGridView();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tvT_IconButton1 = new WinFormsApp1.Custom_Controls.TvT_IconButton();
-            this.tvT_IconButton2 = new WinFormsApp1.Custom_Controls.TvT_IconButton();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.tvT_IconButton2 = new WinFormsApp1.Custom_Controls.TvT_IconButton();
+            this.tvT_IconButton1 = new WinFormsApp1.Custom_Controls.TvT_IconButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.dgrid_phieutract = new System.Windows.Forms.DataGridView();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dgrid_phieutra = new System.Windows.Forms.DataGridView();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tabControl1.SuspendLayout();
             this.tp_muon.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -84,12 +84,12 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_phieumuonchitiet)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgrid_phieutra)).BeginInit();
-            this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgrid_phieutract)).BeginInit();
-            this.groupBox6.SuspendLayout();
             this.groupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgrid_phieutract)).BeginInit();
+            this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgrid_phieutra)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -503,112 +503,26 @@
             this.tabPage2.Text = "TRẢ SÁCH";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // dgrid_phieutra
-            // 
-            this.dgrid_phieutra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgrid_phieutra.Location = new System.Drawing.Point(0, 48);
-            this.dgrid_phieutra.Name = "dgrid_phieutra";
-            this.dgrid_phieutra.RowTemplate.Height = 25;
-            this.dgrid_phieutra.Size = new System.Drawing.Size(258, 338);
-            this.dgrid_phieutra.TabIndex = 0;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.label4);
-            this.groupBox5.Controls.Add(this.textBox1);
-            this.groupBox5.Controls.Add(this.dgrid_phieutra);
-            this.groupBox5.Location = new System.Drawing.Point(6, 5);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(264, 395);
-            this.groupBox5.TabIndex = 1;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Danh Sách Mượn";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(90, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(168, 23);
-            this.textBox1.TabIndex = 1;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(27, 30);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 15);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Tìm Kiếm";
-            // 
-            // dgrid_phieutract
-            // 
-            this.dgrid_phieutract.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgrid_phieutract.Location = new System.Drawing.Point(6, 22);
-            this.dgrid_phieutract.Name = "dgrid_phieutract";
-            this.dgrid_phieutract.RowTemplate.Height = 25;
-            this.dgrid_phieutract.Size = new System.Drawing.Size(384, 162);
-            this.dgrid_phieutract.TabIndex = 3;
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.dgrid_phieutract);
-            this.groupBox6.Location = new System.Drawing.Point(276, 7);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(396, 190);
-            this.groupBox6.TabIndex = 2;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Phiếu Trả Chi Tiết";
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Location = new System.Drawing.Point(678, 16);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(197, 384);
-            this.groupBox7.TabIndex = 3;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Xác Nhận Trả";
-            // 
             // groupBox8
             // 
             this.groupBox8.Controls.Add(this.richTextBox1);
             this.groupBox8.Controls.Add(this.tvT_IconButton2);
             this.groupBox8.Controls.Add(this.tvT_IconButton1);
             this.groupBox8.Controls.Add(this.pictureBox1);
-            this.groupBox8.Location = new System.Drawing.Point(276, 203);
+            this.groupBox8.Location = new System.Drawing.Point(276, 197);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(396, 197);
+            this.groupBox8.Size = new System.Drawing.Size(396, 194);
             this.groupBox8.TabIndex = 4;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "CAMERA";
             // 
-            // pictureBox1
+            // richTextBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(6, 22);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(179, 126);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // tvT_IconButton1
-            // 
-            this.tvT_IconButton1.BackColor = System.Drawing.Color.SkyBlue;
-            this.tvT_IconButton1.BackgroundColor = System.Drawing.Color.SkyBlue;
-            this.tvT_IconButton1.BorderColor = System.Drawing.Color.Gray;
-            this.tvT_IconButton1.BorderRadius = 20;
-            this.tvT_IconButton1.BorderSize = 1;
-            this.tvT_IconButton1.FlatAppearance.BorderSize = 0;
-            this.tvT_IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tvT_IconButton1.ForeColor = System.Drawing.Color.Black;
-            this.tvT_IconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.tvT_IconButton1.IconColor = System.Drawing.Color.Black;
-            this.tvT_IconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.tvT_IconButton1.Location = new System.Drawing.Point(6, 154);
-            this.tvT_IconButton1.Name = "tvT_IconButton1";
-            this.tvT_IconButton1.Size = new System.Drawing.Size(85, 37);
-            this.tvT_IconButton1.TabIndex = 1;
-            this.tvT_IconButton1.Text = "Bật Máy Ảnh";
-            this.tvT_IconButton1.TextColor = System.Drawing.Color.Black;
-            this.tvT_IconButton1.UseVisualStyleBackColor = false;
+            this.richTextBox1.Location = new System.Drawing.Point(201, 22);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(189, 157);
+            this.richTextBox1.TabIndex = 3;
+            this.richTextBox1.Text = "";
             // 
             // tvT_IconButton2
             // 
@@ -623,7 +537,7 @@
             this.tvT_IconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
             this.tvT_IconButton2.IconColor = System.Drawing.Color.Black;
             this.tvT_IconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.tvT_IconButton2.Location = new System.Drawing.Point(100, 154);
+            this.tvT_IconButton2.Location = new System.Drawing.Point(100, 148);
             this.tvT_IconButton2.Name = "tvT_IconButton2";
             this.tvT_IconButton2.Size = new System.Drawing.Size(85, 37);
             this.tvT_IconButton2.TabIndex = 2;
@@ -631,13 +545,99 @@
             this.tvT_IconButton2.TextColor = System.Drawing.Color.Black;
             this.tvT_IconButton2.UseVisualStyleBackColor = false;
             // 
-            // richTextBox1
+            // tvT_IconButton1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(201, 22);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(189, 166);
-            this.richTextBox1.TabIndex = 3;
-            this.richTextBox1.Text = "";
+            this.tvT_IconButton1.BackColor = System.Drawing.Color.SkyBlue;
+            this.tvT_IconButton1.BackgroundColor = System.Drawing.Color.SkyBlue;
+            this.tvT_IconButton1.BorderColor = System.Drawing.Color.Gray;
+            this.tvT_IconButton1.BorderRadius = 20;
+            this.tvT_IconButton1.BorderSize = 1;
+            this.tvT_IconButton1.FlatAppearance.BorderSize = 0;
+            this.tvT_IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tvT_IconButton1.ForeColor = System.Drawing.Color.Black;
+            this.tvT_IconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.tvT_IconButton1.IconColor = System.Drawing.Color.Black;
+            this.tvT_IconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.tvT_IconButton1.Location = new System.Drawing.Point(6, 148);
+            this.tvT_IconButton1.Name = "tvT_IconButton1";
+            this.tvT_IconButton1.Size = new System.Drawing.Size(85, 37);
+            this.tvT_IconButton1.TabIndex = 1;
+            this.tvT_IconButton1.Text = "Bật Máy Ảnh";
+            this.tvT_IconButton1.TextColor = System.Drawing.Color.Black;
+            this.tvT_IconButton1.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(6, 22);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(179, 120);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Location = new System.Drawing.Point(678, 7);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(197, 384);
+            this.groupBox7.TabIndex = 3;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Xác Nhận Trả";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.dgrid_phieutract);
+            this.groupBox6.Location = new System.Drawing.Point(276, 7);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(396, 190);
+            this.groupBox6.TabIndex = 2;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Phiếu Trả Chi Tiết";
+            // 
+            // dgrid_phieutract
+            // 
+            this.dgrid_phieutract.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgrid_phieutract.Location = new System.Drawing.Point(6, 22);
+            this.dgrid_phieutract.Name = "dgrid_phieutract";
+            this.dgrid_phieutract.RowTemplate.Height = 25;
+            this.dgrid_phieutract.Size = new System.Drawing.Size(384, 162);
+            this.dgrid_phieutract.TabIndex = 3;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.label4);
+            this.groupBox5.Controls.Add(this.textBox1);
+            this.groupBox5.Controls.Add(this.dgrid_phieutra);
+            this.groupBox5.Location = new System.Drawing.Point(6, 5);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(264, 386);
+            this.groupBox5.TabIndex = 1;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Danh Sách Mượn";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(27, 30);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(57, 15);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Tìm Kiếm";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(90, 22);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(168, 23);
+            this.textBox1.TabIndex = 1;
+            // 
+            // dgrid_phieutra
+            // 
+            this.dgrid_phieutra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgrid_phieutra.Location = new System.Drawing.Point(0, 48);
+            this.dgrid_phieutra.Name = "dgrid_phieutra";
+            this.dgrid_phieutra.RowTemplate.Height = 25;
+            this.dgrid_phieutra.Size = new System.Drawing.Size(258, 329);
+            this.dgrid_phieutra.TabIndex = 0;
             // 
             // MuonTraForm
             // 
@@ -663,13 +663,13 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_phieumuonchitiet)).EndInit();
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgrid_phieutra)).EndInit();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgrid_phieutract)).EndInit();
-            this.groupBox6.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgrid_phieutract)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgrid_phieutra)).EndInit();
             this.ResumeLayout(false);
 
         }
