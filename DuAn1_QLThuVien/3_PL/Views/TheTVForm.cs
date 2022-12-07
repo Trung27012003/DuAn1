@@ -1,6 +1,7 @@
 ﻿
 using _2_BUS.IServices;
 using _2_BUS.Services;
+using _2_BUS.Utilities;
 using _2_BUS.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -20,12 +21,14 @@ namespace _3_PL.Views
         Guid _idTv;
         List<TheThanhVienView> _lstTheThanhVienView;
         ITheThanhVienServices _TheThanhVienServices;
+        Validates _Validates;
         public TheTVForm()
         {
             InitializeComponent();
             _lstTheThanhVienView = new List<TheThanhVienView>();
             _TheThanhVienServices = new TheThanhVienServices();
             _lstTheThanhVienView = _TheThanhVienServices.GetTheThanhVien();
+            _Validates = new Validates();
             LoadToGrid(_lstTheThanhVienView);
         }
         public void LoadToGrid(List<TheThanhVienView> lst)
@@ -63,25 +66,8 @@ namespace _3_PL.Views
 
         private void btn_them_Click(object sender, EventArgs e)
         {
-            bool sdt = Regex.IsMatch(tbt_sdt.Text, "^0\\d+");
-            if (!sdt)
-            {
-                MessageBox.Show("Số điện thoại không đúng định dạng");
-            }
-            else if (tbt_tenthanhvien.Text == "")
-            {
-                MessageBox.Show("Vui lòng nhập tên thành viên");
-            }
-            else if (tbt_diachi.Text == "")
-            {
-                MessageBox.Show("Vui lòng nhập địa chỉ");
-            }
-            else if (tbt_sdt.Text == "")
-            {
-                MessageBox.Show("Vui lòng nhập số điện thoại");
-            }
-            else
-            {
+              
+            
                 TheThanhVienView ttv = new TheThanhVienView()
                 {
                     TenThanhVien = tbt_tenthanhvien.Text,
@@ -100,7 +86,9 @@ namespace _3_PL.Views
                     _lstTheThanhVienView = _TheThanhVienServices.GetTheThanhVien();
                     LoadToGrid(_lstTheThanhVienView);
                 }
-            }
+
+            
+
 
 
         }
@@ -162,6 +150,24 @@ namespace _3_PL.Views
             }
             LoadToGrid(a);
 
+        }
+
+        private void tbt_tenthanhvien_TextChanged(object sender, EventArgs e)
+        {
+            lb_tenthanhvien.Text = _Validates.checkRong(tbt_tenthanhvien.Text);
+            lb_tenthanhvien.ForeColor = Color.Red;
+        }
+
+        private void tbt_diachi_TextChanged(object sender, EventArgs e)
+        {
+           lb_diacchi.Text = _Validates.checkRong(tbt_diachi.Text);
+            lb_diacchi.ForeColor = Color.Red;
+        }
+
+        private void tbt_sdt_TextChanged(object sender, EventArgs e)
+        {
+            lb_sdt.Text = _Validates.checkSDT(tbt_sdt.Text);
+            lb_sdt.ForeColor = Color.Red;
         }
     } 
 }
