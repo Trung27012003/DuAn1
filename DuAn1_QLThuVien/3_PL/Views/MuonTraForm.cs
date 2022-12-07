@@ -294,24 +294,26 @@ namespace _3_PL.Views
 
         private void btn_batmay_Click(object sender, EventArgs e)
         {
-            if (btn_batmay.Text == "Start")
-            {
-                CaptureDevice = new VideoCaptureDevice(filterInfoCollection[cbb_chonanh.SelectedIndex].MonikerString);
-                CaptureDevice.NewFrame += CaptureDevice_NewFrame;
-                CaptureDevice.Start();
-                timer1.Start();
-                btn_batmay.Text = "Stop";
-            }
+            //if (btn_batmay.Text == "Start")
+            //{
+            //    CaptureDevice = new VideoCaptureDevice(filterInfoCollection[cbb_chonanh.SelectedIndex].MonikerString);
+            //    CaptureDevice.NewFrame += CaptureDevice_NewFrame;
+            //    CaptureDevice.Start();
+            //    timer1.Start();
+            //    btn_batmay.Text = "Stop";
+            //}
 
-            else
-            {
-                CaptureDevice.SignalToStop();
-                timer1.Stop();
-                ptb_camera.Image = null;
-                btn_batmay.Text = "Start";
+            //else
+            //{
+            //    CaptureDevice.SignalToStop();
+            //    timer1.Stop();
+            //    ptb_camera.Image = null;
+            //    btn_batmay.Text = "Start";
                 
                 
-            }
+            //}
+            FormCheckQR formCheckQR = new FormCheckQR();
+            formCheckQR.ShowDialog();
         }
 
         private void CaptureDevice_NewFrame(object sender, AForge.Video.NewFrameEventArgs eventArgs)
