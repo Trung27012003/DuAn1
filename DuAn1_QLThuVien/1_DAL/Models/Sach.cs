@@ -17,6 +17,7 @@ namespace _1_DAL.Models
         public int? GiaTien { get; set; }
         public string? GhiChu { get; set; }
         public virtual TheLoai TheLoai { get; set; }
+        public string Anh { get; set; }
 
 
     }

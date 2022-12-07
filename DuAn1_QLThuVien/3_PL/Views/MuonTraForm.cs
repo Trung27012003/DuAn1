@@ -358,7 +358,7 @@ namespace _3_PL.Views
                     {
                         rtb_show.Text = resul.ToString();
                         timer1.Stop();
-
+                        
                     }
                 }
             }
