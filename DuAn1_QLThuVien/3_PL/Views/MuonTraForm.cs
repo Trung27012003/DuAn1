@@ -334,6 +334,8 @@ namespace _3_PL.Views
                 CaptureDevice.SignalToStop();
         }
 
+       
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (ptb_camera.Image != null)

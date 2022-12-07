@@ -463,8 +463,7 @@
       "1_DAL/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "6.0.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0",
-          "ZXing.Net": "0.16.6"
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0"
         },
         "runtime": {
           "1_DAL.dll": {}
@@ -473,8 +472,7 @@
       "2_BUS/1.0.0": {
         "dependencies": {
           "1_DAL": "1.0.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0",
-          "ZXing.Net": "0.16.6"
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0"
         },
         "runtime": {
           "2_BUS.dll": {}
