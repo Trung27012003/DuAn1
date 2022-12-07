@@ -23,6 +23,7 @@ namespace _3_PL.Views
     {
         ISachServices _IsachServices;
         ITheLoaiServices _ITheLoaiServices;
+        ITheThanhVienServices _ITheThanhVienServices;
         List<SachView> _lstSachView;
         List<SachView> _lstSachView1;
         List<PhieuMuonChiTietView> _lstPMCT;
@@ -35,7 +36,8 @@ namespace _3_PL.Views
             InitializeComponent();
             _IsachServices = new SachServices();
             _ITheLoaiServices = new TheLoaiServices();
-            _lstSachView1= new List<SachView>();
+            _ITheThanhVienServices = new TheThanhVienServices();
+            _lstSachView1 = new List<SachView>();
             _lstSachView = new List<SachView>();
             _lstPMCT = new List<PhieuMuonChiTietView>();
             _lstPM = new List<PhieuMuonChiTietView>();
@@ -70,6 +72,11 @@ namespace _3_PL.Views
             foreach (var item in _ITheLoaiServices.GetAllTL())
             {
                 cmb_loc.Items.Add(item.Name);
+            }
+            cmb_tenkh.Items.Clear();
+            foreach (var item in _ITheThanhVienServices.GetTheThanhVien())
+            {
+                cmb_tenkh.Items.Add(item.TenThanhVien);
             }
         }
         private void tbx_search_TextChanged(object sender, EventArgs e)
@@ -281,7 +288,7 @@ namespace _3_PL.Views
             LoadToGrid_Sach(_IsachServices.GetSach());
             tbx_search.Text = "";
             cmb_loc.Text = "";
-            tbx_idpm.Text = "";
+            cmb_tenkh.Text = "";
             dtp_ngaytra.Value = DateTime.Now + TimeSpan.FromDays(7);
 
         }
@@ -336,21 +343,21 @@ namespace _3_PL.Views
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            //if (ptb_camera.Image != null)
-            //{
-            //    BarcodeReader reader = new BarcodeReader();
-            //    Result resul = reader.Decode((Bitmap)ptb_camera.Image);
-            //    if (resul != null)
-            //    {
+            if (ptb_camera.Image != null)
+            {
+                BarcodeReader reader = new BarcodeReader();
+                Result resul = reader.Decode((Bitmap)ptb_camera.Image);
+                if (resul != null)
+                {
 
-            //       if (CaptureDevice.IsRunning == true)
-            //        {
-            //           rtb_show.Text = resul.ToString();
-            //           timer1.Stop();
+                    if (CaptureDevice.IsRunning == true)
+                    {
+                        rtb_show.Text = resul.ToString();
+                        timer1.Stop();
 
-            //        }
-            //    }
-            //}
+                    }
+                }
+            }
         }
 
 

@@ -293,3 +293,7 @@ C:\Users\My HanhQuynh\Documents\GitHub\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6
 C:\Users\My HanhQuynh\Documents\GitHub\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.CopyComplete
 C:\Users\My HanhQuynh\Documents\GitHub\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.genruntimeconfig.cache
 C:\Users\My HanhQuynh\Documents\GitHub\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\ref\3_PL.dll
+C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\AForge.dll
+C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\AForge.Video.dll
+C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\AForge.Video.DirectShow.dll
+C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\zxing.dll
