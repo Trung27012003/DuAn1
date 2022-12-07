@@ -51,6 +51,9 @@
             this.btn_sua = new System.Windows.Forms.Button();
             this.btn_xoa = new System.Windows.Forms.Button();
             this.dtp_ngaysinh = new System.Windows.Forms.DateTimePicker();
+            this.lb_tenthanhvien = new System.Windows.Forms.Label();
+            this.lb_diacchi = new System.Windows.Forms.Label();
+            this.lb_sdt = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_show)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -84,6 +87,7 @@
             this.tbt_tenthanhvien.Name = "tbt_tenthanhvien";
             this.tbt_tenthanhvien.Size = new System.Drawing.Size(298, 31);
             this.tbt_tenthanhvien.TabIndex = 2;
+            this.tbt_tenthanhvien.TextChanged += new System.EventHandler(this.tbt_tenthanhvien_TextChanged);
             // 
             // tbt_timkiem
             // 
@@ -96,11 +100,12 @@
             // 
             // tbt_sdt
             // 
-            this.tbt_sdt.Location = new System.Drawing.Point(145, 161);
+            this.tbt_sdt.Location = new System.Drawing.Point(145, 170);
             this.tbt_sdt.Margin = new System.Windows.Forms.Padding(4);
             this.tbt_sdt.Name = "tbt_sdt";
             this.tbt_sdt.Size = new System.Drawing.Size(298, 31);
             this.tbt_sdt.TabIndex = 5;
+            this.tbt_sdt.TextChanged += new System.EventHandler(this.tbt_sdt_TextChanged);
             // 
             // tbt_diachi
             // 
@@ -109,6 +114,7 @@
             this.tbt_diachi.Name = "tbt_diachi";
             this.tbt_diachi.Size = new System.Drawing.Size(298, 31);
             this.tbt_diachi.TabIndex = 6;
+            this.tbt_diachi.TextChanged += new System.EventHandler(this.tbt_diachi_TextChanged);
             // 
             // label2
             // 
@@ -123,7 +129,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 165);
+            this.label3.Location = new System.Drawing.Point(6, 173);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 25);
@@ -133,7 +139,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 228);
+            this.label4.Location = new System.Drawing.Point(6, 234);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 25);
@@ -261,17 +267,47 @@
             // 
             // dtp_ngaysinh
             // 
-            this.dtp_ngaysinh.Location = new System.Drawing.Point(145, 223);
+            this.dtp_ngaysinh.Location = new System.Drawing.Point(145, 234);
             this.dtp_ngaysinh.Margin = new System.Windows.Forms.Padding(4);
             this.dtp_ngaysinh.Name = "dtp_ngaysinh";
             this.dtp_ngaysinh.Size = new System.Drawing.Size(298, 31);
             this.dtp_ngaysinh.TabIndex = 22;
+            // 
+            // lb_tenthanhvien
+            // 
+            this.lb_tenthanhvien.AutoSize = true;
+            this.lb_tenthanhvien.Location = new System.Drawing.Point(145, 79);
+            this.lb_tenthanhvien.Name = "lb_tenthanhvien";
+            this.lb_tenthanhvien.Size = new System.Drawing.Size(69, 25);
+            this.lb_tenthanhvien.TabIndex = 23;
+            this.lb_tenthanhvien.Text = "label10";
+            // 
+            // lb_diacchi
+            // 
+            this.lb_diacchi.AutoSize = true;
+            this.lb_diacchi.Location = new System.Drawing.Point(145, 144);
+            this.lb_diacchi.Name = "lb_diacchi";
+            this.lb_diacchi.Size = new System.Drawing.Size(69, 25);
+            this.lb_diacchi.TabIndex = 24;
+            this.lb_diacchi.Text = "label10";
+            // 
+            // lb_sdt
+            // 
+            this.lb_sdt.AutoSize = true;
+            this.lb_sdt.Location = new System.Drawing.Point(145, 205);
+            this.lb_sdt.Name = "lb_sdt";
+            this.lb_sdt.Size = new System.Drawing.Size(69, 25);
+            this.lb_sdt.TabIndex = 25;
+            this.lb_sdt.Text = "label11";
             // 
             // TheTVForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1156, 705);
+            this.Controls.Add(this.lb_sdt);
+            this.Controls.Add(this.lb_diacchi);
+            this.Controls.Add(this.lb_tenthanhvien);
             this.Controls.Add(this.dtp_ngaysinh);
             this.Controls.Add(this.btn_xoa);
             this.Controls.Add(this.btn_sua);
@@ -328,5 +364,8 @@
         private Button btn_sua;
         private Button btn_xoa;
         private DateTimePicker dtp_ngaysinh;
+        private Label lb_tenthanhvien;
+        private Label lb_diacchi;
+        private Label lb_sdt;
     }
 }
