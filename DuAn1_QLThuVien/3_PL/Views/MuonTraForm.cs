@@ -22,7 +22,9 @@ namespace _3_PL.Views
     public partial class MuonTraForm : Form
     {
         ISachServices _IsachServices;
+        ITheLoaiServices _ITheLoaiServices;
         List<SachView> _lstSachView;
+        List<SachView> _lstSachView1;
         List<PhieuMuonChiTietView> _lstPMCT;
         List<PhieuMuonChiTietView> _lstPM;
         Guid _IDSach;
@@ -32,6 +34,8 @@ namespace _3_PL.Views
         {
             InitializeComponent();
             _IsachServices = new SachServices();
+            _ITheLoaiServices = new TheLoaiServices();
+            _lstSachView1= new List<SachView>();
             _lstSachView = new List<SachView>();
             _lstPMCT = new List<PhieuMuonChiTietView>();
             _lstPM = new List<PhieuMuonChiTietView>();
@@ -42,14 +46,7 @@ namespace _3_PL.Views
         }
 
         // ============FORM MƯỢN =============================================//
-        public void LoadToCmbTL()
-        {
-            //cmb_loc.Items.Clear();
-            //foreach (var item in _IsachServices.GetSach().Where(c=>c.TL.)
-            //{
-            //    cmb_loc.Items.Add(item.TL);
-            //}
-        }
+       
         public void TongTien1(Label a, dynamic lst)
         {
             if (_lstPMCT != null)
@@ -66,25 +63,64 @@ namespace _3_PL.Views
                 lbl_tongtien1.Text = "";
             }
         }
-        public void LoadToGrid_Sach(List<SachView> s)
+        public void LoadToCmbTL()
+        {
+            cmb_loc.Items.Clear();
+            cmb_loc.Items.Add("Tất cả");
+            foreach (var item in _ITheLoaiServices.GetAllTL())
+            {
+                cmb_loc.Items.Add(item.Name);
+            }
+        }
+        private void tbx_search_TextChanged(object sender, EventArgs e)
+        {
+            if (cmb_loc.Text == "" || cmb_loc.Text == "Tất cả")
+            {
+                _lstSachView = _IsachServices.GetSach().FindAll(c => c.Name.ToLower().Contains(tbx_search.Text.ToLower()));
+                LoadToGrid_Sach(_lstSachView);
+            }
+            else
+            {
+                var a = _lstSachView1.FindAll(c => c.Name.ToLower().Contains(tbx_search.Text.ToLower()));
+                LoadToGrid_Sach(a);
+            }
+        }
+        private void cmb_loc_SelectedIndexChanged(object sender, EventArgs e)
         {
             
-                dgrid_danhsachsach.Rows.Clear();
-                dgrid_danhsachsach.ColumnCount = 6;
-                dgrid_danhsachsach.Columns[0].Name = "Id";
-                dgrid_danhsachsach.Columns[1].Name = "STT";
-                dgrid_danhsachsach.Columns[2].Name = "Thể loại";
-                dgrid_danhsachsach.Columns[3].Name = "Tác giả";
-                dgrid_danhsachsach.Columns[4].Name = "Tên sách";
-                dgrid_danhsachsach.Columns[5].Name = "Số lượng";
-                dgrid_danhsachsach.Columns[0].Visible = false;
-                int stt = 1;
-                foreach (var x in s)
-                {
-                    dgrid_danhsachsach.Rows.Add(
-                         x.Id, stt++, x.IdTL, x.TG, x.Name, x.SoLuong);
-                }
-            
+            if (cmb_loc.Text == "Tất cả")
+            {
+                _lstSachView = _IsachServices.GetSach();
+                LoadToGrid_Sach(_lstSachView);
+            }
+            else
+            {
+                var getId = _ITheLoaiServices.GetAllTL().FirstOrDefault(x => x.Name == cmb_loc.Text).Id;
+                _lstSachView1 = _IsachServices.GetSach().FindAll(c => c.IdTL == getId);
+                LoadToGrid_Sach(_lstSachView1);
+
+            }
+
+        }
+        public void LoadToGrid_Sach(List<SachView> s)
+        {
+
+            dgrid_danhsachsach.Rows.Clear();
+            dgrid_danhsachsach.ColumnCount = 6;
+            dgrid_danhsachsach.Columns[0].Name = "Id";
+            dgrid_danhsachsach.Columns[1].Name = "STT";
+            dgrid_danhsachsach.Columns[2].Name = "Thể loại";
+            dgrid_danhsachsach.Columns[3].Name = "Tác giả";
+            dgrid_danhsachsach.Columns[4].Name = "Tên sách";
+            dgrid_danhsachsach.Columns[5].Name = "Số lượng";
+            dgrid_danhsachsach.Columns[0].Visible = false;
+            int stt = 1;
+            foreach (var x in s)
+            {
+                dgrid_danhsachsach.Rows.Add(
+                     x.Id, stt++,_ITheLoaiServices.GetAllTL().FirstOrDefault(c=>c.Id==x.IdTL).Name, x.TG, x.Name, x.SoLuong);
+            }
+
         }
         public void LoadToPhieuMuonCT()
         {
@@ -175,18 +211,11 @@ namespace _3_PL.Views
                     LoadToPhieuMuonCT();
                 }
             }
-
-            //_lstPMCT.Remove(_lst);
             LoadToPhieuMuonCT();
 
 
         }
         private void tvT_IconButton2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -259,46 +288,71 @@ namespace _3_PL.Views
 
 
         // ====================== FORM TRẢ ================================//
-        private FilterInfoCollection capturedevice;
-        private VideoCaptureDevice frame;
+
+        FilterInfoCollection filterInfoCollection;
+        VideoCaptureDevice CaptureDevice;
+
         private void btn_batmay_Click(object sender, EventArgs e)
         {
-            frame = new VideoCaptureDevice(capturedevice[cbb_chonanh.SelectedIndex].MonikerString);
-            frame.NewFrame += new NewFrameEventHandler(Frame_NewFrame);
-            frame.Start();
+            if (btn_batmay.Text == "Start")
+            {
+                CaptureDevice = new VideoCaptureDevice(filterInfoCollection[cbb_chonanh.SelectedIndex].MonikerString);
+                CaptureDevice.NewFrame += CaptureDevice_NewFrame;
+                CaptureDevice.Start();
+                timer1.Start();
+                btn_batmay.Text = "Stop";
+            }
+
+            else
+            {
+                CaptureDevice.SignalToStop();
+                timer1.Stop();
+                ptb_camera.Image = null;
+                btn_batmay.Text = "Start";
+                
+                
+            }
         }
 
-        private void Frame_NewFrame(object sender, NewFrameEventArgs eventArgs)
+        private void CaptureDevice_NewFrame(object sender, AForge.Video.NewFrameEventArgs eventArgs)
         {
             ptb_camera.Image = (Bitmap)eventArgs.Frame.Clone();
         }
 
         private void MuonTraForm_Load(object sender, EventArgs e)
         {
-            capturedevice = new FilterInfoCollection(FilterCategory.VideoInputDevice);
-            foreach(FilterInfo item in capturedevice)   
-            {
-                cbb_chonanh.Items.Add(item.Name);
-            }
+            filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            CaptureDevice = new VideoCaptureDevice();
+            foreach (FilterInfo device in filterInfoCollection)
+                cbb_chonanh.Items.Add(device.Name);
             cbb_chonanh.SelectedIndex = 0;
-            frame = new VideoCaptureDevice();
         }
 
         private void MuonTraForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if(frame.IsRunning == true)
-            {
-                frame.Stop();
-            }
+            if (CaptureDevice.IsRunning == true)
+                CaptureDevice.SignalToStop();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-         //if(ptb_camera.Image != null)
-         //   {
-         //       BarcodeReaderGeneric reader = new BarcodeReaderGeneric();
-         //       Result rs = reader.Decode((Bitmap)ptb_camera.Image);
-         //   }  
+            if (ptb_camera.Image != null)
+            {
+                BarcodeReader reader = new BarcodeReader();
+                Result resul = reader.Decode((Bitmap)ptb_camera.Image);
+                if (resul != null)
+                {
+
+                    if (CaptureDevice.IsRunning == true)
+                    {
+                        rtb_show.Text = resul.ToString();
+                        timer1.Stop();
+
+                    }
+                }
+            }
         }
+
+
     }
 }

@@ -214,3 +214,8 @@ C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\A
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\AForge.Video.xml
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\AForge.Video.DirectShow.xml
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\AForge.xml
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.ThongKeForm.resources
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\AForge.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\AForge.Video.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\AForge.Video.DirectShow.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\zxing.dll
