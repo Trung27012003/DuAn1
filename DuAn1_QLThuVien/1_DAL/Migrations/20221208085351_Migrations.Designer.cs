@@ -12,7 +12,11 @@ using _1_DAL.Context;
 namespace _1_DAL.Migrations
 {
     [DbContext(typeof(QL_ThuVienDbContext))]
+<<<<<<<< HEAD:DuAn1_QLThuVien/1_DAL/Migrations/20221208085351_Migrations.Designer.cs
     [Migration("20221208085351_Migrations")]
+========
+    [Migration("20221208163926_Migrations")]
+>>>>>>>> main:DuAn1_QLThuVien/1_DAL/Migrations/20221208163926_Migrations.Designer.cs
     partial class Migrations
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -111,6 +115,11 @@ namespace _1_DAL.Migrations
                     b.Property<Guid?>("IdTheTV")
                         .IsRequired()
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("MaPm")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasColumnName("MaPm");
 
                     b.Property<DateTime?>("NgayMuon")
                         .IsRequired()
@@ -244,9 +253,16 @@ namespace _1_DAL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+<<<<<<<< HEAD:DuAn1_QLThuVien/1_DAL/Migrations/20221208085351_Migrations.Designer.cs
                     b.Property<string>("Anh")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+========
+                    b.Property<string>("BarCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasColumnName("BarCode");
+>>>>>>>> main:DuAn1_QLThuVien/1_DAL/Migrations/20221208163926_Migrations.Designer.cs
 
                     b.Property<string>("GhiChu")
                         .IsRequired()
@@ -260,6 +276,11 @@ namespace _1_DAL.Migrations
                     b.Property<Guid?>("IdTL")
                         .IsRequired()
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Ma")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasColumnName("Ma");
 
                     b.Property<string>("NXB")
                         .IsRequired()
@@ -284,6 +305,9 @@ namespace _1_DAL.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("IdTL");
+
+                    b.HasIndex("Ma")
+                        .IsUnique();
 
                     b.ToTable("Sach", (string)null);
                 });

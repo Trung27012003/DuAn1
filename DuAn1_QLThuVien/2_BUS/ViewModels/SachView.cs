@@ -11,6 +11,8 @@ namespace _2_BUS.ViewModels
         public Guid Id { get; set; }
         public Guid? IdTL { get; set; }
         public string? TG { get; set; }
+        public string? Ma { get; set; }
+        public string? BarCode { get; set; }
         public string? NXB { get; set; }
         public string? Name { get; set; }
         public int? SoLuong { get; set; }

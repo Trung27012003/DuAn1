@@ -110,6 +110,11 @@ namespace _1_DAL.Migrations
                         .IsRequired()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("MaPm")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasColumnName("MaPm");
+
                     b.Property<DateTime?>("NgayMuon")
                         .IsRequired()
                         .HasColumnType("DateTime")
@@ -242,9 +247,16 @@ namespace _1_DAL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+<<<<<<< HEAD
                     b.Property<string>("Anh")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+=======
+                    b.Property<string>("BarCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasColumnName("BarCode");
+>>>>>>> main
 
                     b.Property<string>("GhiChu")
                         .IsRequired()
@@ -258,6 +270,11 @@ namespace _1_DAL.Migrations
                     b.Property<Guid?>("IdTL")
                         .IsRequired()
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Ma")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasColumnName("Ma");
 
                     b.Property<string>("NXB")
                         .IsRequired()
@@ -282,6 +299,9 @@ namespace _1_DAL.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("IdTL");
+
+                    b.HasIndex("Ma")
+                        .IsUnique();
 
                     b.ToTable("Sach", (string)null);
                 });

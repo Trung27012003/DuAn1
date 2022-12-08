@@ -12,6 +12,7 @@ namespace _1_DAL.Models
         public Guid Id { get; set; }
         public Guid? IdTheTV { get; set; }
         public Guid? IdNV { get; set; }
+        public string? MaPm { get; set; }
         public DateTime? NgayMuon { get; set; }
         public DateTime? NgayTra { get; set; }
         public string?  GhiChu { get; set; }

@@ -24,6 +24,10 @@ namespace _3_PL.Views
         ISachServices _IsachServices;
         ITheLoaiServices _ITheLoaiServices;
         ITheThanhVienServices _ITheThanhVienServices;
+        IPhieuMuonServices _IPhieuMuonServices;
+        IPhieuMuonChiTietChiTietServices _IPhieuMuonChiTietChiTietServices;
+        INhanVienServices _INhanVienServices;
+
         List<SachView> _lstSachView;
         List<SachView> _lstSachView1;
         List<PhieuMuonChiTietView> _lstPMCT;
@@ -37,11 +41,15 @@ namespace _3_PL.Views
             _IsachServices = new SachServices();
             _ITheLoaiServices = new TheLoaiServices();
             _ITheThanhVienServices = new TheThanhVienServices();
+            _IPhieuMuonServices = new PhieuMuonServices();
+            _IPhieuMuonChiTietChiTietServices = new PhieuMuonChiTietServices();
+            _INhanVienServices = new NhanVienServices();
             _lstSachView1 = new List<SachView>();
             _lstSachView = new List<SachView>();
             _lstPMCT = new List<PhieuMuonChiTietView>();
             _lstPM = new List<PhieuMuonChiTietView>();
             _lstSachView = _IsachServices.GetSach();
+            
             LoadToGrid_Sach(_lstSachView);
             LoadToCmbTL();
 
@@ -78,6 +86,11 @@ namespace _3_PL.Views
             {
                 cmb_tenkh.Items.Add(item.TenThanhVien);
             }
+            cmb_nhanvien.Items.Clear();
+            foreach (var item in _INhanVienServices.GetAllNv())
+            {
+                cmb_nhanvien.Items.Add(item.Name);
+            }
         }
         private void tbx_search_TextChanged(object sender, EventArgs e)
         {
@@ -113,19 +126,29 @@ namespace _3_PL.Views
         {
 
             dgrid_danhsachsach.Rows.Clear();
-            dgrid_danhsachsach.ColumnCount = 6;
+            dgrid_danhsachsach.ColumnCount = 7;
             dgrid_danhsachsach.Columns[0].Name = "Id";
             dgrid_danhsachsach.Columns[1].Name = "STT";
-            dgrid_danhsachsach.Columns[2].Name = "Thể loại";
-            dgrid_danhsachsach.Columns[3].Name = "Tác giả";
-            dgrid_danhsachsach.Columns[4].Name = "Tên sách";
-            dgrid_danhsachsach.Columns[5].Name = "Số lượng";
+            dgrid_danhsachsach.Columns[2].Name = "Tên sách";
+            dgrid_danhsachsach.Columns[3].Name = "Mã sách";
+            dgrid_danhsachsach.Columns[4].Name = "Thể loại";
+            dgrid_danhsachsach.Columns[5].Name = "Tác giả";
+            dgrid_danhsachsach.Columns[6].Name = "Số lượng";
             dgrid_danhsachsach.Columns[0].Visible = false;
+            DataGridViewButtonColumn button = new DataGridViewButtonColumn();
+            {
+                button.Name = "Add";
+                button.HeaderText = "Add";
+
+                button.Text = ("Add");
+                button.UseColumnTextForButtonValue = true;
+                dgrid_danhsachsach.Columns.Add(button);
+            }
             int stt = 1;
             foreach (var x in s)
             {
                 dgrid_danhsachsach.Rows.Add(
-                     x.Id, stt++,_ITheLoaiServices.GetAllTL().FirstOrDefault(c=>c.Id==x.IdTL).Name, x.TG, x.Name, x.SoLuong);
+                     x.Id, stt++,x.Name,x.Ma,_ITheLoaiServices.GetAllTL().FirstOrDefault(c=>c.Id==x.IdTL).Name, x.TG, x.SoLuong);
             }
 
         }
@@ -141,6 +164,15 @@ namespace _3_PL.Views
                 dgrid_phieumuonchitiet.Columns[4].Name = "Điều kiện";
                 dgrid_phieumuonchitiet.Columns[5].Name = "Tiền thế chân";
                 dgrid_phieumuonchitiet.Columns[0].Visible = false;
+                DataGridViewButtonColumn button = new DataGridViewButtonColumn();
+                {
+                    button.Name = "Delete";
+                    button.HeaderText = "Delete";
+
+                    button.Text = ("Delete");
+                    button.UseColumnTextForButtonValue = true;
+                    dgrid_phieumuonchitiet.Columns.Add(button);
+                }
                 int stt = 1;
                 foreach (var item in _lstPMCT)
                 {
@@ -157,33 +189,7 @@ namespace _3_PL.Views
 
         }
 
-        public void LoadToPhieuMuon()
-        {
-            {
-                dgrid_doncho.Rows.Clear();
-                dgrid_doncho.ColumnCount = 6;
-                dgrid_doncho.Columns[0].Name = "Id";
-                dgrid_doncho.Columns[1].Name = "STT";
-                dgrid_doncho.Columns[2].Name = "Tên sách";
-                dgrid_doncho.Columns[3].Name = "Số lượng";
-                dgrid_doncho.Columns[4].Name = "Điều kiện";
-                dgrid_doncho.Columns[5].Name = "Tiền thế chân";
-                dgrid_doncho.Columns[0].Visible = false;
-                int stt = 1;
-                foreach (var item in _lstPM)
-                {
-                    dgrid_doncho.Rows.Add(
-                        item.Id,
-                        stt++,
-                        _IsachServices.GetSach().FirstOrDefault(c => c.Id == item.IdSach).Name,
-                        item.SoLuong,
-                        item.DieuKien,
-                        item.TienTheChan);
-                }
-                TongTien1(lbl_tongtien2, _lstPM);
-            }
-
-        }
+       
 
         public void AddPMCT(Guid Id)
         {
@@ -230,35 +236,37 @@ namespace _3_PL.Views
         private void dgrid_danhsachsach_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             _IDSach = Guid.Parse(dgrid_danhsachsach.CurrentRow.Cells[0].Value.ToString());
-            AddPMCT(_IDSach);
+            var indexColumn = e.ColumnIndex;
+            if (indexColumn==7)
+            {
+                if (_lstPMCT.Count>=3)
+                {
+                    MessageBox.Show("Mỗi thành viên chỉ được mượn tối đa 3 quyển sách!!!");
+                }
+                else
+                {
+                    AddPMCT(_IDSach);
+                }
+            }
+           
         }
 
         private void dgrid_phieumuonchitiet_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             _IdPMCT = Guid.Parse(dgrid_phieumuonchitiet.CurrentRow.Cells[0].Value.ToString());
-
-        }
-
-        private void dgrid_doncho_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            _IDPM = Guid.Parse(dgrid_doncho.CurrentRow.Cells[0].Value.ToString());
-        }
-
-        private void btn_them_Click(object sender, EventArgs e)
-        {
-
-            if (_lstPMCT.Count == 0)
+            var indexColumn = e.ColumnIndex;
+            if (indexColumn == 6)
             {
-                MessageBox.Show("Vui lòng thêm sách!");
-            }
-            else
-            {
-                _lstPM = _lstPMCT;
-                LoadToPhieuMuon();
-                LoadToPhieuMuonCT();
-            }
-        }
+                var pmct = _lstPMCT.FirstOrDefault(c => c.Id == _IdPMCT);
+                if (_IdPMCT != null)
+                {
+                    _lstPMCT.Remove(pmct);
+                    LoadToPhieuMuonCT();
+                }
 
+            }
+
+        }
         private void btn_xoa_Click(object sender, EventArgs e)
         {
 
@@ -269,30 +277,60 @@ namespace _3_PL.Views
                 _lstPMCT.Remove(pmct);
                 LoadToPhieuMuonCT();
             }
-            if (_IDPM != null)
-            {
-                _lstPM.Remove(pm);
-                LoadToPhieuMuon();
-            }
+
         }
 
         private void btn_reset_Click(object sender, EventArgs e)
         {
 
             lbl_tongtien1.Text = "";
-            lbl_tongtien2.Text = "";
             _lstPM.Clear();
             _lstPMCT.Clear();
-            LoadToPhieuMuon();
             LoadToPhieuMuonCT();
             LoadToGrid_Sach(_IsachServices.GetSach());
             tbx_search.Text = "";
             cmb_loc.Text = "";
             cmb_tenkh.Text = "";
+            tbx_mapm.Text = "";
             dtp_ngaytra.Value = DateTime.Now + TimeSpan.FromDays(7);
 
         }
 
+        private void tbx_thanhtoan_Click(object sender, EventArgs e)
+        {
+            if (_lstPMCT.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn sách");
+            }
+            else
+            {
+                var pm = new PhieuMuonView()
+                {
+                    IdTheTV = _ITheThanhVienServices.GetTheThanhVien().FirstOrDefault(c => c.TenThanhVien == cmb_tenkh.Text).Id,
+                    IdNV = _INhanVienServices.GetAllNv().FirstOrDefault(c => c.Name == cmb_nhanvien.Text).Id,
+                    MaPm = tbx_mapm.Text,
+                    NgayMuon = DateTime.Now,
+                    NgayTra = dtp_ngaytra.Value,
+                    GhiChu = "Chưa Trả",
+                };
+                _IPhieuMuonServices.AddTN(pm);
+                //taisaoloi
+                _IDPM = _IPhieuMuonServices.GetPhieuMuon().FirstOrDefault(c=>c.MaPm==tbx_mapm.Text).Id;
+                tbx_search.Text = _IDPM.ToString();
+                foreach (var item in _lstPMCT)
+                {
+                    item.IdPM = _IDPM;
+                    item.IdSach = item.IdSach;
+                    item.SoLuong = item.SoLuong;
+                    item.DieuKien = item.DieuKien;
+                    item.TienTheChan = item.TienTheChan;
+                    item.GhiChu = "Chưa Trả";
+                    _IPhieuMuonChiTietChiTietServices.AddTN(item);
+                }
+                MessageBox.Show("Thêm thành công");
+                btn_reset_Click(sender, e);
+            }
+        }
 
         // ====================== FORM TRẢ ================================//
 
@@ -364,6 +402,6 @@ namespace _3_PL.Views
             }
         }
 
-
+        
     }
 }

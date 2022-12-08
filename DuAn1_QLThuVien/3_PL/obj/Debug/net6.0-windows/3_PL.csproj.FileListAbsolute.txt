@@ -1,8 +1,12 @@
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.exe
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.dll.config
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.deps.json
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.runtimeconfig.json
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.dll
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.pdb
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\AForge.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\AForge.Video.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\AForge.Video.DirectShow.dll
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Humanizer.dll
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.Data.SqlClient.dll
@@ -26,9 +30,12 @@ C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-win
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.dll
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\QRCodeDecoderLibrary.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\QRCodeEncoderLibrary.dll
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\QRCoder.dll
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\System.Runtime.Caching.dll
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\zxing.dll
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
@@ -44,18 +51,21 @@ C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-win
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\WinFormsApp1.Custom_Controls.TvT_IconButton.resources
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.custom_control.TvT_TextBox.resources
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Properties.Resources.resources
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.SignUP.resources
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.FormCheckQR.resources
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.frm_Login.resources
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.frm_menus.resources
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.frm_SignUp.resources
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.GiaoDienSach.resources
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.LoginForm.resources
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.Menu.resources
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.MenuForm.resources
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.MuonTraForm.resources
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.SachForm.resources
-C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.SignUP.resources
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.TheNgayForm.resources
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.TheNVForm.resources
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.TheTVForm.resources
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.ThongKeForm.resources
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.csproj.GenerateResource.cache
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.AssemblyInfoInputs.cache
@@ -67,6 +77,7 @@ C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-win
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.pdb
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.genruntimeconfig.cache
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\ref\3_PL.dll
+<<<<<<< HEAD
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.exe
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.deps.json
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\3_PL.runtimeconfig.json
@@ -373,3 +384,5 @@ C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\QRCodeDecoderLibrary.dll
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\QRCodeEncoderLibrary.dll
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.GiaoDienSach.resources
+=======
+>>>>>>> main

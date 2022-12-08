@@ -24,7 +24,11 @@ namespace _1_DAL.Configurations
             buider.Property(p => p.SoLuong).HasColumnName("SoLuong").HasColumnType("int").IsRequired();
             buider.Property(p => p.GiaTien).HasColumnName("GiaTien").HasColumnType("money").IsRequired();
             buider.Property(p => p.GhiChu).HasColumnName("GhiChu").HasColumnType("nvarchar(100)").IsRequired();
+            buider.Property(p => p.Ma).HasColumnName("Ma").HasColumnType("nvarchar(100)").IsRequired();
+            buider.Property(p => p.BarCode).HasColumnName("BarCode").HasColumnType("nvarchar(100)").IsRequired();
 
+            //buider.HasIndex(c => c.BarCode).IsUnique();
+            buider.HasIndex(c => c.Ma).IsUnique();
             buider.HasOne(p => p.TheLoai).WithMany().HasForeignKey(p => p.IdTL);
         }
     }

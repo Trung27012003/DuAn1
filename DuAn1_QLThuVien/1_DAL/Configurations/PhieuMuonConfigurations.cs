@@ -23,6 +23,8 @@ namespace _1_DAL.Configurations
             buider.Property(p => p.NgayMuon).HasColumnName("NgayMuon").HasColumnType("DateTime").IsRequired();
             buider.Property(p => p.NgayTra).HasColumnName("NgayTra").HasColumnType("DateTime").IsRequired();
             buider.Property(p => p.GhiChu).HasColumnName("GhiChu").HasColumnType("nvarchar(100)").IsRequired();
+            buider.Property(p => p.MaPm).HasColumnName("MaPm").HasColumnType("nvarchar(100)").IsRequired();
+
 
             buider.HasOne(p => p.NhanVien).WithMany().HasForeignKey(p => p.IdNV);
             buider.HasOne(p => p.TheThanhVien).WithMany().HasForeignKey(p => p.IdTheTV);
