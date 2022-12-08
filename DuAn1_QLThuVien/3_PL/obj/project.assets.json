@@ -829,16 +829,16 @@
           }
         }
       },
-      "ZXing.Net/0.16.6": {
+      "ZXing.Net/0.16.8": {
         "type": "package",
         "compile": {
-          "lib/netcoreapp3.1/zxing.dll": {
-            "related": ".xml"
+          "lib/net6.0/zxing.dll": {
+            "related": ".XML"
           }
         },
         "runtime": {
-          "lib/netcoreapp3.1/zxing.dll": {
-            "related": ".xml"
+          "lib/net6.0/zxing.dll": {
+            "related": ".XML"
           }
         }
       },
@@ -2145,10 +2145,10 @@
         "version.txt"
       ]
     },
-    "ZXing.Net/0.16.6": {
-      "sha512": "0+6EcJ7Ve1BocwqvqpAmgMa7xF3wxqROcM3KvAE6WGNIqXLA5YEziLjRX+kKYVrcttlFRz1IaoRSzt/o6Ttviw==",
+    "ZXing.Net/0.16.8": {
+      "sha512": "Cbbe+x7I7E+VJ0VxU1fPc7AktIw/9xea/ZY/fh38sXqTQ75LJp9ooGUjpzFqfpPfIKozAoXgJ4yvY4GzKpPBzQ==",
       "type": "package",
-      "path": "zxing.net/0.16.6",
+      "path": "zxing.net/0.16.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2183,6 +2183,10 @@
         "lib/net48/zxing.dll",
         "lib/net48/zxing.presentation.XML",
         "lib/net48/zxing.presentation.dll",
+        "lib/net5.0/zxing.XML",
+        "lib/net5.0/zxing.dll",
+        "lib/net6.0/zxing.XML",
+        "lib/net6.0/zxing.dll",
         "lib/netcoreapp3.0/zxing.dll",
         "lib/netcoreapp3.0/zxing.xml",
         "lib/netcoreapp3.1/zxing.dll",
@@ -2217,7 +2221,8 @@
         "lib/windows8/zxing.winmd",
         "lib/wp8/zxing.wp8.0.XML",
         "lib/wp8/zxing.wp8.0.dll",
-        "zxing.net.0.16.6.nupkg.sha512",
+        "logo.jpg",
+        "zxing.net.0.16.8.nupkg.sha512",
         "zxing.net.nuspec"
       ]
     },
@@ -2245,23 +2250,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Trung2701\\.nuget\\packages\\": {},
+    "C:\\Users\\vanhu\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Trung2701\\Documents\\da1\\DuAn1\\DuAn1_QLThuVien\\3_PL\\3_PL.csproj",
+      "projectUniqueName": "D:\\GitClone\\DuAn1_QLThuVien\\3_PL\\3_PL.csproj",
       "projectName": "3_PL",
-      "projectPath": "C:\\Users\\Trung2701\\Documents\\da1\\DuAn1\\DuAn1_QLThuVien\\3_PL\\3_PL.csproj",
-      "packagesPath": "C:\\Users\\Trung2701\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Trung2701\\Documents\\da1\\DuAn1\\DuAn1_QLThuVien\\3_PL\\obj\\",
+      "projectPath": "D:\\GitClone\\DuAn1_QLThuVien\\3_PL\\3_PL.csproj",
+      "packagesPath": "C:\\Users\\vanhu\\.nuget\\packages\\",
+      "outputPath": "D:\\GitClone\\DuAn1_QLThuVien\\3_PL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Trung2701\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\vanhu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2276,8 +2281,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\Trung2701\\Documents\\da1\\DuAn1\\DuAn1_QLThuVien\\2_BUS\\2_BUS.csproj": {
-              "projectPath": "C:\\Users\\Trung2701\\Documents\\da1\\DuAn1\\DuAn1_QLThuVien\\2_BUS\\2_BUS.csproj"
+            "D:\\GitClone\\DuAn1_QLThuVien\\2_BUS\\2_BUS.csproj": {
+              "projectPath": "D:\\GitClone\\DuAn1_QLThuVien\\2_BUS\\2_BUS.csproj"
             }
           }
         }
@@ -2342,21 +2347,11 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   },
   "logs": [
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "3_PL depends on ZXing.Net (>= 0.16.8) but ZXing.Net 0.16.8 was not found. An approximate best match of ZXing.Net 0.16.6 was resolved.",
-      "libraryId": "ZXing.Net",
-      "targetGraphs": [
-        "net6.0-windows7.0"
-      ]
-    },
     {
       "code": "NU1701",
       "level": "Warning",
