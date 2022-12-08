@@ -49,7 +49,7 @@ namespace _1_DAL.Respositories
 
             if (obj == null) return false;
             var tempobj = _context.sachs.FirstOrDefault(c => c.Id == obj.Id);
-            tempobj.TL = obj.TL;
+            tempobj.IdTL = obj.IdTL;
             tempobj.TG = obj.TG;
 
             tempobj.Name = obj.Name;

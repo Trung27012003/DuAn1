@@ -9,15 +9,13 @@
       "3_PL/1.0.0": {
         "dependencies": {
           "2_BUS": "1.0.0",
-          "AForge": "2.2.5",
           "AForge.Video": "2.2.5",
           "AForge.Video.DirectShow": "2.2.5",
           "FontAwesome.Sharp": "6.1.1",
           "Microsoft.EntityFrameworkCore.Design": "6.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0",
-          "QRCodeDecoderLibrary": "2.0.1",
-          "QRCodeEncoderLibrary": "2.0.1",
-          "QRCoder": "1.4.3"
+          "QRCoder": "1.4.3",
+          "ZXing.Net": "0.16.6"
         },
         "runtime": {
           "3_PL.dll": {}
@@ -365,22 +363,6 @@
         }
       },
       "Microsoft.Win32.SystemEvents/6.0.0": {},
-      "QRCodeDecoderLibrary/2.0.1": {
-        "runtime": {
-          "lib/net462/QRCodeDecoderLibrary.dll": {
-            "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.0.0.0"
-          }
-        }
-      },
-      "QRCodeEncoderLibrary/2.0.1": {
-        "runtime": {
-          "lib/netstandard2.0/QRCodeEncoderLibrary.dll": {
-            "assemblyVersion": "2.0.1.0",
-            "fileVersion": "2.0.1.0"
-          }
-        }
-      },
       "QRCoder/1.4.3": {
         "dependencies": {
           "System.Drawing.Common": "6.0.0"
@@ -470,15 +452,18 @@
           "System.Drawing.Common": "6.0.0"
         }
       },
+      "ZXing.Net/0.16.6": {
+        "runtime": {
+          "lib/netcoreapp3.1/zxing.dll": {
+            "assemblyVersion": "0.16.6.0",
+            "fileVersion": "0.16.6.0"
+          }
+        }
+      },
       "1_DAL/1.0.0": {
         "dependencies": {
-          "AForge": "2.2.5",
-          "AForge.Video": "2.2.5",
-          "AForge.Video.DirectShow": "2.2.5",
           "Microsoft.EntityFrameworkCore": "6.0.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0",
-          "QRCodeDecoderLibrary": "2.0.1",
-          "QRCodeEncoderLibrary": "2.0.1"
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0"
         },
         "runtime": {
           "1_DAL.dll": {}
@@ -487,12 +472,7 @@
       "2_BUS/1.0.0": {
         "dependencies": {
           "1_DAL": "1.0.0",
-          "AForge": "2.2.5",
-          "AForge.Video": "2.2.5",
-          "AForge.Video.DirectShow": "2.2.5",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0",
-          "QRCodeDecoderLibrary": "2.0.1",
-          "QRCodeEncoderLibrary": "2.0.1"
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0"
         },
         "runtime": {
           "2_BUS.dll": {}
@@ -730,20 +710,6 @@
       "path": "microsoft.win32.systemevents/6.0.0",
       "hashPath": "microsoft.win32.systemevents.6.0.0.nupkg.sha512"
     },
-    "QRCodeDecoderLibrary/2.0.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-RdyGBr1mtuO9dIWQs77y7/kz0e85q9kHBFOIH6x8UqDZTM8l9+a4vgIGGqjP5nPidCGQHGR/Z+zpVTp1KBJd/g==",
-      "path": "qrcodedecoderlibrary/2.0.1",
-      "hashPath": "qrcodedecoderlibrary.2.0.1.nupkg.sha512"
-    },
-    "QRCodeEncoderLibrary/2.0.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-aHeIIB1CkbFMC1tuimwCf89WijUiHFolS4BD3ySDBhMy3SESCwjCoSN7A4KGQSoLHZotIJmldfTNsqNgIewKSw==",
-      "path": "qrcodeencoderlibrary/2.0.1",
-      "hashPath": "qrcodeencoderlibrary.2.0.1.nupkg.sha512"
-    },
     "QRCoder/1.4.3": {
       "type": "package",
       "serviceable": true,
@@ -848,6 +814,13 @@
       "sha512": "sha512-CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
+    },
+    "ZXing.Net/0.16.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0+6EcJ7Ve1BocwqvqpAmgMa7xF3wxqROcM3KvAE6WGNIqXLA5YEziLjRX+kKYVrcttlFRz1IaoRSzt/o6Ttviw==",
+      "path": "zxing.net/0.16.6",
+      "hashPath": "zxing.net.0.16.6.nupkg.sha512"
     },
     "1_DAL/1.0.0": {
       "type": "project",

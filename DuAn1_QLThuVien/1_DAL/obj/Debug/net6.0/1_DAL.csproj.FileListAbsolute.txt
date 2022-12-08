@@ -26,17 +26,45 @@ C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\refint\1
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\1_DAL.pdb
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\1_DAL.genruntimeconfig.cache
 C:\Users\Admin\Desktop\git\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\ref\1_DAL.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1\DuAn1_QLThuVien\1_DAL\bin\Debug\net6.0\1_DAL.deps.json
-D:\Dự án 1\New folder\DuAn1\DuAn1\DuAn1_QLThuVien\1_DAL\bin\Debug\net6.0\1_DAL.runtimeconfig.json
-D:\Dự án 1\New folder\DuAn1\DuAn1\DuAn1_QLThuVien\1_DAL\bin\Debug\net6.0\1_DAL.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1\DuAn1_QLThuVien\1_DAL\bin\Debug\net6.0\1_DAL.pdb
-D:\Dự án 1\New folder\DuAn1\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\1_DAL.csproj.AssemblyReference.cache
-D:\Dự án 1\New folder\DuAn1\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\1_DAL.GeneratedMSBuildEditorConfig.editorconfig
-D:\Dự án 1\New folder\DuAn1\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\1_DAL.AssemblyInfoInputs.cache
-D:\Dự án 1\New folder\DuAn1\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\1_DAL.AssemblyInfo.cs
-D:\Dự án 1\New folder\DuAn1\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\1_DAL.csproj.CoreCompileInputs.cache
-D:\Dự án 1\New folder\DuAn1\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\1_DAL.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\refint\1_DAL.dll
-D:\Dự án 1\New folder\DuAn1\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\1_DAL.pdb
-D:\Dự án 1\New folder\DuAn1\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\1_DAL.genruntimeconfig.cache
-D:\Dự án 1\New folder\DuAn1\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\ref\1_DAL.dll
+C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\1_DAL\bin\Debug\net6.0\1_DAL.deps.json
+C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\1_DAL\bin\Debug\net6.0\1_DAL.runtimeconfig.json
+C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\1_DAL\bin\Debug\net6.0\1_DAL.dll
+C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\1_DAL\bin\Debug\net6.0\1_DAL.pdb
+C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\1_DAL.csproj.AssemblyReference.cache
+C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\1_DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\1_DAL.AssemblyInfoInputs.cache
+C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\1_DAL.AssemblyInfo.cs
+C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\1_DAL.csproj.CoreCompileInputs.cache
+C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\1_DAL.dll
+C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\refint\1_DAL.dll
+C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\1_DAL.pdb
+C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\1_DAL.genruntimeconfig.cache
+C:\Users\Trung2701\Documents\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\ref\1_DAL.dll
+C:\Users\My HanhQuynh\Documents\GitHub\DuAn1\DuAn1_QLThuVien\1_DAL\bin\Debug\net6.0\1_DAL.deps.json
+C:\Users\My HanhQuynh\Documents\GitHub\DuAn1\DuAn1_QLThuVien\1_DAL\bin\Debug\net6.0\1_DAL.runtimeconfig.json
+C:\Users\My HanhQuynh\Documents\GitHub\DuAn1\DuAn1_QLThuVien\1_DAL\bin\Debug\net6.0\1_DAL.dll
+C:\Users\My HanhQuynh\Documents\GitHub\DuAn1\DuAn1_QLThuVien\1_DAL\bin\Debug\net6.0\1_DAL.pdb
+C:\Users\My HanhQuynh\Documents\GitHub\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\1_DAL.csproj.AssemblyReference.cache
+C:\Users\My HanhQuynh\Documents\GitHub\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\1_DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\My HanhQuynh\Documents\GitHub\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\1_DAL.AssemblyInfoInputs.cache
+C:\Users\My HanhQuynh\Documents\GitHub\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\1_DAL.AssemblyInfo.cs
+C:\Users\My HanhQuynh\Documents\GitHub\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\1_DAL.csproj.CoreCompileInputs.cache
+C:\Users\My HanhQuynh\Documents\GitHub\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\1_DAL.dll
+C:\Users\My HanhQuynh\Documents\GitHub\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\refint\1_DAL.dll
+C:\Users\My HanhQuynh\Documents\GitHub\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\1_DAL.pdb
+C:\Users\My HanhQuynh\Documents\GitHub\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\1_DAL.genruntimeconfig.cache
+C:\Users\My HanhQuynh\Documents\GitHub\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\ref\1_DAL.dll
+C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\1_DAL\bin\Debug\net6.0\1_DAL.deps.json
+C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\1_DAL\bin\Debug\net6.0\1_DAL.runtimeconfig.json
+C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\1_DAL\bin\Debug\net6.0\1_DAL.dll
+C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\1_DAL\bin\Debug\net6.0\1_DAL.pdb
+C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\1_DAL.csproj.AssemblyReference.cache
+C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\1_DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\1_DAL.AssemblyInfoInputs.cache
+C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\1_DAL.AssemblyInfo.cs
+C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\1_DAL.csproj.CoreCompileInputs.cache
+C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\1_DAL.dll
+C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\refint\1_DAL.dll
+C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\1_DAL.pdb
+C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\1_DAL.genruntimeconfig.cache
+C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\1_DAL\obj\Debug\net6.0\ref\1_DAL.dll

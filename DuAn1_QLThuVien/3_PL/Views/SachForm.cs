@@ -19,12 +19,23 @@ namespace _3_PL.Views
     public partial class SachForm : Form
     {
         public ISachServices _IsachServices;
+        public ITheLoaiServices _ITheLoaiServices;  
         private int stt;
         private Guid _id;
         public SachForm()
         {
             InitializeComponent();
             _IsachServices = new SachServices();
+            _ITheLoaiServices = new TheLoaiServices();
+            LoadTocmb();
+        }
+        private void LoadTocmb()
+        {
+            cmb_theLoai.Items.Clear();
+            foreach (var item in _ITheLoaiServices.GetAllTL())
+            {
+                cmb_theLoai.Items.Add(item.Name);
+            }
         }
         private void LoadDS()
         {
@@ -43,7 +54,7 @@ namespace _3_PL.Views
             foreach (var x in _IsachServices.GetSach())
             {
                 dtg_showsach.Rows.Add(
-                    stt++,x.Id,x.TL,x.TG,x.NXB,x.Name,x.SoLuong,x.GiaTien);
+                    stt++,x.Id,_ITheLoaiServices.GetAllTL().FirstOrDefault(c=>c.Id==x.IdTL).Name,x.TG,x.NXB,x.Name,x.SoLuong,x.GiaTien);
             }
         }
         private void LoadTL()
@@ -53,9 +64,9 @@ namespace _3_PL.Views
             dtg_showtl.ColumnCount = 2;
             dtg_showtl.Columns[0].Name = "STT";
             dtg_showtl.Columns[1].Name = "Thể loại";
-            foreach(var x in _IsachServices.GetSach())
+            foreach(var x in _ITheLoaiServices.GetAllTL())
             {
-                dtg_showtl.Rows.Add(stt++,x.TL);
+                dtg_showtl.Rows.Add(stt++, x.Name);
             }
         }
         private SachView GetData()
@@ -63,7 +74,7 @@ namespace _3_PL.Views
             SachView sachView = new SachView();
             {
                 sachView.Id = _id;
-                sachView.TL = tbt_TL.Text;
+                sachView.IdTL = _ITheLoaiServices.GetAllTL().FirstOrDefault(c => c.Name == cmb_theLoai.Text).Id;
                 sachView.TG = tbt_tg.Text;
                 sachView.NXB = tbt_NXB.Text;
                 sachView.Name = tbt_tensach.Text;
@@ -81,7 +92,7 @@ namespace _3_PL.Views
         {
             
             int a;
-            if (tbt_TL.Text == "")
+            if (cmb_theLoai.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập thể loại");
             }
@@ -108,16 +119,41 @@ namespace _3_PL.Views
             
             else
             {
-                DialogResult dialog = MessageBox.Show("Bạn có muốn thêm sách mới không?", "Xác nhận", MessageBoxButtons.YesNo);
-                if (dialog == DialogResult.Yes)
+                var checktl = _ITheLoaiServices.GetAllTL().FirstOrDefault(c => c.Name == cmb_theLoai.Text);
+                if (checktl==null)
                 {
-                    MessageBox.Show(_IsachServices.AddTN(GetData()));
-                    LoadDS();
+                    TheLoaiView cvv = new TheLoaiView()
+                    {
+
+                        Name = cmb_theLoai.Text,
+                    };
+                    _ITheLoaiServices.AddTL(cvv);
+                    LoadTocmb();
+                    DialogResult dialogs = MessageBox.Show("Bạn có muốn thêm sách mới không?", "Xác nhận", MessageBoxButtons.YesNo);
+                    if (dialogs == DialogResult.Yes)
+                    {
+                        MessageBox.Show(_IsachServices.AddTN(GetData()));
+                        LoadDS();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Đã hủy");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Đã hủy");
+                    DialogResult dialog = MessageBox.Show("Bạn có muốn thêm sách mới không?", "Xác nhận", MessageBoxButtons.YesNo);
+                    if (dialog == DialogResult.Yes)
+                    {
+                        MessageBox.Show(_IsachServices.AddTN(GetData()));
+                        LoadDS();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Đã hủy");
+                    }
                 }
+              
             }
 
             
@@ -125,10 +161,7 @@ namespace _3_PL.Views
 
         private void dtg_showtl_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            tbt_TL.Text = dtg_showtl.CurrentCell.Value.ToString();
-            var a = _IsachServices.GetSach().Where(x => x.TL.Contains(tbt_TL.Text)).ToList();
-            dtg_showsach.Rows.Clear();
-            Loadsearch(a);
+            cmb_theLoai.Text = dtg_showtl.CurrentCell.Value.ToString();
         }
 
         private void SachForm_Load(object sender, EventArgs e)
@@ -172,7 +205,7 @@ namespace _3_PL.Views
             btn_sua.Enabled = true;
             btn_xoa.Enabled = true;
             _id = (Guid)dtg_showsach.CurrentRow.Cells[1].Value;
-            tbt_TL.Text = dtg_showsach.CurrentRow.Cells[2].Value.ToString();
+            cmb_theLoai.Text = dtg_showsach.CurrentRow.Cells[2].Value.ToString();
             tbt_tg.Text = dtg_showsach.CurrentRow.Cells[3].Value.ToString();
             tbt_NXB.Text = dtg_showsach.CurrentRow.Cells[4].Value.ToString();
             tbt_tensach.Text = dtg_showsach.CurrentRow.Cells[5].Value.ToString();
@@ -203,19 +236,19 @@ namespace _3_PL.Views
             foreach (var x in a)
             {
                 dtg_showsach.Rows.Add(
-                    stt++, x.Id, x.TL, x.TG, x.NXB, x.Name, x.SoLuong, x.GiaTien);
+                    stt++, x.Id, _ITheLoaiServices.GetAllTL().FirstOrDefault(c=>c.Id==x.IdTL).Name, x.TG, x.NXB, x.Name, x.SoLuong, x.GiaTien); ;
             }
         }
 
         private void btn_QR_Click(object sender, EventArgs e)
         {
             QRCoder.QRCodeGenerator qrcode = new QRCodeGenerator();
-            var qrtext = "Tên Sách: " + tbt_tensach.Text + "\n" + "Nhà Xuất Bản: " + tbt_NXB.Text + "\n" + "Tác Giả: " + tbt_tg.Text + "\n" + "Thể Loại: " + tbt_TL.Text + "\n" +"Ghi Chú: " + tbx_ghichu.Text;
+            var qrtext = "Tên Sách: " + tbt_tensach.Text + "\n" + "Nhà Xuất Bản: " + tbt_NXB.Text + "\n" + "Tác Giả: " + tbt_tg.Text + "\n" + "Thể Loại: " + cmb_theLoai.Text + "\n" +"Ghi Chú: " + tbx_ghichu.Text;
             var data = qrcode.CreateQrCode(qrtext, QRCoder.QRCodeGenerator.ECCLevel.L);
             var code = new QRCoder.QRCode(data);
-            ptb_QR.Image = code.GetGraphic(20);
+            ptb_QR.Image = code.GetGraphic(2);
         }
 
-      
+       
     }
 }

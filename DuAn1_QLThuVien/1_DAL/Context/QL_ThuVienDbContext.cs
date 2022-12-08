@@ -25,14 +25,15 @@ namespace _1_DAL.Context
         public DbSet<Sach> sachs { get; set; }
         public DbSet<PhieuMuon> phieuMuons { get; set; }
         public DbSet<PhieuMuonChiTiet> phieuMuonChiTiets { get; set; }
+        public DbSet<TheLoai> theLoais { get; set; }
         public DbSet<PhieuTra> phieuTras { get; set; }
         public DbSet<PhieuTraChiTiet> phieuTraChiTiets { get; set; }
         public DbSet<ChucVu> chucVus { get; set; }
-        public virtual DbSet<Account> Accounts { get; set; }
+        public DbSet<Account> Accounts { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder.
-              UseSqlServer("Data Source=LAPTOP-4C55HFD4\\SQLEXPRESS;Initial Catalog=DuAn_QLThuVien;Integrated Security=True"));//User ID=trungtruong;Password=123456
+              UseSqlServer("Data Source=HOANGQUAN-GD\\SQLEXPRESS;Initial Catalog=DuAn_QLThuVien;Integrated Security=True"));//User ID=trungtruong;Password=123456
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

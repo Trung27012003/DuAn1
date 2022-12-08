@@ -10,7 +10,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AForge" Version="2.2.5" />
     <PackageReference Include="AForge.Video" Version="2.2.5" />
     <PackageReference Include="AForge.Video.DirectShow" Version="2.2.5" />
     <PackageReference Include="FontAwesome.Sharp" Version="6.1.1" />
@@ -19,9 +18,8 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.0" />
-    <PackageReference Include="QRCodeDecoderLibrary" Version="2.0.1" />
-    <PackageReference Include="QRCodeEncoderLibrary" Version="2.0.1" />
     <PackageReference Include="QRCoder" Version="1.4.3" />
+    <PackageReference Include="ZXing.Net" Version="0.16.6" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,6 +28,15 @@
 
   <ItemGroup>
     <Folder Include="Resources\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="AForge.Video">
+      <HintPath>..\..\..\..\..\Documents\AForge.NET Framework-2.2.5-(libs only)\Release\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>..\..\..\..\..\Documents\AForge.NET Framework-2.2.5-(libs only)\Release\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

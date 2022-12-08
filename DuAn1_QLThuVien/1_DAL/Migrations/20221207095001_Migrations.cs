@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace _1_DAL.Migrations
 {
-    public partial class duan1 : Migration
+    public partial class Migrations : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -34,21 +34,15 @@ namespace _1_DAL.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Sach",
+                name: "TheLoai",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    TheLoai = table.Column<string>(type: "nvarchar(100)", nullable: false),
-                    TacGia = table.Column<string>(type: "nvarchar(100)", nullable: false),
-                    NXB = table.Column<string>(type: "nvarchar(100)", nullable: false),
-                    TenSach = table.Column<string>(type: "nvarchar(100)", nullable: false),
-                    SoLuong = table.Column<int>(type: "int", nullable: false),
-                    GiaTien = table.Column<decimal>(type: "money", nullable: false),
-                    GhiChu = table.Column<string>(type: "nvarchar(100)", nullable: false)
+                    TenTL = table.Column<string>(type: "nvarchar(100)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Sach", x => x.Id);
+                    table.PrimaryKey("PK_TheLoai", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -87,6 +81,30 @@ namespace _1_DAL.Migrations
                         name: "FK_NhanVien_ChucVu_IdCV",
                         column: x => x.IdCV,
                         principalTable: "ChucVu",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Sach",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    IdTL = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    TacGia = table.Column<string>(type: "nvarchar(100)", nullable: false),
+                    NXB = table.Column<string>(type: "nvarchar(100)", nullable: false),
+                    TenSach = table.Column<string>(type: "nvarchar(100)", nullable: false),
+                    SoLuong = table.Column<int>(type: "int", nullable: false),
+                    GiaTien = table.Column<decimal>(type: "money", nullable: false),
+                    GhiChu = table.Column<string>(type: "nvarchar(100)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Sach", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Sach_TheLoai_IdTL",
+                        column: x => x.IdTL,
+                        principalTable: "TheLoai",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -258,6 +276,11 @@ namespace _1_DAL.Migrations
                 column: "IdSach");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Sach_IdTL",
+                table: "Sach",
+                column: "IdTL");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_TheNgay_IdNV",
                 table: "TheNgay",
                 column: "IdNV");
@@ -285,6 +308,9 @@ namespace _1_DAL.Migrations
 
             migrationBuilder.DropTable(
                 name: "PhieuMuon");
+
+            migrationBuilder.DropTable(
+                name: "TheLoai");
 
             migrationBuilder.DropTable(
                 name: "NhanVien");

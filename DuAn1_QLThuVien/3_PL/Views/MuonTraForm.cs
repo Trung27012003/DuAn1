@@ -10,13 +10,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using AForge.Video;
+using AForge.Video.DirectShow;
+using ZXing;
+using System.IO;
+using ZXing.Aztec;
+using AForge;
+using ZXing.QrCode;
 namespace _3_PL.Views
 {
     public partial class MuonTraForm : Form
     {
         ISachServices _IsachServices;
+        ITheLoaiServices _ITheLoaiServices;
+        ITheThanhVienServices _ITheThanhVienServices;
         List<SachView> _lstSachView;
+        List<SachView> _lstSachView1;
         List<PhieuMuonChiTietView> _lstPMCT;
         List<PhieuMuonChiTietView> _lstPM;
         Guid _IDSach;
@@ -26,6 +35,9 @@ namespace _3_PL.Views
         {
             InitializeComponent();
             _IsachServices = new SachServices();
+            _ITheLoaiServices = new TheLoaiServices();
+            _ITheThanhVienServices = new TheThanhVienServices();
+            _lstSachView1 = new List<SachView>();
             _lstSachView = new List<SachView>();
             _lstPMCT = new List<PhieuMuonChiTietView>();
             _lstPM = new List<PhieuMuonChiTietView>();
@@ -34,14 +46,9 @@ namespace _3_PL.Views
             LoadToCmbTL();
 
         }
-        public void LoadToCmbTL()
-        {
-            //cmb_loc.Items.Clear();
-            //foreach (var item in _IsachServices.GetSach().Where(c=>c.TL.)
-            //{
-            //    cmb_loc.Items.Add(item.TL);
-            //}
-        }
+
+        // ============FORM MƯỢN =============================================//
+       
         public void TongTien1(Label a, dynamic lst)
         {
             if (_lstPMCT != null)
@@ -58,25 +65,69 @@ namespace _3_PL.Views
                 lbl_tongtien1.Text = "";
             }
         }
-        public void LoadToGrid_Sach(List<SachView> s)
+        public void LoadToCmbTL()
+        {
+            cmb_loc.Items.Clear();
+            cmb_loc.Items.Add("Tất cả");
+            foreach (var item in _ITheLoaiServices.GetAllTL())
+            {
+                cmb_loc.Items.Add(item.Name);
+            }
+            cmb_tenkh.Items.Clear();
+            foreach (var item in _ITheThanhVienServices.GetTheThanhVien())
+            {
+                cmb_tenkh.Items.Add(item.TenThanhVien);
+            }
+        }
+        private void tbx_search_TextChanged(object sender, EventArgs e)
+        {
+            if (cmb_loc.Text == "" || cmb_loc.Text == "Tất cả")
+            {
+                _lstSachView = _IsachServices.GetSach().FindAll(c => c.Name.ToLower().Contains(tbx_search.Text.ToLower()));
+                LoadToGrid_Sach(_lstSachView);
+            }
+            else
+            {
+                var a = _lstSachView1.FindAll(c => c.Name.ToLower().Contains(tbx_search.Text.ToLower()));
+                LoadToGrid_Sach(a);
+            }
+        }
+        private void cmb_loc_SelectedIndexChanged(object sender, EventArgs e)
         {
             
-                dgrid_danhsachsach.Rows.Clear();
-                dgrid_danhsachsach.ColumnCount = 6;
-                dgrid_danhsachsach.Columns[0].Name = "Id";
-                dgrid_danhsachsach.Columns[1].Name = "STT";
-                dgrid_danhsachsach.Columns[2].Name = "Thể loại";
-                dgrid_danhsachsach.Columns[3].Name = "Tác giả";
-                dgrid_danhsachsach.Columns[4].Name = "Tên sách";
-                dgrid_danhsachsach.Columns[5].Name = "Số lượng";
-                dgrid_danhsachsach.Columns[0].Visible = false;
-                int stt = 1;
-                foreach (var x in s)
-                {
-                    dgrid_danhsachsach.Rows.Add(
-                         x.Id, stt++, x.TL, x.TG, x.Name, x.SoLuong);
-                }
-            
+            if (cmb_loc.Text == "Tất cả")
+            {
+                _lstSachView = _IsachServices.GetSach();
+                LoadToGrid_Sach(_lstSachView);
+            }
+            else
+            {
+                var getId = _ITheLoaiServices.GetAllTL().FirstOrDefault(x => x.Name == cmb_loc.Text).Id;
+                _lstSachView1 = _IsachServices.GetSach().FindAll(c => c.IdTL == getId);
+                LoadToGrid_Sach(_lstSachView1);
+
+            }
+
+        }
+        public void LoadToGrid_Sach(List<SachView> s)
+        {
+
+            dgrid_danhsachsach.Rows.Clear();
+            dgrid_danhsachsach.ColumnCount = 6;
+            dgrid_danhsachsach.Columns[0].Name = "Id";
+            dgrid_danhsachsach.Columns[1].Name = "STT";
+            dgrid_danhsachsach.Columns[2].Name = "Thể loại";
+            dgrid_danhsachsach.Columns[3].Name = "Tác giả";
+            dgrid_danhsachsach.Columns[4].Name = "Tên sách";
+            dgrid_danhsachsach.Columns[5].Name = "Số lượng";
+            dgrid_danhsachsach.Columns[0].Visible = false;
+            int stt = 1;
+            foreach (var x in s)
+            {
+                dgrid_danhsachsach.Rows.Add(
+                     x.Id, stt++,_ITheLoaiServices.GetAllTL().FirstOrDefault(c=>c.Id==x.IdTL).Name, x.TG, x.Name, x.SoLuong);
+            }
+
         }
         public void LoadToPhieuMuonCT()
         {
@@ -167,18 +218,11 @@ namespace _3_PL.Views
                     LoadToPhieuMuonCT();
                 }
             }
-
-            //_lstPMCT.Remove(_lst);
             LoadToPhieuMuonCT();
 
 
         }
         private void tvT_IconButton2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -244,10 +288,82 @@ namespace _3_PL.Views
             LoadToGrid_Sach(_IsachServices.GetSach());
             tbx_search.Text = "";
             cmb_loc.Text = "";
-            tbx_idpm.Text = "";
+            cmb_tenkh.Text = "";
             dtp_ngaytra.Value = DateTime.Now + TimeSpan.FromDays(7);
 
         }
-        //  public void LoadToGrid
+
+
+        // ====================== FORM TRẢ ================================//
+
+        FilterInfoCollection filterInfoCollection;
+        VideoCaptureDevice CaptureDevice;
+
+        private void btn_batmay_Click(object sender, EventArgs e)
+        {
+            //if (btn_batmay.Text == "Start")
+            //{
+            //    CaptureDevice = new VideoCaptureDevice(filterInfoCollection[cbb_chonanh.SelectedIndex].MonikerString);
+            //    CaptureDevice.NewFrame += CaptureDevice_NewFrame;
+            //    CaptureDevice.Start();
+            //    timer1.Start();
+            //    btn_batmay.Text = "Stop";
+            //}
+
+            //else
+            //{
+            //    CaptureDevice.SignalToStop();
+            //    timer1.Stop();
+            //    ptb_camera.Image = null;
+            //    btn_batmay.Text = "Start";
+                
+                
+            //}
+            FormCheckQR formCheckQR = new FormCheckQR();
+            formCheckQR.ShowDialog();
+        }
+
+        private void CaptureDevice_NewFrame(object sender, AForge.Video.NewFrameEventArgs eventArgs)
+        {
+            ptb_camera.Image = (Bitmap)eventArgs.Frame.Clone();
+        }
+
+        private void MuonTraForm_Load(object sender, EventArgs e)
+        {
+            filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            CaptureDevice = new VideoCaptureDevice();
+            foreach (FilterInfo device in filterInfoCollection)
+                cbb_chonanh.Items.Add(device.Name);
+            cbb_chonanh.SelectedIndex = 0;
+        }
+
+        private void MuonTraForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (CaptureDevice.IsRunning == true)
+                CaptureDevice.SignalToStop();
+        }
+
+       
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (ptb_camera.Image != null)
+            {
+                BarcodeReader reader = new BarcodeReader();
+                Result resul = reader.Decode((Bitmap)ptb_camera.Image);
+                if (resul != null)
+                {
+
+                    if (CaptureDevice.IsRunning == true)
+                    {
+                        rtb_show.Text = resul.ToString();
+                        timer1.Stop();
+
+                    }
+                }
+            }
+        }
+
+
     }
 }
