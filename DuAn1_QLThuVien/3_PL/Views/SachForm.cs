@@ -19,7 +19,8 @@ namespace _3_PL.Views
     public partial class SachForm : Form
     {
         public ISachServices _IsachServices;
-        public ITheLoaiServices _ITheLoaiServices;  
+        public ITheLoaiServices _ITheLoaiServices;
+        public IPhieuMuonChiTietChiTietServices _IPhieuMuonChiTietChiTietServices;
         private int stt;
         private Guid _id;
         public SachForm()
@@ -27,6 +28,7 @@ namespace _3_PL.Views
             InitializeComponent();
             _IsachServices = new SachServices();
             _ITheLoaiServices = new TheLoaiServices();
+            _IPhieuMuonChiTietChiTietServices = new PhieuMuonChiTietServices();
             LoadTocmb();
         }
         private void LoadTocmb()
@@ -112,11 +114,18 @@ namespace _3_PL.Views
             {
                 MessageBox.Show("Số lượng phải là số");
             }
+            else if (Convert.ToInt32(tbt_soluong.Text) < 0)
+            {
+                MessageBox.Show("Số lượng sách phải là số dương");
+            }
             else if (!int.TryParse(tbt_giatien.Text, out a))
             {
                 MessageBox.Show("Giá tiền phải là số");
             }
-            
+            else if (Convert.ToInt32(tbt_giatien.Text) < 0)
+            {
+                MessageBox.Show("Giá tiền phải là số dương");
+            }
             else
             {
                 var checktl = _ITheLoaiServices.GetAllTL().FirstOrDefault(c => c.Name == cmb_theLoai.Text);
@@ -174,30 +183,78 @@ namespace _3_PL.Views
 
         private void btn_sua_Click(object sender, EventArgs e)
         {
-            DialogResult dialog = MessageBox.Show("Bạn có muốn cập nhập sách không?", "Xác nhận", MessageBoxButtons.YesNo);
-            if (dialog == DialogResult.Yes)
+            int a;
+            var b = _IsachServices.GetSach().Where(x => x.Name.Equals(tbt_tensach.Text));
+            if (cmb_theLoai.Text == "")
             {
-                MessageBox.Show(_IsachServices.UpdateTN(GetData()));
-                LoadDS();
+                MessageBox.Show("Vui lòng nhập thể loại");
+            }
+            else if (tbt_tg.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên tác giả");
+            }
+            else if (tbt_NXB.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập nhà xuất bản");
+            }
+            else if (tbt_tensach.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên sách");
+            }
+            else if (b != null)
+            {
+                MessageBox.Show("Tên sách này đã tồn tại");
+            }
+            else if (!int.TryParse(tbt_soluong.Text, out a))
+            {
+                MessageBox.Show("Số lượng phải là số");
+            }else if (Convert.ToInt32(tbt_soluong.Text) < 0) 
+            {
+                MessageBox.Show("Số lượng sách phải là số dương");
+            }
+            else if (!int.TryParse(tbt_giatien.Text, out a))
+            {
+                MessageBox.Show("Giá tiền phải là số");
+            }
+            else if (Convert.ToInt32(tbt_giatien.Text)<0)
+            {
+                MessageBox.Show("Giá tiền phải là số dương");
             }
             else
             {
-                MessageBox.Show("Đã hủy");
+                DialogResult dialog = MessageBox.Show("Bạn có muốn cập nhập sách không?", "Xác nhận", MessageBoxButtons.YesNo);
+                if (dialog == DialogResult.Yes)
+                {
+                    MessageBox.Show(_IsachServices.UpdateTN(GetData()));
+                    LoadDS();
+                }
+                else
+                {
+                    MessageBox.Show("Đã hủy");
+                }
             }
         }
 
         private void btn_xoa_Click(object sender, EventArgs e)
         {
-            DialogResult dialog = MessageBox.Show("Bạn có muốn xóa sách không?", "Xác nhận", MessageBoxButtons.YesNo);
-            if (dialog == DialogResult.Yes)
+            var c = _IPhieuMuonChiTietChiTietServices.GetPhieuMuonChiTiet().Where(x => x.IdSach.Equals(_id));
+            if (c != null)
             {
-                MessageBox.Show(_IsachServices.RemoveTN(_id));
-                LoadDS();
-            }
-            else
+                MessageBox.Show("Sách này đang cho mượn,không thể xóa bỏ");
+            }else
             {
-                MessageBox.Show("Đã hủy");
+                DialogResult dialog = MessageBox.Show("Bạn có muốn xóa sách không?", "Xác nhận", MessageBoxButtons.YesNo);
+                if (dialog == DialogResult.Yes)
+                {
+                    MessageBox.Show(_IsachServices.RemoveTN(_id));
+                    LoadDS();
+                }
+                else
+                {
+                    MessageBox.Show("Đã hủy");
+                }
             }
+            
         }
 
         private void dtg_showsach_CellClick(object sender, DataGridViewCellEventArgs e)
