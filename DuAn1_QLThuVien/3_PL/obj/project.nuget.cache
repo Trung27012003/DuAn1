@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "y7ZWV8ejulJfXOYMTAs0xZrPtjrcaUtCd7jRH+ATzlfu6X2ZHbeVMKcUn1N55EOmIBurmZKYd0nHeXgc/KtBng==",
+  "dgSpecHash": "5kPVD0Fsst3uiUnNCTmiEy+DYRt9kjO6MoGgkp1cPOW7nUlSP3x1zvvTn1qbECBAidsYxJl46T3StPGhz++zvg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\Desktop\\git\\DuAn1\\DuAn1_QLThuVien\\3_PL\\3_PL.csproj",
   "expectedPackageFiles": [
@@ -36,6 +36,8 @@
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\qrcodedecoderlibrary\\2.0.1\\qrcodedecoderlibrary.2.0.1.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\qrcodeencoderlibrary\\2.0.1\\qrcodeencoderlibrary.2.0.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\qrcoder\\1.4.3\\qrcoder.1.4.3.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.configuration.configurationmanager\\4.7.0\\system.configuration.configurationmanager.4.7.0.nupkg.sha512",
@@ -80,6 +82,16 @@
       "warningLevel": 1,
       "message": "Package 'AForge.Video.DirectShow 2.2.5' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
       "libraryId": "AForge.Video.DirectShow",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'QRCodeDecoderLibrary 2.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "QRCodeDecoderLibrary",
       "targetGraphs": [
         "net6.0-windows7.0"
       ]
