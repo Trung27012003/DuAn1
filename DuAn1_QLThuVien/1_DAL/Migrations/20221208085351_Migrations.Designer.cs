@@ -12,7 +12,7 @@ using _1_DAL.Context;
 namespace _1_DAL.Migrations
 {
     [DbContext(typeof(QL_ThuVienDbContext))]
-    [Migration("20221207095001_Migrations")]
+    [Migration("20221208085351_Migrations")]
     partial class Migrations
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -243,6 +243,10 @@ namespace _1_DAL.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Anh")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("GhiChu")
                         .IsRequired()

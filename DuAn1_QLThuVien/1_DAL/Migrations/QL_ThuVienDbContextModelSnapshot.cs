@@ -242,6 +242,10 @@ namespace _1_DAL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("Anh")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("GhiChu")
                         .IsRequired()
                         .HasColumnType("nvarchar(100)")

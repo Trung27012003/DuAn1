@@ -96,7 +96,8 @@ namespace _1_DAL.Migrations
                     TenSach = table.Column<string>(type: "nvarchar(100)", nullable: false),
                     SoLuong = table.Column<int>(type: "int", nullable: false),
                     GiaTien = table.Column<decimal>(type: "money", nullable: false),
-                    GhiChu = table.Column<string>(type: "nvarchar(100)", nullable: false)
+                    GhiChu = table.Column<string>(type: "nvarchar(100)", nullable: false),
+                    Anh = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
