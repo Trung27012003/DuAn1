@@ -450,3 +450,7 @@ C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.
 C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\3_PL.genruntimeconfig.cache
 C:\Users\hoang\OneDrive\Tài liệu\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\ref\3_PL.dll
 >>>>>>> 7b541b0adf41549488f0b212d9312afcd06e7857
+D:\GitClone\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.FormCheckQR.resources
+D:\GitClone\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.GiaoDienSach.resources
+D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\QRCodeDecoderLibrary.dll
+D:\GitClone\DuAn1_QLThuVien\3_PL\bin\Debug\net6.0-windows\QRCodeEncoderLibrary.dll

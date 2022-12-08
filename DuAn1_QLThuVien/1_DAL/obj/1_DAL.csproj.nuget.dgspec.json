@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "D:\\GitClone\\DuAn1_QLThuVien\\1_DAL\\1_DAL.csproj": {}
   },
   "projects": {
@@ -13,29 +12,12 @@
         "projectPath": "D:\\GitClone\\DuAn1_QLThuVien\\1_DAL\\1_DAL.csproj",
         "packagesPath": "C:\\Users\\vanhu\\.nuget\\packages\\",
         "outputPath": "D:\\GitClone\\DuAn1_QLThuVien\\1_DAL\\obj\\",
-=======
-    "D:\\Dự án 1\\New folder\\DuAn1\\DuAn1\\DuAn1_QLThuVien\\1_DAL\\1_DAL.csproj": {}
-  },
-  "projects": {
-    "D:\\Dự án 1\\New folder\\DuAn1\\DuAn1\\DuAn1_QLThuVien\\1_DAL\\1_DAL.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\Dự án 1\\New folder\\DuAn1\\DuAn1\\DuAn1_QLThuVien\\1_DAL\\1_DAL.csproj",
-        "projectName": "1_DAL",
-        "projectPath": "D:\\Dự án 1\\New folder\\DuAn1\\DuAn1\\DuAn1_QLThuVien\\1_DAL\\1_DAL.csproj",
-        "packagesPath": "C:\\Users\\VHC\\.nuget\\packages\\",
-        "outputPath": "D:\\Dự án 1\\New folder\\DuAn1\\DuAn1\\DuAn1_QLThuVien\\1_DAL\\obj\\",
->>>>>>> 7b541b0adf41549488f0b212d9312afcd06e7857
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-<<<<<<< HEAD
           "C:\\Users\\vanhu\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-          "C:\\Users\\VHC\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 7b541b0adf41549488f0b212d9312afcd06e7857
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
