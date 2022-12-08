@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace _3_PL.Views
 {
-    public partial class ThongKeForm : Form
+    public partial class GiaoDienSach : Form
     {
-        public ThongKeForm()
+        public GiaoDienSach()
         {
             InitializeComponent();
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void groupBox2_Enter(object sender, EventArgs e)
         {
 
         }

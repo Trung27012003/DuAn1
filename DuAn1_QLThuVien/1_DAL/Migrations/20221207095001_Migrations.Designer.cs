@@ -12,7 +12,7 @@ using _1_DAL.Context;
 namespace _1_DAL.Migrations
 {
     [DbContext(typeof(QL_ThuVienDbContext))]
-    [Migration("20221205151726_Migrations")]
+    [Migration("20221207095001_Migrations")]
     partial class Migrations
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -36,7 +36,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tbx_thanhtoan = new WinFormsApp1.Custom_Controls.TvT_IconButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.tbx_idpm = new System.Windows.Forms.TextBox();
             this.dtp_ngaytra = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -76,6 +75,7 @@
             this.dgrid_phieutra = new System.Windows.Forms.DataGridView();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.cmb_tenkh = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tp_muon.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -122,11 +122,11 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.cmb_tenkh);
             this.groupBox4.Controls.Add(this.lbl_tongtien2);
             this.groupBox4.Controls.Add(this.label3);
             this.groupBox4.Controls.Add(this.tbx_thanhtoan);
             this.groupBox4.Controls.Add(this.label2);
-            this.groupBox4.Controls.Add(this.tbx_idpm);
             this.groupBox4.Controls.Add(this.dtp_ngaytra);
             this.groupBox4.Controls.Add(this.label6);
             this.groupBox4.Location = new System.Drawing.Point(626, 303);
@@ -183,13 +183,6 @@
             this.label2.Size = new System.Drawing.Size(66, 20);
             this.label2.TabIndex = 15;
             this.label2.Text = "Ngày trả";
-            // 
-            // tbx_idpm
-            // 
-            this.tbx_idpm.Location = new System.Drawing.Point(107, 27);
-            this.tbx_idpm.Name = "tbx_idpm";
-            this.tbx_idpm.Size = new System.Drawing.Size(245, 27);
-            this.tbx_idpm.TabIndex = 14;
             // 
             // dtp_ngaytra
             // 
@@ -629,6 +622,14 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // cmb_tenkh
+            // 
+            this.cmb_tenkh.FormattingEnabled = true;
+            this.cmb_tenkh.Location = new System.Drawing.Point(104, 39);
+            this.cmb_tenkh.Name = "cmb_tenkh";
+            this.cmb_tenkh.Size = new System.Drawing.Size(248, 28);
+            this.cmb_tenkh.TabIndex = 36;
+            // 
             // MuonTraForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -673,7 +674,6 @@
         private ComboBox cmb_loc;
         private Label label9;
         private Label label8;
-        private TextBox tbx_idpm;
         private Label label6;
         private DateTimePicker dtp_ngaytra;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
@@ -714,5 +714,6 @@
         private PictureBox ptb_camera;
         private ComboBox cbb_chonanh;
         private System.Windows.Forms.Timer timer1;
+        private ComboBox cmb_tenkh;
     }
 }

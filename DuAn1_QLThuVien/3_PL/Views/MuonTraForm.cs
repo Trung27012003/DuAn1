@@ -23,6 +23,7 @@ namespace _3_PL.Views
     {
         ISachServices _IsachServices;
         ITheLoaiServices _ITheLoaiServices;
+        ITheThanhVienServices _ITheThanhVienServices;
         List<SachView> _lstSachView;
         List<SachView> _lstSachView1;
         List<PhieuMuonChiTietView> _lstPMCT;
@@ -35,7 +36,8 @@ namespace _3_PL.Views
             InitializeComponent();
             _IsachServices = new SachServices();
             _ITheLoaiServices = new TheLoaiServices();
-            _lstSachView1= new List<SachView>();
+            _ITheThanhVienServices = new TheThanhVienServices();
+            _lstSachView1 = new List<SachView>();
             _lstSachView = new List<SachView>();
             _lstPMCT = new List<PhieuMuonChiTietView>();
             _lstPM = new List<PhieuMuonChiTietView>();
@@ -70,6 +72,11 @@ namespace _3_PL.Views
             foreach (var item in _ITheLoaiServices.GetAllTL())
             {
                 cmb_loc.Items.Add(item.Name);
+            }
+            cmb_tenkh.Items.Clear();
+            foreach (var item in _ITheThanhVienServices.GetTheThanhVien())
+            {
+                cmb_tenkh.Items.Add(item.TenThanhVien);
             }
         }
         private void tbx_search_TextChanged(object sender, EventArgs e)
@@ -281,7 +288,7 @@ namespace _3_PL.Views
             LoadToGrid_Sach(_IsachServices.GetSach());
             tbx_search.Text = "";
             cmb_loc.Text = "";
-            tbx_idpm.Text = "";
+            cmb_tenkh.Text = "";
             dtp_ngaytra.Value = DateTime.Now + TimeSpan.FromDays(7);
 
         }
@@ -294,24 +301,26 @@ namespace _3_PL.Views
 
         private void btn_batmay_Click(object sender, EventArgs e)
         {
-            if (btn_batmay.Text == "Start")
-            {
-                CaptureDevice = new VideoCaptureDevice(filterInfoCollection[cbb_chonanh.SelectedIndex].MonikerString);
-                CaptureDevice.NewFrame += CaptureDevice_NewFrame;
-                CaptureDevice.Start();
-                timer1.Start();
-                btn_batmay.Text = "Stop";
-            }
+            //if (btn_batmay.Text == "Start")
+            //{
+            //    CaptureDevice = new VideoCaptureDevice(filterInfoCollection[cbb_chonanh.SelectedIndex].MonikerString);
+            //    CaptureDevice.NewFrame += CaptureDevice_NewFrame;
+            //    CaptureDevice.Start();
+            //    timer1.Start();
+            //    btn_batmay.Text = "Stop";
+            //}
 
-            else
-            {
-                CaptureDevice.SignalToStop();
-                timer1.Stop();
-                ptb_camera.Image = null;
-                btn_batmay.Text = "Start";
+            //else
+            //{
+            //    CaptureDevice.SignalToStop();
+            //    timer1.Stop();
+            //    ptb_camera.Image = null;
+            //    btn_batmay.Text = "Start";
                 
                 
-            }
+            //}
+            FormCheckQR formCheckQR = new FormCheckQR();
+            formCheckQR.ShowDialog();
         }
 
         private void CaptureDevice_NewFrame(object sender, AForge.Video.NewFrameEventArgs eventArgs)
@@ -333,6 +342,8 @@ namespace _3_PL.Views
             if (CaptureDevice.IsRunning == true)
                 CaptureDevice.SignalToStop();
         }
+
+       
 
         private void timer1_Tick(object sender, EventArgs e)
         {

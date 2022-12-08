@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace _2_BUS.Utilities
 {
     public class Validates
     {
-
+       
         public string checkSDT(string s)
         {
             bool startWith0 = s.StartsWith("0");
@@ -32,6 +33,55 @@ namespace _2_BUS.Utilities
             return "";
 
 
+        }
+
+        public string checkSo(string s)
+        {
+            bool rg = Regex.IsMatch(s, @"\d{1,100}");
+            try
+            {
+                if (s.Trim().Length == 0)
+                {
+                    return "Nhập thông tin đi ? lừa ai?";
+                }
+                else if (!rg)
+                {
+                    return "Nhập 1 số đi ";
+                }
+                else if (int.Parse(s) <= 0)
+                {
+                    return "Nhập 1 số dương đi";
+                }
+                return "";
+            }
+            catch (Exception)
+            {
+                return "Nhập sai rồi! ";
+            }
+        }
+
+        public  string checkMk(string c)
+        {
+
+            bool regex = Regex.IsMatch(c, @"[A-Za-z0-9]");
+           
+            if (!regex)
+            {
+                return "Không được nhập kí tự đặc biệt";
+            }
+            else
+            {
+                return "";
+            }
+        }
+
+        public string checkRong(string s)
+        {
+            if (s.Trim().Length == 0)
+            {
+                return "Nhập cái gì vào đi";
+            }
+            else return "";
         }
 
 
