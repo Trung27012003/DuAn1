@@ -12,8 +12,13 @@
       }
     ],
     "additionalProbingPaths": [
+<<<<<<< HEAD
+      "C:\\Users\\vanhu\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\vanhu\\.nuget\\packages",
+=======
       "C:\\Users\\VHC\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\VHC\\.nuget\\packages",
+>>>>>>> 7b541b0adf41549488f0b212d9312afcd06e7857
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
     "configProperties": {

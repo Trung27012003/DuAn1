@@ -154,6 +154,7 @@
             this.cbx_remember.TabIndex = 3;
             this.cbx_remember.Text = "Remember";
             this.cbx_remember.UseVisualStyleBackColor = true;
+            this.cbx_remember.CheckedChanged += new System.EventHandler(this.cbx_remember_CheckedChanged);
             // 
             // tbx_username
             // 
@@ -243,6 +244,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_Login";
             this.Text = "frm_Login";
+            this.Load += new System.EventHandler(this.frm_Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

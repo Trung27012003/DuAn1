@@ -347,21 +347,21 @@ namespace _3_PL.Views
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (ptb_camera.Image != null)
-            {
-                BarcodeReader reader = new BarcodeReader();
-                Result resul = reader.Decode((Bitmap)ptb_camera.Image);
-                if (resul != null)
-                {
+            //if (ptb_camera.Image != null)
+            //{
+            //    //BarcodeReader reader = new BarcodeReader();
+            //    //Result resul = reader.Decode((Bitmap)ptb_camera.Image);
+            //    if (resul != null)
+            //    {
 
-                    if (CaptureDevice.IsRunning == true)
-                    {
-                        rtb_show.Text = resul.ToString();
-                        timer1.Stop();
+            //        if (CaptureDevice.IsRunning == true)
+            //        {
+            //            rtb_show.Text = resul.ToString();
+            //            timer1.Stop();
 
-                    }
-                }
-            }
+            //        }
+            //    }
+            //}
         }
 
 
