@@ -364,7 +364,7 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.tbt_timkiem);
-            this.groupBox4.Location = new System.Drawing.Point(643, 333);
+            this.groupBox4.Location = new System.Drawing.Point(651, 353);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(280, 64);
             this.groupBox4.TabIndex = 26;
