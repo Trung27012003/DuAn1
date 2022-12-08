@@ -35,6 +35,8 @@ namespace _3_PL.Views
         Guid _IDSach;
         Guid _IdPMCT;
         Guid _IDPM;
+        Guid _IDPT;
+        Label text;
         public MuonTraForm()
         {
             InitializeComponent();
@@ -48,8 +50,9 @@ namespace _3_PL.Views
             _lstSachView = new List<SachView>();
             _lstPMCT = new List<PhieuMuonChiTietView>();
             _lstPM = new List<PhieuMuonChiTietView>();
-            _lstSachView = _IsachServices.GetSach();
             
+            _lstSachView = _IsachServices.GetSach();
+            Loadtogrid_PhieuTra();
             LoadToGrid_Sach(_lstSachView);
             LoadToCmbTL();
 
@@ -147,10 +150,12 @@ namespace _3_PL.Views
             int stt = 1;
             foreach (var x in s)
             {
-                dgrid_danhsachsach.Rows.Add(
-                     x.Id, stt++,x.Name,x.Ma,_ITheLoaiServices.GetAllTL().FirstOrDefault(c=>c.Id==x.IdTL).Name, x.TG, x.SoLuong);
+                if (x.SoLuong!=0)
+                {
+                    dgrid_danhsachsach.Rows.Add(
+                    x.Id, stt++, x.Name, x.Ma, _ITheLoaiServices.GetAllTL().FirstOrDefault(c => c.Id == x.IdTL).Name, x.TG, x.SoLuong);
+                }
             }
-
         }
         public void LoadToPhieuMuonCT()
         {
@@ -168,7 +173,6 @@ namespace _3_PL.Views
                 {
                     button.Name = "Delete";
                     button.HeaderText = "Delete";
-
                     button.Text = ("Delete");
                     button.UseColumnTextForButtonValue = true;
                     dgrid_phieumuonchitiet.Columns.Add(button);
@@ -184,13 +188,10 @@ namespace _3_PL.Views
                         item.DieuKien,
                         item.TienTheChan);
                 }
-                TongTien1(lbl_tongtien1, _lstPMCT);
+                TongTien1(lbl_tongtien1,_lstPMCT);
             }
 
         }
-
-       
-
         public void AddPMCT(Guid Id)
         {
 
@@ -206,9 +207,12 @@ namespace _3_PL.Views
             };
             _lstPMCT.Add(pmctv);
             if (data != null)
-
             {
-                if (data.SoLuong == sach.SoLuong)
+                if (sach.SoLuong==0)
+                {
+                    MessageBox.Show("Sản phẩm đã hết");
+                }
+                else if (data.SoLuong == sach.SoLuong)
                 {
                     MessageBox.Show("Sản phẩm trong giỏ hàng đã vượt quá số lượng cho phép");
                     var a = _lstPMCT.Find(c => c.SoLuong < c.SoLuong || c.SoLuong == 1);
@@ -225,8 +229,6 @@ namespace _3_PL.Views
                 }
             }
             LoadToPhieuMuonCT();
-
-
         }
         private void tvT_IconButton2_Click(object sender, EventArgs e)
         {
@@ -326,6 +328,9 @@ namespace _3_PL.Views
                     item.TienTheChan = item.TienTheChan;
                     item.GhiChu = "Chưa Trả";
                     _IPhieuMuonChiTietChiTietServices.AddTN(item);
+                    var x = _IsachServices.GetSach().FirstOrDefault(c => c.Id == item.IdSach);
+                    x.SoLuong = x.SoLuong - item.SoLuong;
+                    _IsachServices.UpdateTN(x);
                 }
                 MessageBox.Show("Thêm thành công");
                 btn_reset_Click(sender, e);
@@ -354,16 +359,32 @@ namespace _3_PL.Views
             //    timer1.Stop();
             //    ptb_camera.Image = null;
             //    btn_batmay.Text = "Start";
-                
-                
             //}
-            FormCheckQR formCheckQR = new FormCheckQR();
-            formCheckQR.ShowDialog();
+            //FormCheckQR formCheckQR = new FormCheckQR();
+            //formCheckQR.ShowDialog();
         }
 
         private void CaptureDevice_NewFrame(object sender, AForge.Video.NewFrameEventArgs eventArgs)
-        {
-            ptb_camera.Image = (Bitmap)eventArgs.Frame.Clone();
+             {
+            
+            Bitmap bitmap = (Bitmap)eventArgs.Frame.Clone();
+            BarcodeReader reader = new BarcodeReader();
+
+            var result = reader.Decode(bitmap);
+            if (result != null)
+            {
+                text.Invoke(new MethodInvoker(delegate ()
+                {
+                    text.Text = result.ToString();
+                }));
+            }
+            ptb_camera.Image = bitmap;
+            //var a = _IsachServices.GetSach().FirstOrDefault(c => c.BarCode == lbl_ma.Text).Id;
+            //var b = _IPhieuMuonChiTietChiTietServices.GetPhieuMuonChiTiet().FirstOrDefault(c => c.IdSach == a);
+            //if (lbl_ma.Text != null)
+            //{
+            //    dgrid_danhsachsach.CurrentRow.Cells[8].Value = true;
+            //}
         }
 
         private void MuonTraForm_Load(object sender, EventArgs e)
@@ -381,8 +402,27 @@ namespace _3_PL.Views
                 CaptureDevice.SignalToStop();
         }
 
-       
-
+       public void Loadtogrid_PhieuTra()
+        {
+            int stt = 1;
+            dgrid_phieutra.Rows.Clear();
+            dgrid_phieutra.ColumnCount = 8;
+            dgrid_phieutra.Columns[0].Name = "ID";
+            dgrid_phieutra.Columns[0].Visible =false;
+            dgrid_phieutra.Columns[1].Name = "STT";
+            dgrid_phieutra.Columns[2].Name = "Tên thành viên";
+            dgrid_phieutra.Columns[3].Name = "Tên nhân viên";
+            dgrid_phieutra.Columns[4].Name = "Mã phiếu mượn";
+            dgrid_phieutra.Columns[5].Name = "Ngày mượn";
+            dgrid_phieutra.Columns[6].Name = "ngày trả";
+            dgrid_phieutra.Columns[7].Name = "Ghi chú";
+            foreach (var item in _IPhieuMuonServices.GetPhieuMuon())
+            {
+                var tentv = _ITheThanhVienServices.GetTheThanhVien().FirstOrDefault(c => c.Id == item.IdTheTV).TenThanhVien;
+                var tennv = _INhanVienServices.GetAllNv().FirstOrDefault(c=>c.Id==item.IdNV).Name;
+                dgrid_phieutra.Rows.Add(item.Id,stt++,tentv,tennv,item.MaPm,item.NgayMuon,item.NgayTra,item.GhiChu);
+            }
+        }
         private void timer1_Tick(object sender, EventArgs e)
         {
             //if (ptb_camera.Image != null)
@@ -402,6 +442,70 @@ namespace _3_PL.Views
             //}
         }
 
-        
+        private void dgrid_phieutra_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            _IDPT = Guid.Parse(dgrid_phieutra.CurrentRow.Cells[0].Value.ToString());
+            LoadToPhieuTraCT(_IDPT);
+        }
+        public void LoadToPhieuTraCT(Guid Id)
+        {
+            int stt = 1;
+            var a = _IPhieuMuonChiTietChiTietServices.GetPhieuMuonChiTiet().FindAll(c=>c.IdPM==Id);
+            dgrid_phieutract.Rows.Clear();
+            dgrid_phieutract.ColumnCount = 8;
+            dgrid_phieutract.Columns[0].Name = "ID";
+            dgrid_phieutract.Columns[0].Visible = false;
+            dgrid_phieutract.Columns[1].Name = "IDPM";
+            dgrid_phieutract.Columns[1].Visible = false;
+            dgrid_phieutract.Columns[2].Name = "STT";
+            dgrid_phieutract.Columns[3].Name = "Tên sách";
+            dgrid_phieutract.Columns[4].Name = "Số lượng";
+            dgrid_phieutract.Columns[5].Name = "Điều kiện";
+            dgrid_phieutract.Columns[6].Name = "Tiền thế chân";
+            dgrid_phieutract.Columns[7].Name = "Ghi chú";
+            DataGridViewCheckBoxColumn cb = new DataGridViewCheckBoxColumn();
+            {
+                cb.Name = "Xác nhận";
+                dgrid_phieutract.Columns.Add(cb);
+            }
+            foreach (var item in a)
+            {
+                var sach = _IsachServices.GetSach().FirstOrDefault(c => c.Id == item.IdSach).Name;
+                dgrid_phieutract.Rows.Add(item.Id,item.IdPM,stt++,sach,item.SoLuong,item.DieuKien,item.TienTheChan,item.GhiChu);
+            }
+        }
+
+        private void btn_start_Click(object sender, EventArgs e)
+        {
+            if (btn_start.Text == "Start")
+            {
+                CaptureDevice = new VideoCaptureDevice(filterInfoCollection[cbb_chonanh.SelectedIndex].MonikerString);
+                CaptureDevice.NewFrame += CaptureDevice_NewFrame;
+                CaptureDevice.Start();
+                timer1.Start();
+                btn_start.Text = "Stop";
+            }
+
+            else
+            {
+                CaptureDevice.SignalToStop();
+                timer1.Stop();
+                ptb_camera.Image = null;
+                btn_start.Text = "Start";
+            }
+        }
+
+        private void dgrid_phieutract_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //dgrid_phieutract.CurrentRow.Cells[8].Value = true;
+
+
+          
+        }
+
+        private void dgrid_phieutract_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
