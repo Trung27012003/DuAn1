@@ -1,6 +1,6 @@
 ﻿namespace _3_PL.Views
 {
-    partial class SignUP
+    partial class DoiMK
     {
         /// <summary>
         /// Required designer variable.
@@ -49,9 +49,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(177, 190);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 25);
+            this.label3.Size = new System.Drawing.Size(122, 25);
             this.label3.TabIndex = 18;
-            this.label3.Text = "Password";
+            this.label3.Text = "Mật khẩu mới";
             // 
             // tbx_repass
             // 
@@ -70,11 +70,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(177, 258);
+            this.label2.Location = new System.Drawing.Point(155, 272);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 25);
+            this.label2.Size = new System.Drawing.Size(170, 25);
             this.label2.TabIndex = 15;
-            this.label2.Text = "Re password";
+            this.label2.Text = "Nhập mật khẩu mới";
             // 
             // label1
             // 
@@ -87,11 +87,11 @@
             // 
             // btn_dn
             // 
-            this.btn_dn.Location = new System.Drawing.Point(299, 358);
+            this.btn_dn.Location = new System.Drawing.Point(364, 368);
             this.btn_dn.Name = "btn_dn";
-            this.btn_dn.Size = new System.Drawing.Size(112, 51);
+            this.btn_dn.Size = new System.Drawing.Size(228, 51);
             this.btn_dn.TabIndex = 13;
-            this.btn_dn.Text = "Sign in";
+            this.btn_dn.Text = "Đổi mật khẩu";
             this.btn_dn.UseVisualStyleBackColor = true;
             this.btn_dn.Click += new System.EventHandler(this.btn_dn_Click);
             // 

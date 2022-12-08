@@ -31,7 +31,7 @@ namespace _3_PL.Views
         }
         public void ShowFormPass()
         {
-            SignUP mn = new SignUP(tbx_username.Texts);
+            DoiMK mn = new DoiMK(tbx_username.Texts);
             mn.ShowDialog();
         }
         private void label5_Click(object sender, EventArgs e)
@@ -56,11 +56,11 @@ namespace _3_PL.Views
                 Account account = _iaccServices.CheckLogin(tbx_username.Texts, tbx_password.Texts);
                 if (account == null)
                 {
-                    MessageBox.Show("tai khoan mat khau ko chinh xac");
+                    MessageBox.Show("Tài khoản mật khẩu không chính xác");
                 }
                 else
                 {
-                    MessageBox.Show("Dang nhap thanh cong");
+                    MessageBox.Show("Đăng nhập thành công");
                     Thread thread = new Thread(new ThreadStart(ShowFormMenu)); //Tạo luồng mới
                     thread.Start(); //Khởi chạy luồng
                     this.Close();

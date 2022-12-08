@@ -13,12 +13,12 @@ using System.Windows.Forms;
 
 namespace _3_PL.Views
 {
-    public partial class SignUP : Form
+    public partial class DoiMK : Form
     {
 
         string tdn;
         IAccServices _iaccServices;
-        public SignUP(string tendangnhap)
+        public DoiMK(string tendangnhap)
         {
             InitializeComponent();
             _iaccServices = new AccServices();
