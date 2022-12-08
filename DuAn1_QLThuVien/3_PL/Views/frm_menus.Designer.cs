@@ -60,10 +60,9 @@
             // 
             this.pn_show.Controls.Add(this.pn_1);
             this.pn_show.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pn_show.Location = new System.Drawing.Point(172, 0);
-            this.pn_show.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pn_show.Location = new System.Drawing.Point(197, 0);
             this.pn_show.Name = "pn_show";
-            this.pn_show.Size = new System.Drawing.Size(910, 445);
+            this.pn_show.Size = new System.Drawing.Size(1040, 676);
             this.pn_show.TabIndex = 3;
             // 
             // pn_1
@@ -72,18 +71,17 @@
             this.pn_1.Controls.Add(this.lbl_timer01);
             this.pn_1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pn_1.Location = new System.Drawing.Point(0, 0);
-            this.pn_1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pn_1.Name = "pn_1";
-            this.pn_1.Size = new System.Drawing.Size(910, 28);
+            this.pn_1.Size = new System.Drawing.Size(1040, 37);
             this.pn_1.TabIndex = 3;
             // 
             // lbl_timer01
             // 
             this.lbl_timer01.AutoSize = true;
             this.lbl_timer01.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_timer01.Location = new System.Drawing.Point(713, 8);
+            this.lbl_timer01.Location = new System.Drawing.Point(815, 11);
             this.lbl_timer01.Name = "lbl_timer01";
-            this.lbl_timer01.Size = new System.Drawing.Size(60, 20);
+            this.lbl_timer01.Size = new System.Drawing.Size(71, 23);
             this.lbl_timer01.TabIndex = 0;
             this.lbl_timer01.Text = "label1";
             // 
@@ -98,9 +96,8 @@
             this.pn_2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.pn_2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pn_2.Location = new System.Drawing.Point(0, 0);
-            this.pn_2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pn_2.Name = "pn_2";
-            this.pn_2.Size = new System.Drawing.Size(172, 445);
+            this.pn_2.Size = new System.Drawing.Size(197, 679);
             this.pn_2.TabIndex = 2;
             // 
             // lbl_darkMode
@@ -108,24 +105,23 @@
             this.lbl_darkMode.AutoSize = true;
             this.lbl_darkMode.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_darkMode.ForeColor = System.Drawing.Color.Black;
-            this.lbl_darkMode.Location = new System.Drawing.Point(32, 386);
+            this.lbl_darkMode.Location = new System.Drawing.Point(37, 515);
             this.lbl_darkMode.Name = "lbl_darkMode";
-            this.lbl_darkMode.Size = new System.Drawing.Size(98, 20);
+            this.lbl_darkMode.Size = new System.Drawing.Size(122, 23);
             this.lbl_darkMode.TabIndex = 4;
             this.lbl_darkMode.Text = "Dark mode";
             // 
             // tbtn_darkmode
             // 
             this.tbtn_darkmode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.tbtn_darkmode.Location = new System.Drawing.Point(52, 412);
-            this.tbtn_darkmode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbtn_darkmode.MinimumSize = new System.Drawing.Size(39, 16);
+            this.tbtn_darkmode.Location = new System.Drawing.Point(59, 549);
+            this.tbtn_darkmode.MinimumSize = new System.Drawing.Size(45, 21);
             this.tbtn_darkmode.Name = "tbtn_darkmode";
             this.tbtn_darkmode.OffBackColor = System.Drawing.Color.DimGray;
             this.tbtn_darkmode.OffToggleColor = System.Drawing.Color.Silver;
             this.tbtn_darkmode.OnBackColor = System.Drawing.Color.LightSkyBlue;
             this.tbtn_darkmode.OnToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.tbtn_darkmode.Size = new System.Drawing.Size(57, 24);
+            this.tbtn_darkmode.Size = new System.Drawing.Size(65, 32);
             this.tbtn_darkmode.TabIndex = 2;
             this.tbtn_darkmode.UseVisualStyleBackColor = false;
             this.tbtn_darkmode.CheckedChanged += new System.EventHandler(this.tbtn_darkmode_CheckedChanged);
@@ -139,10 +135,9 @@
             this.panel4.Controls.Add(this.tbx_muontrasach);
             this.panel4.Controls.Add(this.tbx_thongtinsach);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 134);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel4.Location = new System.Drawing.Point(0, 179);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(172, 229);
+            this.panel4.Size = new System.Drawing.Size(197, 305);
             this.panel4.TabIndex = 1;
             // 
             // tvT_IconButton1
@@ -161,11 +156,10 @@
             this.tvT_IconButton1.IconColor = System.Drawing.Color.Black;
             this.tvT_IconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.tvT_IconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.tvT_IconButton1.Location = new System.Drawing.Point(0, 190);
-            this.tvT_IconButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tvT_IconButton1.Location = new System.Drawing.Point(0, 255);
             this.tvT_IconButton1.Name = "tvT_IconButton1";
-            this.tvT_IconButton1.Padding = new System.Windows.Forms.Padding(39, 0, 0, 0);
-            this.tvT_IconButton1.Size = new System.Drawing.Size(172, 38);
+            this.tvT_IconButton1.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
+            this.tvT_IconButton1.Size = new System.Drawing.Size(197, 51);
             this.tvT_IconButton1.TabIndex = 5;
             this.tvT_IconButton1.Text = "Thống kê";
             this.tvT_IconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -189,11 +183,10 @@
             this.tbx_thengay.IconColor = System.Drawing.Color.Black;
             this.tbx_thengay.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.tbx_thengay.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.tbx_thengay.Location = new System.Drawing.Point(0, 152);
-            this.tbx_thengay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbx_thengay.Location = new System.Drawing.Point(0, 204);
             this.tbx_thengay.Name = "tbx_thengay";
-            this.tbx_thengay.Padding = new System.Windows.Forms.Padding(39, 0, 0, 0);
-            this.tbx_thengay.Size = new System.Drawing.Size(172, 38);
+            this.tbx_thengay.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
+            this.tbx_thengay.Size = new System.Drawing.Size(197, 51);
             this.tbx_thengay.TabIndex = 4;
             this.tbx_thengay.Text = "Thẻ ngày";
             this.tbx_thengay.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -217,11 +210,10 @@
             this.tbx_thenhanvien.IconColor = System.Drawing.Color.Black;
             this.tbx_thenhanvien.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.tbx_thenhanvien.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.tbx_thenhanvien.Location = new System.Drawing.Point(0, 114);
-            this.tbx_thenhanvien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbx_thenhanvien.Location = new System.Drawing.Point(0, 153);
             this.tbx_thenhanvien.Name = "tbx_thenhanvien";
-            this.tbx_thenhanvien.Padding = new System.Windows.Forms.Padding(39, 0, 0, 0);
-            this.tbx_thenhanvien.Size = new System.Drawing.Size(172, 38);
+            this.tbx_thenhanvien.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
+            this.tbx_thenhanvien.Size = new System.Drawing.Size(197, 51);
             this.tbx_thenhanvien.TabIndex = 3;
             this.tbx_thenhanvien.Text = "Nhân viên";
             this.tbx_thenhanvien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -245,11 +237,10 @@
             this.tbx_thethanhvien.IconColor = System.Drawing.Color.Black;
             this.tbx_thethanhvien.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.tbx_thethanhvien.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.tbx_thethanhvien.Location = new System.Drawing.Point(0, 76);
-            this.tbx_thethanhvien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbx_thethanhvien.Location = new System.Drawing.Point(0, 102);
             this.tbx_thethanhvien.Name = "tbx_thethanhvien";
-            this.tbx_thethanhvien.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
-            this.tbx_thethanhvien.Size = new System.Drawing.Size(172, 38);
+            this.tbx_thethanhvien.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.tbx_thethanhvien.Size = new System.Drawing.Size(197, 51);
             this.tbx_thethanhvien.TabIndex = 2;
             this.tbx_thethanhvien.Text = "Thẻ thành viên";
             this.tbx_thethanhvien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -273,11 +264,10 @@
             this.tbx_muontrasach.IconColor = System.Drawing.Color.Black;
             this.tbx_muontrasach.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.tbx_muontrasach.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.tbx_muontrasach.Location = new System.Drawing.Point(0, 38);
-            this.tbx_muontrasach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbx_muontrasach.Location = new System.Drawing.Point(0, 51);
             this.tbx_muontrasach.Name = "tbx_muontrasach";
-            this.tbx_muontrasach.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
-            this.tbx_muontrasach.Size = new System.Drawing.Size(172, 38);
+            this.tbx_muontrasach.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.tbx_muontrasach.Size = new System.Drawing.Size(197, 51);
             this.tbx_muontrasach.TabIndex = 1;
             this.tbx_muontrasach.Text = "Mượn trả sách";
             this.tbx_muontrasach.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -305,8 +295,8 @@
             this.tbx_thongtinsach.Location = new System.Drawing.Point(0, 0);
             this.tbx_thongtinsach.Margin = new System.Windows.Forms.Padding(0);
             this.tbx_thongtinsach.Name = "tbx_thongtinsach";
-            this.tbx_thongtinsach.Padding = new System.Windows.Forms.Padding(24, 2, 0, 0);
-            this.tbx_thongtinsach.Size = new System.Drawing.Size(172, 38);
+            this.tbx_thongtinsach.Padding = new System.Windows.Forms.Padding(27, 3, 0, 0);
+            this.tbx_thongtinsach.Size = new System.Drawing.Size(197, 51);
             this.tbx_thongtinsach.TabIndex = 0;
             this.tbx_thongtinsach.Text = "Thông  tin sách";
             this.tbx_thongtinsach.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -321,18 +311,17 @@
             this.panel3.Controls.Add(this.ptx_avata);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(172, 134);
+            this.panel3.Size = new System.Drawing.Size(197, 179);
             this.panel3.TabIndex = 0;
             // 
             // lbl_user
             // 
             this.lbl_user.AutoSize = true;
             this.lbl_user.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_user.Location = new System.Drawing.Point(52, 114);
+            this.lbl_user.Location = new System.Drawing.Point(59, 152);
             this.lbl_user.Name = "lbl_user";
-            this.lbl_user.Size = new System.Drawing.Size(64, 20);
+            this.lbl_user.Size = new System.Drawing.Size(76, 23);
             this.lbl_user.TabIndex = 4;
             this.lbl_user.Text = "Admin";
             // 
@@ -343,11 +332,10 @@
             this.ptb_dangxuat.IconChar = FontAwesome.Sharp.IconChar.RightFromBracket;
             this.ptb_dangxuat.IconColor = System.Drawing.SystemColors.ControlLightLight;
             this.ptb_dangxuat.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ptb_dangxuat.IconSize = 30;
-            this.ptb_dangxuat.Location = new System.Drawing.Point(132, 104);
-            this.ptb_dangxuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ptb_dangxuat.IconSize = 40;
+            this.ptb_dangxuat.Location = new System.Drawing.Point(151, 139);
             this.ptb_dangxuat.Name = "ptb_dangxuat";
-            this.ptb_dangxuat.Size = new System.Drawing.Size(35, 30);
+            this.ptb_dangxuat.Size = new System.Drawing.Size(40, 40);
             this.ptb_dangxuat.TabIndex = 3;
             this.ptb_dangxuat.TabStop = false;
             this.ptb_dangxuat.Click += new System.EventHandler(this.ptb_dangxuat_Click);
@@ -359,11 +347,11 @@
             this.ptx_avata.IconChar = FontAwesome.Sharp.IconChar.User;
             this.ptx_avata.IconColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ptx_avata.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ptx_avata.IconSize = 131;
-            this.ptx_avata.Location = new System.Drawing.Point(0, 2);
-            this.ptx_avata.Margin = new System.Windows.Forms.Padding(3, 0, 3, 2);
+            this.ptx_avata.IconSize = 175;
+            this.ptx_avata.Location = new System.Drawing.Point(0, 3);
+            this.ptx_avata.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.ptx_avata.Name = "ptx_avata";
-            this.ptx_avata.Size = new System.Drawing.Size(172, 131);
+            this.ptx_avata.Size = new System.Drawing.Size(197, 175);
             this.ptx_avata.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptx_avata.TabIndex = 0;
             this.ptx_avata.TabStop = false;
@@ -374,12 +362,11 @@
             // 
             // frm_menus
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1082, 445);
+            this.ClientSize = new System.Drawing.Size(1237, 679);
             this.Controls.Add(this.pn_show);
             this.Controls.Add(this.pn_2);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frm_menus";
             this.Text = "frm_menus";
             this.pn_show.ResumeLayout(false);

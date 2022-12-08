@@ -17,6 +17,8 @@ using System.IO;
 using ZXing.Aztec;
 using AForge;
 using ZXing.QrCode;
+using _1_DAL.Models;
+
 namespace _3_PL.Views
 {
     public partial class MuonTraForm : Form
@@ -26,12 +28,15 @@ namespace _3_PL.Views
         ITheThanhVienServices _ITheThanhVienServices;
         IPhieuMuonServices _IPhieuMuonServices;
         IPhieuMuonChiTietChiTietServices _IPhieuMuonChiTietChiTietServices;
+        IPhieuTraServices _IPhieuTraServices;
+        IPhieuTraChiTietServices _IPhieuTraChiTietServices;
         INhanVienServices _INhanVienServices;
 
         List<SachView> _lstSachView;
         List<SachView> _lstSachView1;
         List<PhieuMuonChiTietView> _lstPMCT;
         List<PhieuMuonChiTietView> _lstPM;
+        List<PhieuTraChiTietView> _lstPTCT;
         Guid _IDSach;
         Guid _IdPMCT;
         Guid _IDPM;
@@ -45,12 +50,15 @@ namespace _3_PL.Views
             _ITheThanhVienServices = new TheThanhVienServices();
             _IPhieuMuonServices = new PhieuMuonServices();
             _IPhieuMuonChiTietChiTietServices = new PhieuMuonChiTietServices();
+            _IPhieuTraServices = new PhieuTraServices();
+            _IPhieuTraChiTietServices = new PhieuTraChiTietServices();
             _INhanVienServices = new NhanVienServices();
             _lstSachView1 = new List<SachView>();
             _lstSachView = new List<SachView>();
             _lstPMCT = new List<PhieuMuonChiTietView>();
             _lstPM = new List<PhieuMuonChiTietView>();
-            
+            _lstPTCT = new List<PhieuTraChiTietView>();
+
             _lstSachView = _IsachServices.GetSach();
             Loadtogrid_PhieuTra();
             LoadToGrid_Sach(_lstSachView);
@@ -59,7 +67,7 @@ namespace _3_PL.Views
         }
 
         // ============FORM MƯỢN =============================================//
-       
+
         public void TongTien1(Label a, dynamic lst)
         {
             if (_lstPMCT != null)
@@ -110,7 +118,7 @@ namespace _3_PL.Views
         }
         private void cmb_loc_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
             if (cmb_loc.Text == "Tất cả")
             {
                 _lstSachView = _IsachServices.GetSach();
@@ -121,7 +129,6 @@ namespace _3_PL.Views
                 var getId = _ITheLoaiServices.GetAllTL().FirstOrDefault(x => x.Name == cmb_loc.Text).Id;
                 _lstSachView1 = _IsachServices.GetSach().FindAll(c => c.IdTL == getId);
                 LoadToGrid_Sach(_lstSachView1);
-
             }
 
         }
@@ -150,7 +157,7 @@ namespace _3_PL.Views
             int stt = 1;
             foreach (var x in s)
             {
-                if (x.SoLuong!=0)
+                if (x.SoLuong != 0)
                 {
                     dgrid_danhsachsach.Rows.Add(
                     x.Id, stt++, x.Name, x.Ma, _ITheLoaiServices.GetAllTL().FirstOrDefault(c => c.Id == x.IdTL).Name, x.TG, x.SoLuong);
@@ -188,7 +195,7 @@ namespace _3_PL.Views
                         item.DieuKien,
                         item.TienTheChan);
                 }
-                TongTien1(lbl_tongtien1,_lstPMCT);
+                TongTien1(lbl_tongtien1, _lstPMCT);
             }
 
         }
@@ -208,7 +215,7 @@ namespace _3_PL.Views
             _lstPMCT.Add(pmctv);
             if (data != null)
             {
-                if (sach.SoLuong==0)
+                if (sach.SoLuong == 0)
                 {
                     MessageBox.Show("Sản phẩm đã hết");
                 }
@@ -239,9 +246,9 @@ namespace _3_PL.Views
         {
             _IDSach = Guid.Parse(dgrid_danhsachsach.CurrentRow.Cells[0].Value.ToString());
             var indexColumn = e.ColumnIndex;
-            if (indexColumn==7)
+            if (indexColumn == 7)
             {
-                if (_lstPMCT.Count>=3)
+                if (_lstPMCT.Count >= 3)
                 {
                     MessageBox.Show("Mỗi thành viên chỉ được mượn tối đa 3 quyển sách!!!");
                 }
@@ -250,7 +257,7 @@ namespace _3_PL.Views
                     AddPMCT(_IDSach);
                 }
             }
-           
+
         }
 
         private void dgrid_phieumuonchitiet_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -282,6 +289,26 @@ namespace _3_PL.Views
 
         }
 
+   
+
+        private void btn_resets_Click(object sender, EventArgs e)
+        {
+            lbl_tongtien1.Text = "";
+            _lstPM.Clear();
+            _lstPMCT.Clear();
+            LoadToPhieuMuonCT();
+            LoadToGrid_Sach(_IsachServices.GetSach());
+            tbx_search.Text = "";
+            cmb_loc.Text = "";
+            tbx_tinhtrang.Text = "";
+            cmb_nhanvien.Text = "";
+            cmb_tenkh.Text = "";
+            tbx_mapm.Text = "";
+            dtp_ngaytra.Value = DateTime.Now + TimeSpan.FromDays(7);
+            Loadtogrid_PhieuTra();
+            LoadToPhieuMuonCT();
+
+        }
         private void btn_reset_Click(object sender, EventArgs e)
         {
 
@@ -295,9 +322,49 @@ namespace _3_PL.Views
             cmb_tenkh.Text = "";
             tbx_mapm.Text = "";
             dtp_ngaytra.Value = DateTime.Now + TimeSpan.FromDays(7);
+            Loadtogrid_PhieuTra();
+            LoadToPhieuTraCT();
 
         }
-
+        private void btn_thanhtoan_Click(object sender, EventArgs e)
+        {
+            if (_lstPMCT.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn sách");
+            }
+            else
+            {
+                var pm = new PhieuMuonView()
+                {
+                    IdTheTV = _ITheThanhVienServices.GetTheThanhVien().FirstOrDefault(c => c.TenThanhVien == cmb_tenkh.Text).Id,
+                    IdNV = _INhanVienServices.GetAllNv().FirstOrDefault(c => c.Name == cmb_nhanvien.Text).Id,
+                    MaPm = tbx_mapm.Text,
+                    NgayMuon = DateTime.Now,
+                    NgayTra = dtp_ngaytra.Value,
+                    GhiChu = "Chưa Trả",
+                };
+                _IPhieuMuonServices.AddTN(pm);
+                //taisaoloi
+                _IDPM = _IPhieuMuonServices.GetPhieuMuon().FirstOrDefault(c => c.MaPm == tbx_mapm.Text).Id;
+                tbx_search.Text = _IDPM.ToString();
+                foreach (var item in _lstPMCT)
+                {
+                    item.IdPM = _IDPM;
+                    item.IdSach = item.IdSach;
+                    item.SoLuong = item.SoLuong;
+                    item.DieuKien = item.DieuKien;
+                    item.TienTheChan = item.TienTheChan;
+                    item.GhiChu = "Chưa Trả";
+                    _IPhieuMuonChiTietChiTietServices.AddTN(item);
+                    var x = _IsachServices.GetSach().FirstOrDefault(c => c.Id == item.IdSach);
+                    x.SoLuong = x.SoLuong - item.SoLuong;
+                    _IsachServices.UpdateTN(x);
+                }
+                MessageBox.Show("Thêm thành công");
+                btn_reset_Click(sender, e);
+            }
+            btn_reset_Click(sender, e);
+        }
         private void tbx_thanhtoan_Click(object sender, EventArgs e)
         {
             if (_lstPMCT.Count == 0)
@@ -317,7 +384,7 @@ namespace _3_PL.Views
                 };
                 _IPhieuMuonServices.AddTN(pm);
                 //taisaoloi
-                _IDPM = _IPhieuMuonServices.GetPhieuMuon().FirstOrDefault(c=>c.MaPm==tbx_mapm.Text).Id;
+                _IDPM = _IPhieuMuonServices.GetPhieuMuon().FirstOrDefault(c => c.MaPm == tbx_mapm.Text).Id;
                 tbx_search.Text = _IDPM.ToString();
                 foreach (var item in _lstPMCT)
                 {
@@ -365,8 +432,8 @@ namespace _3_PL.Views
         }
 
         private void CaptureDevice_NewFrame(object sender, AForge.Video.NewFrameEventArgs eventArgs)
-             {
-            
+        {
+
             Bitmap bitmap = (Bitmap)eventArgs.Frame.Clone();
             BarcodeReader reader = new BarcodeReader();
 
@@ -402,13 +469,14 @@ namespace _3_PL.Views
                 CaptureDevice.SignalToStop();
         }
 
-       public void Loadtogrid_PhieuTra()
+        public void Loadtogrid_PhieuTra()
         {
+            
             int stt = 1;
             dgrid_phieutra.Rows.Clear();
             dgrid_phieutra.ColumnCount = 8;
             dgrid_phieutra.Columns[0].Name = "ID";
-            dgrid_phieutra.Columns[0].Visible =false;
+            dgrid_phieutra.Columns[0].Visible = false;
             dgrid_phieutra.Columns[1].Name = "STT";
             dgrid_phieutra.Columns[2].Name = "Tên thành viên";
             dgrid_phieutra.Columns[3].Name = "Tên nhân viên";
@@ -418,9 +486,27 @@ namespace _3_PL.Views
             dgrid_phieutra.Columns[7].Name = "Ghi chú";
             foreach (var item in _IPhieuMuonServices.GetPhieuMuon())
             {
-                var tentv = _ITheThanhVienServices.GetTheThanhVien().FirstOrDefault(c => c.Id == item.IdTheTV).TenThanhVien;
-                var tennv = _INhanVienServices.GetAllNv().FirstOrDefault(c=>c.Id==item.IdNV).Name;
-                dgrid_phieutra.Rows.Add(item.Id,stt++,tentv,tennv,item.MaPm,item.NgayMuon,item.NgayTra,item.GhiChu);
+                int so = 0;
+                var a = _IPhieuMuonChiTietChiTietServices.GetPhieuMuonChiTiet().FindAll(c => c.IdPM == item.Id);
+                foreach (var x in a)
+                {
+                    if (x.GhiChu=="Chưa Trả")
+                    {
+                        so++;
+                    }
+                }
+                if (so==0)
+                {
+                    
+                    item.GhiChu = "Đã Trả";
+                    _IPhieuMuonServices.UpdateTN(item);
+                }
+                if (item.GhiChu=="Chưa Trả")
+                {
+                    var tentv = _ITheThanhVienServices.GetTheThanhVien().FirstOrDefault(c => c.Id == item.IdTheTV).TenThanhVien;
+                    var tennv = _INhanVienServices.GetAllNv().FirstOrDefault(c => c.Id == item.IdNV).Name;
+                    dgrid_phieutra.Rows.Add(item.Id, stt++, tentv, tennv, item.MaPm, item.NgayMuon, item.NgayTra, item.GhiChu);
+                }
             }
         }
         private void timer1_Tick(object sender, EventArgs e)
@@ -445,12 +531,12 @@ namespace _3_PL.Views
         private void dgrid_phieutra_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             _IDPT = Guid.Parse(dgrid_phieutra.CurrentRow.Cells[0].Value.ToString());
-            LoadToPhieuTraCT(_IDPT);
+            LoadToPhieuTraCT();
         }
-        public void LoadToPhieuTraCT(Guid Id)
+        public void LoadToPhieuTraCT()
         {
             int stt = 1;
-            var a = _IPhieuMuonChiTietChiTietServices.GetPhieuMuonChiTiet().FindAll(c=>c.IdPM==Id);
+            _lstPMCT= _IPhieuMuonChiTietChiTietServices.GetPhieuMuonChiTiet().FindAll(c => c.IdPM == _IDPT);
             dgrid_phieutract.Rows.Clear();
             dgrid_phieutract.ColumnCount = 8;
             dgrid_phieutract.Columns[0].Name = "ID";
@@ -468,10 +554,13 @@ namespace _3_PL.Views
                 cb.Name = "Xác nhận";
                 dgrid_phieutract.Columns.Add(cb);
             }
-            foreach (var item in a)
+            foreach (var item in _lstPMCT)
             {
-                var sach = _IsachServices.GetSach().FirstOrDefault(c => c.Id == item.IdSach).Name;
-                dgrid_phieutract.Rows.Add(item.Id,item.IdPM,stt++,sach,item.SoLuong,item.DieuKien,item.TienTheChan,item.GhiChu);
+                if (item.GhiChu == "Chưa Trả")
+                {
+                    var sach = _IsachServices.GetSach().FirstOrDefault(c => c.Id == item.IdSach).Name;
+                    dgrid_phieutract.Rows.Add(item.Id, item.IdPM, stt++, sach, item.SoLuong, item.DieuKien, item.TienTheChan, item.GhiChu);
+                }
             }
         }
 
@@ -497,15 +586,62 @@ namespace _3_PL.Views
 
         private void dgrid_phieutract_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //dgrid_phieutract.CurrentRow.Cells[8].Value = true;
-
-
-          
+            //var cb = dgrid_phieutract.CurrentRow.Cells[8].Value ;
+            //if ((bool)cb!=null)
+            //{
+                dgrid_phieutract.CurrentRow.Cells[8].Value = true;
+                _IdPMCT = Guid.Parse(dgrid_phieutract.CurrentRow.Cells[0].Value.ToString());
+                var a = _IPhieuMuonChiTietChiTietServices.GetPhieuMuonChiTiet().FirstOrDefault(c => c.Id == _IdPMCT);
+                _lstPM.Add(a);
+            //}
+            //else
+            //{
+            //    _IdPMCT = Guid.Parse(dgrid_phieutract.CurrentRow.Cells[0].Value.ToString());
+            //    var a = _IPhieuMuonChiTietChiTietServices.GetPhieuMuonChiTiet().FirstOrDefault(c => c.Id == _IdPMCT);
+            //    _lstPM.Remove(a);
+            //}
+            
         }
 
         private void dgrid_phieutract_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
+
+        private void btn_trasach_Click(object sender, EventArgs e)
+        {
+
+            var pm = new PhieuTraView()
+            {
+                IdPM = _IDPT,
+                NgayTra = DateTime.Now,
+                GhiChu = "Đã Trả",
+            };
+            _IPhieuTraServices.AddTN(pm);
+            var getIdPT = _IPhieuTraServices.GetPhieuTra().FirstOrDefault(c => c.IdPM == _IDPT).Id;
+            foreach (var item in _lstPM)
+            {
+                var ptct = new PhieuTraChiTietView()
+                {
+                    IdPT = getIdPT,
+                    IdSach = item.IdSach,
+                    SoLuong = item.SoLuong,
+                    TinhTrang =tbx_tinhtrang.Text,
+                    GhiChu = "Đã Trả",
+                };
+                item.GhiChu = "Đã Trả";
+                _IPhieuMuonChiTietChiTietServices.UpdateTN(item);
+                _lstPTCT.Add(ptct);
+                _IPhieuTraChiTietServices.AddTN(ptct);
+                var x = _IsachServices.GetSach().FirstOrDefault(c => c.Id == item.IdSach);
+                x.SoLuong = x.SoLuong +item.SoLuong;
+                _IsachServices.UpdateTN(x);
+            }
+            MessageBox.Show("Trả thành công");
+            btn_reset_Click(sender, e);
+
+        }
+
+  
     }
 }

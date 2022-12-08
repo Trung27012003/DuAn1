@@ -86,7 +86,7 @@ namespace _3_PL.Views
                 sachView.NXB = tbt_NXB.Text;
                 sachView.Name = tbt_tensach.Text;
                 sachView.GhiChu = tbx_ghichu.Text;
-                sachView.SoLuong =Convert.ToInt32(tbt_soluong.Text);
+                sachView.SoLuong =1;
                 sachView.GiaTien = Convert.ToInt32(tbt_giatien.Text);
             }return sachView;
             

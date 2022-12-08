@@ -54,6 +54,9 @@
             this.cbb_chonanh = new System.Windows.Forms.ComboBox();
             this.ptb_camera = new System.Windows.Forms.PictureBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tbx_tinhtrang = new System.Windows.Forms.TextBox();
+            this.btn_trasach = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.dgrid_phieutract = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -61,6 +64,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dgrid_phieutra = new System.Windows.Forms.DataGridView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btn_resets = new System.Windows.Forms.Button();
+            this.btn_thanhtoan = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tp_muon.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -71,6 +76,7 @@
             this.tabPage2.SuspendLayout();
             this.groupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_camera)).BeginInit();
+            this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_phieutract)).BeginInit();
             this.groupBox5.SuspendLayout();
@@ -84,7 +90,7 @@
             this.tabControl1.Location = new System.Drawing.Point(1, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1025, 577);
+            this.tabControl1.Size = new System.Drawing.Size(1025, 630);
             this.tabControl1.TabIndex = 0;
             // 
             // tp_muon
@@ -95,13 +101,15 @@
             this.tp_muon.Location = new System.Drawing.Point(4, 29);
             this.tp_muon.Name = "tp_muon";
             this.tp_muon.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_muon.Size = new System.Drawing.Size(1017, 544);
+            this.tp_muon.Size = new System.Drawing.Size(1017, 597);
             this.tp_muon.TabIndex = 0;
             this.tp_muon.Text = "MƯỢN SÁCH";
             this.tp_muon.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.btn_thanhtoan);
+            this.groupBox4.Controls.Add(this.btn_resets);
             this.groupBox4.Controls.Add(this.label3);
             this.groupBox4.Controls.Add(this.tbx_mapm);
             this.groupBox4.Controls.Add(this.lbl_tongtien1);
@@ -273,7 +281,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1017, 544);
+            this.tabPage2.Size = new System.Drawing.Size(1017, 597);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "TRẢ SÁCH";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -323,14 +331,43 @@
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.label7);
+            this.groupBox7.Controls.Add(this.tbx_tinhtrang);
+            this.groupBox7.Controls.Add(this.btn_trasach);
             this.groupBox7.Location = new System.Drawing.Point(612, 270);
             this.groupBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox7.Size = new System.Drawing.Size(388, 251);
+            this.groupBox7.Size = new System.Drawing.Size(388, 267);
             this.groupBox7.TabIndex = 3;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Xác Nhận Trả";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(34, 65);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(76, 20);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Tình trạng";
+            // 
+            // tbx_tinhtrang
+            // 
+            this.tbx_tinhtrang.Location = new System.Drawing.Point(116, 65);
+            this.tbx_tinhtrang.Name = "tbx_tinhtrang";
+            this.tbx_tinhtrang.Size = new System.Drawing.Size(206, 27);
+            this.tbx_tinhtrang.TabIndex = 1;
+            // 
+            // btn_trasach
+            // 
+            this.btn_trasach.Location = new System.Drawing.Point(136, 201);
+            this.btn_trasach.Name = "btn_trasach";
+            this.btn_trasach.Size = new System.Drawing.Size(174, 43);
+            this.btn_trasach.TabIndex = 0;
+            this.btn_trasach.Text = "Trả sách";
+            this.btn_trasach.UseVisualStyleBackColor = true;
+            this.btn_trasach.Click += new System.EventHandler(this.btn_trasach_Click);
             // 
             // groupBox6
             // 
@@ -404,6 +441,26 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // btn_resets
+            // 
+            this.btn_resets.Location = new System.Drawing.Point(47, 249);
+            this.btn_resets.Name = "btn_resets";
+            this.btn_resets.Size = new System.Drawing.Size(110, 52);
+            this.btn_resets.TabIndex = 41;
+            this.btn_resets.Text = "Reset";
+            this.btn_resets.UseVisualStyleBackColor = true;
+            this.btn_resets.Click += new System.EventHandler(this.btn_resets_Click);
+            // 
+            // btn_thanhtoan
+            // 
+            this.btn_thanhtoan.Location = new System.Drawing.Point(217, 249);
+            this.btn_thanhtoan.Name = "btn_thanhtoan";
+            this.btn_thanhtoan.Size = new System.Drawing.Size(110, 52);
+            this.btn_thanhtoan.TabIndex = 42;
+            this.btn_thanhtoan.Text = "Thanh Toán";
+            this.btn_thanhtoan.UseVisualStyleBackColor = true;
+            this.btn_thanhtoan.Click += new System.EventHandler(this.btn_thanhtoan_Click);
+            // 
             // MuonTraForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -427,6 +484,8 @@
             this.tabPage2.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ptb_camera)).EndInit();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_phieutract)).EndInit();
             this.groupBox5.ResumeLayout(false);
@@ -473,5 +532,10 @@
         private Label label3;
         private TextBox tbx_mapm;
         private Button btn_start;
+        private Button btn_trasach;
+        private Label label7;
+        private TextBox tbx_tinhtrang;
+        private Button btn_thanhtoan;
+        private Button btn_resets;
     }
 }

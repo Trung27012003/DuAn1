@@ -227,9 +227,9 @@ namespace _1_DAL.Migrations
                         .HasColumnType("nvarchar(100)")
                         .HasColumnName("SoLuong");
 
-                    b.Property<int?>("TinhTrang")
+                    b.Property<string>("TinhTrang")
                         .IsRequired()
-                        .HasColumnType("int")
+                        .HasColumnType("nvarchar(100)")
                         .HasColumnName("TinhTrang");
 
                     b.HasKey("Id");

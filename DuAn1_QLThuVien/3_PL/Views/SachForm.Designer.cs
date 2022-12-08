@@ -98,8 +98,10 @@
             // 
             this.tbt_soluong.Location = new System.Drawing.Point(113, 287);
             this.tbt_soluong.Name = "tbt_soluong";
+            this.tbt_soluong.ReadOnly = true;
             this.tbt_soluong.Size = new System.Drawing.Size(218, 27);
             this.tbt_soluong.TabIndex = 6;
+            this.tbt_soluong.Text = "1";
             // 
             // label1
             // 
