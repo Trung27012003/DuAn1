@@ -11,6 +11,13 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Windows.Media.Media3D;
+using System.Media;
+using AForge.Video;
+using AForge.Video.DirectShow;
+using System.Drawing.Imaging;
+
 
 namespace _3_PL.Views
 {
@@ -22,6 +29,9 @@ namespace _3_PL.Views
         List<NhanVienView> _lstNhanVienView;
         IChucVuServices _ChucVuServices;
         INhanVienServices _NhanVienServices;
+        private int bat;
+        FilterInfoCollection _filterInfos;
+        VideoCaptureDevice device;
 
         public TheNVForm()
         {
@@ -33,6 +43,7 @@ namespace _3_PL.Views
             _lstNhanVienView = new List<NhanVienView>();
             _lstChucVuViews = _ChucVuServices.GetTheNgay();
             _lstNhanVienView = _NhanVienServices.GetAllNv();
+           
             LoadToGridNv(_lstNhanVienView);
             LoadToGridCv(_lstChucVuViews);
             Loadtocbb();
@@ -242,10 +253,7 @@ namespace _3_PL.Views
             }
         }
 
-        private void TheNVForm_Load(object sender, EventArgs e)
-        {
-
-        }
+     
 
         private void dgrid_shownv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -257,6 +265,66 @@ namespace _3_PL.Views
             dtp_ngaysinh.Text = dgrid_shownv.CurrentRow.Cells[6].Value.ToString();
             
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (btn_Show.Text == "HIỂN THỊ")
+            {
+                btn_Show.Text = "ẨN";
+                grb_Anh.Visible = true;
+            }else if(btn_Show.Text == "ẨN")
+            {
+                btn_Show.Text = "HIỂN THỊ";
+                grb_Anh.Visible = false;
+            }
+        }
+
+        private void TheNVForm_Load_1(object sender, EventArgs e)
+        {
+            grb_Anh.Visible = false;
+            btn_Show.Text = "HIỂN THỊ";
+            _filterInfos = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            foreach (FilterInfo info in _filterInfos)
+            {
+                cbb_DSCamera.Items.Add(info.Name);
+                cbb_DSCamera.SelectedIndex = 0;
+                device = new VideoCaptureDevice();
+            }
+        }
+
+        private void btn__Click(object sender, EventArgs e)
+        {
+            device = new VideoCaptureDevice(_filterInfos[cbb_DSCamera.SelectedIndex].MonikerString);
+            device.NewFrame += VideoCaptureDevice_NewFrame;
+            device.Start();
+            device.Stop();
+
+        }
+
+        private void VideoCaptureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)
+        {
+           ptb_Anh.Image = (Bitmap)eventArgs.Frame.Clone();
+        }
+
+        private void btn_Save_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!Directory.Exists(@"D:\Dự án 1\New folder\DuAn1\DuAn1\DuAn1_QLThuVien\image"))
+                {
+                    Directory.CreateDirectory(@"D:\Dự án 1\New folder\DuAn1\DuAn1\DuAn1_QLThuVien\image");
+                }else
+                {
+                    string path = @"D:\Dự án 1\New folder\DuAn1\DuAn1\DuAn1_QLThuVien\image";
+                    ptb_Anh.Image.Save(path + @"\" + tbx_tennv.Text + ".jpg",ImageFormat.Jpeg);
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

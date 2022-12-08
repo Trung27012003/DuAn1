@@ -2,6 +2,39 @@
   "version": 3,
   "targets": {
     "net6.0-windows7.0": {
+      "AForge/2.2.5": {
+        "type": "package",
+        "compile": {
+          "lib/AForge.dll": {}
+        },
+        "runtime": {
+          "lib/AForge.dll": {}
+        }
+      },
+      "AForge.Video/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "AForge": "2.2.5"
+        },
+        "compile": {
+          "lib/AForge.Video.dll": {}
+        },
+        "runtime": {
+          "lib/AForge.Video.dll": {}
+        }
+      },
+      "AForge.Video.DirectShow/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "AForge.Video": "2.2.5"
+        },
+        "compile": {
+          "lib/AForge.Video.DirectShow.dll": {}
+        },
+        "runtime": {
+          "lib/AForge.Video.DirectShow.dll": {}
+        }
+      },
       "FontAwesome.Sharp/6.1.1": {
         "type": "package",
         "compile": {
@@ -502,6 +535,28 @@
           }
         }
       },
+      "QRCodeDecoderLibrary/2.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net462/QRCodeDecoderLibrary.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/QRCodeDecoderLibrary.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "QRCodeEncoderLibrary/2.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/QRCodeEncoderLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/QRCodeEncoderLibrary.dll": {}
+        }
+      },
       "QRCoder/1.4.3": {
         "type": "package",
         "dependencies": {
@@ -800,8 +855,13 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "AForge": "2.2.5",
+          "AForge.Video": "2.2.5",
+          "AForge.Video.DirectShow": "2.2.5",
           "Microsoft.EntityFrameworkCore": "6.0.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0"
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0",
+          "QRCodeDecoderLibrary": "2.0.1",
+          "QRCodeEncoderLibrary": "2.0.1"
         },
         "compile": {
           "bin/placeholder/1_DAL.dll": {}
@@ -815,7 +875,12 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "1_DAL": "1.0.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0"
+          "AForge": "2.2.5",
+          "AForge.Video": "2.2.5",
+          "AForge.Video.DirectShow": "2.2.5",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0",
+          "QRCodeDecoderLibrary": "2.0.1",
+          "QRCodeEncoderLibrary": "2.0.1"
         },
         "compile": {
           "bin/placeholder/2_BUS.dll": {}
@@ -827,6 +892,45 @@
     }
   },
   "libraries": {
+    "AForge/2.2.5": {
+      "sha512": "clkumhM9DggqIzEXAHgVLeWO4arG5YfoPr7J4jfjJx35AoeEIJSSm49J25bwp/9mXQYLwi7y1Wunc8qgYJsGxg==",
+      "type": "package",
+      "path": "aforge/2.2.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "aforge.2.2.5.nupkg.sha512",
+        "aforge.nuspec",
+        "lib/AForge.dll",
+        "lib/AForge.xml"
+      ]
+    },
+    "AForge.Video/2.2.5": {
+      "sha512": "XqzcOXtBUagEPRqg/00oayxlCPmxP4284SdM62mVotsNoD03fs19BrzdMBfhUOOYPyd0B/IXH7tEWnSDmc2gxA==",
+      "type": "package",
+      "path": "aforge.video/2.2.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "aforge.video.2.2.5.nupkg.sha512",
+        "aforge.video.nuspec",
+        "lib/AForge.Video.dll",
+        "lib/AForge.Video.xml"
+      ]
+    },
+    "AForge.Video.DirectShow/2.2.5": {
+      "sha512": "pEch6felU/RGAbl0A7yjaQjsGxwiRFU9R+qBqR92wQo++XhzPLeQaZHnAPIBYaG7MfoqtjgCDkK4z3Tra4VQ3w==",
+      "type": "package",
+      "path": "aforge.video.directshow/2.2.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "aforge.video.directshow.2.2.5.nupkg.sha512",
+        "aforge.video.directshow.nuspec",
+        "lib/AForge.Video.DirectShow.dll",
+        "lib/AForge.Video.DirectShow.xml"
+      ]
+    },
     "FontAwesome.Sharp/6.1.1": {
       "sha512": "p6dnSMcKQg790vGSJgvFk6S8gXQnEcCugfaJ21WFxZz9h+9KyxL+sX6kbGv8p4iVoX/e5BAMnTV4QJFJvx8QxQ==",
       "type": "package",
@@ -1553,6 +1657,37 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "QRCodeDecoderLibrary/2.0.1": {
+      "sha512": "RdyGBr1mtuO9dIWQs77y7/kz0e85q9kHBFOIH6x8UqDZTM8l9+a4vgIGGqjP5nPidCGQHGR/Z+zpVTp1KBJd/g==",
+      "type": "package",
+      "path": "qrcodedecoderlibrary/2.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "lib/net462/QRCodeDecoderLibrary.dll",
+        "lib/net462/QRCodeDecoderLibrary.pdb",
+        "lib/net462/QRCodeDecoderLibrary.xml",
+        "qrcodedecoderlibrary.2.0.1.nupkg.sha512",
+        "qrcodedecoderlibrary.nuspec",
+        "readme.md"
+      ]
+    },
+    "QRCodeEncoderLibrary/2.0.1": {
+      "sha512": "aHeIIB1CkbFMC1tuimwCf89WijUiHFolS4BD3ySDBhMy3SESCwjCoSN7A4KGQSoLHZotIJmldfTNsqNgIewKSw==",
+      "type": "package",
+      "path": "qrcodeencoderlibrary/2.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "The Code Project Open License.txt",
+        "lib/net462/QRCodeEncoderLibrary.dll",
+        "lib/net462/QRCodeEncoderLibrary.xml",
+        "lib/netstandard2.0/QRCodeEncoderLibrary.dll",
+        "qrcodeencoderlibrary.2.0.1.nupkg.sha512",
+        "qrcodeencoderlibrary.nuspec"
+      ]
+    },
     "QRCoder/1.4.3": {
       "sha512": "fWuFqjm8GTlEb2GqBl3Hi8HZZeZQwBSHxvRPtPjyNbT82H0ff0JwavKRBmMaXCno1Av6McPC8aJzri0Mj2w9Jw==",
       "type": "package",
@@ -2072,9 +2207,14 @@
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
       "2_BUS >= 1.0.0",
+      "AForge >= 2.2.5",
+      "AForge.Video >= 2.2.5",
+      "AForge.Video.DirectShow >= 2.2.5",
       "FontAwesome.Sharp >= 6.1.1",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.0",
+      "QRCodeDecoderLibrary >= 2.0.1",
+      "QRCodeEncoderLibrary >= 2.0.1",
       "QRCoder >= 1.4.3"
     ]
   },
@@ -2126,6 +2266,18 @@
       "net6.0-windows7.0": {
         "targetAlias": "net6.0-windows",
         "dependencies": {
+          "AForge": {
+            "target": "Package",
+            "version": "[2.2.5, )"
+          },
+          "AForge.Video": {
+            "target": "Package",
+            "version": "[2.2.5, )"
+          },
+          "AForge.Video.DirectShow": {
+            "target": "Package",
+            "version": "[2.2.5, )"
+          },
           "FontAwesome.Sharp": {
             "target": "Package",
             "version": "[6.1.1, )"
@@ -2139,6 +2291,14 @@
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "[6.0.0, )"
+          },
+          "QRCodeDecoderLibrary": {
+            "target": "Package",
+            "version": "[2.0.1, )"
+          },
+          "QRCodeEncoderLibrary": {
+            "target": "Package",
+            "version": "[2.0.1, )"
           },
           "QRCoder": {
             "target": "Package",
@@ -2170,10 +2330,44 @@
   },
   "logs": [
     {
-      "code": "Undefined",
+      "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Problem reading the cache file D:\\Dự án 1\\New folder\\DuAn1\\DuAn1\\DuAn1_QLThuVien\\3_PL\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+      "message": "Package 'AForge 2.2.5' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "AForge",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'AForge.Video 2.2.5' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "AForge.Video",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'AForge.Video.DirectShow 2.2.5' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "AForge.Video.DirectShow",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'QRCodeDecoderLibrary 2.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "QRCodeDecoderLibrary",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
     }
   ]
 }

@@ -30,10 +30,14 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btn_Show = new System.Windows.Forms.Button();
+            this.grb_Anh = new System.Windows.Forms.GroupBox();
+            this.cbb_DSCamera = new System.Windows.Forms.ComboBox();
+            this.btn_Chup = new System.Windows.Forms.Button();
+            this.ptb_Anh = new System.Windows.Forms.PictureBox();
             this.cbb_tenchucvu = new System.Windows.Forms.ComboBox();
             this.tbx_searchnv = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgrid_shownv = new System.Windows.Forms.DataGridView();
             this.btn_xoanv = new System.Windows.Forms.Button();
             this.btn_suanv = new System.Windows.Forms.Button();
@@ -55,9 +59,11 @@
             this.btn_xoa = new System.Windows.Forms.Button();
             this.btn_them = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.btn_Save = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.grb_Anh.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_Anh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_shownv)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_show)).BeginInit();
@@ -75,10 +81,11 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btn_Show);
+            this.tabPage1.Controls.Add(this.grb_Anh);
             this.tabPage1.Controls.Add(this.cbb_tenchucvu);
             this.tabPage1.Controls.Add(this.tbx_searchnv);
             this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.dgrid_shownv);
             this.tabPage1.Controls.Add(this.btn_xoanv);
             this.tabPage1.Controls.Add(this.btn_suanv);
@@ -100,6 +107,56 @@
             this.tabPage1.Text = "Nhân viên";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // btn_Show
+            // 
+            this.btn_Show.Location = new System.Drawing.Point(742, 6);
+            this.btn_Show.Name = "btn_Show";
+            this.btn_Show.Size = new System.Drawing.Size(142, 43);
+            this.btn_Show.TabIndex = 21;
+            this.btn_Show.Text = "HIỂN THỊ";
+            this.btn_Show.UseVisualStyleBackColor = true;
+            this.btn_Show.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // grb_Anh
+            // 
+            this.grb_Anh.Controls.Add(this.btn_Save);
+            this.grb_Anh.Controls.Add(this.cbb_DSCamera);
+            this.grb_Anh.Controls.Add(this.btn_Chup);
+            this.grb_Anh.Controls.Add(this.ptb_Anh);
+            this.grb_Anh.Location = new System.Drawing.Point(412, 6);
+            this.grb_Anh.Name = "grb_Anh";
+            this.grb_Anh.Size = new System.Drawing.Size(209, 259);
+            this.grb_Anh.TabIndex = 18;
+            this.grb_Anh.TabStop = false;
+            this.grb_Anh.Text = "Ảnh";
+            // 
+            // cbb_DSCamera
+            // 
+            this.cbb_DSCamera.FormattingEnabled = true;
+            this.cbb_DSCamera.Location = new System.Drawing.Point(6, 191);
+            this.cbb_DSCamera.Name = "cbb_DSCamera";
+            this.cbb_DSCamera.Size = new System.Drawing.Size(196, 28);
+            this.cbb_DSCamera.TabIndex = 23;
+            // 
+            // btn_Chup
+            // 
+            this.btn_Chup.Location = new System.Drawing.Point(6, 225);
+            this.btn_Chup.Name = "btn_Chup";
+            this.btn_Chup.Size = new System.Drawing.Size(94, 29);
+            this.btn_Chup.TabIndex = 22;
+            this.btn_Chup.Text = "Chụp";
+            this.btn_Chup.UseVisualStyleBackColor = true;
+            this.btn_Chup.Click += new System.EventHandler(this.btn__Click);
+            // 
+            // ptb_Anh
+            // 
+            this.ptb_Anh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ptb_Anh.Location = new System.Drawing.Point(6, 19);
+            this.ptb_Anh.Name = "ptb_Anh";
+            this.ptb_Anh.Size = new System.Drawing.Size(196, 166);
+            this.ptb_Anh.TabIndex = 20;
+            this.ptb_Anh.TabStop = false;
+            // 
             // cbb_tenchucvu
             // 
             this.cbb_tenchucvu.FormattingEnabled = true;
@@ -110,7 +167,7 @@
             // 
             // tbx_searchnv
             // 
-            this.tbx_searchnv.Location = new System.Drawing.Point(677, 238);
+            this.tbx_searchnv.Location = new System.Drawing.Point(686, 238);
             this.tbx_searchnv.Name = "tbx_searchnv";
             this.tbx_searchnv.Size = new System.Drawing.Size(222, 27);
             this.tbx_searchnv.TabIndex = 16;
@@ -119,37 +176,28 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(582, 245);
+            this.label6.Location = new System.Drawing.Point(836, 215);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(72, 20);
             this.label6.TabIndex = 15;
             this.label6.Text = "Tìm Kiếm";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(425, 26);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(189, 182);
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            // 
             // dgrid_shownv
             // 
             this.dgrid_shownv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgrid_shownv.Location = new System.Drawing.Point(7, 271);
+            this.dgrid_shownv.Location = new System.Drawing.Point(13, 271);
             this.dgrid_shownv.Name = "dgrid_shownv";
             this.dgrid_shownv.RowHeadersWidth = 51;
             this.dgrid_shownv.RowTemplate.Height = 29;
-            this.dgrid_shownv.Size = new System.Drawing.Size(901, 238);
+            this.dgrid_shownv.Size = new System.Drawing.Size(901, 234);
             this.dgrid_shownv.TabIndex = 13;
             this.dgrid_shownv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrid_shownv_CellClick);
             // 
             // btn_xoanv
             // 
-            this.btn_xoanv.Location = new System.Drawing.Point(742, 143);
+            this.btn_xoanv.Location = new System.Drawing.Point(742, 164);
             this.btn_xoanv.Name = "btn_xoanv";
-            this.btn_xoanv.Size = new System.Drawing.Size(142, 61);
+            this.btn_xoanv.Size = new System.Drawing.Size(142, 48);
             this.btn_xoanv.TabIndex = 12;
             this.btn_xoanv.Text = "XÓA";
             this.btn_xoanv.UseVisualStyleBackColor = true;
@@ -157,9 +205,9 @@
             // 
             // btn_suanv
             // 
-            this.btn_suanv.Location = new System.Drawing.Point(742, 76);
+            this.btn_suanv.Location = new System.Drawing.Point(742, 111);
             this.btn_suanv.Name = "btn_suanv";
-            this.btn_suanv.Size = new System.Drawing.Size(142, 61);
+            this.btn_suanv.Size = new System.Drawing.Size(142, 47);
             this.btn_suanv.TabIndex = 11;
             this.btn_suanv.Text = "SỬA";
             this.btn_suanv.UseVisualStyleBackColor = true;
@@ -167,9 +215,9 @@
             // 
             // btn_themnv
             // 
-            this.btn_themnv.Location = new System.Drawing.Point(742, 9);
+            this.btn_themnv.Location = new System.Drawing.Point(742, 56);
             this.btn_themnv.Name = "btn_themnv";
-            this.btn_themnv.Size = new System.Drawing.Size(142, 61);
+            this.btn_themnv.Size = new System.Drawing.Size(142, 49);
             this.btn_themnv.TabIndex = 10;
             this.btn_themnv.Text = "THÊM";
             this.btn_themnv.UseVisualStyleBackColor = true;
@@ -321,6 +369,16 @@
             this.btn_them.UseVisualStyleBackColor = true;
             this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
             // 
+            // btn_Save
+            // 
+            this.btn_Save.Location = new System.Drawing.Point(109, 225);
+            this.btn_Save.Name = "btn_Save";
+            this.btn_Save.Size = new System.Drawing.Size(94, 29);
+            this.btn_Save.TabIndex = 24;
+            this.btn_Save.Text = "Lưu";
+            this.btn_Save.UseVisualStyleBackColor = true;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
+            // 
             // TheNVForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -328,11 +386,13 @@
             this.ClientSize = new System.Drawing.Size(925, 545);
             this.Controls.Add(this.tabControl1);
             this.Name = "TheNVForm";
-            this.Text = "TheTVForm";
+            this.Text = "Nhan vien";
+            this.Load += new System.EventHandler(this.TheNVForm_Load_1);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.grb_Anh.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_Anh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_shownv)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
@@ -360,8 +420,6 @@
         private TextBox tbx_tennv;
         private TabPage tabPage2;
         private TextBox tbx_searchnv;
-        private Label label6;
-        private PictureBox pictureBox1;
         private Label label7;
         private TextBox tbx_tencv;
         private DataGridView dgrid_show;
@@ -370,5 +428,12 @@
         private Button btn_them;
         private ComboBox cbb_tenchucvu;
         private SaveFileDialog saveFileDialog1;
+        private Button btn_Chup;
+        private Button btn_Show;
+        private GroupBox grb_Anh;
+        private PictureBox ptb_Anh;
+        private Label label6;
+        private ComboBox cbb_DSCamera;
+        private Button btn_Save;
     }
 }
