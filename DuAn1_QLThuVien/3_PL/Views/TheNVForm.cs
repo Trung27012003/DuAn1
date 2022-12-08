@@ -103,7 +103,8 @@ namespace _3_PL.Views
         {
             if(tbx_tencv.Text == "")
             {
-                MessageBox.Show("Vui lòng nhập chức vụ");
+                tbx_tencv.BackColor = Color.Yellow;
+                MessageBox.Show("Không để trống tên chức vụ, vui lòng nhập chức vụ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -112,7 +113,7 @@ namespace _3_PL.Views
 
                     Name = tbx_tencv.Text,
                 };
-                DialogResult dg = MessageBox.Show("Bạn có chắc chắn muốn thêm không ?", "Thông báo", MessageBoxButtons.YesNo);
+                DialogResult dg = MessageBox.Show("Bạn có muốn thêm ?", "Thông báo", MessageBoxButtons.YesNo);
                 if (dg == DialogResult.Yes)
                 {
                     MessageBox.Show(_ChucVuServices.AddTN(cvv));
@@ -131,7 +132,7 @@ namespace _3_PL.Views
                 Id = _IdCv,
                 Name = tbx_tencv.Text,
             };
-            DialogResult dg = MessageBox.Show("Bạn có chắc chắn muốn Sửa không ?", "Thông báo", MessageBoxButtons.YesNo);
+            DialogResult dg = MessageBox.Show("Bạn có muốn sửa ?", "Thông báo", MessageBoxButtons.YesNo);
             if (dg == DialogResult.Yes)
             {
                 MessageBox.Show(_ChucVuServices.UpdateTN(cvv));
@@ -146,7 +147,7 @@ namespace _3_PL.Views
         private void btn_xoa_Click(object sender, EventArgs e)
         {
 
-            DialogResult dg = MessageBox.Show("Bạn có chắc chắn muốn Xóa không ?", "Thông báo", MessageBoxButtons.YesNo);
+            DialogResult dg = MessageBox.Show("Bạn có muốn xóa ?", "Thông Báo", MessageBoxButtons.YesNo);
             if (dg == DialogResult.Yes)
             {
                 MessageBox.Show(_ChucVuServices.RemoveTN(_IdCv));
@@ -160,70 +161,38 @@ namespace _3_PL.Views
 
         private void btn_themnv_Click(object sender, EventArgs e)
         {
-            bool sdt = Regex.IsMatch(tbx_sdt.Text, "^0\\d+");
-            if (!sdt)
+            var checkcv = _ChucVuServices.GetTheNgay().FirstOrDefault(c => c.Name == cbb_tenchucvu.Text);
+            //bool checkname = Regex.IsMatch(tbx_tennv.Text, "[a-zA-Z]");
+            //bool checktext = Regex.IsMatch(tbx_diachi.Text, "");
+            bool sdt = Regex.IsMatch(tbx_sdt.Text, "^0[0-9]{9}$");
+
+            if (cbb_tenchucvu.Text == "")
             {
-                MessageBox.Show("Số điện thoại không đúng định dạng");
+                cbb_tenchucvu.BackColor = Color.Red;
+                MessageBox.Show("Không để trống chức vụ, vui lòng chọn chức vụ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            else if (cbb_tenchucvu.Text == "")
+            else if (checkcv == null)
             {
-                MessageBox.Show("Vui lòng chọn chức vụ");
-            }
-            else if (tbx_tennv.Text == "")
-            {
-                MessageBox.Show("Vui lòng nhập tên nhân viên");
-            }
-            else if (tbx_diachi.Text == "")
-            {
-                MessageBox.Show("Vui lòng nhập địa chỉ");
-            }
-            else
-            {
-                var checkcv = _ChucVuServices.GetTheNgay().FirstOrDefault(c => c.Name == cbb_tenchucvu.Text);
-                
-                if (checkcv==null)
+                DialogResult dr = MessageBox.Show($"Chức vụ bạn chọn không tồn tại, bạn có muốn thêm mới chức vụ '{cbb_tenchucvu.Text}' không", "Thông báo", MessageBoxButtons.YesNo);
+                if (dr == DialogResult.Yes)
                 {
-                   DialogResult dr = MessageBox.Show($"Chức vụ bạn chọn không tồn tại, bạn có muốn thêm mới chức vụ '{cbb_tenchucvu.Text}' không", "Thông báo", MessageBoxButtons.YesNo);
-                    if (dr == DialogResult.Yes)
+                    ChucVuView cv = new ChucVuView()
                     {
-                        ChucVuView cv = new ChucVuView()
-                        {
+                        Name = cbb_tenchucvu.Text,
+                    };
+                    _ChucVuServices.AddTN(cv);
+                    Loadtocbb();
 
-                            Name = cbb_tenchucvu.Text,
-                        };
-                        _ChucVuServices.AddTN(cv);
-                        Loadtocbb();
-
-                        NhanVienView cvv = new NhanVienView()
-                        {
-
-                            Name = tbx_tennv.Text,
-                            NgaySinh = DateTime.Now,
-                            DiaChi = tbx_diachi.Text,
-                            SDT = tbx_sdt.Text,
-                            IdCV = _ChucVuServices.GetTheNgay().FirstOrDefault(c => c.Name == cbb_tenchucvu.Text).Id
-                        };
-                        DialogResult dg = MessageBox.Show("bạn có chắc chắn muốn thêm mới nhân viên không ?", "thông báo", MessageBoxButtons.YesNo);
-                        if (dg == DialogResult.Yes)
-                        {
-                            MessageBox.Show(_NhanVienServices.AddTN(cvv));
-                            _lstNhanVienView = _NhanVienServices.GetAllNv();
-                            LoadToGridNv(_lstNhanVienView);
-                        }
-                    }
-                }
-                else
-                {
                     NhanVienView cvv = new NhanVienView()
                     {
-
                         Name = tbx_tennv.Text,
                         NgaySinh = DateTime.Now,
                         DiaChi = tbx_diachi.Text,
                         SDT = tbx_sdt.Text,
                         IdCV = _ChucVuServices.GetTheNgay().FirstOrDefault(c => c.Name == cbb_tenchucvu.Text).Id
                     };
-                    DialogResult dg = MessageBox.Show("bạn có chắc chắn muốn thêm không ?", "thông báo", MessageBoxButtons.YesNo);
+                    DialogResult dg = MessageBox.Show("Bạn có muốn thêm ?", "Thông Báo", MessageBoxButtons.YesNo);
                     if (dg == DialogResult.Yes)
                     {
                         MessageBox.Show(_NhanVienServices.AddTN(cvv));
@@ -232,11 +201,50 @@ namespace _3_PL.Views
                     }
                 }
             }
-                
+            else if (tbx_tennv.Text == "")
+            {
+                tbx_tennv.BackColor = Color.Red;
+                MessageBox.Show("Không để trống tên nhân viên, vui lòng nhập tên nhân viên", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (tbx_diachi.Text == "")
+            {
+                tbx_diachi.BackColor = Color.Red;
+                MessageBox.Show("Không để trống địa chỉ, vui lòng nhập đại chỉ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (tbx_sdt.Text == "")
+            {
+                tbx_sdt.BackColor = Color.Red;
+                MessageBox.Show("Không để trống SDT, vui lòng nhập SDT", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (!sdt)
+            {
+                tbx_sdt.BackColor = Color.Red;
+                MessageBox.Show("Sai định dạng SDT", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                NhanVienView cvv = new NhanVienView()
+                {
+                    Name = tbx_tennv.Text,
+                    NgaySinh = DateTime.Now,
+                    DiaChi = tbx_diachi.Text,
+                    SDT = tbx_sdt.Text,
+                    IdCV = _ChucVuServices.GetTheNgay().FirstOrDefault(c => c.Name == cbb_tenchucvu.Text).Id
+                };
+                DialogResult dg = MessageBox.Show("Bạn có muốn thêm ?", "Thông Báo", MessageBoxButtons.YesNo);
+                if (dg == DialogResult.Yes)
+                {
+                    MessageBox.Show(_NhanVienServices.AddTN(cvv));
+                    _lstNhanVienView = _NhanVienServices.GetAllNv();
+                    LoadToGridNv(_lstNhanVienView);
+                }
+            }
+
         }
-
-       
-
         private void btn_suanv_Click(object sender, EventArgs e)
         {
 
@@ -293,6 +301,31 @@ namespace _3_PL.Views
             dtp_ngaysinh.Text = dgrid_shownv.CurrentRow.Cells[6].Value.ToString();
             
 
+        }
+
+        private void tbx_tencv_TextChanged(object sender, EventArgs e)
+        {
+            tbx_tencv.BackColor = Color.White;
+        }
+
+        private void cbb_tenchucvu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbb_tenchucvu.BackColor = Color.White;
+        }
+
+        private void tbx_tennv_TextChanged(object sender, EventArgs e)
+        {
+            tbx_tennv.BackColor = Color.White;
+        }
+
+        private void tbx_diachi_TextChanged(object sender, EventArgs e)
+        {
+            tbx_diachi.BackColor = Color.White;
+        }
+
+        private void tbx_sdt_TextChanged(object sender, EventArgs e)
+        {
+            tbx_sdt.BackColor = Color.White;
         }
     }
 }
