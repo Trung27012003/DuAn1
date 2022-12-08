@@ -9,6 +9,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -26,6 +27,11 @@ namespace _3_PL.Views
         public void ShowFormLoUp()
         {
             frm_SignUp mn = new frm_SignUp();
+            mn.ShowDialog();
+        }
+        public void ShowFormPass()
+        {
+            SignUP mn = new SignUP(tbx_username.Texts);
             mn.ShowDialog();
         }
         private void label5_Click(object sender, EventArgs e)
@@ -99,6 +105,13 @@ namespace _3_PL.Views
             {
                 cbx_remember.Checked = true;
             }
+        }
+
+        private void lbl_forgotPassword_Click(object sender, EventArgs e)
+        {
+            Thread thread = new Thread(new ThreadStart(ShowFormPass)); //Tạo luồng mới
+            thread.Start(); //Khởi chạy luồng
+            this.Close();
         }
     }
 }

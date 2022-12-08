@@ -14,5 +14,7 @@ namespace _2_BUS.IServices
         Account CheckLogin(string username, string password);
         bool CheckAccountExists(string username);
         string CreateAccount(AccView obj);
+        string EditEMPLOYEES(Account sp);
+        List<Account> GetAllAccount();
     }
 }

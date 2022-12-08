@@ -41,5 +41,19 @@ namespace _1_DAL.Respositories
              return _context.Accounts.ToList();
           
         }
+        public string EditEMPLOYEES(Account sp)
+        {
+
+            try
+            {
+                _context.Accounts.Update(sp);
+                _context.SaveChanges();
+                return "successful";
+            }
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+        }
     }
 }
