@@ -1880,24 +1880,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\hoang\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\git\\DuAn1\\DuAn1_QLThuVien\\2_BUS\\2_BUS.csproj",
+      "projectUniqueName": "C:\\Users\\hoang\\OneDrive\\Tài liệu\\DuAn1\\DuAn1_QLThuVien\\2_BUS\\2_BUS.csproj",
       "projectName": "2_BUS",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\git\\DuAn1\\DuAn1_QLThuVien\\2_BUS\\2_BUS.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\git\\DuAn1\\DuAn1_QLThuVien\\2_BUS\\obj\\",
+      "projectPath": "C:\\Users\\hoang\\OneDrive\\Tài liệu\\DuAn1\\DuAn1_QLThuVien\\2_BUS\\2_BUS.csproj",
+      "packagesPath": "C:\\Users\\hoang\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\hoang\\OneDrive\\Tài liệu\\DuAn1\\DuAn1_QLThuVien\\2_BUS\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\hoang\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1911,8 +1906,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Admin\\Desktop\\git\\DuAn1\\DuAn1_QLThuVien\\1_DAL\\1_DAL.csproj": {
-              "projectPath": "C:\\Users\\Admin\\Desktop\\git\\DuAn1\\DuAn1_QLThuVien\\1_DAL\\1_DAL.csproj"
+            "C:\\Users\\hoang\\OneDrive\\Tài liệu\\DuAn1\\DuAn1_QLThuVien\\1_DAL\\1_DAL.csproj": {
+              "projectPath": "C:\\Users\\hoang\\OneDrive\\Tài liệu\\DuAn1\\DuAn1_QLThuVien\\1_DAL\\1_DAL.csproj"
             }
           }
         }
@@ -1959,7 +1954,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
