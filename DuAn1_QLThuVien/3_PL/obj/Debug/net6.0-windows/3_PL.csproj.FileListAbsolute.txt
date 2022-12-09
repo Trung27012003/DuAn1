@@ -56,6 +56,7 @@ C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-win
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.frm_Login.resources
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.frm_menus.resources
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.frm_SignUp.resources
+C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.frm_thongkedulieu.resources
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.GiaoDienSach.resources
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.LoginForm.resources
 C:\Users\Trung2701\Documents\da1\DuAn1\DuAn1_QLThuVien\3_PL\obj\Debug\net6.0-windows\_3_PL.Views.Menu.resources

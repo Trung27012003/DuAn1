@@ -112,7 +112,7 @@ namespace _3_PL.Views
 
         private void tvT_IconButton1_Click(object sender, EventArgs e)
         {
-
+            OpenPanel(new frm_thongkedulieu());
         }
     }
     

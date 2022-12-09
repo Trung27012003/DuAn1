@@ -346,7 +346,6 @@ namespace _3_PL.Views
                 _IPhieuMuonServices.AddTN(pm);
                 //taisaoloi
                 _IDPM = _IPhieuMuonServices.GetPhieuMuon().FirstOrDefault(c => c.MaPm == tbx_mapm.Text).Id;
-                tbx_search.Text = _IDPM.ToString();
                 foreach (var item in _lstPMCT)
                 {
                     item.IdPM = _IDPM;
