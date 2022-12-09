@@ -4,9 +4,6 @@
     <Compile Update="Custom_Controls\TvT_DatePicker.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Update="Custom_Controls\TvT_IconButton.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Update="Custom_Controls\TvT_TextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
