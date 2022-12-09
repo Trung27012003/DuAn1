@@ -99,6 +99,10 @@ namespace _3_PL.Views
         {
             
             int a;
+            if(tbx_ma.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập Mã sách");
+            }
             if (cmb_theLoai.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập thể loại");

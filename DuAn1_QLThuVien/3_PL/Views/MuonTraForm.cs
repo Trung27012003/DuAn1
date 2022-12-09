@@ -445,12 +445,7 @@ namespace _3_PL.Views
                 }));
             }
             ptb_camera.Image = bitmap;
-            //var a = _IsachServices.GetSach().FirstOrDefault(c => c.BarCode == lbl_ma.Text).Id;
-            //var b = _IPhieuMuonChiTietChiTietServices.GetPhieuMuonChiTiet().FirstOrDefault(c => c.IdSach == a);
-            //if (lbl_ma.Text != null)
-            //{
-            //    dgrid_danhsachsach.CurrentRow.Cells[8].Value = true;
-            //}
+
         }
 
         private void MuonTraForm_Load(object sender, EventArgs e)
@@ -641,6 +636,14 @@ namespace _3_PL.Views
 
         }
 
-  
+        private void lb_code_TextChanged(object sender, EventArgs e)
+        {
+            var a = _IsachServices.GetSach().FirstOrDefault(c => c.BarCode == lb_code.Text).Id;
+            var b = _IPhieuMuonChiTietChiTietServices.GetPhieuMuonChiTiet().FirstOrDefault(c => c.IdSach == a);
+            if (lb_code.Text != null)
+            {
+                cb_xacnhan.Checked = true;
+            }
+        }
     }
 }
