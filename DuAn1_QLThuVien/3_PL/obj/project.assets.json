@@ -2148,24 +2148,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\My HanhQuynh\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\git\\DuAn1\\DuAn1_QLThuVien\\3_PL\\3_PL.csproj",
+      "projectUniqueName": "C:\\Users\\My HanhQuynh\\Documents\\GitHub\\DuAn1\\DuAn1_QLThuVien\\3_PL\\3_PL.csproj",
       "projectName": "3_PL",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\git\\DuAn1\\DuAn1_QLThuVien\\3_PL\\3_PL.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\git\\DuAn1\\DuAn1_QLThuVien\\3_PL\\obj\\",
+      "projectPath": "C:\\Users\\My HanhQuynh\\Documents\\GitHub\\DuAn1\\DuAn1_QLThuVien\\3_PL\\3_PL.csproj",
+      "packagesPath": "C:\\Users\\My HanhQuynh\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\My HanhQuynh\\Documents\\GitHub\\DuAn1\\DuAn1_QLThuVien\\3_PL\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\My HanhQuynh\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2179,8 +2174,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\Admin\\Desktop\\git\\DuAn1\\DuAn1_QLThuVien\\2_BUS\\2_BUS.csproj": {
-              "projectPath": "C:\\Users\\Admin\\Desktop\\git\\DuAn1\\DuAn1_QLThuVien\\2_BUS\\2_BUS.csproj"
+            "C:\\Users\\My HanhQuynh\\Documents\\GitHub\\DuAn1\\DuAn1_QLThuVien\\2_BUS\\2_BUS.csproj": {
+              "projectPath": "C:\\Users\\My HanhQuynh\\Documents\\GitHub\\DuAn1\\DuAn1_QLThuVien\\2_BUS\\2_BUS.csproj"
             }
           }
         }
@@ -2244,7 +2239,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   },

@@ -1,5 +1,6 @@
 ﻿using _2_BUS.IServices;
 using _2_BUS.Services;
+using _2_BUS.Utilities;
 using _2_BUS.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,7 @@ namespace _3_PL.Views
     {
         Guid _IdCv;
         Guid _IdNv;
+        Validates _Validates;
         List<ChucVuView> _lstChucVuViews;
         List<NhanVienView> _lstNhanVienView;
         IChucVuServices _ChucVuServices;
@@ -33,6 +35,7 @@ namespace _3_PL.Views
             _lstNhanVienView = new List<NhanVienView>();
             _lstChucVuViews = _ChucVuServices.GetTheNgay();
             _lstNhanVienView = _NhanVienServices.GetAllNv();
+            _Validates = new Validates();
             LoadToGridNv(_lstNhanVienView);
             LoadToGridCv(_lstChucVuViews);
             Loadtocbb();
@@ -168,7 +171,7 @@ namespace _3_PL.Views
 
             if (cbb_tenchucvu.Text == "")
             {
-                cbb_tenchucvu.BackColor = Color.Red;
+                //cbb_tenchucvu.BackColor = Color.Red;
                 MessageBox.Show("Không để trống chức vụ, vui lòng chọn chức vụ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
@@ -203,25 +206,25 @@ namespace _3_PL.Views
             }
             else if (tbx_tennv.Text == "")
             {
-                tbx_tennv.BackColor = Color.Red;
+                //tbx_tennv.BackColor = Color.Red;
                 MessageBox.Show("Không để trống tên nhân viên, vui lòng nhập tên nhân viên", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else if (tbx_diachi.Text == "")
             {
-                tbx_diachi.BackColor = Color.Red;
+                //tbx_diachi.BackColor = Color.Red;
                 MessageBox.Show("Không để trống địa chỉ, vui lòng nhập đại chỉ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else if (tbx_sdt.Text == "")
             {
-                tbx_sdt.BackColor = Color.Red;
+                //tbx_sdt.BackColor = Color.Red;
                 MessageBox.Show("Không để trống SDT, vui lòng nhập SDT", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else if (!sdt)
             {
-                tbx_sdt.BackColor = Color.Red;
+               // tbx_sdt.BackColor = Color.Red;
                 MessageBox.Show("Sai định dạng SDT", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
@@ -306,26 +309,39 @@ namespace _3_PL.Views
         private void tbx_tencv_TextChanged(object sender, EventArgs e)
         {
             tbx_tencv.BackColor = Color.White;
+           
         }
 
         private void cbb_tenchucvu_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cbb_tenchucvu.BackColor = Color.White;
+            //cbb_tenchucvu.BackColor = Color.White;
+           
         }
 
         private void tbx_tennv_TextChanged(object sender, EventArgs e)
         {
-            tbx_tennv.BackColor = Color.White;
+           
+            //lb_tennv.Text = _Validates.checkRong(tbx_tencv.Text);
+            //lb_tennv.ForeColor = Color.Red;
         }
 
         private void tbx_diachi_TextChanged(object sender, EventArgs e)
         {
-            tbx_diachi.BackColor = Color.White;
+            
+            //lb_dc.Text = _Validates.checkRong(tbx_tencv.Text);
+            //lb_dc.ForeColor = Color.Red;
         }
 
         private void tbx_sdt_TextChanged(object sender, EventArgs e)
         {
-            tbx_sdt.BackColor = Color.White;
+           // tbx_sdt.BackColor = Color.White;
+            lb_sdt.Text = _Validates.checkSDT(tbx_sdt.Text);
+            lb_sdt.ForeColor = Color.Red;
+        }
+
+        private void lb_dc_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

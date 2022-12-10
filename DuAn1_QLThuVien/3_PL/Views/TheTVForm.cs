@@ -66,8 +66,23 @@ namespace _3_PL.Views
 
         private void btn_them_Click(object sender, EventArgs e)
         {
-              
-            
+            if (tbt_tenthanhvien.Text == "")
+            {
+                
+                MessageBox.Show("Không để trống tên thành viên, vui lòng nhập", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }else if (tbt_diachi.Text == "")
+            {
+                
+                MessageBox.Show("Không để trống địa chỉ, vui lòng nhập", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }else if(tbt_sdt.Text == "")
+            {
+                MessageBox.Show("Không để trống số điện thoại, vui lòng nhập", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
                 TheThanhVienView ttv = new TheThanhVienView()
                 {
                     TenThanhVien = tbt_tenthanhvien.Text,
@@ -86,6 +101,10 @@ namespace _3_PL.Views
                     _lstTheThanhVienView = _TheThanhVienServices.GetTheThanhVien();
                     LoadToGrid(_lstTheThanhVienView);
                 }
+            }
+           
+
+           
 
             
 
