@@ -66,6 +66,10 @@ namespace _3_PL.Views
 
         private void btn_them_Click(object sender, EventArgs e)
         {
+            bool sdt = Regex.IsMatch(tbt_sdt.Text, "^0[0-9]{9}$");
+            bool regex = Regex.IsMatch(tbt_tenthanhvien.Text, @"[A-Za-z0-9]");
+            
+            bool chu = Regex.IsMatch(tbt_tenthanhvien.Text, @"[^0-9]");
             if (tbt_tenthanhvien.Text == "")
             {
                 
@@ -81,6 +85,23 @@ namespace _3_PL.Views
                 MessageBox.Show("Không để trống số điện thoại, vui lòng nhập", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            else if (!sdt)
+            {
+                MessageBox.Show("Sai định dạng SDT", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (!regex)
+            {
+                MessageBox.Show("Sai định dạng ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+           
+            else if (!chu)
+            {
+                MessageBox.Show("Sai định dạng ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            
             else
             {
                 TheThanhVienView ttv = new TheThanhVienView()
