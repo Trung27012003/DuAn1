@@ -34,7 +34,7 @@ namespace _1_DAL.Context
         {
             base.OnConfiguring(optionsBuilder.
 
-              UseSqlServer("Data Source=DESKTOP-OJ6PLFS\\SQLEXPRESS;Initial Catalog=DuAn_QLThuVien;Integrated Security=True"));//User ID=trungtruong;Password=123456
+              UseSqlServer("Data Source=Trung2701\\SQLEXPRESS;Initial Catalog=DuAn_QLThuVien;Integrated Security=True"));//User ID=trungtruong;Password=123456
 
               
         }

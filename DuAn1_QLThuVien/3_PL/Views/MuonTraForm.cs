@@ -204,20 +204,24 @@ namespace _3_PL.Views
 
             var sach = _IsachServices.GetSach().FirstOrDefault(c => c.Id == Id);
             var data = _lstPMCT.FirstOrDefault(c => c.IdSach == sach.Id);
-
-            PhieuMuonChiTietView pmctv = new PhieuMuonChiTietView()
+         
+            foreach (var item in _lstPMCT)
             {
-                IdSach = sach.Id,
-                DieuKien = sach.GhiChu,
-                SoLuong = 1,
-                TienTheChan = sach.GiaTien / 2,
-            };
-            _lstPMCT.Add(pmctv);
+                soluong += Convert.ToInt32(item.SoLuong);
+            }
             if (data != null)
             {
+                
                 if (sach.SoLuong == 0)
                 {
                     MessageBox.Show("Sản phẩm đã hết");
+                }
+                else if (soluong > 4)
+                {
+                    MessageBox.Show("Mỗi thành viên chỉ được mượn tối đa 3 quyển");
+                    var a = _lstPMCT.Find(c => c.SoLuong < c.SoLuong || c.SoLuong == 1);
+                    _lstPMCT.Remove(a);
+                    LoadToPhieuMuonCT();
                 }
                 else if (data.SoLuong == sach.SoLuong)
                 {
@@ -235,27 +239,38 @@ namespace _3_PL.Views
                     LoadToPhieuMuonCT();
                 }
             }
+            else
+            {
+                if (soluong<4)
+                {
+                    PhieuMuonChiTietView pmctv = new PhieuMuonChiTietView()
+                    {
+                        IdSach = sach.Id,
+                        DieuKien = sach.GhiChu,
+                        SoLuong = 1,
+                        TienTheChan = sach.GiaTien / 2,
+                    };
+                    _lstPMCT.Add(pmctv);
+                }
+                else
+                {
+                    MessageBox.Show("Mỗi thành viên chỉ được mượn tối đa 3 quyển");
+                }
+            }
             LoadToPhieuMuonCT();
         }
         private void tvT_IconButton2_Click(object sender, EventArgs e)
         {
 
         }
-
+        int soluong = 0;
         private void dgrid_danhsachsach_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             _IDSach = Guid.Parse(dgrid_danhsachsach.CurrentRow.Cells[0].Value.ToString());
             var indexColumn = e.ColumnIndex;
             if (indexColumn == 7)
             {
-                if (_lstPMCT.Count >= 3)
-                {
-                    MessageBox.Show("Mỗi thành viên chỉ được mượn tối đa 3 quyển sách!!!");
-                }
-                else
-                {
                     AddPMCT(_IDSach);
-                }
             }
 
         }
@@ -293,6 +308,7 @@ namespace _3_PL.Views
 
         private void btn_resets_Click(object sender, EventArgs e)
         {
+            soluong = 1;
             lbl_tongtien1.Text = "";
             _lstPM.Clear();
             _lstPMCT.Clear();
@@ -328,9 +344,19 @@ namespace _3_PL.Views
         }
         private void btn_thanhtoan_Click(object sender, EventArgs e)
         {
+            var mapm = _IPhieuMuonServices.GetPhieuMuon();
+            var idtv = _ITheThanhVienServices.GetTheThanhVien().FirstOrDefault(c => c.TenThanhVien == cmb_tenkh.Text);
+            if (idtv != null)
+            {
+                mapm = _IPhieuMuonServices.GetPhieuMuon().FindAll(c => c.IdTheTV == idtv.Id&&c.GhiChu!= "Đã Trả");
+            }
             if (_lstPMCT.Count == 0)
             {
                 MessageBox.Show("Vui lòng chọn sách");
+            }
+            else if (mapm.Count>0)
+            {
+                MessageBox.Show("Bạn cần trả sách trước khi mượn");
             }
             else
             {
@@ -359,10 +385,10 @@ namespace _3_PL.Views
                     x.SoLuong = x.SoLuong - item.SoLuong;
                     _IsachServices.UpdateTN(x);
                 }
-                MessageBox.Show("Thêm thành công");
-                btn_reset_Click(sender, e);
+                MessageBox.Show("Mượn sách thành công, Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi!!!");
+                btn_reset_Click(null, null);
             }
-            btn_reset_Click(sender, e);
+            btn_reset_Click(null, null);
         }
         private void tbx_thanhtoan_Click(object sender, EventArgs e)
         {
@@ -399,7 +425,7 @@ namespace _3_PL.Views
                     _IsachServices.UpdateTN(x);
                 }
                 MessageBox.Show("Thêm thành công");
-                btn_reset_Click(sender, e);
+                btn_resets_Click(null,null) ;
             }
         }
 
@@ -580,59 +606,85 @@ namespace _3_PL.Views
 
         private void dgrid_phieutract_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //var cb = dgrid_phieutract.CurrentRow.Cells[8].Value ;
-            //if ((bool)cb!=null)
-            //{
-                dgrid_phieutract.CurrentRow.Cells[8].Value = true;
-                _IdPMCT = Guid.Parse(dgrid_phieutract.CurrentRow.Cells[0].Value.ToString());
-                var a = _IPhieuMuonChiTietChiTietServices.GetPhieuMuonChiTiet().FirstOrDefault(c => c.Id == _IdPMCT);
-                _lstPM.Add(a);
-            //}
-            //else
-            //{
-            //    _IdPMCT = Guid.Parse(dgrid_phieutract.CurrentRow.Cells[0].Value.ToString());
-            //    var a = _IPhieuMuonChiTietChiTietServices.GetPhieuMuonChiTiet().FirstOrDefault(c => c.Id == _IdPMCT);
-            //    _lstPM.Remove(a);
-            //}
             
+            _IdPMCT = Guid.Parse(dgrid_phieutract.CurrentRow.Cells[0].Value.ToString());
+            var a = _IPhieuMuonChiTietChiTietServices.GetPhieuMuonChiTiet().FirstOrDefault(c => c.Id == _IdPMCT);
+            bool isChecked = (bool)dgrid_phieutract.CurrentRow.Cells[8].EditedFormattedValue;
+            if (isChecked)
+            {
+                dgrid_phieutract.CurrentRow.Cells[8].Value = false;
+                _lstPM.RemoveAll(c => c.Id == _IdPMCT);
+            }
+            if (isChecked==false)
+            {
+                dgrid_phieutract.CurrentRow.Cells[8].Value = true;
+                _lstPM.Add(a);
+            }
         }
 
         private void dgrid_phieutract_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+            //foreach (DataGridViewRow row in dgrid_phieutract.Rows)
+            //{
+            //    DataGridViewCheckBoxCell chk = (DataGridViewCheckBoxCell)row.Cells[8];
+            //    if ((bool)(chk.Value))
+            //    { 
+            //        _IdPMCT = Guid.Parse(dgrid_phieutract.CurrentRow.Cells[0].Value.ToString());
+            //        var a = _IPhieuMuonChiTietChiTietServices.GetPhieuMuonChiTiet().FirstOrDefault(c => c.Id == _IdPMCT);
+            //        _lstPM.Add(a);
+
+            //    }
+            //    else
+            //    {
+            //        _IdPMCT = Guid.Parse(dgrid_phieutract.CurrentRow.Cells[0].Value.ToString());
+            //        var b = _IPhieuMuonChiTietChiTietServices.GetPhieuMuonChiTiet().FirstOrDefault(c => c.Id == _IdPMCT);
+            //        _lstPM.Remove(b);
+            //    }
+
+            //}
+
 
         }
 
         private void btn_trasach_Click(object sender, EventArgs e)
         {
 
-            var pm = new PhieuTraView()
+            if (_lstPM.Count==0)
             {
-                IdPM = _IDPT,
-                NgayTra = DateTime.Now,
-                GhiChu = "Đã Trả",
-            };
-            _IPhieuTraServices.AddTN(pm);
-            var getIdPT = _IPhieuTraServices.GetPhieuTra().FirstOrDefault(c => c.IdPM == _IDPT).Id;
-            foreach (var item in _lstPM)
+                MessageBox.Show("Bạn chưa chọn sách trả");
+            }
+            else
             {
-                var ptct = new PhieuTraChiTietView()
+                var pm = new PhieuTraView()
                 {
-                    IdPT = getIdPT,
-                    IdSach = item.IdSach,
-                    SoLuong = item.SoLuong,
-                    TinhTrang =tbx_tinhtrang.Text,
+                    IdPM = _IDPT,
+                    NgayTra = DateTime.Now,
                     GhiChu = "Đã Trả",
                 };
-                item.GhiChu = "Đã Trả";
-                _IPhieuMuonChiTietChiTietServices.UpdateTN(item);
-                _lstPTCT.Add(ptct);
-                _IPhieuTraChiTietServices.AddTN(ptct);
-                var x = _IsachServices.GetSach().FirstOrDefault(c => c.Id == item.IdSach);
-                x.SoLuong = x.SoLuong +item.SoLuong;
-                _IsachServices.UpdateTN(x);
+                _IPhieuTraServices.AddTN(pm);
+                var getIdPT = _IPhieuTraServices.GetPhieuTra().FirstOrDefault(c => c.IdPM == _IDPT).Id;
+                foreach (var item in _lstPM)
+                {
+                    var ptct = new PhieuTraChiTietView()
+                    {
+                        IdPT = getIdPT,
+                        IdSach = item.IdSach,
+                        SoLuong = item.SoLuong,
+                        TinhTrang = tbx_tinhtrang.Text,
+                        GhiChu = "Đã Trả",
+                    };
+                    item.GhiChu = "Đã Trả";
+                    _IPhieuMuonChiTietChiTietServices.UpdateTN(item);
+                    _lstPTCT.Add(ptct);
+                    _IPhieuTraChiTietServices.AddTN(ptct);
+                    var x = _IsachServices.GetSach().FirstOrDefault(c => c.Id == item.IdSach);
+                    x.SoLuong = x.SoLuong + item.SoLuong;
+                    _IsachServices.UpdateTN(x);
+                }
+                MessageBox.Show("Trả thành công");
+                btn_reset_Click(null, null);
             }
-            MessageBox.Show("Trả thành công");
-            btn_reset_Click(sender, e);
 
         }
 
@@ -644,6 +696,11 @@ namespace _3_PL.Views
             {
                 cb_xacnhan.Checked = true;
             }
+        }
+
+        private void dgrid_phieutract_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
