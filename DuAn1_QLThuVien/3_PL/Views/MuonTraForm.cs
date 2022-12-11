@@ -63,6 +63,7 @@ namespace _3_PL.Views
             Loadtogrid_PhieuTra();
             LoadToGrid_Sach(_lstSachView);
             LoadToCmbTL();
+            btn_resets_Click(null,null);
 
         }
 
@@ -145,6 +146,10 @@ namespace _3_PL.Views
             dgrid_danhsachsach.Columns[5].Name = "Tác giả";
             dgrid_danhsachsach.Columns[6].Name = "Số lượng";
             dgrid_danhsachsach.Columns[0].Visible = false;
+            dgrid_danhsachsach.Columns[1].Width = 50;
+            dgrid_danhsachsach.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgrid_danhsachsach.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            dgrid_danhsachsach.AllowUserToResizeColumns = false;
             DataGridViewButtonColumn button = new DataGridViewButtonColumn();
             {
                 button.Name = "Add";
@@ -168,14 +173,19 @@ namespace _3_PL.Views
         {
             {
                 dgrid_phieumuonchitiet.Rows.Clear();
-                dgrid_phieumuonchitiet.ColumnCount = 6;
+                dgrid_phieumuonchitiet.ColumnCount = 7;
                 dgrid_phieumuonchitiet.Columns[0].Name = "Id";
                 dgrid_phieumuonchitiet.Columns[1].Name = "STT";
                 dgrid_phieumuonchitiet.Columns[2].Name = "Tên sách";
-                dgrid_phieumuonchitiet.Columns[3].Name = "Số lượng";
-                dgrid_phieumuonchitiet.Columns[4].Name = "Điều kiện";
-                dgrid_phieumuonchitiet.Columns[5].Name = "Tiền thế chân";
+                dgrid_phieumuonchitiet.Columns[3].Name = "Mã sách";
+                dgrid_phieumuonchitiet.Columns[4].Name = "Số lượng";
+                dgrid_phieumuonchitiet.Columns[5].Name = "Điều kiện";
+                dgrid_phieumuonchitiet.Columns[6].Name = "Tiền thế chân";
                 dgrid_phieumuonchitiet.Columns[0].Visible = false;
+                dgrid_phieumuonchitiet.Columns[1].Width = 50;
+                dgrid_phieumuonchitiet.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dgrid_phieumuonchitiet.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+                dgrid_phieumuonchitiet.AllowUserToResizeColumns = false;
                 DataGridViewButtonColumn button = new DataGridViewButtonColumn();
                 {
                     button.Name = "Delete";
@@ -191,6 +201,7 @@ namespace _3_PL.Views
                         item.Id,
                         stt++,
                         _IsachServices.GetSach().FirstOrDefault(c => c.Id == item.IdSach).Name,
+                       _IsachServices.GetSach().FirstOrDefault(c => c.Id == item.IdSach).Ma,
                         item.SoLuong,
                         item.DieuKien,
                         item.TienTheChan);
@@ -204,44 +215,49 @@ namespace _3_PL.Views
 
             var sach = _IsachServices.GetSach().FirstOrDefault(c => c.Id == Id);
             var data = _lstPMCT.FirstOrDefault(c => c.IdSach == sach.Id);
-         
-            foreach (var item in _lstPMCT)
-            {
-                soluong += Convert.ToInt32(item.SoLuong);
-            }
+            
             if (data != null)
             {
-                
+                foreach (var item in _lstPMCT)
+                {
+                    soluong += Convert.ToInt32(item.SoLuong);
+                }
                 if (sach.SoLuong == 0)
                 {
                     MessageBox.Show("Sản phẩm đã hết");
                 }
-                else if (soluong > 4)
+                else if (soluong > 3)
                 {
                     MessageBox.Show("Mỗi thành viên chỉ được mượn tối đa 3 quyển");
-                    var a = _lstPMCT.Find(c => c.SoLuong < c.SoLuong || c.SoLuong == 1);
-                    _lstPMCT.Remove(a);
-                    LoadToPhieuMuonCT();
+                    //var a = _lstPMCT.Find(c => c.SoLuong < c.SoLuong || c.SoLuong == 1);
+                    //_lstPMCT.Remove(a);
+                    //LoadToPhieuMuonCT();
+                    soluong = 3;
                 }
                 else if (data.SoLuong == sach.SoLuong)
                 {
                     MessageBox.Show("Sản phẩm trong giỏ hàng đã vượt quá số lượng cho phép");
-                    var a = _lstPMCT.Find(c => c.SoLuong < c.SoLuong || c.SoLuong == 1);
-                    _lstPMCT.Remove(a);
-                    LoadToPhieuMuonCT();
+                    //var a = _lstPMCT.Find(c => c.SoLuong < c.SoLuong || c.SoLuong == 1);
+                    //_lstPMCT.RemoveAll(c => c.SoLuong < c.SoLuong || c.SoLuong == 1);
+                    //LoadToPhieuMuonCT();
+                    soluong = 3;
                 }
                 else
                 {
                     data.SoLuong++;
                     data.TienTheChan = sach.GiaTien * data.SoLuong / 2;
-                    var a = _lstPMCT.Find(c => c.SoLuong < c.SoLuong || c.SoLuong == 1);
-                    _lstPMCT.Remove(a);
+                    //_lstPMCT.RemoveAll(c => c.SoLuong < c.SoLuong || c.SoLuong == 1);
+
                     LoadToPhieuMuonCT();
                 }
             }
             else
             {
-                if (soluong<4)
+                foreach (var item in _lstPMCT)
+                {
+                    soluong += Convert.ToInt32(item.SoLuong);
+                }
+                if (soluong <= 3)
                 {
                     PhieuMuonChiTietView pmctv = new PhieuMuonChiTietView()
                     {
@@ -277,19 +293,23 @@ namespace _3_PL.Views
 
         private void dgrid_phieumuonchitiet_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            _IdPMCT = Guid.Parse(dgrid_phieumuonchitiet.CurrentRow.Cells[0].Value.ToString());
+            var tensach = dgrid_phieumuonchitiet.CurrentRow.Cells[2].Value.ToString();
+            var ids = _IsachServices.GetSach().FirstOrDefault(c => c.Name == tensach);
             var indexColumn = e.ColumnIndex;
-            if (indexColumn == 6)
+            if (indexColumn == 7)
             {
-                var pmct = _lstPMCT.FirstOrDefault(c => c.Id == _IdPMCT);
-                if (_IdPMCT != null)
+                
+                foreach (var item in _lstPMCT)
+                {
+                    soluong -= Convert.ToInt32(item.SoLuong);
+                }
+                var pmct = _lstPMCT.FirstOrDefault(c => c.IdSach == ids.Id);
+                if (pmct != null)
                 {
                     _lstPMCT.Remove(pmct);
                     LoadToPhieuMuonCT();
                 }
-
             }
-
         }
         private void btn_xoa_Click(object sender, EventArgs e)
         {
@@ -308,10 +328,14 @@ namespace _3_PL.Views
 
         private void btn_resets_Click(object sender, EventArgs e)
         {
-            soluong = 1;
+  
+
+            soluong = 0;
             lbl_tongtien1.Text = "";
             _lstPM.Clear();
             _lstPMCT.Clear();
+
+
             LoadToPhieuMuonCT();
             LoadToGrid_Sach(_IsachServices.GetSach());
             tbx_search.Text = "";
@@ -322,7 +346,6 @@ namespace _3_PL.Views
             tbx_mapm.Text = "";
             dtp_ngaytra.Value = DateTime.Now + TimeSpan.FromDays(7);
             Loadtogrid_PhieuTra();
-            LoadToPhieuMuonCT();
 
         }
         private void btn_reset_Click(object sender, EventArgs e)
@@ -344,6 +367,7 @@ namespace _3_PL.Views
         }
         private void btn_thanhtoan_Click(object sender, EventArgs e)
         {
+            tbx_mapm.Text ="PM"+ DateTime.Now.ToString("yyMMddHHmmss");
             var mapm = _IPhieuMuonServices.GetPhieuMuon();
             var idtv = _ITheThanhVienServices.GetTheThanhVien().FirstOrDefault(c => c.TenThanhVien == cmb_tenkh.Text);
             if (idtv != null)
@@ -353,10 +377,27 @@ namespace _3_PL.Views
             if (_lstPMCT.Count == 0)
             {
                 MessageBox.Show("Vui lòng chọn sách");
+                return;
+            }
+            else if (cmb_nhanvien.Text=="")
+            {
+                MessageBox.Show("Vui lòng chọn nhân viên");
+                return;
+            }
+            else if (cmb_tenkh.Text=="")
+            {
+                MessageBox.Show("Vui lòng chọn khách hàng");
+                return;
+            }
+            else if (tbx_mapm.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập mã phiếu mượn");
+                return;
             }
             else if (mapm.Count>0)
             {
                 MessageBox.Show("Bạn cần trả sách trước khi mượn");
+                return;
             }
             else
             {
@@ -370,7 +411,6 @@ namespace _3_PL.Views
                     GhiChu = "Chưa Trả",
                 };
                 _IPhieuMuonServices.AddTN(pm);
-                //taisaoloi
                 _IDPM = _IPhieuMuonServices.GetPhieuMuon().FirstOrDefault(c => c.MaPm == tbx_mapm.Text).Id;
                 foreach (var item in _lstPMCT)
                 {
@@ -386,9 +426,9 @@ namespace _3_PL.Views
                     _IsachServices.UpdateTN(x);
                 }
                 MessageBox.Show("Mượn sách thành công, Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi!!!");
-                btn_reset_Click(null, null);
+                btn_resets_Click(null, null);
             }
-            btn_reset_Click(null, null);
+            //btn_resets_Click(null, null);
         }
         private void tbx_thanhtoan_Click(object sender, EventArgs e)
         {
@@ -408,7 +448,6 @@ namespace _3_PL.Views
                     GhiChu = "Chưa Trả",
                 };
                 _IPhieuMuonServices.AddTN(pm);
-                //taisaoloi
                 _IDPM = _IPhieuMuonServices.GetPhieuMuon().FirstOrDefault(c => c.MaPm == tbx_mapm.Text).Id;
                 tbx_search.Text = _IDPM.ToString();
                 foreach (var item in _lstPMCT)
@@ -504,6 +543,10 @@ namespace _3_PL.Views
             dgrid_phieutra.Columns[5].Name = "Ngày mượn";
             dgrid_phieutra.Columns[6].Name = "ngày trả";
             dgrid_phieutra.Columns[7].Name = "Ghi chú";
+            dgrid_phieutra.Columns[1].Width = 50;
+            dgrid_phieutra.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgrid_phieutra.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            dgrid_phieutra.AllowUserToResizeColumns = false;
             foreach (var item in _IPhieuMuonServices.GetPhieuMuon())
             {
                 int so = 0;
@@ -531,21 +574,6 @@ namespace _3_PL.Views
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            //if (ptb_camera.Image != null)
-            //{
-            //    //BarcodeReader reader = new BarcodeReader();
-            //    //Result resul = reader.Decode((Bitmap)ptb_camera.Image);
-            //    if (resul != null)
-            //    {
-
-            //        if (CaptureDevice.IsRunning == true)
-            //        {
-            //            rtb_show.Text = resul.ToString();
-            //            timer1.Stop();
-
-            //        }
-            //    }
-            //}
         }
 
         private void dgrid_phieutra_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -558,17 +586,22 @@ namespace _3_PL.Views
             int stt = 1;
             _lstPMCT= _IPhieuMuonChiTietChiTietServices.GetPhieuMuonChiTiet().FindAll(c => c.IdPM == _IDPT);
             dgrid_phieutract.Rows.Clear();
-            dgrid_phieutract.ColumnCount = 8;
+            dgrid_phieutract.ColumnCount = 9;
             dgrid_phieutract.Columns[0].Name = "ID";
             dgrid_phieutract.Columns[0].Visible = false;
             dgrid_phieutract.Columns[1].Name = "IDPM";
             dgrid_phieutract.Columns[1].Visible = false;
             dgrid_phieutract.Columns[2].Name = "STT";
             dgrid_phieutract.Columns[3].Name = "Tên sách";
-            dgrid_phieutract.Columns[4].Name = "Số lượng";
-            dgrid_phieutract.Columns[5].Name = "Điều kiện";
-            dgrid_phieutract.Columns[6].Name = "Tiền thế chân";
-            dgrid_phieutract.Columns[7].Name = "Ghi chú";
+            dgrid_phieutract.Columns[4].Name = "Mã sách";
+            dgrid_phieutract.Columns[5].Name = "Số lượng";
+            dgrid_phieutract.Columns[6].Name = "Điều kiện";
+            dgrid_phieutract.Columns[7].Name = "Tiền thế chân";
+            dgrid_phieutract.Columns[8].Name = "Ghi chú";
+            dgrid_phieutract.Columns[2].Width = 50;
+            dgrid_phieutract.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgrid_phieutract.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            dgrid_phieutract.AllowUserToResizeColumns = false;
             DataGridViewCheckBoxColumn cb = new DataGridViewCheckBoxColumn();
             {
                 cb.Name = "Xác nhận";
@@ -578,8 +611,8 @@ namespace _3_PL.Views
             {
                 if (item.GhiChu == "Chưa Trả")
                 {
-                    var sach = _IsachServices.GetSach().FirstOrDefault(c => c.Id == item.IdSach).Name;
-                    dgrid_phieutract.Rows.Add(item.Id, item.IdPM, stt++, sach, item.SoLuong, item.DieuKien, item.TienTheChan, item.GhiChu);
+                    var sach = _IsachServices.GetSach().FirstOrDefault(c => c.Id == item.IdSach);
+                    dgrid_phieutract.Rows.Add(item.Id, item.IdPM, stt++, sach.Name,sach.Ma, item.SoLuong, item.DieuKien, item.TienTheChan, item.GhiChu);
                 }
             }
         }
@@ -609,42 +642,21 @@ namespace _3_PL.Views
             
             _IdPMCT = Guid.Parse(dgrid_phieutract.CurrentRow.Cells[0].Value.ToString());
             var a = _IPhieuMuonChiTietChiTietServices.GetPhieuMuonChiTiet().FirstOrDefault(c => c.Id == _IdPMCT);
-            bool isChecked = (bool)dgrid_phieutract.CurrentRow.Cells[8].EditedFormattedValue;
+            bool isChecked = (bool)dgrid_phieutract.CurrentRow.Cells[9].EditedFormattedValue;
             if (isChecked)
             {
-                dgrid_phieutract.CurrentRow.Cells[8].Value = false;
+                dgrid_phieutract.CurrentRow.Cells[9].Value = false;
                 _lstPM.RemoveAll(c => c.Id == _IdPMCT);
             }
             if (isChecked==false)
             {
-                dgrid_phieutract.CurrentRow.Cells[8].Value = true;
+                dgrid_phieutract.CurrentRow.Cells[9].Value = true;
                 _lstPM.Add(a);
             }
         }
 
         private void dgrid_phieutract_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
-            //foreach (DataGridViewRow row in dgrid_phieutract.Rows)
-            //{
-            //    DataGridViewCheckBoxCell chk = (DataGridViewCheckBoxCell)row.Cells[8];
-            //    if ((bool)(chk.Value))
-            //    { 
-            //        _IdPMCT = Guid.Parse(dgrid_phieutract.CurrentRow.Cells[0].Value.ToString());
-            //        var a = _IPhieuMuonChiTietChiTietServices.GetPhieuMuonChiTiet().FirstOrDefault(c => c.Id == _IdPMCT);
-            //        _lstPM.Add(a);
-
-            //    }
-            //    else
-            //    {
-            //        _IdPMCT = Guid.Parse(dgrid_phieutract.CurrentRow.Cells[0].Value.ToString());
-            //        var b = _IPhieuMuonChiTietChiTietServices.GetPhieuMuonChiTiet().FirstOrDefault(c => c.Id == _IdPMCT);
-            //        _lstPM.Remove(b);
-            //    }
-
-            //}
-
-
         }
 
         private void btn_trasach_Click(object sender, EventArgs e)
@@ -653,6 +665,12 @@ namespace _3_PL.Views
             if (_lstPM.Count==0)
             {
                 MessageBox.Show("Bạn chưa chọn sách trả");
+            }
+            else if (tbx_tinhtrang.Text=="")
+            {
+
+                MessageBox.Show("Bạn chưa nhập tình trạng sách");
+
             }
             else
             {
@@ -683,7 +701,7 @@ namespace _3_PL.Views
                     _IsachServices.UpdateTN(x);
                 }
                 MessageBox.Show("Trả thành công");
-                btn_reset_Click(null, null);
+                btn_resets_Click(null, null);
             }
 
         }
@@ -699,6 +717,11 @@ namespace _3_PL.Views
         }
 
         private void dgrid_phieutract_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgrid_phieumuonchitiet_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
 
         }

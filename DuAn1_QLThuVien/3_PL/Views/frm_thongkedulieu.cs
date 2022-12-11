@@ -113,13 +113,8 @@ namespace _3_PL.Views
             dgrid_show2.Columns[6].Name = "Số lượng";
             dgrid_show2.Columns[0].Visible = false;
             dgrid_show2.Columns[1].Width = 50;
-            //dgrid_show2.Columns[2].Width = 200;
-            //dgrid_show2.Columns[3].Width = 200;
-            //dgrid_show2.Columns[4].Width = 200;
-            //dgrid_show2.Columns[5].Width = 200;
-            //dgrid_show2.Columns[6].Width = 200;
             dgrid_show2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            //dgrid_show2.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            dgrid_show2.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
             dgrid_show2.AllowUserToResizeColumns = false;
             foreach (var item in lst)
             {

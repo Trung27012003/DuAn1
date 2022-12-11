@@ -293,6 +293,7 @@
             this.dgrid_phieumuonchitiet.Size = new System.Drawing.Size(589, 277);
             this.dgrid_phieumuonchitiet.TabIndex = 31;
             this.dgrid_phieumuonchitiet.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrid_phieumuonchitiet_CellClick);
+            this.dgrid_phieumuonchitiet.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrid_phieumuonchitiet_CellValueChanged);
             // 
             // tabPage2
             // 
