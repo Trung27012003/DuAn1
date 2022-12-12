@@ -28,7 +28,19 @@ namespace _3_PL.Views
         private void btn_dn_Click(object sender, EventArgs e)
         {
             Account ac = _iaccServices.GetAllAccount().Where(c => c.UserName == tdn).FirstOrDefault();
-            if (ac.PassWord == tbx_mkcu.Text)
+            if (tbx_mkcu.Text == "") 
+            {
+                MessageBox.Show("Nhập mật khẩu cũ", "Thông báo");
+            }
+            else if (tbx_pass.Text == "")
+            {
+                MessageBox.Show("Nhập mật khẩu mới", "Thông báo");
+            }
+            else if (tbx_repass.Text == "")
+            {
+                MessageBox.Show("Nhập lại mật khẩu mới", "Thông báo");
+            }
+            else if (ac.PassWord == tbx_mkcu.Text)
             {
                 if (tbx_pass.Text == tbx_repass.Text)
                 {
@@ -41,8 +53,12 @@ namespace _3_PL.Views
                 }
                 else
                 {
-                    MessageBox.Show("Nhập sai thông tin", "Thông báo");
+                    MessageBox.Show("Nhập mật khẩu mới và nhập lại mật khẩu mới", "Thông báo");
                 }
+            }
+            else
+            {
+                MessageBox.Show("Nhập mật khẩu cũ", "Thông báo");
             }
         }
     }

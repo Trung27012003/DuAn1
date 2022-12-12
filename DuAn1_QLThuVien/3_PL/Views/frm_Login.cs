@@ -47,7 +47,15 @@ namespace _3_PL.Views
         }
         private void btn_login_Click(object sender, EventArgs e)
         {
-            if (_iaccServices.CheckEmtyDB())
+            if (tbx_username.Texts == "")
+            {
+                MessageBox.Show("Nhập tên tài khoản", "Thông báo");
+            }
+            else if(tbx_password.Texts == "")
+            {
+                MessageBox.Show("Nhập mật khẩu", "Thông báo");
+            }
+            else if (_iaccServices.CheckEmtyDB())
             {
                 MessageBox.Show("There is no Account exists in database, please create a new one");
             }
@@ -56,11 +64,11 @@ namespace _3_PL.Views
                 Account account = _iaccServices.CheckLogin(tbx_username.Texts, tbx_password.Texts);
                 if (account == null)
                 {
-                    MessageBox.Show("tai khoan mat khau ko chinh xac");
+                    MessageBox.Show("Tài khoản mật khẩu không chính xác");
                 }
                 else
                 {
-                    MessageBox.Show("Dang nhap thanh cong");
+                    MessageBox.Show("Đăng nhập thành công");
                     Thread thread = new Thread(new ThreadStart(ShowFormMenu)); //Tạo luồng mới
                     thread.Start(); //Khởi chạy luồng
                     this.Close();
