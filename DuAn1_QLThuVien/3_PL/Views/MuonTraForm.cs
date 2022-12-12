@@ -240,7 +240,11 @@ namespace _3_PL.Views
                     //var a = _lstPMCT.Find(c => c.SoLuong < c.SoLuong || c.SoLuong == 1);
                     //_lstPMCT.RemoveAll(c => c.SoLuong < c.SoLuong || c.SoLuong == 1);
                     //LoadToPhieuMuonCT();
-                    soluong = 3;
+                    //soluong = 3;
+                    foreach (var item in _lstPMCT)
+                    {
+                        soluong -= Convert.ToInt32(item.SoLuong);
+                    }
                 }
                 else
                 {
@@ -699,6 +703,7 @@ namespace _3_PL.Views
                     var x = _IsachServices.GetSach().FirstOrDefault(c => c.Id == item.IdSach);
                     x.SoLuong = x.SoLuong + item.SoLuong;
                     _IsachServices.UpdateTN(x);
+                    btn_resets_Click(null, null);
                 }
                 MessageBox.Show("Trả thành công");
                 btn_resets_Click(null, null);
