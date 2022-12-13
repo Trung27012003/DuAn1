@@ -346,58 +346,13 @@ namespace _3_PL.Views
             lb_sdt.ForeColor = Color.Red;
         }
 
-        private void lb_dc_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_Show_Click(object sender, EventArgs e)
-        {
-            if (btn_Show.Text == "HIỂN THỊ")
-            {
-                grb_Anh.Visible = true;
-                btn_Show.Text = "ẨN";
-            }
-            else
-            {               
-                grb_Anh.Visible = false;
-                btn_Show.Text = "HIỂN THỊ";
-            }
-        }
-
-        private void TheNVForm_Load_1(object sender, EventArgs e)
-        {
-            grb_Anh.Visible = false;
-            
-        }
-
 
         private void device_NewFrame(object sender, NewFrameEventArgs eventArgs)
         {
             Bitmap bitmap = (Bitmap)eventArgs.Frame.Clone();
             ptb_Anh.Image= bitmap;
         }
-        private void btn_Change_Click(object sender, EventArgs e)
-        {
-            if (tbx_tennv.Text == "")
-            {
-                MessageBox.Show("Cần nhập tên nhân viên trước khi lựa chọn ảnh");
-            }
-            else
-            {
-                tabControl1.SelectedIndex = 2;
-                btn_take.Text = "Chụp ảnh";
-                infoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
-                foreach (FilterInfo info in infoCollection)
-                {
-                    cbb_Camera.Items.Add(info.Name);
-                }
-                cbb_Camera.SelectedIndex = 0;
-                RunCamera();
-            }
-            
-
-        }
+        
         private void RunCamera()
         {
             device = new VideoCaptureDevice();
@@ -419,55 +374,6 @@ namespace _3_PL.Views
             ptb_Anh.Image = bitmap;
         }
 
-        private void btn_take_Click_1(object sender, EventArgs e)
-        {
-            try
-            {
-                if (btn_take.Text == "Chụp ảnh")
-                {                    
-                    btn_take.Text = "Chụp lại";
-                    btn_Again.Text = "Lưu và thoát";
-                    TakePicture();
-                    device.SignalToStop();
-                    Bitmap anhT = ResizeImage(ptb_Anh.Image, 900, 464);
-                    Bitmap anh = ResizeImage(ptb_Anh.Image, 235, 207);
-                    ptb_Anh.Image = anhT;
-                    ptb_AnhNV.Image = anh;
-                }
-                else
-                {                    
-                    btn_take.Text = "Chụp ảnh";
-                    btn_Again.Text = "Quay lại";
-                    RunCamera();
-                }
-                
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void btn_Again_Click(object sender, EventArgs e)
-        {
-            if (btn_Again.Text == "Lưu và thoát")
-            {
-                    device.SignalToStop();
-                    string path = @"C:\Users\VHC\Dropbox\PC\Desktop\Du an 1\Ảnh";
-                    string ten = path + @"\" + tbx_tennv.Text + ".jpg";
-                    ptb_Anh.Image.Save(path + @"\" + tbx_tennv.Text + ".jpg", ImageFormat.Jpeg);
-                    btn_take.Text = "Chụp ảnh";
-                    ptb_Anh.Dispose();
-                    tabControl1.SelectedIndex = 0;                                   
-            }
-            else
-            {
-                device.Stop();
-                ptb_AnhNV.Dispose();
-                tabControl1.SelectedIndex = 0;
-            }
-            
-        }
         public static Bitmap ResizeImage(Image image, int width, int height)
         {
             var destRect = new Rectangle(0, 0, width, height);
@@ -493,9 +399,95 @@ namespace _3_PL.Views
             return destImage;
         }
 
-        private void cbb_Camera_SelectedIndexChanged(object sender, EventArgs e)
+        
+
+        private void btn_Show_Click_1(object sender, EventArgs e)
         {
-            
+            if (btn_Show.Text == "HIỂN THỊ")
+            {
+                grb_Anh.Visible = true;
+                btn_Show.Text = "ẨN";
+            }
+            else
+            {
+                grb_Anh.Visible = false;
+                btn_Show.Text = "HIỂN THỊ";
+            }
+        }
+
+        private void btn_Change_Click_1(object sender, EventArgs e)
+        {
+            if (tbx_tennv.Text == "")
+            {
+                MessageBox.Show("Cần nhập tên nhân viên trước khi lựa chọn ảnh");
+            }
+            else
+            {
+                tabControl1.SelectedIndex = 2;
+                btn_take.Text = "Chụp ảnh";
+                infoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+                foreach (FilterInfo info in infoCollection)
+                {
+                    cbb_Camera.Items.Add(info.Name);
+                }
+                cbb_Camera.SelectedIndex = 0;
+                RunCamera();
+            }
+
+        }
+
+        private void TheNVForm_Load_1(object sender, EventArgs e)
+        {
+            grb_Anh.Visible = false;
+        }
+
+        private void btn_take_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (btn_take.Text == "Chụp ảnh")
+                {
+                    btn_take.Text = "Chụp lại";
+                    btn_Again.Text = "Lưu và thoát";
+                    TakePicture();
+                    device.SignalToStop();
+                    Bitmap anhT = ResizeImage(ptb_Anh.Image, 900, 464);
+                    Bitmap anh = ResizeImage(ptb_Anh.Image, 235, 207);
+                    ptb_Anh.Image = anhT;
+                    ptb_AnhNV.Image = anh;
+                }
+                else
+                {
+                    btn_take.Text = "Chụp ảnh";
+                    btn_Again.Text = "Quay lại";
+                    RunCamera();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btn_Again_Click_1(object sender, EventArgs e)
+        {
+            if (btn_Again.Text == "Lưu và thoát")
+            {
+                device.SignalToStop();
+                string path = @"C:\Users\VHC\Dropbox\PC\Desktop\Du an 1\Ảnh";
+                string ten = path + @"\" + tbx_tennv.Text + ".jpg";
+                ptb_Anh.Image.Save(path + @"\" + tbx_tennv.Text + ".jpg", ImageFormat.Jpeg);
+                btn_take.Text = "Chụp ảnh";
+                ptb_Anh.Dispose();
+                tabControl1.SelectedIndex = 0;
+            }
+            else
+            {
+                device.SignalToStop();
+                ptb_AnhNV.Dispose();
+                tabControl1.SelectedIndex = 0;
+            }
         }
     }
 }
