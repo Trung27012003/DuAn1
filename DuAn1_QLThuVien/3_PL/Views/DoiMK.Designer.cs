@@ -31,7 +31,7 @@
             this.tbx_pass = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tbx_repass = new System.Windows.Forms.TextBox();
-            this.tbx_username = new System.Windows.Forms.TextBox();
+            this.tbx_mkcu = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_dn = new System.Windows.Forms.Button();
@@ -60,12 +60,12 @@
             this.tbx_repass.Size = new System.Drawing.Size(370, 31);
             this.tbx_repass.TabIndex = 17;
             // 
-            // tbx_username
+            // tbx_mkcu
             // 
-            this.tbx_username.Location = new System.Drawing.Point(341, 118);
-            this.tbx_username.Name = "tbx_username";
-            this.tbx_username.Size = new System.Drawing.Size(370, 31);
-            this.tbx_username.TabIndex = 16;
+            this.tbx_mkcu.Location = new System.Drawing.Point(341, 118);
+            this.tbx_mkcu.Name = "tbx_mkcu";
+            this.tbx_mkcu.Size = new System.Drawing.Size(370, 31);
+            this.tbx_mkcu.TabIndex = 16;
             // 
             // label2
             // 
@@ -81,9 +81,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(181, 119);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 25);
+            this.label1.Size = new System.Drawing.Size(109, 25);
             this.label1.TabIndex = 14;
-            this.label1.Text = "Username";
+            this.label1.Text = "Mật khẩu cũ";
             // 
             // btn_dn
             // 
@@ -91,8 +91,9 @@
             this.btn_dn.Name = "btn_dn";
             this.btn_dn.Size = new System.Drawing.Size(112, 51);
             this.btn_dn.TabIndex = 13;
-            this.btn_dn.Text = "Sign in";
+            this.btn_dn.Text = "Đổi mật khẩu";
             this.btn_dn.UseVisualStyleBackColor = true;
+            this.btn_dn.Click += new System.EventHandler(this.btn_dn_Click);
             // 
             // SignUP
             // 
@@ -102,7 +103,7 @@
             this.Controls.Add(this.tbx_pass);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tbx_repass);
-            this.Controls.Add(this.tbx_username);
+            this.Controls.Add(this.tbx_mkcu);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_dn);
@@ -118,7 +119,7 @@
         private TextBox tbx_pass;
         private Label label3;
         private TextBox tbx_repass;
-        private TextBox tbx_username;
+        private TextBox tbx_mkcu;
         private Label label2;
         private Label label1;
         private Button btn_dn;

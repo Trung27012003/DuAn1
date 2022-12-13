@@ -13,6 +13,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QRCoder;
 using QRCoder.Exceptions;
+using AForge.Video.DirectShow;
+using ZXing;
 
 namespace _3_PL.Views
 {
@@ -43,20 +45,23 @@ namespace _3_PL.Views
         {
             stt = 1;
             dtg_showsach.Rows.Clear();
-            dtg_showsach.ColumnCount = 8;
+            dtg_showsach.ColumnCount = 10;
             dtg_showsach.Columns[0].Name = "STT";
             dtg_showsach.Columns[1].Name = "Id";
-            dtg_showsach.Columns[2].Name = "Thể loại";
-            dtg_showsach.Columns[3].Name = "Tác giả";
-            dtg_showsach.Columns[4].Name = "NXB";
-            dtg_showsach.Columns[5].Name = "Tên sách";
-            dtg_showsach.Columns[6].Name = "Số lượng";
-            dtg_showsach.Columns[7].Name = "Giá tiền";
+            dtg_showsach.Columns[2].Name = "Mã Bar";
+            dtg_showsach.Columns[3].Name = "Mã";
+            dtg_showsach.Columns[4].Name = "Thể loại";
+            dtg_showsach.Columns[5].Name = "Tác giả";
+            dtg_showsach.Columns[6].Name = "NXB";
+            dtg_showsach.Columns[7].Name = "Tên sách";
+            dtg_showsach.Columns[8].Name = "Số lượng";
+            dtg_showsach.Columns[9].Name = "Giá tiền";
             dtg_showsach.Columns[1].Visible = false;
+            dtg_showsach.Columns[2].Visible = false;
             foreach (var x in _IsachServices.GetSach())
             {
                 dtg_showsach.Rows.Add(
-                    stt++,x.Id,_ITheLoaiServices.GetAllTL().FirstOrDefault(c=>c.Id==x.IdTL).Name,x.TG,x.NXB,x.Name,x.SoLuong,x.GiaTien);
+                    stt++, x.Id, x.BarCode, x.Ma, _ITheLoaiServices.GetAllTL().FirstOrDefault(c => c.Id == x.IdTL).Name, x.TG, x.NXB, x.Name, x.SoLuong, x.GiaTien);
             }
         }
         private void LoadTL()
@@ -78,10 +83,12 @@ namespace _3_PL.Views
                 sachView.Id = _id;
                 sachView.IdTL = _ITheLoaiServices.GetAllTL().FirstOrDefault(c => c.Name == cmb_theLoai.Text).Id;
                 sachView.TG = tbt_tg.Text;
+                sachView.Ma = tbx_ma.Text;
+                sachView.BarCode = tbx_barcode.Text;
                 sachView.NXB = tbt_NXB.Text;
                 sachView.Name = tbt_tensach.Text;
                 sachView.GhiChu = tbx_ghichu.Text;
-                sachView.SoLuong =Convert.ToInt32(tbt_soluong.Text);
+                sachView.SoLuong =1;
                 sachView.GiaTien = Convert.ToInt32(tbt_giatien.Text);
             }return sachView;
             
@@ -94,6 +101,10 @@ namespace _3_PL.Views
         {
             
             int a;
+            if(tbx_ma.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập Mã sách");
+            }
             if (cmb_theLoai.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập thể loại");
@@ -179,6 +190,11 @@ namespace _3_PL.Views
             LoadDS();
             btn_sua.Enabled = false;
             btn_xoa.Enabled = false;
+            filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            CaptureDevice = new VideoCaptureDevice();
+            foreach (FilterInfo device in filterInfoCollection)
+                cbb_chonanh.Items.Add(device.Name);
+            cbb_chonanh.SelectedIndex = 0;
         }
 
         private void btn_sua_Click(object sender, EventArgs e)
@@ -262,12 +278,14 @@ namespace _3_PL.Views
             btn_sua.Enabled = true;
             btn_xoa.Enabled = true;
             _id = (Guid)dtg_showsach.CurrentRow.Cells[1].Value;
-            cmb_theLoai.Text = dtg_showsach.CurrentRow.Cells[2].Value.ToString();
-            tbt_tg.Text = dtg_showsach.CurrentRow.Cells[3].Value.ToString();
-            tbt_NXB.Text = dtg_showsach.CurrentRow.Cells[4].Value.ToString();
-            tbt_tensach.Text = dtg_showsach.CurrentRow.Cells[5].Value.ToString();
-            tbt_soluong.Text = dtg_showsach.CurrentRow.Cells[6].Value.ToString();
-            tbt_giatien.Text = dtg_showsach.CurrentRow.Cells[7].Value.ToString();
+            tbx_barcode.Text = dtg_showsach.CurrentRow.Cells[2].Value.ToString();
+            tbx_ma.Text = dtg_showsach.CurrentRow.Cells[3].Value.ToString();
+            cmb_theLoai.Text = dtg_showsach.CurrentRow.Cells[4].Value.ToString();
+            tbt_tg.Text = dtg_showsach.CurrentRow.Cells[5].Value.ToString();
+            tbt_NXB.Text = dtg_showsach.CurrentRow.Cells[6].Value.ToString();
+            tbt_tensach.Text = dtg_showsach.CurrentRow.Cells[7].Value.ToString();
+            tbt_soluong.Text = dtg_showsach.CurrentRow.Cells[8].Value.ToString();
+            tbt_giatien.Text = dtg_showsach.CurrentRow.Cells[9].Value.ToString();
         }
 
         private void tbt_timkiem_TextChanged(object sender, EventArgs e)
@@ -280,32 +298,71 @@ namespace _3_PL.Views
         {
             stt = 1;
             dtg_showsach.Rows.Clear();
-            dtg_showsach.ColumnCount = 8;
+            dtg_showsach.Rows.Clear();
+            dtg_showsach.ColumnCount = 10;
             dtg_showsach.Columns[0].Name = "STT";
             dtg_showsach.Columns[1].Name = "Id";
-            dtg_showsach.Columns[2].Name = "Thể loại";
-            dtg_showsach.Columns[3].Name = "Tác giả";
-            dtg_showsach.Columns[4].Name = "NXB";
-            dtg_showsach.Columns[5].Name = "Tên sách";
-            dtg_showsach.Columns[6].Name = "Số lượng";
-            dtg_showsach.Columns[7].Name = "Giá tiền";
+            dtg_showsach.Columns[2].Name = "Mã Bar";
+            dtg_showsach.Columns[3].Name = "Mã";
+            dtg_showsach.Columns[4].Name = "Thể loại";
+            dtg_showsach.Columns[5].Name = "Tác giả";
+            dtg_showsach.Columns[6].Name = "NXB";
+            dtg_showsach.Columns[7].Name = "Tên sách";
+            dtg_showsach.Columns[8].Name = "Số lượng";
+            dtg_showsach.Columns[9].Name = "Giá tiền";
+            dtg_showsach.Columns[1].Visible = false;
+            dtg_showsach.Columns[2].Visible = false;
             dtg_showsach.Columns[1].Visible = false;
             foreach (var x in a)
             {
                 dtg_showsach.Rows.Add(
-                    stt++, x.Id, _ITheLoaiServices.GetAllTL().FirstOrDefault(c=>c.Id==x.IdTL).Name, x.TG, x.NXB, x.Name, x.SoLuong, x.GiaTien); ;
+                 stt++, x.Id, x.BarCode, x.Ma, _ITheLoaiServices.GetAllTL().FirstOrDefault(c => c.Id == x.IdTL).Name, x.TG, x.NXB, x.Name, x.SoLuong, x.GiaTien); ;
             }
         }
-
+        FilterInfoCollection filterInfoCollection;
+        VideoCaptureDevice CaptureDevice;
         private void btn_QR_Click(object sender, EventArgs e)
         {
-            QRCoder.QRCodeGenerator qrcode = new QRCodeGenerator();
-            var qrtext = "Tên Sách: " + tbt_tensach.Text + "\n" + "Nhà Xuất Bản: " + tbt_NXB.Text + "\n" + "Tác Giả: " + tbt_tg.Text + "\n" + "Thể Loại: " + cmb_theLoai.Text + "\n" +"Ghi Chú: " + tbx_ghichu.Text;
-            var data = qrcode.CreateQrCode(qrtext, QRCoder.QRCodeGenerator.ECCLevel.L);
-            var code = new QRCoder.QRCode(data);
-            ptb_QR.Image = code.GetGraphic(2);
+            //QRCoder.QRCodeGenerator qrcode = new QRCodeGenerator();
+            //var qrtext = "Tên Sách: " + tbt_tensach.Text + "\n" + "Nhà Xuất Bản: " + tbt_NXB.Text + "\n" + "Tác Giả: " + tbt_tg.Text + "\n" + "Thể Loại: " + cmb_theLoai.Text + "\n" +"Ghi Chú: " + tbx_ghichu.Text;
+            //var data = qrcode.CreateQrCode(qrtext, QRCoder.QRCodeGenerator.ECCLevel.L);
+            //var code = new QRCoder.QRCode(data);
+            //ptb_QR.Image = code.GetGraphic(2);
+
+            if (btn_start.Text == "Start")
+            {
+                CaptureDevice = new VideoCaptureDevice(filterInfoCollection[cbb_chonanh.SelectedIndex].MonikerString);
+                CaptureDevice.NewFrame += CaptureDevice_NewFrame;
+                CaptureDevice.Start();
+                btn_start.Text = "Stop";
+            }
+
+            else
+            {
+                CaptureDevice.SignalToStop();
+                ptb_QR.Image = null;
+                btn_start.Text = "Start";
+
+
+            }
+          
+        }
+        private void CaptureDevice_NewFrame(object sender, AForge.Video.NewFrameEventArgs eventArgs)
+        {
+            Bitmap bitmap = (Bitmap)eventArgs.Frame.Clone();
+            BarcodeReader reader = new BarcodeReader();
+
+            var result = reader.Decode(bitmap);
+            if (result != null)
+            {
+                tbx_barcode.Invoke(new MethodInvoker(delegate ()
+                {
+                    tbx_barcode.Text = result.ToString();
+                }));
+            }
+            ptb_QR.Image = bitmap;
         }
 
-       
+
     }
 }

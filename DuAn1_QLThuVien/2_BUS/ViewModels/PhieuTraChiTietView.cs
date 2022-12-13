@@ -13,7 +13,7 @@ namespace _2_BUS.ViewModels
         public Guid? IdPT { get; set; }
         public Guid? IdSach { get; set; }
         public int? SoLuong { get; set; }
-        public int? TinhTrang { get; set; }
+        public string? TinhTrang { get; set; }
         public string? GhiChu { get; set; }
         
     }

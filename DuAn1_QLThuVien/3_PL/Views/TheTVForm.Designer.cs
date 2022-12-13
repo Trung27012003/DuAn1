@@ -276,7 +276,9 @@
             // lb_tenthanhvien
             // 
             this.lb_tenthanhvien.AutoSize = true;
-            this.lb_tenthanhvien.Location = new System.Drawing.Point(145, 79);
+            this.lb_tenthanhvien.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lb_tenthanhvien.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lb_tenthanhvien.Location = new System.Drawing.Point(155, 49);
             this.lb_tenthanhvien.Name = "lb_tenthanhvien";
             this.lb_tenthanhvien.Size = new System.Drawing.Size(69, 25);
             this.lb_tenthanhvien.TabIndex = 23;
@@ -285,7 +287,9 @@
             // lb_diacchi
             // 
             this.lb_diacchi.AutoSize = true;
-            this.lb_diacchi.Location = new System.Drawing.Point(145, 144);
+            this.lb_diacchi.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lb_diacchi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lb_diacchi.Location = new System.Drawing.Point(155, 112);
             this.lb_diacchi.Name = "lb_diacchi";
             this.lb_diacchi.Size = new System.Drawing.Size(69, 25);
             this.lb_diacchi.TabIndex = 24;
@@ -294,7 +298,9 @@
             // lb_sdt
             // 
             this.lb_sdt.AutoSize = true;
-            this.lb_sdt.Location = new System.Drawing.Point(145, 205);
+            this.lb_sdt.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lb_sdt.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lb_sdt.Location = new System.Drawing.Point(283, 173);
             this.lb_sdt.Name = "lb_sdt";
             this.lb_sdt.Size = new System.Drawing.Size(69, 25);
             this.lb_sdt.TabIndex = 25;

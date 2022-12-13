@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace _2_BUS.IServices
 {
-    public interface IPhieuMuon
+    public interface IPhieuMuonServices
     {//Duc ngu
         List<PhieuMuonView> GetPhieuMuon();
         string AddTN(PhieuMuonView obj);

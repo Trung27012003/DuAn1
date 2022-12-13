@@ -87,8 +87,17 @@ namespace _3_PL.Views
 
         private void cbb_nhanvien_SelectedIndexChanged(object sender, EventArgs e)
         {
-            tbt_idnv.Text =  _NhanVienServices.GetAllNv().FirstOrDefault(p => p.Name == cbb_nhanvien.Text).Id.ToString();
-            tbt_idnv.Enabled = false;
+            if(cbb_nhanvien.Text == "")
+            {
+                MessageBox.Show("Không để trống tên nhân viên, vui lòng nhập", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            
+            
+                tbt_idnv.Text = _NhanVienServices.GetAllNv().FirstOrDefault(p => p.Name == cbb_nhanvien.Text).Id.ToString();
+                tbt_idnv.Enabled = false;
+            
+           
         }
     }
 }

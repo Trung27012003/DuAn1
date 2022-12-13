@@ -30,7 +30,10 @@ namespace _2_BUS.Services
             return ac;
 
         }
-        
+        public List<Account> GetAllAccount()
+        {
+            return _iAccRep.GetAllAccounts();
+        }
         public string CreateAccount(AccView obj)
         {
             if (obj == null) return "Thêm không thành công!";
@@ -53,6 +56,18 @@ namespace _2_BUS.Services
             }
             else return false;
         }
+        public string EditEMPLOYEES(Account sp)
+        {
 
+            try
+            {
+                _iAccRep.EditEMPLOYEES(sp);
+                return "successful";
+            }
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+        }
     }
 }

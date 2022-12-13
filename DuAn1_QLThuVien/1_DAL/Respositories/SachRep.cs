@@ -51,7 +51,8 @@ namespace _1_DAL.Respositories
             var tempobj = _context.sachs.FirstOrDefault(c => c.Id == obj.Id);
             tempobj.IdTL = obj.IdTL;
             tempobj.TG = obj.TG;
-
+            tempobj.Ma = obj.Ma;
+            tempobj.BarCode = obj.BarCode;
             tempobj.Name = obj.Name;
             tempobj.SoLuong = obj.SoLuong;
             tempobj.GiaTien = obj.GiaTien;

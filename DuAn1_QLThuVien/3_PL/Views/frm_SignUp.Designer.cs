@@ -33,23 +33,23 @@
             this.tbx_repass = new _3_PL.custom_control.TvT_TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.tvT_IconButton1 = new WinFormsApp1.Custom_Controls.TvT_IconButton();
-            this.cbx_robot = new System.Windows.Forms.CheckBox();
             this.tbx_username = new _3_PL.custom_control.TvT_TextBox();
             this.tbx_pass = new _3_PL.custom_control.TvT_TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cbx_robot = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cbx_robot);
             this.panel1.Controls.Add(this.tbx_repass);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.tvT_IconButton1);
-            this.panel1.Controls.Add(this.cbx_robot);
             this.panel1.Controls.Add(this.tbx_username);
             this.panel1.Controls.Add(this.tbx_pass);
             this.panel1.Controls.Add(this.label3);
@@ -117,19 +117,6 @@
             this.tvT_IconButton1.TextColor = System.Drawing.Color.WhiteSmoke;
             this.tvT_IconButton1.UseVisualStyleBackColor = false;
             this.tvT_IconButton1.Click += new System.EventHandler(this.tvT_IconButton1_Click);
-            // 
-            // cbx_robot
-            // 
-            this.cbx_robot.AutoSize = true;
-            this.cbx_robot.Font = new System.Drawing.Font("Century", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cbx_robot.ForeColor = System.Drawing.Color.Gray;
-            this.cbx_robot.Location = new System.Drawing.Point(54, 438);
-            this.cbx_robot.Margin = new System.Windows.Forms.Padding(4);
-            this.cbx_robot.Name = "cbx_robot";
-            this.cbx_robot.Size = new System.Drawing.Size(198, 29);
-            this.cbx_robot.TabIndex = 6;
-            this.cbx_robot.Text = "I\'m not a robot";
-            this.cbx_robot.UseVisualStyleBackColor = true;
             // 
             // tbx_username
             // 
@@ -220,6 +207,16 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // cbx_robot
+            // 
+            this.cbx_robot.AutoSize = true;
+            this.cbx_robot.Location = new System.Drawing.Point(53, 437);
+            this.cbx_robot.Name = "cbx_robot";
+            this.cbx_robot.Size = new System.Drawing.Size(246, 29);
+            this.cbx_robot.TabIndex = 12;
+            this.cbx_robot.Text = "Tôi không phải người máy";
+            this.cbx_robot.UseVisualStyleBackColor = true;
+            // 
             // frm_SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -243,12 +240,12 @@
         private custom_control.TvT_TextBox tbx_repass;
         private Label label6;
         private WinFormsApp1.Custom_Controls.TvT_IconButton tvT_IconButton1;
-        private CheckBox cbx_robot;
         private custom_control.TvT_TextBox tbx_username;
         private custom_control.TvT_TextBox tbx_pass;
         private Label label3;
         private Label label2;
         private Label label1;
         private PictureBox pictureBox1;
+        private CheckBox cbx_robot;
     }
 }

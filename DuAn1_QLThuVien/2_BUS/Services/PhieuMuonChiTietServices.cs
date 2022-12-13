@@ -24,6 +24,8 @@ namespace _2_BUS.Services
             if (obj == null) return "Thêm không thành công!";
             var phieuMuonChiTiet = new PhieuMuonChiTiet()
             {
+                IdPM= obj.IdPM,
+                IdSach = obj.IdSach,
               SoLuong = obj.SoLuong,
               DieuKien = obj.DieuKien,
               GhiChu = obj.GhiChu,

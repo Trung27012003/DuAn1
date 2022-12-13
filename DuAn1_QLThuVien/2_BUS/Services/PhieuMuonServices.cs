@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace _2_BUS.Services
 {
-    public class PhieuMuonServices : IPhieuMuon
+    public class PhieuMuonServices : IPhieuMuonServices
     {//Duc ngu
         public IPhieuMuonRep _iphieuMuonRep;
         public PhieuMuonServices()
@@ -23,6 +23,9 @@ namespace _2_BUS.Services
             if (obj == null) return "Thêm không thành công!";
             var phieuMuon = new PhieuMuon()
             {
+                IdNV = obj.IdNV,
+                MaPm = obj.MaPm,
+                IdTheTV = obj.IdTheTV,
                 NgayMuon = obj.NgayMuon,
                 NgayTra = obj.NgayTra,
                 GhiChu = obj.GhiChu
@@ -42,6 +45,7 @@ namespace _2_BUS.Services
                 {
                     Id = a.Id,
                     IdNV = a.IdNV,
+                    MaPm = a.MaPm,
                     IdTheTV = a.IdTheTV,
                     NgayMuon = a.NgayMuon,
                     NgayTra = a.NgayTra,
@@ -67,6 +71,7 @@ namespace _2_BUS.Services
                 Id = obj.Id,
                 IdTheTV = obj.IdTheTV,
                 IdNV = obj.IdNV,
+                MaPm = obj.MaPm,
                 NgayMuon = obj.NgayMuon,
                 NgayTra = obj.NgayTra,
                 GhiChu = obj.GhiChu

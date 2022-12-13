@@ -91,6 +91,8 @@ namespace _1_DAL.Migrations
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     IdTL = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Ma = table.Column<string>(type: "nvarchar(100)", nullable: false),
+                    BarCode = table.Column<string>(type: "nvarchar(100)", nullable: false),
                     TacGia = table.Column<string>(type: "nvarchar(100)", nullable: false),
                     NXB = table.Column<string>(type: "nvarchar(100)", nullable: false),
                     TenSach = table.Column<string>(type: "nvarchar(100)", nullable: false),
@@ -116,6 +118,7 @@ namespace _1_DAL.Migrations
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     IdTheTV = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     IdNV = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    MaPm = table.Column<string>(type: "nvarchar(100)", nullable: false),
                     NgayMuon = table.Column<DateTime>(type: "DateTime", nullable: false),
                     NgayTra = table.Column<DateTime>(type: "DateTime", nullable: false),
                     GhiChu = table.Column<string>(type: "nvarchar(100)", nullable: false)
@@ -215,7 +218,7 @@ namespace _1_DAL.Migrations
                     IdPT = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     IdSach = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     SoLuong = table.Column<string>(type: "nvarchar(100)", nullable: false),
-                    TinhTrang = table.Column<int>(type: "int", nullable: false),
+                    TinhTrang = table.Column<string>(type: "nvarchar(100)", nullable: false),
                     GhiChu = table.Column<string>(type: "nvarchar(100)", nullable: false)
                 },
                 constraints: table =>
@@ -279,6 +282,12 @@ namespace _1_DAL.Migrations
                 name: "IX_Sach_IdTL",
                 table: "Sach",
                 column: "IdTL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Sach_Ma",
+                table: "Sach",
+                column: "Ma",
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_TheNgay_IdNV",
