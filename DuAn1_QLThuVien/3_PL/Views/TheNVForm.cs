@@ -377,13 +377,30 @@ namespace _3_PL.Views
                     cbb_Camera.Items.Add(info.Name);
                 }
                 cbb_Camera.SelectedIndex = 0;
-                device = new VideoCaptureDevice();
-                device = new VideoCaptureDevice(infoCollection[cbb_Camera.SelectedIndex].MonikerString);
-                device.NewFrame += device_NewFrame;
-                device.Start();
+                RunCamera();
             }
             
 
+        }
+        private void RunCamera()
+        {
+            device = new VideoCaptureDevice();
+            device = new VideoCaptureDevice(infoCollection[cbb_Camera.SelectedIndex].MonikerString);
+            device.NewFrame += device_NewFrame;
+            device.Start();
+        }
+        private void TakePicture()
+        {
+            device = new VideoCaptureDevice();
+            device = new VideoCaptureDevice(infoCollection[cbb_Camera.SelectedIndex].MonikerString);
+            device.SnapshotFrame += device_SnapshotFrame;
+            device.Start();
+        }
+
+        private void device_SnapshotFrame(object sender, NewFrameEventArgs eventArgs)
+        {
+            Bitmap bitmap = (Bitmap)eventArgs.Frame.Clone();
+            ptb_Anh.Image = bitmap;
         }
 
         private void btn_take_Click_1(object sender, EventArgs e)
@@ -394,17 +411,18 @@ namespace _3_PL.Views
                 {                    
                     btn_take.Text = "Chụp lại";
                     btn_Again.Text = "Lưu và thoát";
-
+                    TakePicture();
                     device.SignalToStop();
+                    Bitmap anhT = ResizeImage(ptb_Anh.Image, 900, 464);
+                    Bitmap anh = ResizeImage(ptb_Anh.Image, 235, 207);
+                    ptb_Anh.Image = anhT;
+                    ptb_AnhNV.Image = anh;
                 }
                 else
                 {                    
                     btn_take.Text = "Chụp ảnh";
                     btn_Again.Text = "Quay lại";
-                    device = new VideoCaptureDevice();
-                    device = new VideoCaptureDevice(infoCollection[cbb_Camera.SelectedIndex].MonikerString);
-                    device.NewFrame += device_NewFrame;
-                    device.Start();
+                    RunCamera();
                 }
                 
             }
@@ -418,28 +436,18 @@ namespace _3_PL.Views
         {
             if (btn_Again.Text == "Lưu và thoát")
             {
-                DialogResult dialog = MessageBox.Show("Bạn có muốn lấy ảnh này không?", "Xác nhận", MessageBoxButtons.YesNo);
-                if (dialog == DialogResult.Yes)
-                {
                     device.SignalToStop();
                     string path = @"C:\Users\VHC\Dropbox\PC\Desktop\Du an 1\Ảnh";
                     string ten = path + @"\" + tbx_tennv.Text + ".jpg";
                     ptb_Anh.Image.Save(path + @"\" + tbx_tennv.Text + ".jpg", ImageFormat.Jpeg);
                     btn_take.Text = "Chụp ảnh";
-                    ptb_Anh = null;
-                    tabControl1.SelectedIndex = 0;               
-                    Image anh = ResizeImage(ptb_Anh.Image, 235, 207);
-                    ptb_AnhNV.Image = anh;
-                }
-                else
-                {
-                    device.SignalToStop();
-                    tabControl1.SelectedIndex = 0;
-                }
+                    ptb_Anh.Dispose();
+                    tabControl1.SelectedIndex = 0;                                   
             }
             else
             {
-                device.SignalToStop();
+                device.Stop();
+                ptb_AnhNV.Dispose();
                 tabControl1.SelectedIndex = 0;
             }
             
