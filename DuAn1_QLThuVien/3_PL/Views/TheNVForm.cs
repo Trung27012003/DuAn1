@@ -1,6 +1,7 @@
 ﻿using _2_BUS.IServices;
 using _2_BUS.Services;
 using _2_BUS.ViewModels;
+using AForge.Video.DirectShow;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,6 +12,10 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AForge.Video.DirectShow;
+using AForge.Video;
+using System.Drawing.Imaging;
+using System.Drawing.Drawing2D;
 
 namespace _3_PL.Views
 {
@@ -22,7 +27,9 @@ namespace _3_PL.Views
         List<NhanVienView> _lstNhanVienView;
         IChucVuServices _ChucVuServices;
         INhanVienServices _NhanVienServices;
-
+        FilterInfoCollection infoCollection;
+        VideoCaptureDevice device;
+        
         public TheNVForm()
         {
             
@@ -326,6 +333,145 @@ namespace _3_PL.Views
         private void tbx_sdt_TextChanged(object sender, EventArgs e)
         {
             tbx_sdt.BackColor = Color.White;
+        }
+
+        private void btn_Show_Click(object sender, EventArgs e)
+        {
+            if (btn_Show.Text == "HIỂN THỊ")
+            {
+                grb_Anh.Visible = true;
+                btn_Show.Text = "ẨN";
+            }
+            else
+            {               
+                grb_Anh.Visible = false;
+                btn_Show.Text = "HIỂN THỊ";
+            }
+        }
+
+        private void TheNVForm_Load_1(object sender, EventArgs e)
+        {
+            grb_Anh.Visible = false;
+            
+        }
+
+
+        private void device_NewFrame(object sender, NewFrameEventArgs eventArgs)
+        {
+            Bitmap bitmap = (Bitmap)eventArgs.Frame.Clone();
+            ptb_Anh.Image= bitmap;
+        }
+        private void btn_Change_Click(object sender, EventArgs e)
+        {
+            if (tbx_tennv.Text == "")
+            {
+                MessageBox.Show("Cần nhập tên nhân viên trước khi lựa chọn ảnh");
+            }
+            else
+            {
+                tabControl1.SelectedIndex = 2;
+                btn_take.Text = "Chụp ảnh";
+                infoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+                foreach (FilterInfo info in infoCollection)
+                {
+                    cbb_Camera.Items.Add(info.Name);
+                }
+                cbb_Camera.SelectedIndex = 0;
+                device = new VideoCaptureDevice();
+                device = new VideoCaptureDevice(infoCollection[cbb_Camera.SelectedIndex].MonikerString);
+                device.NewFrame += device_NewFrame;
+                device.Start();
+            }
+            
+
+        }
+
+        private void btn_take_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (btn_take.Text == "Chụp ảnh")
+                {                    
+                    btn_take.Text = "Chụp lại";
+                    btn_Again.Text = "Lưu và thoát";
+
+                    device.SignalToStop();
+                }
+                else
+                {                    
+                    btn_take.Text = "Chụp ảnh";
+                    btn_Again.Text = "Quay lại";
+                    device = new VideoCaptureDevice();
+                    device = new VideoCaptureDevice(infoCollection[cbb_Camera.SelectedIndex].MonikerString);
+                    device.NewFrame += device_NewFrame;
+                    device.Start();
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btn_Again_Click(object sender, EventArgs e)
+        {
+            if (btn_Again.Text == "Lưu và thoát")
+            {
+                DialogResult dialog = MessageBox.Show("Bạn có muốn lấy ảnh này không?", "Xác nhận", MessageBoxButtons.YesNo);
+                if (dialog == DialogResult.Yes)
+                {
+                    device.SignalToStop();
+                    string path = @"C:\Users\VHC\Dropbox\PC\Desktop\Du an 1\Ảnh";
+                    string ten = path + @"\" + tbx_tennv.Text + ".jpg";
+                    ptb_Anh.Image.Save(path + @"\" + tbx_tennv.Text + ".jpg", ImageFormat.Jpeg);
+                    btn_take.Text = "Chụp ảnh";
+                    ptb_Anh = null;
+                    tabControl1.SelectedIndex = 0;               
+                    Image anh = ResizeImage(ptb_Anh.Image, 235, 207);
+                    ptb_AnhNV.Image = anh;
+                }
+                else
+                {
+                    device.SignalToStop();
+                    tabControl1.SelectedIndex = 0;
+                }
+            }
+            else
+            {
+                device.SignalToStop();
+                tabControl1.SelectedIndex = 0;
+            }
+            
+        }
+        public static Bitmap ResizeImage(Image image, int width, int height)
+        {
+            var destRect = new Rectangle(0, 0, width, height);
+            var destImage = new Bitmap(width, height);
+
+            destImage.SetResolution(image.HorizontalResolution, image.VerticalResolution);
+
+            using (var graphics = Graphics.FromImage(destImage))
+            {
+                graphics.CompositingMode = CompositingMode.SourceCopy;
+                graphics.CompositingQuality = CompositingQuality.HighQuality;
+                graphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                graphics.SmoothingMode = SmoothingMode.HighQuality;
+                graphics.PixelOffsetMode = PixelOffsetMode.HighQuality;
+
+                using (var wrapMode = new ImageAttributes())
+                {
+                    wrapMode.SetWrapMode(WrapMode.TileFlipXY);
+                    graphics.DrawImage(image, destRect, 0, 0, image.Width, image.Height, GraphicsUnit.Pixel, wrapMode);
+                }
+            }
+
+            return destImage;
+        }
+
+        private void cbb_Camera_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

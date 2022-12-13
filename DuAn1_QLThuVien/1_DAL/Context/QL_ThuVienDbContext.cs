@@ -33,7 +33,7 @@ namespace _1_DAL.Context
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder.
-              UseSqlServer("Data Source=HOANGQUAN-GD\\SQLEXPRESS;Initial Catalog=DuAn_QLThuVien;Integrated Security=True"));//User ID=trungtruong;Password=123456
+              UseSqlServer("Data Source=LAPTOP-4C55HFD4\\SQLEXPRESS;Initial Catalog=DuAn_QLThuVien;Integrated Security=True"));//User ID=trungtruong;Password=123456
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
