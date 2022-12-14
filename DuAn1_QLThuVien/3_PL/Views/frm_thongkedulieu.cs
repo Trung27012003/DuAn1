@@ -49,7 +49,7 @@ namespace _3_PL.Views
             _lstSach = new List<SachView>();
             _lstPMCT = _IPhieuMuonChiTietChiTietServices.GetPhieuMuonChiTiet();
             _lstPTCT = _IPhieuTraChiTietServices.GetPhieuTraChiTiet();
-            _lstPM = _IPhieuMuonServices.GetPhieuMuon();
+            _lstPM = _IPhieuMuonServices.GetPhieuMuon().FindAll(c => c.GhiChu == "Chưa Trả");
             _lstPT = _IPhieuTraServices.GetPhieuTra();
             _lstSach = _ISachServices.GetSach();
         }
