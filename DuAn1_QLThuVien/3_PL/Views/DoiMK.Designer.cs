@@ -91,7 +91,7 @@
             this.btn_dn.Name = "btn_dn";
             this.btn_dn.Size = new System.Drawing.Size(112, 51);
             this.btn_dn.TabIndex = 13;
-            this.btn_dn.Text = "Sign in";
+            this.btn_dn.Text = "Đổi mật khẩu";
             this.btn_dn.UseVisualStyleBackColor = true;
             this.btn_dn.Click += new System.EventHandler(this.btn_dn_Click);
             // 

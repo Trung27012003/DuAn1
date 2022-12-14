@@ -83,7 +83,29 @@ namespace _2_BUS.Utilities
             }
             else return "";
         }
+        public bool CheckPass(string password)
+        {
+            if (password.Length < 8)
+            {
+                return false;
+            }
+            bool Kitu_dacbiet = false;
+            bool Kitu_dacbiet1 = false;
+            bool Kitu_dacbiet2 = false;
+            for (int i = 0; i < password.Length; i++)
+            {
+                if (password[i] >= 'a' && password[i] <= 'z')
+                    Kitu_dacbiet = true;
+                if (password[i] >= 'A' && password[i] <= 'Z')
+                    Kitu_dacbiet1 = true;
+                if (password[i] >= '0' && password[i] <= '9')
+                    Kitu_dacbiet2 = true;
+                if (Kitu_dacbiet && Kitu_dacbiet1 && Kitu_dacbiet2)
+                    return true;
 
+            }
+            return false;
 
+        }
     }
 }

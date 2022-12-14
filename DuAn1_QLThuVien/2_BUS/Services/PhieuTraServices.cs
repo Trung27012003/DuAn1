@@ -23,7 +23,7 @@ namespace _2_BUS.Services
             if (obj == null) return "Thêm không thành công!";
             var phieutra = new PhieuTra()
             {
-
+                IdPM = obj.IdPM,
                 NgayTra = obj.NgayTra,
                 GhiChu = obj.GhiChu
 
