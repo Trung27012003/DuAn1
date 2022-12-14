@@ -25,6 +25,7 @@ namespace _3_PL.Views
         public IPhieuMuonChiTietChiTietServices _IPhieuMuonChiTietChiTietServices;
         private int stt;
         private Guid _id;
+        private Guid _idTL;
         public SachForm()
         {
             InitializeComponent();
@@ -32,6 +33,7 @@ namespace _3_PL.Views
             _ITheLoaiServices = new TheLoaiServices();
             _IPhieuMuonChiTietChiTietServices = new PhieuMuonChiTietServices();
             LoadTocmb();
+            
         }
         private void LoadTocmb()
         {
@@ -66,14 +68,16 @@ namespace _3_PL.Views
         }
         private void LoadTL()
         {
+            stt=1;
             dtg_showtl.Rows.Clear();
-            int stt = 1;
-            dtg_showtl.ColumnCount = 2;
+            dtg_showtl.ColumnCount = 3;
             dtg_showtl.Columns[0].Name = "STT";
             dtg_showtl.Columns[1].Name = "Thể loại";
-            foreach(var x in _ITheLoaiServices.GetAllTL())
+            dtg_showtl.Columns[2].Name = "";
+            dtg_showtl.Columns[2].Visible = false;
+            foreach (var x in _ITheLoaiServices.GetAllTL())
             {
-                dtg_showtl.Rows.Add(stt++, x.Name);
+                dtg_showtl.Rows.Add(stt++,x.Name ,x.Id);
             }
         }
         private SachView GetData()
@@ -154,6 +158,7 @@ namespace _3_PL.Views
                     {
                         MessageBox.Show(_IsachServices.AddTN(GetData()));
                         LoadDS();
+                        LoadTL();
                     }
                     else
                     {
@@ -167,6 +172,7 @@ namespace _3_PL.Views
                     {
                         MessageBox.Show(_IsachServices.AddTN(GetData()));
                         LoadDS();
+                        LoadTL();
                     }
                     else
                     {
@@ -181,7 +187,11 @@ namespace _3_PL.Views
 
         private void dtg_showtl_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            cmb_theLoai.Text = dtg_showtl.CurrentCell.Value.ToString();
+            cmb_theLoai.Text = dtg_showtl.CurrentRow.Cells[1].Value.ToString();
+            _idTL = (Guid)dtg_showtl.CurrentRow.Cells[2].Value;
+            var c = _IsachServices.GetSach().Where(x => x.IdTL.Equals(_idTL)).ToList();
+            dtg_showsach.Rows.Clear();
+            Loadsearch(c);
         }
 
         private void SachForm_Load(object sender, EventArgs e)
@@ -200,7 +210,7 @@ namespace _3_PL.Views
         private void btn_sua_Click(object sender, EventArgs e)
         {
             int a;
-            var b = _IsachServices.GetSach().Where(x => x.Name.Equals(tbt_tensach.Text));
+            var b = _IsachServices.GetSach().FirstOrDefault(x => x.Name.Equals(tbt_tensach.Text));
             if (cmb_theLoai.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập thể loại");
@@ -253,17 +263,23 @@ namespace _3_PL.Views
 
         private void btn_xoa_Click(object sender, EventArgs e)
         {
-            var c = _IPhieuMuonChiTietChiTietServices.GetPhieuMuonChiTiet().Where(x => x.IdSach.Equals(_id));
+            var c = _IPhieuMuonChiTietChiTietServices.GetPhieuMuonChiTiet().FirstOrDefault(x => x.IdSach == _id && x.GhiChu.Contains("Chưa Trả") );
+            var d = _IPhieuMuonChiTietChiTietServices.GetPhieuMuonChiTiet().FirstOrDefault(x => x.IdSach == _id && x.GhiChu.Contains("Đã Trả"));
             if (c != null)
             {
                 MessageBox.Show("Sách này đang cho mượn,không thể xóa bỏ");
-            }else
+            }else if (d != null)
+            {
+                MessageBox.Show("Sách này đã tham gia cho mượn,không thể xóa bỏ");
+            }
+            else
             {
                 DialogResult dialog = MessageBox.Show("Bạn có muốn xóa sách không?", "Xác nhận", MessageBoxButtons.YesNo);
                 if (dialog == DialogResult.Yes)
                 {
                     MessageBox.Show(_IsachServices.RemoveTN(_id));
                     LoadDS();
+                    LoadTL();
                 }
                 else
                 {
@@ -294,6 +310,7 @@ namespace _3_PL.Views
             dtg_showsach.Rows.Clear();
             Loadsearch(a);
         }
+        
         private void Loadsearch(dynamic a)
         {
             stt = 1;
