@@ -31,15 +31,6 @@
     <Compile Update="Views\frm_thongkedulieu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\GiaoDienSach.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Views\LoginForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Views\MenuForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Views\MuonTraForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -53,9 +44,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\TheTVForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Views\ThongKeForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

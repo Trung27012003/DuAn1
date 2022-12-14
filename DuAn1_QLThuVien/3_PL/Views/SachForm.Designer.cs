@@ -77,21 +77,21 @@
             // 
             this.tbt_tg.Location = new System.Drawing.Point(113, 151);
             this.tbt_tg.Name = "tbt_tg";
-            this.tbt_tg.Size = new System.Drawing.Size(218, 27);
+            this.tbt_tg.Size = new System.Drawing.Size(342, 27);
             this.tbt_tg.TabIndex = 1;
             // 
             // tbt_giatien
             // 
             this.tbt_giatien.Location = new System.Drawing.Point(113, 328);
             this.tbt_giatien.Name = "tbt_giatien";
-            this.tbt_giatien.Size = new System.Drawing.Size(218, 27);
+            this.tbt_giatien.Size = new System.Drawing.Size(342, 27);
             this.tbt_giatien.TabIndex = 4;
             // 
             // tbt_tensach
             // 
             this.tbt_tensach.Location = new System.Drawing.Point(113, 240);
             this.tbt_tensach.Name = "tbt_tensach";
-            this.tbt_tensach.Size = new System.Drawing.Size(218, 27);
+            this.tbt_tensach.Size = new System.Drawing.Size(342, 27);
             this.tbt_tensach.TabIndex = 5;
             // 
             // tbt_soluong
@@ -99,7 +99,7 @@
             this.tbt_soluong.Location = new System.Drawing.Point(113, 287);
             this.tbt_soluong.Name = "tbt_soluong";
             this.tbt_soluong.ReadOnly = true;
-            this.tbt_soluong.Size = new System.Drawing.Size(218, 27);
+            this.tbt_soluong.Size = new System.Drawing.Size(342, 27);
             this.tbt_soluong.TabIndex = 6;
             this.tbt_soluong.Text = "1";
             // 
@@ -159,7 +159,7 @@
             // 
             // btn_them
             // 
-            this.btn_them.Location = new System.Drawing.Point(641, 17);
+            this.btn_them.Location = new System.Drawing.Point(724, 22);
             this.btn_them.Name = "btn_them";
             this.btn_them.Size = new System.Drawing.Size(115, 44);
             this.btn_them.TabIndex = 17;
@@ -169,7 +169,7 @@
             // 
             // btn_sua
             // 
-            this.btn_sua.Location = new System.Drawing.Point(793, 17);
+            this.btn_sua.Location = new System.Drawing.Point(876, 22);
             this.btn_sua.Name = "btn_sua";
             this.btn_sua.Size = new System.Drawing.Size(115, 44);
             this.btn_sua.TabIndex = 18;
@@ -179,7 +179,7 @@
             // 
             // btn_xoa
             // 
-            this.btn_xoa.Location = new System.Drawing.Point(641, 73);
+            this.btn_xoa.Location = new System.Drawing.Point(724, 78);
             this.btn_xoa.Name = "btn_xoa";
             this.btn_xoa.Size = new System.Drawing.Size(115, 44);
             this.btn_xoa.TabIndex = 19;
@@ -189,7 +189,7 @@
             // 
             // tbt_timkiem
             // 
-            this.tbt_timkiem.Location = new System.Drawing.Point(6, 27);
+            this.tbt_timkiem.Location = new System.Drawing.Point(-3, 29);
             this.tbt_timkiem.Name = "tbt_timkiem";
             this.tbt_timkiem.Size = new System.Drawing.Size(268, 27);
             this.tbt_timkiem.TabIndex = 20;
@@ -205,7 +205,7 @@
             this.dtg_showtl.Name = "dtg_showtl";
             this.dtg_showtl.RowHeadersWidth = 51;
             this.dtg_showtl.RowTemplate.Height = 29;
-            this.dtg_showtl.Size = new System.Drawing.Size(207, 271);
+            this.dtg_showtl.Size = new System.Drawing.Size(215, 389);
             this.dtg_showtl.TabIndex = 22;
             this.dtg_showtl.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_showtl_CellClick);
             // 
@@ -245,7 +245,7 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Location = new System.Drawing.Point(250, 17);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(385, 417);
+            this.groupBox1.Size = new System.Drawing.Size(468, 417);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chi tiết";
@@ -254,7 +254,7 @@
             // 
             this.tbx_barcode.Location = new System.Drawing.Point(112, 108);
             this.tbx_barcode.Name = "tbx_barcode";
-            this.tbx_barcode.Size = new System.Drawing.Size(218, 27);
+            this.tbx_barcode.Size = new System.Drawing.Size(342, 27);
             this.tbx_barcode.TabIndex = 24;
             // 
             // label9
@@ -270,7 +270,7 @@
             // 
             this.tbx_ma.Location = new System.Drawing.Point(113, 65);
             this.tbx_ma.Name = "tbx_ma";
-            this.tbx_ma.Size = new System.Drawing.Size(218, 27);
+            this.tbx_ma.Size = new System.Drawing.Size(342, 27);
             this.tbx_ma.TabIndex = 22;
             // 
             // label8
@@ -287,14 +287,14 @@
             this.cmb_theLoai.FormattingEnabled = true;
             this.cmb_theLoai.Location = new System.Drawing.Point(112, 21);
             this.cmb_theLoai.Name = "cmb_theLoai";
-            this.cmb_theLoai.Size = new System.Drawing.Size(218, 28);
+            this.cmb_theLoai.Size = new System.Drawing.Size(342, 28);
             this.cmb_theLoai.TabIndex = 21;
             // 
             // tbx_ghichu
             // 
             this.tbx_ghichu.Location = new System.Drawing.Point(113, 373);
             this.tbx_ghichu.Name = "tbx_ghichu";
-            this.tbx_ghichu.Size = new System.Drawing.Size(218, 27);
+            this.tbx_ghichu.Size = new System.Drawing.Size(342, 27);
             this.tbx_ghichu.TabIndex = 19;
             // 
             // label7
@@ -310,13 +310,13 @@
             // 
             this.tbt_NXB.Location = new System.Drawing.Point(113, 196);
             this.tbt_NXB.Name = "tbt_NXB";
-            this.tbt_NXB.Size = new System.Drawing.Size(218, 27);
+            this.tbt_NXB.Size = new System.Drawing.Size(342, 27);
             this.tbt_NXB.TabIndex = 18;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.ptb_QR);
-            this.panel1.Location = new System.Drawing.Point(651, 186);
+            this.panel1.Location = new System.Drawing.Point(734, 191);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(266, 140);
@@ -337,7 +337,7 @@
             this.groupBox2.Controls.Add(this.dtg_showtl);
             this.groupBox2.Location = new System.Drawing.Point(11, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(227, 304);
+            this.groupBox2.Size = new System.Drawing.Size(227, 422);
             this.groupBox2.TabIndex = 24;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thể Loại";
@@ -347,7 +347,7 @@
             this.groupBox3.Controls.Add(this.dtg_showsach);
             this.groupBox3.Location = new System.Drawing.Point(19, 440);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(904, 195);
+            this.groupBox3.Size = new System.Drawing.Size(999, 202);
             this.groupBox3.TabIndex = 25;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Danh sách";
@@ -359,14 +359,14 @@
             this.dtg_showsach.Name = "dtg_showsach";
             this.dtg_showsach.RowHeadersWidth = 51;
             this.dtg_showsach.RowTemplate.Height = 29;
-            this.dtg_showsach.Size = new System.Drawing.Size(891, 176);
+            this.dtg_showsach.Size = new System.Drawing.Size(987, 169);
             this.dtg_showsach.TabIndex = 0;
             this.dtg_showsach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_showsach_CellClick);
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.tbt_timkiem);
-            this.groupBox4.Location = new System.Drawing.Point(651, 353);
+            this.groupBox4.Location = new System.Drawing.Point(734, 358);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(280, 64);
             this.groupBox4.TabIndex = 26;
@@ -375,7 +375,7 @@
             // 
             // btn_start
             // 
-            this.btn_start.Location = new System.Drawing.Point(793, 73);
+            this.btn_start.Location = new System.Drawing.Point(876, 78);
             this.btn_start.Name = "btn_start";
             this.btn_start.Size = new System.Drawing.Size(115, 44);
             this.btn_start.TabIndex = 27;
@@ -394,7 +394,7 @@
             // cbb_chonanh
             // 
             this.cbb_chonanh.FormattingEnabled = true;
-            this.cbb_chonanh.Location = new System.Drawing.Point(772, 151);
+            this.cbb_chonanh.Location = new System.Drawing.Point(855, 156);
             this.cbb_chonanh.Name = "cbb_chonanh";
             this.cbb_chonanh.Size = new System.Drawing.Size(144, 28);
             this.cbb_chonanh.TabIndex = 29;

@@ -42,7 +42,10 @@ namespace _3_PL.Views
             dtg_show.Columns[3].Name = "Ngày bắt đầu";
             dtg_show.Columns[4].Name = "Ngày kết thúc";
             dtg_show.Columns[5].Name = "Ghi chú";
-
+            dtg_show.Columns[1].Width = 50;
+            dtg_show.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dtg_show.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            dtg_show.AllowUserToResizeColumns = false;
 
             foreach (var view in list)
             {
@@ -69,7 +72,6 @@ namespace _3_PL.Views
         {
             TheNgayView tnv = new TheNgayView();
             {
-
                 tnv.IdNV = Guid.Parse(tbt_idnv.Text);
                 tnv.NameNV = cbb_nhanvien.Text;
                 tnv.StartTime = DateTime.Now;
@@ -92,12 +94,31 @@ namespace _3_PL.Views
                 MessageBox.Show("Không để trống tên nhân viên, vui lòng nhập", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            
-            
                 tbt_idnv.Text = _NhanVienServices.GetAllNv().FirstOrDefault(p => p.Name == cbb_nhanvien.Text).Id.ToString();
-                tbt_idnv.Enabled = false;
-            
-           
+                tbt_idnv.Enabled = false;  
+        }
+
+        private void btn_loc_Click(object sender, EventArgs e)
+        {
+            var lst = _ITheNgayServices.GetTheNgay().Where(p => p.StartTime >= dtp_starts.Value && p.EndTime <= dtp_ends.Value).ToList();
+            if (dtp_starts.Value> dtp_ends.Value)
+            {
+                MessageBox.Show("Ngày bắt đầu và kết thúc không hợp lệ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+              
+                if (lst.Count!=0)
+                {
+                    LoadToDTG(lst.ToList());
+                }
+                else
+                {
+                    MessageBox.Show("Không có dữ liệu", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    LoadToDTG(theNgayViews);
+                }
+            }
+
         }
     }
 }

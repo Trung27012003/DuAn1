@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.dtp_start = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_starts = new System.Windows.Forms.DateTimePicker();
             this.rtb_ghichu = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,12 +45,13 @@
             this.btn_them = new System.Windows.Forms.Button();
             this.btn_in = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_ends = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.dtp_end = new System.Windows.Forms.DateTimePicker();
             this.tbt_idnv = new System.Windows.Forms.TextBox();
             this.cbb_nhanvien = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.btn_loc = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_show)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,13 +62,13 @@
             this.dtp_start.Size = new System.Drawing.Size(239, 27);
             this.dtp_start.TabIndex = 0;
             // 
-            // dateTimePicker2
+            // dtp_starts
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(275, 286);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(113, 27);
-            this.dateTimePicker2.TabIndex = 1;
+            this.dtp_starts.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_starts.Location = new System.Drawing.Point(275, 286);
+            this.dtp_starts.Name = "dtp_starts";
+            this.dtp_starts.Size = new System.Drawing.Size(113, 27);
+            this.dtp_starts.TabIndex = 1;
             // 
             // rtb_ghichu
             // 
@@ -119,9 +120,6 @@
             this.dtg_show.RowHeadersWidth = 51;
             this.dtg_show.RowTemplate.Height = 29;
             this.dtg_show.Size = new System.Drawing.Size(802, 149);
-
-
-
             this.dtg_show.TabIndex = 6;
             // 
             // Column1
@@ -129,6 +127,7 @@
             this.Column1.HeaderText = "Id";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Column1.Visible = false;
             this.Column1.Width = 50;
             // 
@@ -165,7 +164,7 @@
             this.Column6.HeaderText = "Ghi Chú";
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
-            this.Column6.Width = 140;
+            this.Column6.Width = 135;
             // 
             // label4
             // 
@@ -205,13 +204,13 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "Tìm kiếm";
             // 
-            // dateTimePicker3
+            // dtp_ends
             // 
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker3.Location = new System.Drawing.Point(434, 286);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(124, 27);
-            this.dateTimePicker3.TabIndex = 13;
+            this.dtp_ends.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_ends.Location = new System.Drawing.Point(434, 286);
+            this.dtp_ends.Name = "dtp_ends";
+            this.dtp_ends.Size = new System.Drawing.Size(124, 27);
+            this.dtp_ends.TabIndex = 13;
             // 
             // label6
             // 
@@ -256,61 +255,31 @@
             this.label7.TabIndex = 17;
             this.label7.Text = "Mã nhân viên ";
             // 
-
-            // Column1
+            // btn_loc
             // 
-            this.Column1.HeaderText = "Id";
-            this.Column1.Name = "Column1";
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column1.Visible = false;
-            this.Column1.Width = 50;
+            this.btn_loc.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btn_loc.IconColor = System.Drawing.Color.Black;
+            this.btn_loc.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_loc.Location = new System.Drawing.Point(580, 286);
+            this.btn_loc.Name = "btn_loc";
+            this.btn_loc.Size = new System.Drawing.Size(97, 33);
+            this.btn_loc.TabIndex = 19;
+            this.btn_loc.Text = "Lọc";
+            this.btn_loc.UseVisualStyleBackColor = true;
+            this.btn_loc.Click += new System.EventHandler(this.btn_loc_Click);
             // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "STT";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 50;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Tên Nhân Viên";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 160;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Ngày Bắt Đầu";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 200;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Ngày Kết Thúc";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 200;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Ghi Chú";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 135;
-            // 
-
             // TheNgayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-
-            this.ClientSize = new System.Drawing.Size(818, 412);
-
             this.ClientSize = new System.Drawing.Size(935, 515);
-
+            this.Controls.Add(this.btn_loc);
             this.Controls.Add(this.tbt_idnv);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.cbb_nhanvien);
             this.Controls.Add(this.dtp_end);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.dateTimePicker3);
+            this.Controls.Add(this.dtp_ends);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btn_in);
             this.Controls.Add(this.btn_them);
@@ -320,7 +289,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.rtb_ghichu);
-            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dtp_starts);
             this.Controls.Add(this.dtp_start);
             this.Name = "TheNgayForm";
             this.Text = "TheNgayForm";
@@ -333,7 +302,7 @@
         #endregion
 
         private DateTimePicker dtp_start;
-        private DateTimePicker dateTimePicker2;
+        private DateTimePicker dtp_starts;
         private RichTextBox rtb_ghichu;
         private Label label1;
         private Label label2;
@@ -343,7 +312,7 @@
         private Button btn_them;
         private Button btn_in;
         private Label label5;
-        private DateTimePicker dateTimePicker3;
+        private DateTimePicker dtp_ends;
         private Label label6;
         private DateTimePicker dtp_end;
         private TextBox tbt_idnv;
@@ -355,5 +324,6 @@
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column6;
+        private FontAwesome.Sharp.IconButton btn_loc;
     }
 }
