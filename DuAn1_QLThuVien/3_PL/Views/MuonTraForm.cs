@@ -333,13 +333,12 @@ namespace _3_PL.Views
         private void btn_resets_Click(object sender, EventArgs e)
         {
   
-
             soluong = 0;
             lbl_tongtien1.Text = "";
             _lstPM.Clear();
             _lstPMCT.Clear();
-
-
+            Loadtogrid_PhieuTra();
+            LoadToPhieuTraCT();
             LoadToPhieuMuonCT();
             LoadToGrid_Sach(_IsachServices.GetSach());
             tbx_search.Text = "";
@@ -349,8 +348,6 @@ namespace _3_PL.Views
             cmb_tenkh.Text = "";
             tbx_mapm.Text = "";
             dtp_ngaytra.Value = DateTime.Now + TimeSpan.FromDays(7);
-            Loadtogrid_PhieuTra();
-
         }
         private void btn_reset_Click(object sender, EventArgs e)
         {
@@ -686,7 +683,7 @@ namespace _3_PL.Views
                 };
                 _IPhieuTraServices.AddTN(pm);
                 var getIdPT = _IPhieuTraServices.GetPhieuTra().FirstOrDefault(c => c.IdPM == _IDPT).Id;
-                foreach (var item in _lstPM)
+                foreach (var item in _lstPM.ToList())
                 {
                     var ptct = new PhieuTraChiTietView()
                     {

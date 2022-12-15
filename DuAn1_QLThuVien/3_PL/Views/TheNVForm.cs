@@ -62,6 +62,10 @@ namespace _3_PL.Views
             dgrid_shownv.Columns[4].Name = "Địa Chỉ";
             dgrid_shownv.Columns[5].Name = "SDT";
             dgrid_shownv.Columns[6].Name = "Ngày Sinh";
+            dgrid_shownv.Columns[1].Width = 50;
+            dgrid_shownv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgrid_shownv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            dgrid_shownv.AllowUserToResizeColumns = false;
             foreach (var item in lst)
             {
                 dgrid_shownv.Rows.Add(
@@ -90,6 +94,9 @@ namespace _3_PL.Views
             dgrid_show.Columns[0].Visible = false;
             dgrid_show.Columns[1].Name = "STT";
             dgrid_show.Columns[2].Name = "Name";
+            dgrid_show.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgrid_show.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            dgrid_show.AllowUserToResizeColumns = false;
             foreach (var item in lst)
             {
                 dgrid_show.Rows.Add(item.Id,stt++,item.Name);

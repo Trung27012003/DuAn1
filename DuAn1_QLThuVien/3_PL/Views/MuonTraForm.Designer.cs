@@ -168,11 +168,11 @@
             // lbl_tongtien1
             // 
             this.lbl_tongtien1.AutoSize = true;
-            this.lbl_tongtien1.Location = new System.Drawing.Point(115, 203);
+            this.lbl_tongtien1.Location = new System.Drawing.Point(124, 203);
             this.lbl_tongtien1.Name = "lbl_tongtien1";
-            this.lbl_tongtien1.Size = new System.Drawing.Size(42, 20);
+            this.lbl_tongtien1.Size = new System.Drawing.Size(24, 20);
             this.lbl_tongtien1.TabIndex = 35;
-            this.lbl_tongtien1.Text = "tien2";
+            this.lbl_tongtien1.Text = ".....";
             // 
             // cmb_nhanvien
             // 
@@ -267,9 +267,9 @@
             // cmb_loc
             // 
             this.cmb_loc.FormattingEnabled = true;
-            this.cmb_loc.Location = new System.Drawing.Point(821, 21);
+            this.cmb_loc.Location = new System.Drawing.Point(781, 21);
             this.cmb_loc.Name = "cmb_loc";
-            this.cmb_loc.Size = new System.Drawing.Size(151, 28);
+            this.cmb_loc.Size = new System.Drawing.Size(191, 28);
             this.cmb_loc.TabIndex = 20;
             this.cmb_loc.SelectedIndexChanged += new System.EventHandler(this.cmb_loc_SelectedIndexChanged);
             // 
@@ -493,7 +493,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1029, 633);
+            this.ClientSize = new System.Drawing.Size(1030, 633);
             this.Controls.Add(this.tabControl1);
             this.Name = "MuonTraForm";
             this.Text = "MuonTraForm";

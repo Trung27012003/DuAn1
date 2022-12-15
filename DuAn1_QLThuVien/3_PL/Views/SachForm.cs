@@ -60,6 +60,10 @@ namespace _3_PL.Views
             dtg_showsach.Columns[9].Name = "Giá tiền";
             dtg_showsach.Columns[1].Visible = false;
             dtg_showsach.Columns[2].Visible = false;
+            dtg_showsach.Columns[1].Width = 50;
+            dtg_showsach.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dtg_showsach.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            dtg_showsach.AllowUserToResizeColumns = false;
             foreach (var x in _IsachServices.GetSach())
             {
                 dtg_showsach.Rows.Add(

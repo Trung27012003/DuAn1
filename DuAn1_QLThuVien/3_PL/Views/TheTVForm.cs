@@ -46,6 +46,10 @@ namespace _3_PL.Views
             dtg_show.Columns[6].Name = "Địa Chỉ";
             dtg_show.Columns[7].Name = "Ngày Sinh";
             dtg_show.Columns[8].Name = "Ghi chú";
+            dtg_show.Columns[1].Width = 50;
+            dtg_show.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dtg_show.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            dtg_show.AllowUserToResizeColumns = false;
             foreach (var item in lst)
             {
                 dtg_show.Rows.Add(
@@ -68,16 +72,13 @@ namespace _3_PL.Views
         {
             bool sdt = Regex.IsMatch(tbt_sdt.Text, "^0[0-9]{9}$");
             bool regex = Regex.IsMatch(tbt_tenthanhvien.Text, @"[A-Za-z0-9]");
-            
             bool chu = Regex.IsMatch(tbt_tenthanhvien.Text, @"[^0-9]");
             if (tbt_tenthanhvien.Text == "")
             {
-                
                 MessageBox.Show("Không để trống tên thành viên, vui lòng nhập", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }else if (tbt_diachi.Text == "")
             {
-                
                 MessageBox.Show("Không để trống địa chỉ, vui lòng nhập", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }else if(tbt_sdt.Text == "")
@@ -123,14 +124,6 @@ namespace _3_PL.Views
                     LoadToGrid(_lstTheThanhVienView);
                 }
             }
-           
-
-           
-
-            
-
-
-
         }
 
         private void btn_sua_Click(object sender, EventArgs e)
