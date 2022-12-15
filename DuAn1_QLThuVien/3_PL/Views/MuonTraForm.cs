@@ -78,11 +78,11 @@ namespace _3_PL.Views
                 {
                     tongtien += (double)(item.TienTheChan);
                 }
-                a.Text = tongtien.ToString();
+                a.Text = tongtien.ToString()+" VND";
             }
             else
             {
-                lbl_tongtien1.Text = "";
+                lbl_tongtien1.Text = "....";
             }
         }
         public void LoadToCmbTL()
@@ -154,7 +154,6 @@ namespace _3_PL.Views
             {
                 button.Name = "Add";
                 button.HeaderText = "Add";
-
                 button.Text = ("Add");
                 button.UseColumnTextForButtonValue = true;
                 dgrid_danhsachsach.Columns.Add(button);
@@ -334,7 +333,7 @@ namespace _3_PL.Views
         {
   
             soluong = 0;
-            lbl_tongtien1.Text = "";
+            lbl_tongtien1.Text = "....";
             _lstPM.Clear();
             _lstPMCT.Clear();
             Loadtogrid_PhieuTra();
@@ -505,9 +504,9 @@ namespace _3_PL.Views
             var result = reader.Decode(bitmap);
             if (result != null)
             {
-                text.Invoke(new MethodInvoker(delegate ()
+                lb_code.Invoke(new MethodInvoker(delegate ()
                 {
-                    text.Text = result.ToString();
+                    lb_code.Text = result.ToString();
                 }));
             }
             ptb_camera.Image = bitmap;
@@ -710,12 +709,16 @@ namespace _3_PL.Views
 
         private void lb_code_TextChanged(object sender, EventArgs e)
         {
-            var a = _IsachServices.GetSach().FirstOrDefault(c => c.BarCode == lb_code.Text).Id;
-            var b = _IPhieuMuonChiTietChiTietServices.GetPhieuMuonChiTiet().FirstOrDefault(c => c.IdSach == a);
-            if (lb_code.Text != null)
+            var a = _IsachServices.GetSach().FirstOrDefault(c => c.Ma == lb_code.Text);
+            if (a!=null)
             {
-                cb_xacnhan.Checked = true;
+                var b = _IPhieuMuonChiTietChiTietServices.GetPhieuMuonChiTiet().FirstOrDefault(c => c.IdSach == a.Id);
+                if (b != null)
+                {
+                    cb_xacnhan.Checked = true;
+                }
             }
+            
         }
 
         private void dgrid_phieutract_CellValueChanged(object sender, DataGridViewCellEventArgs e)

@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_menus));
             this.pn_show = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pn_1 = new System.Windows.Forms.Panel();
             this.lbl_timer01 = new System.Windows.Forms.Label();
             this.pn_2 = new System.Windows.Forms.Panel();
@@ -48,6 +50,7 @@
             this.ptx_avata = new FontAwesome.Sharp.IconPictureBox();
             this.timer_01 = new System.Windows.Forms.Timer(this.components);
             this.pn_show.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pn_1.SuspendLayout();
             this.pn_2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -58,12 +61,23 @@
             // 
             // pn_show
             // 
+            this.pn_show.Controls.Add(this.pictureBox1);
             this.pn_show.Controls.Add(this.pn_1);
             this.pn_show.Dock = System.Windows.Forms.DockStyle.Top;
             this.pn_show.Location = new System.Drawing.Point(197, 0);
             this.pn_show.Name = "pn_show";
             this.pn_show.Size = new System.Drawing.Size(1040, 676);
             this.pn_show.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 39);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1040, 634);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // pn_1
             // 
@@ -370,6 +384,7 @@
             this.Name = "frm_menus";
             this.Text = "frm_menus";
             this.pn_show.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pn_1.ResumeLayout(false);
             this.pn_1.PerformLayout();
             this.pn_2.ResumeLayout(false);
@@ -403,5 +418,6 @@
         private Label lbl_timer01;
         private System.Windows.Forms.Timer timer_01;
         private WinFormsApp1.Custom_Controls.TvT_IconButton tvT_IconButton1;
+        private PictureBox pictureBox1;
     }
 }

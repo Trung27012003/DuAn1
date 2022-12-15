@@ -152,7 +152,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 172);
+            this.label3.Location = new System.Drawing.Point(15, 170);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 20);
             this.label3.TabIndex = 40;
@@ -168,7 +168,7 @@
             // lbl_tongtien1
             // 
             this.lbl_tongtien1.AutoSize = true;
-            this.lbl_tongtien1.Location = new System.Drawing.Point(124, 203);
+            this.lbl_tongtien1.Location = new System.Drawing.Point(112, 203);
             this.lbl_tongtien1.Name = "lbl_tongtien1";
             this.lbl_tongtien1.Size = new System.Drawing.Size(24, 20);
             this.lbl_tongtien1.TabIndex = 35;
@@ -185,7 +185,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 203);
+            this.label1.Location = new System.Drawing.Point(15, 203);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 20);
             this.label1.TabIndex = 32;
@@ -211,7 +211,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 127);
+            this.label2.Location = new System.Drawing.Point(15, 128);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 20);
             this.label2.TabIndex = 15;

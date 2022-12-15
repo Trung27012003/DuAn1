@@ -133,9 +133,9 @@
             // 
             this.grb_Anh.Controls.Add(this.btn_Change);
             this.grb_Anh.Controls.Add(this.ptb_AnhNV);
-            this.grb_Anh.Location = new System.Drawing.Point(450, 13);
+            this.grb_Anh.Location = new System.Drawing.Point(547, 13);
             this.grb_Anh.Name = "grb_Anh";
-            this.grb_Anh.Size = new System.Drawing.Size(250, 274);
+            this.grb_Anh.Size = new System.Drawing.Size(250, 261);
             this.grb_Anh.TabIndex = 21;
             this.grb_Anh.TabStop = false;
             this.grb_Anh.Text = "Ảnh";
@@ -153,7 +153,7 @@
             // ptb_AnhNV
             // 
             this.ptb_AnhNV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ptb_AnhNV.Location = new System.Drawing.Point(9, 21);
+            this.ptb_AnhNV.Location = new System.Drawing.Point(6, 25);
             this.ptb_AnhNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ptb_AnhNV.Name = "ptb_AnhNV";
             this.ptb_AnhNV.Size = new System.Drawing.Size(235, 207);
@@ -164,7 +164,7 @@
             // 
             this.lb_sdt.AutoSize = true;
             this.lb_sdt.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lb_sdt.Location = new System.Drawing.Point(238, 185);
+            this.lb_sdt.Location = new System.Drawing.Point(243, 189);
             this.lb_sdt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_sdt.Name = "lb_sdt";
             this.lb_sdt.Size = new System.Drawing.Size(50, 20);
@@ -174,26 +174,26 @@
             // cbb_tenchucvu
             // 
             this.cbb_tenchucvu.FormattingEnabled = true;
-            this.cbb_tenchucvu.Location = new System.Drawing.Point(129, 13);
+            this.cbb_tenchucvu.Location = new System.Drawing.Point(134, 17);
             this.cbb_tenchucvu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbb_tenchucvu.Name = "cbb_tenchucvu";
-            this.cbb_tenchucvu.Size = new System.Drawing.Size(222, 28);
+            this.cbb_tenchucvu.Size = new System.Drawing.Size(398, 28);
             this.cbb_tenchucvu.TabIndex = 17;
             this.cbb_tenchucvu.SelectedIndexChanged += new System.EventHandler(this.cbb_tenchucvu_SelectedIndexChanged);
             // 
             // tbx_searchnv
             // 
-            this.tbx_searchnv.Location = new System.Drawing.Point(747, 280);
+            this.tbx_searchnv.Location = new System.Drawing.Point(134, 285);
             this.tbx_searchnv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbx_searchnv.Name = "tbx_searchnv";
-            this.tbx_searchnv.Size = new System.Drawing.Size(222, 27);
+            this.tbx_searchnv.Size = new System.Drawing.Size(398, 27);
             this.tbx_searchnv.TabIndex = 16;
             this.tbx_searchnv.TextChanged += new System.EventHandler(this.tbx_searchnv_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(747, 250);
+            this.label6.Location = new System.Drawing.Point(31, 288);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(72, 20);
             this.label6.TabIndex = 15;
@@ -203,13 +203,13 @@
             // 
             this.dgrid_shownv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgrid_shownv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgrid_shownv.Location = new System.Drawing.Point(7, 311);
+            this.dgrid_shownv.Location = new System.Drawing.Point(7, 329);
             this.dgrid_shownv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgrid_shownv.Name = "dgrid_shownv";
             this.dgrid_shownv.RowHeadersWidth = 51;
             this.dgrid_shownv.RowTemplate.Height = 29;
             this.dgrid_shownv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgrid_shownv.Size = new System.Drawing.Size(1002, 282);
+            this.dgrid_shownv.Size = new System.Drawing.Size(1002, 264);
             this.dgrid_shownv.TabIndex = 13;
             this.dgrid_shownv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrid_shownv_CellClick);
             // 
@@ -294,37 +294,37 @@
             // dtp_ngaysinh
             // 
             this.dtp_ngaysinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_ngaysinh.Location = new System.Drawing.Point(129, 233);
+            this.dtp_ngaysinh.Location = new System.Drawing.Point(134, 237);
             this.dtp_ngaysinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtp_ngaysinh.Name = "dtp_ngaysinh";
-            this.dtp_ngaysinh.Size = new System.Drawing.Size(222, 27);
+            this.dtp_ngaysinh.Size = new System.Drawing.Size(398, 27);
             this.dtp_ngaysinh.TabIndex = 4;
             this.dtp_ngaysinh.Value = new System.DateTime(2022, 12, 15, 23, 1, 40, 0);
             // 
             // tbx_sdt
             // 
-            this.tbx_sdt.Location = new System.Drawing.Point(129, 183);
+            this.tbx_sdt.Location = new System.Drawing.Point(134, 187);
             this.tbx_sdt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbx_sdt.Name = "tbx_sdt";
-            this.tbx_sdt.Size = new System.Drawing.Size(222, 27);
+            this.tbx_sdt.Size = new System.Drawing.Size(398, 27);
             this.tbx_sdt.TabIndex = 3;
             this.tbx_sdt.TextChanged += new System.EventHandler(this.tbx_sdt_TextChanged);
             // 
             // tbx_diachi
             // 
-            this.tbx_diachi.Location = new System.Drawing.Point(129, 128);
+            this.tbx_diachi.Location = new System.Drawing.Point(134, 132);
             this.tbx_diachi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbx_diachi.Name = "tbx_diachi";
-            this.tbx_diachi.Size = new System.Drawing.Size(222, 27);
+            this.tbx_diachi.Size = new System.Drawing.Size(398, 27);
             this.tbx_diachi.TabIndex = 2;
             this.tbx_diachi.TextChanged += new System.EventHandler(this.tbx_diachi_TextChanged);
             // 
             // tbx_tennv
             // 
-            this.tbx_tennv.Location = new System.Drawing.Point(129, 71);
+            this.tbx_tennv.Location = new System.Drawing.Point(134, 75);
             this.tbx_tennv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbx_tennv.Name = "tbx_tennv";
-            this.tbx_tennv.Size = new System.Drawing.Size(222, 27);
+            this.tbx_tennv.Size = new System.Drawing.Size(398, 27);
             this.tbx_tennv.TabIndex = 1;
             this.tbx_tennv.TextChanged += new System.EventHandler(this.tbx_tennv_TextChanged);
             // 

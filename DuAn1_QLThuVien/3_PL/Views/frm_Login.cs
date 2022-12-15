@@ -57,7 +57,7 @@ namespace _3_PL.Views
             }
             else if (_iaccServices.CheckEmtyDB())
             {
-                MessageBox.Show("There is no Account exists in database, please create a new one");
+                MessageBox.Show("Account không tồn tại","Thông báo");
             }
             else
             {

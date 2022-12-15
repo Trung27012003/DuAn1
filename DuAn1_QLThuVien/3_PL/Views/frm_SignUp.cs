@@ -22,6 +22,7 @@ namespace _3_PL.Views
         {
             InitializeComponent();
             _iAccServices = new AccServices();
+            validates = new Validates();
         }
         public void ShowFormMenu()
         {
@@ -38,10 +39,10 @@ namespace _3_PL.Views
             {
                 MessageBox.Show("Nhập mật khẩu", "Thông báo");
             }
-            else if (validates.CheckPass(tbx_pass.Texts) == false)
-            {
-                MessageBox.Show("Nhập mật khẩu chứa số hoặc chữ", "Thông báo");
-            }
+            //else if (validates.CheckPass(tbx_pass.Texts) == false)
+            //{
+            //    MessageBox.Show("Nhập mật khẩu chứa số hoặc chữ", "Thông báo");
+            //}
             else if (tbx_repass.Texts == "")
             {
                 MessageBox.Show("Nhập lại mật khẩu ", "Thông báo");
