@@ -52,6 +52,7 @@ namespace _3_PL.Views
             _lstPM = _IPhieuMuonServices.GetPhieuMuon().FindAll(c => c.GhiChu == "Chưa Trả");
             _lstPT = _IPhieuTraServices.GetPhieuTra();
             _lstSach = _ISachServices.GetSach();
+            cmb_locpm.SelectedIndex = 0;
         }
         public void LoadToCmb()
         {

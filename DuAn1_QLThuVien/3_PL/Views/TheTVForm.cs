@@ -30,6 +30,12 @@ namespace _3_PL.Views
             _lstTheThanhVienView = _TheThanhVienServices.GetTheThanhVien();
             _Validates = new Validates();
             LoadToGrid(_lstTheThanhVienView);
+            Loaddtp();
+        }
+        public void Loaddtp()
+        {
+            dtp_ngaybatdau.Value = DateTime.Now;
+            dtp_ngayketthuc.Value = DateTime.Now.AddMonths(3);
         }
         public void LoadToGrid(List<TheThanhVienView> lst)
         {
@@ -108,11 +114,11 @@ namespace _3_PL.Views
                 TheThanhVienView ttv = new TheThanhVienView()
                 {
                     TenThanhVien = tbt_tenthanhvien.Text,
-                    NgayDangKi = DateTime.Now,
-                    NgayHetHan = DateTime.Now,
+                    NgayDangKi = dtp_ngaybatdau.Value,
+                    NgayHetHan = dtp_ngayketthuc.Value,
                     SDT = tbt_sdt.Text,
                     DiaChi = tbt_diachi.Text,
-                    NgaySinh = DateTime.Now,
+                    NgaySinh = dtp_ngaysinh.Value,
                     GhiChu = rtb_ghichu.Text
                 };
 
@@ -122,6 +128,7 @@ namespace _3_PL.Views
                     MessageBox.Show(_TheThanhVienServices.AddTN(ttv));
                     _lstTheThanhVienView = _TheThanhVienServices.GetTheThanhVien();
                     LoadToGrid(_lstTheThanhVienView);
+                    Loaddtp();
                 }
             }
         }
@@ -132,11 +139,11 @@ namespace _3_PL.Views
             {
                 Id = _idTv,
                 TenThanhVien = tbt_tenthanhvien.Text,
-                NgayDangKi = DateTime.Now,
-                NgayHetHan = DateTime.Now,
+                NgayDangKi = dtp_ngaybatdau.Value,
+                NgayHetHan = dtp_ngayketthuc.Value,
                 SDT = tbt_sdt.Text,
                 DiaChi = tbt_diachi.Text,
-                NgaySinh = DateTime.Now,
+                NgaySinh = dtp_ngaysinh.Value,
                 GhiChu = rtb_ghichu.Text
             };
             DialogResult dg = MessageBox.Show("bạn có chắc chắn muốn sửa không ?", "thông báo", MessageBoxButtons.YesNo);
@@ -145,6 +152,7 @@ namespace _3_PL.Views
                 MessageBox.Show(_TheThanhVienServices.UpdateTN(ttv));
                 _lstTheThanhVienView = _TheThanhVienServices.GetTheThanhVien();
                 LoadToGrid(_lstTheThanhVienView);
+                Loaddtp();
             }
 
         }
@@ -170,6 +178,7 @@ namespace _3_PL.Views
                 MessageBox.Show(_TheThanhVienServices.RemoveTN(_idTv));
                 _lstTheThanhVienView = _TheThanhVienServices.GetTheThanhVien();
                 LoadToGrid(_lstTheThanhVienView);
+                Loaddtp();
             }
 
         }
@@ -201,6 +210,11 @@ namespace _3_PL.Views
         {
             lb_sdt.Text = _Validates.checkSDT(tbt_sdt.Text);
             lb_sdt.ForeColor = Color.Red;
+        }
+
+        private void TheTVForm_Load(object sender, EventArgs e)
+        {
+
         }
     } 
 }

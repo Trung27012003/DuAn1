@@ -189,7 +189,7 @@
             // 
             // tbt_timkiem
             // 
-            this.tbt_timkiem.Location = new System.Drawing.Point(-3, 29);
+            this.tbt_timkiem.Location = new System.Drawing.Point(6, 29);
             this.tbt_timkiem.Name = "tbt_timkiem";
             this.tbt_timkiem.Size = new System.Drawing.Size(268, 27);
             this.tbt_timkiem.TabIndex = 20;
@@ -319,16 +319,16 @@
             this.panel1.Location = new System.Drawing.Point(734, 191);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(266, 140);
+            this.panel1.Size = new System.Drawing.Size(266, 160);
             this.panel1.TabIndex = 28;
             // 
             // ptb_QR
             // 
             this.ptb_QR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ptb_QR.Location = new System.Drawing.Point(2, 4);
+            this.ptb_QR.Location = new System.Drawing.Point(2, 0);
             this.ptb_QR.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ptb_QR.Name = "ptb_QR";
-            this.ptb_QR.Size = new System.Drawing.Size(263, 140);
+            this.ptb_QR.Size = new System.Drawing.Size(263, 160);
             this.ptb_QR.TabIndex = 0;
             this.ptb_QR.TabStop = false;
             // 
@@ -404,7 +404,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1022, 647);
+            this.ClientSize = new System.Drawing.Size(1022, 653);
             this.Controls.Add(this.cbb_chonanh);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_start);

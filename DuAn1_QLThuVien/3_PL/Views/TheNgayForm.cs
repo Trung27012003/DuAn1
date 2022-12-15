@@ -66,6 +66,7 @@ namespace _3_PL.Views
         private void btn_in_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Đi mua cái máy in về đây rồi tính tiếp !!!");
+          
         }
 
         private void btn_them_Click(object sender, EventArgs e)
@@ -75,7 +76,7 @@ namespace _3_PL.Views
                 tnv.IdNV = Guid.Parse(tbt_idnv.Text);
                 tnv.NameNV = cbb_nhanvien.Text;
                 tnv.StartTime = DateTime.Now;
-                tnv.EndTime = DateTime.Now;
+                tnv.EndTime = DateTime.Now.AddDays(1);
                 tnv.GhiChu = rtb_ghichu.Text;
             }
             DialogResult rs = MessageBox.Show("Bạn có muốn thêm >?", "Thông báo ", MessageBoxButtons.OKCancel);

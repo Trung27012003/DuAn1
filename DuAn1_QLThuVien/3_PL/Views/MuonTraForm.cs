@@ -545,9 +545,9 @@ namespace _3_PL.Views
             dgrid_phieutra.Columns[6].Name = "ngày trả";
             dgrid_phieutra.Columns[7].Name = "Ghi chú";
             dgrid_phieutra.Columns[1].Width = 50;
-            dgrid_phieutra.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgrid_phieutra.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
-            dgrid_phieutra.AllowUserToResizeColumns = false;
+            //dgrid_phieutra.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            //dgrid_phieutra.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            //dgrid_phieutra.AllowUserToResizeColumns = false;
             foreach (var item in _IPhieuMuonServices.GetPhieuMuon())
             {
                 int so = 0;

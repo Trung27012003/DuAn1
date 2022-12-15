@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "K8H92ZRsA560R9NLX9ZBKNHp4nwEel+bDWVUmKw5jYiOH4rs79E757oefkYyTayuH4r9kUdbqOcwQCl+K600zA==",
+  "dgSpecHash": "EcRQ4jwRwW/zCbH13ENhz24AwD9zdktA4ZmVIwMqjYwFE5GgB68Vc92BMprnj+jg+VsM+1LdJrR2G4q07dn2uw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Trung2701\\Documents\\da1\\DuAn1\\DuAn1_QLThuVien\\3_PL\\3_PL.csproj",
   "expectedPackageFiles": [
@@ -53,7 +53,11 @@
     "C:\\Users\\Trung2701\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
     "C:\\Users\\Trung2701\\.nuget\\packages\\system.text.encoding.codepages\\4.7.0\\system.text.encoding.codepages.4.7.0.nupkg.sha512",
     "C:\\Users\\Trung2701\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
-    "C:\\Users\\Trung2701\\.nuget\\packages\\zxing.net\\0.16.6\\zxing.net.0.16.6.nupkg.sha512"
+    "C:\\Users\\Trung2701\\.nuget\\packages\\zxing.net\\0.16.6\\zxing.net.0.16.6.nupkg.sha512",
+    "C:\\Users\\Trung2701\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.12\\microsoft.windowsdesktop.app.ref.6.0.12.nupkg.sha512",
+    "C:\\Users\\Trung2701\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.12\\microsoft.netcore.app.ref.6.0.12.nupkg.sha512",
+    "C:\\Users\\Trung2701\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.12\\microsoft.aspnetcore.app.ref.6.0.12.nupkg.sha512",
+    "C:\\Users\\Trung2701\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.12\\microsoft.netcore.app.host.win-x64.6.0.12.nupkg.sha512"
   ],
   "logs": [
     {

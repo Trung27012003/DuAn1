@@ -72,11 +72,11 @@ namespace _3_PL.Views
                     item.Id,
                     stt++,
                     item.Name,
-                    (item.IdCV!=null)?_ChucVuServices.GetTheNgay().FirstOrDefault(c=>c.Id==item.IdCV).Name:" ",
+                    (item.IdCV != null) ? _ChucVuServices.GetTheNgay().FirstOrDefault(c => c.Id == item.IdCV).Name : " ",
                     item.DiaChi,
                     item.SDT,
-                    item.NgaySinh
-                    );
+                    item.NgaySinh.Value
+                    ) ;
             }
         }
 
@@ -204,12 +204,12 @@ namespace _3_PL.Views
                     NhanVienView cvv = new NhanVienView()
                     {
                         Name = tbx_tennv.Text,
-                        NgaySinh = DateTime.Now,
+                        NgaySinh = dtp_ngaysinh.Value,
                         DiaChi = tbx_diachi.Text,
                         SDT = tbx_sdt.Text,
                         IdCV = _ChucVuServices.GetTheNgay().FirstOrDefault(c => c.Name == cbb_tenchucvu.Text).Id
                     };
-                    DialogResult dg = MessageBox.Show("Bạn có muốn thêm ?", "Thông Báo", MessageBoxButtons.YesNo);
+                    DialogResult dg = MessageBox.Show("Bạn có muốn thêm nhân viên không ?", "Thông Báo", MessageBoxButtons.YesNo);
                     if (dg == DialogResult.Yes)
                     {
                         MessageBox.Show(_NhanVienServices.AddTN(cvv));
@@ -269,7 +269,7 @@ namespace _3_PL.Views
             {
                 Id= _IdNv,
                 Name = tbx_tennv.Text,
-                NgaySinh = DateTime.Now,
+                NgaySinh = dtp_ngaysinh.Value,
                 DiaChi = tbx_diachi.Text,
                 SDT = tbx_sdt.Text,
                 IdCV = _ChucVuServices.GetTheNgay().FirstOrDefault(c => c.Name == cbb_tenchucvu.Text).Id
@@ -495,6 +495,11 @@ namespace _3_PL.Views
                 ptb_AnhNV.Dispose();
                 tabControl1.SelectedIndex = 0;
             }
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

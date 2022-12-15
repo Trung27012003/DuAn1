@@ -58,7 +58,7 @@
             this.dgrid_show2.Name = "dgrid_show2";
             this.dgrid_show2.RowHeadersWidth = 51;
             this.dgrid_show2.RowTemplate.Height = 29;
-            this.dgrid_show2.Size = new System.Drawing.Size(572, 588);
+            this.dgrid_show2.Size = new System.Drawing.Size(560, 545);
             this.dgrid_show2.TabIndex = 2;
             // 
             // dgrid_show1
@@ -68,7 +68,7 @@
             this.dgrid_show1.Name = "dgrid_show1";
             this.dgrid_show1.RowHeadersWidth = 51;
             this.dgrid_show1.RowTemplate.Height = 29;
-            this.dgrid_show1.Size = new System.Drawing.Size(419, 588);
+            this.dgrid_show1.Size = new System.Drawing.Size(419, 545);
             this.dgrid_show1.TabIndex = 3;
             this.dgrid_show1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrid_show1_CellClick);
             // 
@@ -77,7 +77,7 @@
             this.groupBox2.Controls.Add(this.dgrid_show1);
             this.groupBox2.Location = new System.Drawing.Point(7, 46);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(431, 623);
+            this.groupBox2.Size = new System.Drawing.Size(431, 579);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách mượn";
@@ -87,7 +87,7 @@
             this.groupBox1.Controls.Add(this.dgrid_show2);
             this.groupBox1.Location = new System.Drawing.Point(444, 46);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(584, 623);
+            this.groupBox1.Size = new System.Drawing.Size(584, 590);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách sách";
@@ -95,7 +95,7 @@
             // cmb_locpm
             // 
             this.cmb_locpm.FormattingEnabled = true;
-            this.cmb_locpm.Location = new System.Drawing.Point(237, 17);
+            this.cmb_locpm.Location = new System.Drawing.Point(237, 14);
             this.cmb_locpm.Name = "cmb_locpm";
             this.cmb_locpm.Size = new System.Drawing.Size(195, 28);
             this.cmb_locpm.TabIndex = 10;
@@ -113,7 +113,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(174, 25);
+            this.label2.Location = new System.Drawing.Point(174, 22);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 20);
             this.label2.TabIndex = 12;
@@ -123,7 +123,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1031, 672);
+            this.ClientSize = new System.Drawing.Size(1022, 629);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmb_locpm);

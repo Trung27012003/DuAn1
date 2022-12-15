@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "mjzZpEl1noYWtt4rLghOaQasBa3QNMZaY5vF50F6503kMt8vz48de2ByxMeQlN/zhu6ohRo9KDD/SOOSqFGo9Q==",
+  "dgSpecHash": "YR6a28KydtBRaBy2U1YJ3DplnWixj2uE7xhDsro/EMs4PqkXQMpE5BWIGHT8B3nd7V3EGGor+nsyzje7J0gXGQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Trung2701\\Documents\\da1\\DuAn1\\DuAn1_QLThuVien\\1_DAL\\1_DAL.csproj",
   "expectedPackageFiles": [
@@ -51,7 +51,10 @@
     "C:\\Users\\Trung2701\\.nuget\\packages\\system.security.permissions\\4.7.0\\system.security.permissions.4.7.0.nupkg.sha512",
     "C:\\Users\\Trung2701\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
     "C:\\Users\\Trung2701\\.nuget\\packages\\system.text.encoding.codepages\\4.7.0\\system.text.encoding.codepages.4.7.0.nupkg.sha512",
-    "C:\\Users\\Trung2701\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
+    "C:\\Users\\Trung2701\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
+    "C:\\Users\\Trung2701\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.12\\microsoft.windowsdesktop.app.ref.6.0.12.nupkg.sha512",
+    "C:\\Users\\Trung2701\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.12\\microsoft.netcore.app.ref.6.0.12.nupkg.sha512",
+    "C:\\Users\\Trung2701\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.12\\microsoft.aspnetcore.app.ref.6.0.12.nupkg.sha512"
   ],
   "logs": [
     {
